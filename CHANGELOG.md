@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v2.3.0
+- Sezione progetti ridisegnata: card più grandi su griglia a 3 colonne, copertine con forme e etichetta del tipo di progetto, pannello hover con la descrizione.
+- Risolto il taglio del contenuto in hover (il contenitore con scorrimento orizzontale ritagliava card e pannello).
+- Su mobile le card scorrono in orizzontale con i dettagli sempre visibili.
+
 ## v2.2.2
 - Card dei progetti più piccole (16:9), visibili senza scorrere la pagina, con numero grande in stile Top 10 di Netflix.
 
