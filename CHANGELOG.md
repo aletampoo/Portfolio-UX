@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v2.10.0
+- Slideshow animato dietro la hero: una scena per progetto, nei suoi colori, con forme che fluttuano e lento ingrandimento, in dissolvenza incrociata ogni 6,5 secondi. Attenuato da una velatura scura perché non disturbi la UI sopra.
+
 ## v2.9.0
 - Hero svuotata dei contenuti di progetto: ora è una zona di rilascio con uno slot tratteggiato, tre mini-card che fluttuano e il testo che spiega come trascinare dentro un case study. Su dispositivi touch il testo invita a toccare una card.
 - Rimossi ricerca e campanella dalla barra di navigazione.

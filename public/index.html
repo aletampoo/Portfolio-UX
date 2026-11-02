@@ -69,9 +69,34 @@ body.fs .rt{pointer-events:auto}
 .ai{background:#6d6d6eb3;color:#fff;backdrop-filter:blur(8px)}.ai:hover{background:#6d6d6e80}
 .chp{display:flex;gap:10px}
 .stage.over .screen{box-shadow:0 10px 50px #0009,0 0 0 3px var(--red)}
-.dbg{position:absolute;inset:0;background:radial-gradient(58% 70% at 50% 44%,#ffffff12,transparent 72%),linear-gradient(140deg,#21262c,#0c0f12 78%);transition:background .4s}
+.slides{position:absolute;inset:0;z-index:0;overflow:hidden;opacity:.4}
+.sld{position:absolute;inset:-6%;opacity:0;transition:opacity 1.6s ease;background:radial-gradient(68% 88% at 68% 38%,color-mix(in srgb,var(--c) 72%,#000),transparent 72%),linear-gradient(135deg,color-mix(in srgb,var(--c) 42%,#06080a),#06080a 78%)}
+.sld.on{opacity:1;animation:kb 9s ease-out both}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.13)}}
+.sld i{position:absolute;display:block;border-radius:14px;background:#ffffff1c;border:1.5px solid #ffffff3b;animation:fl 9s ease-in-out infinite}
+.sld i:nth-child(2n){animation-duration:11.5s;animation-delay:-3s}
+.sld i:nth-child(3n){animation-duration:13s;animation-delay:-6s}
+@keyframes fl{0%,100%{translate:0 0}50%{translate:0 -2.6%}}
+.v1 i:nth-child(1){left:9%;top:20%;width:20%;height:27%}
+.v1 i:nth-child(2){left:33%;top:14%;width:14%;height:38%;border-radius:50%}
+.v1 i:nth-child(3){left:52%;top:24%;width:30%;height:15%;border-radius:999px}
+.v1 i:nth-child(4){left:12%;top:57%;width:38%;height:12%;border-radius:999px}
+.v1 i:nth-child(5){left:56%;top:48%;width:26%;height:30%}
+.v2 i{border-radius:9px}
+.v2 i:nth-child(1){left:12%;top:58%;width:7%;height:24%}
+.v2 i:nth-child(2){left:23%;top:44%;width:7%;height:38%}
+.v2 i:nth-child(3){left:34%;top:30%;width:7%;height:52%}
+.v2 i:nth-child(4){left:45%;top:50%;width:7%;height:32%}
+.v2 i:nth-child(5){left:12%;top:18%;width:40%;height:9%;border-radius:999px}
+.v2 i:nth-child(6){left:62%;top:20%;width:24%;height:62%;border-radius:18px}
+.v3 i{border-radius:20px}
+.v3 i:nth-child(1){left:15%;top:23%;width:16%;height:54%}
+.v3 i:nth-child(2){left:34%;top:18%;width:16%;height:64%}
+.v3 i:nth-child(3){left:53%;top:23%;width:16%;height:54%}
+.v3 i:nth-child(4){left:76%;top:41%;width:9%;height:17%;border-radius:50%}
+.dbg{position:absolute;inset:0;z-index:1;background:radial-gradient(48% 58% at 50% 46%,#0a0d10c7,#0a0d1070 62%,#0a0d10eb 100%);transition:background .4s}
 .dbg::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff0d 0 1px,transparent 1px 6cqw),repeating-linear-gradient(90deg,#ffffff0d 0 1px,transparent 1px 6cqw);-webkit-mask-image:radial-gradient(52% 66% at 50% 46%,#000,transparent 80%);mask-image:radial-gradient(52% 66% at 50% 46%,#000,transparent 80%)}
-.stage.over .dbg{background:radial-gradient(58% 70% at 50% 44%,#e5091430,transparent 72%),linear-gradient(140deg,#2a2025,#0c0f12 78%)}
+.stage.over .dbg{background:radial-gradient(48% 58% at 50% 46%,#2b0c11d1,#1a0a0d8c 62%,#0a0d10eb 100%)}
 .dui{position:absolute;inset:0;z-index:2;display:grid;place-content:center;justify-items:center;gap:clamp(12px,2.2cqw,26px);text-align:center;padding:5%}
 .slot{position:relative;width:clamp(140px,25cqw,270px);aspect-ratio:16/10;border:2px dashed #ffffff30;border-radius:clamp(12px,1.8cqw,22px);background:#ffffff08;display:grid;place-items:center;transition:border-color .3s,background .3s,scale .3s}
 .stage.ready .slot{border-color:#ffffff5c;background:#ffffff14}
@@ -235,7 +260,7 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
 }
 .rg{margin-top:44px}
 @media (max-width:860px){.nv{display:none}.ab,.mb{grid-template-columns:1fr}.chp{display:none}.art .mk:nth-child(n+2){display:none}.art .mk{width:22cqw;height:44cqw;top:8cqw}.stage{height:clamp(440px,120vw,640px)}.sx{padding-top:44px}.sh1{background:linear-gradient(90deg,#000a,#0000 90%)}}
-@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important;scroll-behavior:auto!important}.sld:first-child{opacity:1}}
 </style>
 </head>
 <body class="lock">
@@ -327,11 +352,16 @@ function cov(p,d){
 function meta(i){var p=P[i];return '<div class="mt"><b>'+t("cs")+'</b><i>•</i><b>'+p.ty[L=="it"?0:1]+'</b><i>•</i><b>'+p.y+'</b></div>'}
 function sys(){return '<div class="sysv"><figure><div class="b"><i></i><i></i><i></i></div><figcaption>'+t("lTok")+'</figcaption></figure><figure><div class="b"><u></u><u></u></div><figcaption>'+t("lCmp")+'</figcaption></figure><figure><div class="b"><s></s><s></s><s></s><s></s></div><figcaption>'+t("lScr")+'</figcaption></figure></div>'}
 function mocks(){return '<div class="mocks"><div class="mk"><i></i><i></i><i></i></div><div class="mk"><i></i><i></i><i></i></div><div class="mk"><i></i><i></i><i></i></div></div>'}
-var FINE=matchMedia("(hover:hover) and (pointer:fine)").matches;
+var FINE=matchMedia("(hover:hover) and (pointer:fine)").matches,SHP=[5,6,4],SLI=0;
+function slideShow(){inn.querySelectorAll(".sld").forEach(function(x,j){x.classList.toggle("on",j===SLI)})}
+function slideNext(){if(cur!==null)return;var n=inn.querySelectorAll(".sld").length;if(!n)return;SLI=(SLI+1)%n;slideShow()}
 function bb(){
   document.body.style.removeProperty("--amb");
-  inn.innerHTML='<div class="dbg"></div><div class="dui"><div class="slot"><div class="fan">'+P.map(function(x){return '<i style="--c:'+x.c+'"></i>'}).join("")+'</div></div><h2><span class="a">'+t(FINE?"dropT":"tapT")+'</span><span class="b">'+t("drop")+'</span></h2><p>'+t(FINE?"dropP":"tapP")+'</p></div>';
+  inn.innerHTML='<div class="slides">'+P.map(function(x,i){return '<div class="sld v'+(i%3+1)+'" style="--c:'+x.c+'">'+"<i></i>".repeat(SHP[i%3])+'</div>'}).join("")+'</div><div class="dbg"></div><div class="dui"><div class="slot"><div class="fan">'+P.map(function(x){return '<i style="--c:'+x.c+'"></i>'}).join("")+'</div></div><h2><span class="a">'+t(FINE?"dropT":"tapT")+'</span><span class="b">'+t("drop")+'</span></h2><p>'+t(FINE?"dropP":"tapP")+'</p></div>';
+  if(SLI>=P.length)SLI=0;
+  requestAnimationFrame(slideShow);
 }
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)setInterval(slideNext,6500);
 function mrow(k,v){return v?'<div><dt>'+k+'</dt><dd>'+v+'</dd></div>':''}
 function paras(x){return (x?(typeof x=="string"?[x]:x):[]).map(function(q){return '<p>'+q+'</p>'}).join("")}
 function draw(){
