@@ -45,16 +45,12 @@ nav.sc{background:#141414ee;backdrop-filter:blur(14px)}
 .sb input{width:0;opacity:0;border:0;background:none;color:#fff;font:inherit;font-size:14px;outline:0;padding:0;transition:width .3s,opacity .3s}
 .sb.open input{width:min(200px,38vw);opacity:1}
 .pw{position:relative}
-.av{display:flex;align-items:center;border:2px solid #fff;border-radius:7px;background:none;padding:2px;margin-left:6px;text-decoration:none}
 .lt{position:relative;display:flex;align-items:center;gap:2px;background:#ffffff14;border:1px solid #ffffff2e;border-radius:999px;padding:3px;margin-left:4px}
 .lt button{position:relative;z-index:2;display:grid;place-items:center;width:34px;height:26px;border:0;background:none;border-radius:999px;padding:0;opacity:.45;transition:opacity .25s}
 .lt button[aria-pressed=true]{opacity:1}
 .lt .kn{position:absolute;z-index:1;top:3px;left:3px;width:34px;height:26px;border-radius:999px;background:#ffffff2e;box-shadow:0 1px 4px #0007;transition:transform .3s cubic-bezier(.4,0,.2,1)}
 .lt.en .kn{transform:translateX(36px)}
 .fl{width:20px;height:14px;border-radius:2px;display:block;box-shadow:0 0 0 1px #00000070}
-body.fs .av{opacity:0;pointer-events:none}
-.av span{display:grid;place-items:center;width:30px;height:30px;border-radius:4px;background:linear-gradient(135deg,#1abcfe,#a259ff);font-weight:700;font-size:13px}
-.car{border:4px solid transparent;border-top-color:#fff;margin-top:4px}
 .pop{position:absolute;right:0;top:calc(100% + 8px);width:min(300px,88vw);background:#000e;border:1px solid #ffffff26;border-radius:8px;padding:8px;backdrop-filter:blur(14px)}
 .pop[hidden]{display:none}
 .pop h4{margin:6px 10px;font-size:13px;color:var(--mut);font-weight:600}
@@ -157,22 +153,14 @@ body.fs .rt{pointer-events:auto}
 .th.ds{background:linear-gradient(145deg,#2c3742,#10151a 72%)}
 .th.ds::before{content:"";position:absolute;inset:0;background:radial-gradient(66% 86% at 74% 34%,#8aa2b847,transparent 72%)}
 .cr2{position:absolute;z-index:2;left:16px;top:13px;font-size:10px;font-weight:700;letter-spacing:.12em;color:#ffffffb0}
-.dsp{position:absolute;right:7%;top:18%;width:40%;height:50%;border:1.5px solid #ffffff5c;border-radius:7px;background:#0b0f12d9;padding:7% 8%;display:flex;flex-direction:column;gap:9%}
-.dsp b{display:block;height:15%;width:58%;border-radius:999px;background:#ffffff9e}
-.dsp u{display:block;height:10%;border-radius:999px;background:#ffffff3d;text-decoration:none}
-.dsp u+u{width:62%}
-.dsp s{position:absolute;right:8%;bottom:9%;width:15%;aspect-ratio:1;border-radius:50%;border:1.5px solid var(--red);text-decoration:none}
-.tok{position:absolute;right:52%;top:24%;display:grid;gap:16%;width:6.5%}
-.tok i{display:block;aspect-ratio:1;border-radius:3px;border:1px solid #ffffff30}
-.dsart{position:absolute;inset:0;background:linear-gradient(135deg,#2e3843,#0e1216 72%)}
-.dsart::after{content:"";position:absolute;inset:0;background:radial-gradient(56% 82% at 76% 38%,#8aa2b842,transparent 72%)}
-.cock{position:absolute;right:6cqw;top:50%;transform:translateY(-50%);width:34cqw;aspect-ratio:16/9;border:.22cqw solid #ffffff52;border-radius:1.6cqw;background:#0b0f12e8;padding:2.4cqw;display:flex;flex-direction:column;gap:1.5cqw;box-shadow:0 2cqw 6cqw #000a}
-.cock b{display:block;height:2.4cqw;width:46%;border-radius:999px;background:#ffffff9e}
-.cock u{display:block;height:1.6cqw;border-radius:999px;background:#ffffff38;text-decoration:none}
-.cock u+u{width:68%}
-.cock s{position:absolute;right:2.6cqw;bottom:2.6cqw;width:5.4cqw;aspect-ratio:1;border-radius:50%;border:.3cqw solid var(--red);text-decoration:none}
-.tokc{position:absolute;right:43cqw;top:50%;transform:translateY(-50%);display:grid;gap:1.3cqw}
-.tokc span{display:block;width:3.6cqw;aspect-ratio:1;border-radius:.7cqw;border:.14cqw solid #ffffff30}
+.gr{position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff12 0 1px,transparent 1px 13%),repeating-linear-gradient(90deg,#ffffff12 0 1px,transparent 1px 9%);-webkit-mask-image:radial-gradient(62% 74% at 50% 44%,#000,transparent 78%);mask-image:radial-gradient(62% 74% at 50% 44%,#000,transparent 78%)}
+.lgp{position:absolute;z-index:2;left:50%;top:44%;transform:translate(-50%,-50%);display:grid;place-items:center;padding:7% 11%;border:1px solid #ffffff2e;border-radius:9px;background:#ffffff0f}
+.lgp span{font-weight:800;font-size:clamp(13px,7.5cqw,30px);line-height:1;letter-spacing:.3em;text-indent:.3em;color:#fff}
+.dsart{position:absolute;inset:0;background:linear-gradient(140deg,#303a46,#0d1115 74%)}
+.dsart::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff10 0 1px,transparent 1px 7cqw),repeating-linear-gradient(90deg,#ffffff10 0 1px,transparent 1px 7cqw);-webkit-mask-image:radial-gradient(44% 64% at 50% 40%,#000,transparent 78%);mask-image:radial-gradient(44% 64% at 50% 40%,#000,transparent 78%)}
+.dsart::after{content:"";position:absolute;inset:0;background:radial-gradient(40% 58% at 50% 40%,#9db3c740,transparent 72%)}
+.lgb{position:absolute;z-index:2;left:50%;top:40%;transform:translate(-50%,-50%);display:grid;place-items:center;padding:3.2cqw 5.4cqw;border:.16cqw solid #ffffff3d;border-radius:1.2cqw;background:#ffffff0f}
+.lgb span{font-weight:800;font-size:4cqw;line-height:1;letter-spacing:.32em;text-indent:.32em;color:#fff}
 .cl{display:block;margin-bottom:1.1cqw;font-size:clamp(.68rem,1.05cqw,1rem);font-weight:700;letter-spacing:.16em;color:#ffffffbd}
 .tl{position:absolute;z-index:2;left:16px;bottom:13px;right:16px;font-weight:800;font-size:1.4rem;line-height:1.12;letter-spacing:-.025em}
 .tp{position:absolute;z-index:2;right:10px;top:10px;background:#0009;border-radius:5px;padding:3px 9px;font-size:11px;font-weight:600;backdrop-filter:blur(6px)}
@@ -244,7 +232,6 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
     <div class="sb" id="sb"><input id="q" type="search" aria-label="Search"><button class="ic" id="sbtn" aria-label="Search"><svg><use href="#s"/></svg></button></div>
     <div class="pw"><button class="ic" id="bell" aria-label="Notifications" aria-expanded="false"><svg><use href="#b"/></svg></button><div class="pop" id="pb" hidden></div></div>
     <div class="lt" id="lt" role="group" aria-label="Lingua / Language"><span class="kn"></span><button data-lang="it" aria-pressed="true" title="Italiano" aria-label="Italiano"><svg class="fl" viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#008C45"/><rect x="8" width="8" height="16" fill="#F4F5F0"/><rect x="16" width="8" height="16" fill="#CD212A"/></svg></button><button data-lang="en" aria-pressed="false" title="English" aria-label="English"><svg class="fl" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#012169"/><path d="M0 0 24 16M24 0 0 16" fill="none" stroke="#fff" stroke-width="3.4"/><path d="M0 0 24 16M24 0 0 16" fill="none" stroke="#C8102E" stroke-width="2"/><path d="M12 0v16M0 8h24" fill="none" stroke="#fff" stroke-width="5.6"/><path d="M12 0v16M0 8h24" fill="none" stroke="#C8102E" stroke-width="3.4"/></svg></button></div>
-    <a class="av" href="#contact" aria-label="Alessio Tampone"><span>AT</span></a>
   </div>
 </nav>
 <header id="top">
@@ -276,9 +263,10 @@ ttl:"Alessio Tampone | Product Designer",abT:"Chi sono",abP:"Sono Alessio, Produ
 en:{n0:"Home",n1:"Projects",n2:"About",n3:"Experience",n4:"Contact",lang:"Language",ph:"Titles, tags",none:"No projects found.",nt:"Notifications",play:"Play",more:"More info",cs:"Case study",rl:"Role:",wt:"With",rowT:"My projects",rowS:"Hover a card for details, click to open the case study.",n5:"Games",gT:"Games",gN:"UX Dash",gD:"Dodge the comments from clients and stakeholders. Click, tap or press space to jump.",gStart:"Play",gRetry:"Try again",gOver:"Unresolved comment!",gScore:"Score",gBest:"Best",now:"Now playing",scroll:"Scroll to continue",close:"✕ Close",next:"Next project",role:"Role",dur:"Duration",tools:"Tools",client:"Client",year:"Year",team:"Team",pr:"The problem",so:"The solution",rs:"The results",lTok:"Tokens",lCmp:"Components",lScr:"Screens",nw:"New case study:",
 ttl:"Alessio Tampone | Product Designer",abT:"About me",abP:"I’m Alessio, a Product Designer. I work on research, interfaces and design systems with one simple goal: products people understand at first glance and enjoy using. I work closely with developers and product teams, from the first sketch to release.",f1:"years of experience",f2:"projects delivered",f3:"industries explored",skT:"Skills and tools",sk:["User research","Wireframes","Prototyping","Design systems","Accessibility","Usability testing","Figma","FigJam","Framer","Maze","Notion"],exT:"Experience",ex:[["2024 – today","Product Designer","Example Studio","I lead the design of a B2B product, from research to release."],["2022 – 2024","UX/UI Designer","Example Agency","Projects for banks and retail with a shared design system."],["2020 – 2022","Junior Designer","Example Startup","First responsibilities on mobile apps and user testing."]],ctT:"Shall we work together?",ctS:"Tell me about your project: I reply within 24 hours.",mail:"Copy my email",copied:"Email copied:",foot:"End credits. Thanks for watching."}};
 var P=[
-{c:"#6b8299",m:99,y:2025,art:"ds",thc:"ds",ty:["Design system","Design system"],
+{c:"#6b8299",m:99,y:2025,art:"ds",thc:"ds",lg:"ALTEN",ty:["Design system","Design system"],
 it:{t:"Audi Design System",cl:"Audi · Italdesign",tag:"Un linguaggio condiviso per le interfacce di bordo",role:"Product Designer",team:"3 designer",dur:"1 anno",tools:"Figma",
 ds:"370 componenti e 1.000 variabili che tengono insieme le interfacce di bordo di più linee di veicoli. Oggi la libreria è usata da 111 team.",
+sm:"Per un anno ho costruito, con altri due designer, il design system delle interfacce di bordo Audi: 370 componenti e 1.000 variabili. Oggi è usato da 111 team ed è in produzione su vetture in commercio.",
 sec:[
 {n:"01",h:"La sfida",p:["Audi sviluppa interfacce di bordo per linee di veicoli diverse: sportive, SUV, citycar. Ogni linea ha un carattere visivo suo, ma le stesse funzioni di base: accesso al profilo, cruscotto, impostazioni, clima.","Senza una base comune ogni team ricostruiva da capo gli stessi elementi: un pulsante, una lista, un campo di ricerca. Il costo non si fermava al tempo perso a ridisegnare. A valle gli sviluppatori implementavano tre volte lo stesso componente con tre comportamenti leggermente diversi, e ogni incoerenza tra una vettura e l’altra arrivava fino a chi guida. Il primo lavoro quindi non è stato disegnare, ma fare l’inventario di cosa esisteva già e di quanto si sovrapponeva.","A rendere il problema diverso da un sistema per il web sono stati quattro vincoli."],li:["<b>Lo schermo non è uno solo.</b> Dimensione, proporzione e posizione cambiano da una vettura all’altra.","<b>Chi guarda sta guidando.</b> Ogni stato deve leggersi in un colpo d’occhio, perché compete con la strada.","<b>Il ciclo di vita è lungo.</b> Una scelta sbagliata su una variabile resta a bordo per anni, non fino al prossimo rilascio.","<b>L’identità non è una sola.</b> Ogni linea deve sembrare sé stessa pur usando gli stessi componenti."]},
 {n:"02",h:"Il mio ruolo",p:"Per un anno sono stato in un team di tre designer. Mi sono occupato di quattro cose.",li:["<b>Costruzione della libreria.</b> Ho disegnato gran parte dei componenti del sistema.","<b>Architettura delle variabili.</b> Ho creato le variabili e le ho applicate ai componenti, togliendo i valori scritti a mano.","<b>Formazione dei designer.</b> Ho insegnato ai team come inserire il kit nel loro processo.","<b>Manutenzione e rilasci.</b> Ho seguito il sistema dopo il lancio, con l’uscita dei nuovi componenti e la cura di quelli esistenti."]},
@@ -288,6 +276,7 @@ sec:[
 {n:"06",h:"Cosa resta",p:"I numeri di adozione nascondono una cosa: l’uso è molto concentrato. Due soli programmi generano l’87% degli inserimenti, mentre diversi team restano sotto l’1%. Un sistema usato da 111 team sembra adottato, ma è la coda lunga a dire dove il lavoro non è finito. Oggi partirei da lì: affiancherei prima i team a bassa adozione per capire cosa li blocca, invece di leggere il numero complessivo come un risultato raggiunto."}]},
  en:{t:"Audi Design System",cl:"Audi · Italdesign",tag:"A shared language for in-car interfaces",role:"Product Designer",team:"3 designers",dur:"1 year",tools:"Figma",
 ds:"370 components and 1,000 variables holding together the in-car interfaces of several vehicle lines. The library is used by 111 teams today.",
+sm:"For a year I built, with two other designers, the design system behind Audi’s in-car interfaces: 370 components and 1,000 variables. It is used by 111 teams today and is in production in cars on the market.",
 sec:[
 {n:"01",h:"The challenge",p:["Audi builds in-car interfaces for different vehicle lines: sports cars, SUVs, city cars. Each line has its own visual character but the same core functions: profile access, dashboard, settings, climate.","Without a common foundation each team rebuilt the same elements from scratch: a button, a list, a search field. The cost didn’t stop at the time lost redrawing. Downstream, engineers implemented the same component three times with three slightly different behaviours, and every inconsistency between one car and the next reached the person driving. So the first job wasn’t to design: it was to inventory what already existed and how much of it overlapped.","What made this different from a system for the web were four constraints."],li:["<b>There is no single screen.</b> Size, proportion and position change from one vehicle to the next.","<b>The person looking is driving.</b> Every state has to read at a glance, because it competes with the road.","<b>The lifecycle is long.</b> A bad decision on a variable stays in the car for years, not until the next release.","<b>There is no single identity.</b> Each line has to look like itself while using the same components."]},
 {n:"02",h:"My role",p:"For a year I was part of a team of three designers. I owned four things.",li:["<b>Building the library.</b> I designed most of the components in the system.","<b>Variable architecture.</b> I created the variables and applied them across the components, removing hand-written values.","<b>Training the designers.</b> I taught the teams how to fit the kit into their own process.","<b>Maintenance and releases.</b> I looked after the system after launch, shipping new components and keeping the existing ones healthy."]},
@@ -296,31 +285,30 @@ sec:[
 {n:"05",h:"The result",p:"A system nobody adopts is a dead library, and the real work isn’t building the components but making them the easiest path to take. The components are in production in cars on the market today.",li:["<b>Training the teams directly.</b> A system gets adopted when the people using it know where to look, not when it is complete: I worked with the designers inside their process, not next to it.","<b>Documentation with dos and don’ts</b> for every component, so correct use doesn’t depend on who explained it to you.","<b>Semantic naming and predictable APIs,</b> so engineers don’t have to guess what a property does.","<b>Continuous maintenance.</b> New components, fixes, releases: the system is a product, not a delivery."],st:[["111","teams use the library"],["10,400","insertions in one week"]]},
 {n:"06",h:"What remains",p:"The adoption numbers hide something: usage is heavily concentrated. Two programmes alone generate 87% of all insertions, while several teams stay below 1%. A system used by 111 teams looks adopted, but it is the long tail that says where the work isn’t finished. Today I’d start there: sit with the low-adoption teams first to find out what blocks them, instead of reading the headline number as a result achieved."}]}},
 {c:"#ff7262",m:95,y:2024,ty:["Dashboard B2B","B2B dashboard"],
-it:{t:"Pulse",tag:"Dashboard per team B2B",role:"UX/UI designer",dur:"8 settimane",tools:"Figma, Notion",ds:"Una dashboard con ricerca globale e viste salvate: il report giusto è a un clic.",
+it:{t:"Pulse",tag:"Dashboard per team B2B",role:"UX/UI designer",dur:"8 settimane",tools:"Figma, Notion",ds:"Una dashboard con ricerca globale e viste salvate: il report giusto è a un clic.",sm:"Ho ridisegnato la dashboard di uno strumento B2B. Ricerca globale e viste salvate hanno portato il tempo per trovare un report da due minuti a venti secondi.",
 sec:[{n:"01",h:"La sfida",p:"Trovare un report richiedeva due minuti di menu e filtri. I team smettevano di usare lo strumento."},
 {n:"02",h:"Il lavoro in sintesi",p:"Una dashboard con ricerca globale e viste salvate: il report giusto è a un clic.",vis:"mocks"},
 {n:"03",h:"Il risultato",st:[["20 s","per trovare un report"],["+35%","uso settimanale"],["3","versioni testate"]]}]},
- en:{t:"Pulse",tag:"A dashboard for B2B teams",role:"UX/UI designer",dur:"8 weeks",tools:"Figma, Notion",ds:"A dashboard with global search and saved views: the right report is one click away.",
+ en:{t:"Pulse",tag:"A dashboard for B2B teams",role:"UX/UI designer",dur:"8 weeks",tools:"Figma, Notion",ds:"A dashboard with global search and saved views: the right report is one click away.",sm:"I redesigned the dashboard of a B2B tool. Global search and saved views cut the time to find a report from two minutes to twenty seconds.",
 sec:[{n:"01",h:"The challenge",p:"Finding a report took two minutes of menus and filters. Teams stopped using the tool."},
 {n:"02",h:"The work in summary",p:"A dashboard with global search and saved views: the right report is one click away.",vis:"mocks"},
 {n:"03",h:"The result",st:[["20 s","to find a report"],["+35%","weekly usage"],["3","versions tested"]]}]}},
 {c:"#0acf83",m:97,y:2023,ty:["Onboarding bancario","Banking onboarding"],
-it:{t:"Fiore",tag:"Onboarding bancario",role:"UX designer",dur:"6 settimane",tools:"Figma, Optimizely",ds:"Un flusso in 4 passi con un solo obiettivo per schermata e messaggi d’errore chiari.",
+it:{t:"Fiore",tag:"Onboarding bancario",role:"UX designer",dur:"6 settimane",tools:"Figma, Optimizely",ds:"Un flusso in 4 passi con un solo obiettivo per schermata e messaggi d’errore chiari.",sm:"Ho riscritto il flusso di registrazione di una banca, da nove passi a quattro con un solo obiettivo per schermata: +23% di account completati in un test A/B.",
 sec:[{n:"01",h:"La sfida",p:"Quasi un utente su tre abbandonava la registrazione prima di aprire il conto."},
 {n:"02",h:"Il lavoro in sintesi",p:"Un flusso in 4 passi con un solo obiettivo per schermata e messaggi d’errore chiari.",vis:"mocks"},
 {n:"03",h:"Il risultato",st:[["+23%","account completati"],["4","passi invece di 9"],["A/B","test su 2.000 utenti"]]}]},
- en:{t:"Fiore",tag:"Banking onboarding",role:"UX designer",dur:"6 weeks",tools:"Figma, Optimizely",ds:"A 4-step flow with one goal per screen and clear error messages.",
+ en:{t:"Fiore",tag:"Banking onboarding",role:"UX designer",dur:"6 weeks",tools:"Figma, Optimizely",ds:"A 4-step flow with one goal per screen and clear error messages.",sm:"I rewrote a bank’s sign-up flow, from nine steps to four with one goal per screen: 23% more completed accounts in an A/B test.",
 sec:[{n:"01",h:"The challenge",p:"Almost one user in three quit sign-up before opening an account."},
 {n:"02",h:"The work in summary",p:"A 4-step flow with one goal per screen and clear error messages.",vis:"mocks"},
 {n:"03",h:"The result",st:[["+23%","completed accounts"],["4","steps instead of 9"],["A/B","test on 2,000 users"]]}]}}];
 var L="it",cur=null,f=0,busy=0,$=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)},scr=$("#scr"),inn=$("#inner");
 function t(k){return U[L][k]}
-var SW=['#93a7b9','#4d5d6c','#232b33','#e7ebef'];
 function art(i){var p=P[i];
-  if(p.art==="ds")return '<div class="dsart"><div class="tokc">'+SW.map(function(x){return '<span style="background:'+x+'"></span>'}).join("")+'</div><div class="cock"><b></b><u></u><u></u><s></s></div></div><div class="sh1"></div><div class="sh2"></div>';
+  if(p.art==="ds")return '<div class="dsart"><div class="lgb"><span>'+p.lg+'</span></div></div><div class="sh1"></div><div class="sh2"></div>';
   var pos=[["52%","-8deg"],["66%","2deg"],["80%","10deg"]];return '<div class="art" style="--c:'+p.c+'">'+pos.map(function(o){return '<div class="mk" style="--l:'+o[0]+';--r:'+o[1]+'"><i></i><i></i><i></i></div>'}).join("")+'</div><div class="sh1"></div><div class="sh2"></div>'}
 function cov(p,d){
-  if(p.thc==="ds")return '<span class="cr2">'+d.cl+'</span><div class="tok">'+SW.map(function(x){return '<i style="background:'+x+'"></i>'}).join("")+'</div><div class="dsp"><b></b><u></u><u></u><s></s></div>';
+  if(p.thc==="ds")return '<span class="cr2">'+d.cl+'</span><span class="gr"></span><div class="lgp"><span>'+p.lg+'</span></div>';
   return '<i></i><i></i>'}
 function meta(i){var p=P[i];return '<div class="mt"><b>'+t("cs")+'</b><i>•</i><b>'+p.ty[L=="it"?0:1]+'</b><i>•</i><b>'+p.y+'</b></div>'}
 function sys(){return '<div class="sysv"><figure><div class="b"><i></i><i></i><i></i></div><figcaption>'+t("lTok")+'</figcaption></figure><figure><div class="b"><u></u><u></u></div><figcaption>'+t("lCmp")+'</figcaption></figure><figure><div class="b"><s></s><s></s><s></s><s></s></div><figcaption>'+t("lScr")+'</figcaption></figure></div>'}
@@ -365,7 +353,7 @@ function stat(){
 function info(i,keep){
   var p=P[i],d=p[L],md=$("#md");
   $("#mh").innerHTML=art(i)+'<div class="bc" style="--c:'+p.c+'">'+(d.cl?'<span class="cl">'+d.cl+'</span>':'')+'<h2 class="ttl">'+d.t+'</h2><div class="bt"><button class="rp" data-play="'+i+'"><svg><use href="#p"/></svg>'+t("play")+'</button></div></div>';
-  $("#mb").innerHTML='<div>'+meta(i).replace('class="mt"','class="mt" style="font-size:1rem"')+'<p>'+d.ds+'</p><p>'+d.sec[0].p+'</p></div><dl><dt>'+t("role")+'</dt><dd>'+d.role+'</dd><dt>'+t("dur")+'</dt><dd>'+d.dur+'</dd><dt>'+t("tools")+'</dt><dd>'+d.tools+'</dd></dl>';
+  $("#mb").innerHTML='<div>'+meta(i).replace('class="mt"','class="mt" style="font-size:1rem"')+'<p>'+(d.sm||d.ds)+'</p></div><dl><dt>'+t("role")+'</dt><dd>'+d.role+'</dd><dt>'+t("dur")+'</dt><dd>'+d.dur+'</dd><dt>'+t("tools")+'</dt><dd>'+d.tools+'</dd></dl>';
   if(!keep)md.showModal();
 }
 function play(i){

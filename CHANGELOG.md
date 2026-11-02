@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v2.7.0
+- Cover del case study Audi: composizione centrata sul nome Alten, su griglia tecnica sfumata.
+- Rimosso il pulsante avatar "AT" dalla barra di navigazione.
+- La finestra "Altre info" mostra un riassunto breve del progetto invece del testo lungo.
+
 ## v2.6.0
 - Case study riorganizzato: testo allineato a sinistra su colonna singola, sommario con metadati (cliente, anno, ruolo, team, durata, strumenti), sezioni numerate 01-06 e processo a passi verticali.
 - Selettore lingua: toggle con bandiera italiana e inglese al posto del menu a tendina.
