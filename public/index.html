@@ -13,7 +13,7 @@
 :root{--red:#e50914;--bg:#141414;--tx:#fff;--mut:#a3a3a3;--f:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scrollbar-gutter:stable;scroll-padding-top:76px}
-body{margin:0;color:var(--tx);font:16px/1.5 var(--f);background:radial-gradient(120% 620px at 50% 0,color-mix(in srgb,var(--amb,#555) 38%,#141414),#141414) no-repeat,#141414}
+body{margin:0;color:var(--tx);font:16px/1.5 var(--f);background:radial-gradient(120% 620px at 50% 0,color-mix(in srgb,var(--amb,#555) 26%,#141414),#141414) no-repeat,#141414}
 body.lock,body.fs{overflow:hidden}
 button{font:inherit;color:inherit;cursor:pointer}
 :focus-visible{outline:3px solid #fff;outline-offset:2px}
@@ -79,7 +79,25 @@ body.fs .rt{pointer-events:auto}
 .bt button{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:.7em 1.6em;font-weight:700;font-size:clamp(.9rem,1.3cqw,1.25rem)}
 .rp{background:#fff;color:#000}.rp:hover{background:#ffffffd0}
 .ai{background:#6d6d6eb3;color:#fff;backdrop-filter:blur(8px)}.ai:hover{background:#6d6d6e80}
-.chp{position:absolute;right:clamp(14px,2.4cqw,40px);bottom:clamp(14px,2.4cqw,40px);display:flex;gap:10px}
+.hctl{position:absolute;z-index:4;right:clamp(14px,2.4cqw,40px);bottom:clamp(14px,2.4cqw,40px);display:grid;gap:12px;justify-items:end}
+.chp{display:flex;gap:10px}
+.dots{display:flex;gap:8px}
+.dots button{width:10px;height:10px;border-radius:50%;border:0;padding:0;background:#ffffff52;transition:width .25s,background .25s}
+.dots button.on{width:26px;border-radius:999px;background:#fff}
+.dots button:hover{background:#ffffff99}
+.hint2{margin:1.4cqw 0 0;font-size:clamp(.72rem,1.05cqw,.92rem);color:#ffffff8a;font-weight:500}
+.dz{position:absolute;inset:0;z-index:7;display:none;place-items:center;background:#000000ad;backdrop-filter:blur(3px);pointer-events:none}
+.stage.over .dz{display:grid}
+.dz span{display:flex;align-items:center;gap:14px;font-weight:700;font-size:clamp(1rem,2vw,1.5rem);border:2px dashed #ffffff73;border-radius:16px;padding:18px 30px;background:#ffffff0f}
+.dz em{font-style:normal}
+.dz svg{width:1.1em;height:1.1em;color:var(--red)}
+.stage.over .screen{box-shadow:0 10px 50px #0009,0 0 0 3px var(--red)}
+.ghost{position:fixed;left:0;top:0;z-index:300;width:230px;pointer-events:none;opacity:.92;border-radius:10px;filter:drop-shadow(0 20px 34px #000b);transform-origin:top left}
+.ghost .ti,.ghost .cr2{display:none}
+.ghost.ok{outline:3px solid var(--red);outline-offset:3px}
+body.dragging{user-select:none;cursor:grabbing}
+.tile img{-webkit-user-drag:none;user-select:none}
+@media (hover:none),(pointer:coarse){.hint2{display:none}}
 .chp span{display:flex;align-items:center;gap:7px;background:#0007;border-radius:8px;padding:7px 12px;font-size:clamp(.7rem,1cqw,.9rem);font-weight:600;backdrop-filter:blur(8px)}
 .head{position:absolute;top:0;left:0;right:0;z-index:5;display:none;align-items:center;gap:16px;padding:14px 150px 14px 20px;background:linear-gradient(#000d,#0000)}
 .screen.full .head{display:flex}
@@ -141,7 +159,7 @@ body.fs .rt{pointer-events:auto}
 .rsub{margin:-8px 0 18px;color:var(--mut);font-size:.95rem}
 .row h2,.sx h2{margin:0 0 16px;font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.6vw,26px)}
-.tile{position:relative;container-type:inline-size;cursor:pointer;transition:transform .3s}
+.tile{position:relative;container-type:inline-size;cursor:grab;transition:transform .3s}
 .tile:hover,.tile:focus-within{transform:scale(1.04);z-index:5}
 .tiles>.tile:first-child{transform-origin:left center}
 .tiles>.tile:last-child{transform-origin:right center}
@@ -150,17 +168,17 @@ body.fs .rt{pointer-events:auto}
 .th>i{position:absolute;background:#ffffff1f;border:1.5px solid #ffffff59;border-radius:12px}
 .th>i:nth-of-type(1){right:12%;top:16%;width:24%;height:50%}
 .th>i:nth-of-type(2){right:33%;top:30%;width:18%;height:42%;border-radius:50%}
-.th.ds{background:linear-gradient(145deg,#2c3742,#10151a 72%)}
-.th.ds::before{content:"";position:absolute;inset:0;background:radial-gradient(66% 86% at 74% 34%,#8aa2b847,transparent 72%)}
+.th.ds{background:linear-gradient(145deg,color-mix(in srgb,var(--c) 30%,#0f1318),#0b0e12 80%)}
+.th.ds::before{content:"";position:absolute;inset:0;background:radial-gradient(54% 70% at 50% 42%,color-mix(in srgb,var(--c) 26%,transparent),transparent 74%)}
 .cr2{position:absolute;z-index:2;left:16px;top:13px;font-size:10px;font-weight:700;letter-spacing:.12em;color:#ffffffb0}
 .gr{position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff12 0 1px,transparent 1px 13%),repeating-linear-gradient(90deg,#ffffff12 0 1px,transparent 1px 9%);-webkit-mask-image:radial-gradient(62% 74% at 50% 44%,#000,transparent 78%);mask-image:radial-gradient(62% 74% at 50% 44%,#000,transparent 78%)}
-.lgp{position:absolute;z-index:2;left:50%;top:44%;transform:translate(-50%,-50%);display:grid;place-items:center;padding:7% 11%;border:1px solid #ffffff2e;border-radius:9px;background:#ffffff0f}
-.lgp span{font-weight:800;font-size:clamp(13px,7.5cqw,30px);line-height:1;letter-spacing:.3em;text-indent:.3em;color:#fff}
-.dsart{position:absolute;inset:0;background:linear-gradient(140deg,#303a46,#0d1115 74%)}
+.lgp{position:absolute;z-index:2;left:50%;top:45%;transform:translate(-50%,-50%);display:grid;place-items:center;padding:5% 8%;border-radius:10px;background:#fff;box-shadow:0 8px 26px #00000073}
+.lgp img{display:block;height:19cqw;width:auto}
+.dsart{position:absolute;inset:0;background:linear-gradient(140deg,color-mix(in srgb,var(--c) 28%,#0e1217),#0a0d11 78%)}
 .dsart::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff10 0 1px,transparent 1px 7cqw),repeating-linear-gradient(90deg,#ffffff10 0 1px,transparent 1px 7cqw);-webkit-mask-image:radial-gradient(44% 64% at 50% 40%,#000,transparent 78%);mask-image:radial-gradient(44% 64% at 50% 40%,#000,transparent 78%)}
-.dsart::after{content:"";position:absolute;inset:0;background:radial-gradient(40% 58% at 50% 40%,#9db3c740,transparent 72%)}
-.lgb{position:absolute;z-index:2;left:50%;top:40%;transform:translate(-50%,-50%);display:grid;place-items:center;padding:3.2cqw 5.4cqw;border:.16cqw solid #ffffff3d;border-radius:1.2cqw;background:#ffffff0f}
-.lgb span{font-weight:800;font-size:4cqw;line-height:1;letter-spacing:.32em;text-indent:.32em;color:#fff}
+.dsart::after{content:"";position:absolute;inset:0;background:radial-gradient(40% 56% at 50% 40%,color-mix(in srgb,var(--c) 24%,transparent),transparent 74%)}
+.lgb{position:absolute;z-index:2;left:50%;top:40%;transform:translate(-50%,-50%);display:grid;place-items:center;padding:2.2cqw 3.2cqw;border-radius:1.2cqw;background:#fff;box-shadow:0 1.6cqw 4cqw #00000080}
+.lgb img{display:block;height:11cqw;width:auto}
 .cl{display:block;margin-bottom:1.1cqw;font-size:clamp(.68rem,1.05cqw,1rem);font-weight:700;letter-spacing:.16em;color:#ffffffbd}
 .tl{position:absolute;z-index:2;left:16px;bottom:13px;right:16px;font-weight:800;font-size:1.4rem;line-height:1.12;letter-spacing:-.025em}
 .tp{position:absolute;z-index:2;right:10px;top:10px;background:#0009;border-radius:5px;padding:3px 9px;font-size:11px;font-weight:600;backdrop-filter:blur(6px)}
@@ -238,6 +256,7 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
   <h1 class="sr">Alessio Tampone, Product Designer</h1>
   <div class="stage"><div class="screen" id="scr">
     <div class="head"><button class="x" id="cl"></button><span class="hd" id="hd"></span><div class="prog" id="pg"></div></div>
+    <div class="dz" aria-hidden="true"><span><svg><use href="#p"/></svg><em data-i="drop"></em></span></div>
     <div class="inner" id="inner"></div>
   </div></div>
 </header>
@@ -258,30 +277,30 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
 <dialog class="md" id="md"><div class="mh" id="mh"></div><button class="mx" id="mx" aria-label="Close">✕</button><div class="mb" id="mb"></div></dialog>
 
 <script>
-var U={it:{n0:"Home",n1:"Progetti",n2:"Chi sono",n3:"Esperienza",n4:"Contatti",lang:"Lingua",ph:"Titoli, tag",none:"Nessun progetto trovato.",nt:"Notifiche",play:"Riproduci",more:"Altre info",cs:"Case study",rl:"Ruolo:",wt:"Con",rowT:"I miei progetti",rowS:"Passa sopra una card per i dettagli, clicca per aprire il case study.",n5:"Giochi",gT:"Giochi",gN:"UX Dash",gD:"Schiva i commenti di clienti e stakeholder. Clic, tap o barra spaziatrice per saltare.",gStart:"Gioca",gRetry:"Riprova",gOver:"Commento non risolto!",gScore:"Punti",gBest:"Record",now:"Ora in riproduzione",scroll:"Scorri per continuare",close:"✕ Chiudi",next:"Prossimo progetto",role:"Ruolo",dur:"Durata",tools:"Strumenti",client:"Cliente",year:"Anno",team:"Team",pr:"Il problema",so:"La soluzione",rs:"I risultati",lTok:"Token",lCmp:"Componenti",lScr:"Schermate",nw:"Nuovo case study:",
+var U={it:{n0:"Home",n1:"Progetti",n2:"Chi sono",n3:"Esperienza",n4:"Contatti",lang:"Lingua",ph:"Titoli, tag",none:"Nessun progetto trovato.",nt:"Notifiche",play:"Riproduci",more:"Altre info",cs:"Case study",rl:"Ruolo:",wt:"Con",rowT:"I miei progetti",rowS:"Passa sopra una card per i dettagli, clicca per aprire il case study.",n5:"Giochi",gT:"Giochi",gN:"UX Dash",gD:"Schiva i commenti di clienti e stakeholder. Clic, tap o barra spaziatrice per saltare.",gStart:"Gioca",gRetry:"Riprova",gOver:"Commento non risolto!",gScore:"Punti",gBest:"Record",now:"Ora in riproduzione",scroll:"Scorri per continuare",close:"✕ Chiudi",next:"Prossimo progetto",role:"Ruolo",dur:"Durata",tools:"Strumenti",client:"Cliente",year:"Anno",team:"Team",pr:"Il problema",so:"La soluzione",rs:"I risultati",lTok:"Token",lCmp:"Componenti",lScr:"Schermate",drop:"Rilascia per riprodurre",dragHint:"Passa sopra un progetto per vederlo qui, trascinalo dentro per riprodurlo.",nw:"Nuovo case study:",
 ttl:"Alessio Tampone | Product Designer",abT:"Chi sono",abP:"Sono Alessio, Product Designer. Mi occupo di ricerca, interfacce e design system con un obiettivo semplice: prodotti che le persone capiscono al primo colpo e usano volentieri. Lavoro a stretto contatto con sviluppatori e team di prodotto, dal primo schizzo al rilascio.",f1:"anni di esperienza",f2:"progetti consegnati",f3:"settori esplorati",skT:"Competenze e strumenti",sk:["Ricerca utenti","Wireframe","Prototipi","Design system","Accessibilità","Test di usabilità","Figma","FigJam","Framer","Maze","Notion"],exT:"Esperienza",ex:[["2024 – oggi","Product Designer","Studio Esempio","Guido il design di un prodotto B2B, dalla ricerca al rilascio."],["2022 – 2024","UX/UI Designer","Agenzia Esempio","Progetti per banche e retail con un design system condiviso."],["2020 – 2022","Junior Designer","Startup Esempio","Prime responsabilità su app mobile e test con gli utenti."]],ctT:"Lavoriamo insieme?",ctS:"Raccontami il tuo progetto: rispondo entro 24 ore.",mail:"Copia la mia email",copied:"Email copiata:",foot:"Fine dei titoli di coda. Grazie per aver guardato."},
-en:{n0:"Home",n1:"Projects",n2:"About",n3:"Experience",n4:"Contact",lang:"Language",ph:"Titles, tags",none:"No projects found.",nt:"Notifications",play:"Play",more:"More info",cs:"Case study",rl:"Role:",wt:"With",rowT:"My projects",rowS:"Hover a card for details, click to open the case study.",n5:"Games",gT:"Games",gN:"UX Dash",gD:"Dodge the comments from clients and stakeholders. Click, tap or press space to jump.",gStart:"Play",gRetry:"Try again",gOver:"Unresolved comment!",gScore:"Score",gBest:"Best",now:"Now playing",scroll:"Scroll to continue",close:"✕ Close",next:"Next project",role:"Role",dur:"Duration",tools:"Tools",client:"Client",year:"Year",team:"Team",pr:"The problem",so:"The solution",rs:"The results",lTok:"Tokens",lCmp:"Components",lScr:"Screens",nw:"New case study:",
+en:{n0:"Home",n1:"Projects",n2:"About",n3:"Experience",n4:"Contact",lang:"Language",ph:"Titles, tags",none:"No projects found.",nt:"Notifications",play:"Play",more:"More info",cs:"Case study",rl:"Role:",wt:"With",rowT:"My projects",rowS:"Hover a card for details, click to open the case study.",n5:"Games",gT:"Games",gN:"UX Dash",gD:"Dodge the comments from clients and stakeholders. Click, tap or press space to jump.",gStart:"Play",gRetry:"Try again",gOver:"Unresolved comment!",gScore:"Score",gBest:"Best",now:"Now playing",scroll:"Scroll to continue",close:"✕ Close",next:"Next project",role:"Role",dur:"Duration",tools:"Tools",client:"Client",year:"Year",team:"Team",pr:"The problem",so:"The solution",rs:"The results",lTok:"Tokens",lCmp:"Components",lScr:"Screens",drop:"Drop to play",dragHint:"Hover a project to see it here, drag it in to play.",nw:"New case study:",
 ttl:"Alessio Tampone | Product Designer",abT:"About me",abP:"I’m Alessio, a Product Designer. I work on research, interfaces and design systems with one simple goal: products people understand at first glance and enjoy using. I work closely with developers and product teams, from the first sketch to release.",f1:"years of experience",f2:"projects delivered",f3:"industries explored",skT:"Skills and tools",sk:["User research","Wireframes","Prototyping","Design systems","Accessibility","Usability testing","Figma","FigJam","Framer","Maze","Notion"],exT:"Experience",ex:[["2024 – today","Product Designer","Example Studio","I lead the design of a B2B product, from research to release."],["2022 – 2024","UX/UI Designer","Example Agency","Projects for banks and retail with a shared design system."],["2020 – 2022","Junior Designer","Example Startup","First responsibilities on mobile apps and user testing."]],ctT:"Shall we work together?",ctS:"Tell me about your project: I reply within 24 hours.",mail:"Copy my email",copied:"Email copied:",foot:"End credits. Thanks for watching."}};
 var P=[
-{c:"#6b8299",m:99,y:2025,art:"ds",thc:"ds",lg:"ALTEN",ty:["Design system","Design system"],
+{c:"#3e9fd1",m:99,y:2025,art:"ds",thc:"ds",lg:"alten-logo.png",ty:["Design system","Design system"],
 it:{t:"Audi Design System",cl:"Audi · Italdesign",tag:"Un linguaggio condiviso per le interfacce di bordo",role:"Product Designer",team:"3 designer",dur:"1 anno",tools:"Figma",
-ds:"370 componenti e 1.000 variabili che tengono insieme le interfacce di bordo di più linee di veicoli. Oggi la libreria è usata da 111 team.",
-sm:"Per un anno ho costruito, con altri due designer, il design system delle interfacce di bordo Audi: 370 componenti e 1.000 variabili. Oggi è usato da 111 team ed è in produzione su vetture in commercio.",
+ds:"370 componenti e 1.000 token che tengono insieme le interfacce di bordo di più linee di veicoli. Oggi la libreria è usata da 111 team.",
+sm:"Per un anno ho costruito, con altri due designer, il design system delle interfacce di bordo Audi: 370 componenti e 1.000 token. Oggi è usato da 111 team ed è in produzione su vetture in commercio.",
 sec:[
-{n:"01",h:"La sfida",p:["Audi sviluppa interfacce di bordo per linee di veicoli diverse: sportive, SUV, citycar. Ogni linea ha un carattere visivo suo, ma le stesse funzioni di base: accesso al profilo, cruscotto, impostazioni, clima.","Senza una base comune ogni team ricostruiva da capo gli stessi elementi: un pulsante, una lista, un campo di ricerca. Il costo non si fermava al tempo perso a ridisegnare. A valle gli sviluppatori implementavano tre volte lo stesso componente con tre comportamenti leggermente diversi, e ogni incoerenza tra una vettura e l’altra arrivava fino a chi guida. Il primo lavoro quindi non è stato disegnare, ma fare l’inventario di cosa esisteva già e di quanto si sovrapponeva.","A rendere il problema diverso da un sistema per il web sono stati quattro vincoli."],li:["<b>Lo schermo non è uno solo.</b> Dimensione, proporzione e posizione cambiano da una vettura all’altra.","<b>Chi guarda sta guidando.</b> Ogni stato deve leggersi in un colpo d’occhio, perché compete con la strada.","<b>Il ciclo di vita è lungo.</b> Una scelta sbagliata su una variabile resta a bordo per anni, non fino al prossimo rilascio.","<b>L’identità non è una sola.</b> Ogni linea deve sembrare sé stessa pur usando gli stessi componenti."]},
-{n:"02",h:"Il mio ruolo",p:"Per un anno sono stato in un team di tre designer. Mi sono occupato di quattro cose.",li:["<b>Costruzione della libreria.</b> Ho disegnato gran parte dei componenti del sistema.","<b>Architettura delle variabili.</b> Ho creato le variabili e le ho applicate ai componenti, togliendo i valori scritti a mano.","<b>Formazione dei designer.</b> Ho insegnato ai team come inserire il kit nel loro processo.","<b>Manutenzione e rilasci.</b> Ho seguito il sistema dopo il lancio, con l’uscita dei nuovi componenti e la cura di quelli esistenti."]},
-{n:"03",h:"Il processo",p:"Tre decisioni di architettura hanno definito il sistema. Ognuna aveva un’alternativa più veloce da costruire e molto più costosa da mantenere.",stp:[{t:"Temi",s:"una modalità, non una libreria",p:"Ogni linea poteva avere la sua libreria: avremmo avuto tre sistemi da mantenere invece di uno. Il tema è diventato un cambio di modalità sulle variabili, così una linea nuova non si costruisce, si configura."},{t:"Variabili",s:"il nome viene dal ruolo, non dal colore",p:"Un nome descrittivo costringe a rinominare tutto quando il valore cambia; un nome legato alla funzione sopravvive al cambio di colore. È la differenza tra un sistema che si aggiorna e uno che si rifà."},{t:"Stati",s:"obbligatori, non opzionali",p:"Idle, Pressed, Active e Disabled fanno parte di ogni componente interattivo. In auto un pulsante che non mostra di essere stato premuto viene premuto di nuovo, e toglie lo sguardo dalla strada."}]},
-{n:"04",h:"Il lavoro in sintesi",p:"Il sistema si legge su tre livelli: le variabili definiscono i valori, i componenti li usano, le schermate li compongono. Tipografia, spaziature e raggi sono legati a variabili, quindi non c’è un solo valore scritto a mano, e cambiare una variabile aggiorna ogni componente che la usa, in tutti i temi.",vis:"sys",st:[["370","componenti"],["1.000","variabili"],["48","stili"]]},
+{n:"01",h:"La sfida",p:["Audi sviluppa interfacce di bordo per linee di veicoli diverse: sportive, SUV, citycar. Ogni linea ha un carattere visivo suo, ma le stesse funzioni di base: accesso al profilo, cruscotto, impostazioni, clima.","Senza una base comune ogni team ricostruiva da capo gli stessi elementi: un pulsante, una lista, un campo di ricerca. Il costo non si fermava al tempo perso a ridisegnare. A valle gli sviluppatori implementavano tre volte lo stesso componente con tre comportamenti leggermente diversi, e ogni incoerenza tra una vettura e l’altra arrivava fino a chi guida. Il primo lavoro quindi non è stato disegnare, ma fare l’inventario di cosa esisteva già e di quanto si sovrapponeva.","A rendere il problema diverso da un sistema per il web sono stati quattro vincoli."],li:["<b>Lo schermo non è uno solo.</b> Dimensione, proporzione e posizione cambiano da una vettura all’altra.","<b>Chi guarda sta guidando.</b> Ogni stato deve leggersi in un colpo d’occhio, perché compete con la strada.","<b>Il ciclo di vita è lungo.</b> Una scelta sbagliata su un token resta a bordo per anni, non fino al prossimo rilascio.","<b>L’identità non è una sola.</b> Ogni linea deve sembrare sé stessa pur usando gli stessi componenti."]},
+{n:"02",h:"Il mio ruolo",p:"Per un anno sono stato in un team di tre designer. Mi sono occupato di quattro cose.",li:["<b>Costruzione della libreria.</b> Ho disegnato gran parte dei componenti del sistema.","<b>Architettura dei token.</b> Ho creato i token e li ho applicati ai componenti, togliendo i valori scritti a mano.","<b>Formazione dei designer.</b> Ho insegnato ai team come inserire il kit nel loro processo.","<b>Manutenzione e rilasci.</b> Ho seguito il sistema dopo il lancio, con l’uscita dei nuovi componenti e la cura di quelli esistenti."]},
+{n:"03",h:"Il processo",p:"Tre decisioni di architettura hanno definito il sistema. Ognuna aveva un’alternativa più veloce da costruire e molto più costosa da mantenere.",stp:[{t:"Temi",s:"una modalità, non una libreria",p:"Ogni linea poteva avere la sua libreria: avremmo avuto tre sistemi da mantenere invece di uno. Il tema è diventato un cambio di modalità sui token, così una linea nuova non si costruisce, si configura."},{t:"Token",s:"il nome viene dal ruolo, non dal colore",p:"Un nome descrittivo costringe a rinominare tutto quando il valore cambia; un nome legato alla funzione sopravvive al cambio di colore. È la differenza tra un sistema che si aggiorna e uno che si rifà."},{t:"Stati",s:"obbligatori, non opzionali",p:"Idle, Pressed, Active e Disabled fanno parte di ogni componente interattivo. In auto un pulsante che non mostra di essere stato premuto viene premuto di nuovo, e toglie lo sguardo dalla strada."}]},
+{n:"04",h:"Il lavoro in sintesi",p:"Il sistema si legge su tre livelli: i token definiscono i valori, i componenti li usano, le schermate li compongono. Tipografia, spaziature e raggi sono legati a token, quindi non c’è un solo valore scritto a mano, e cambiare un token aggiorna ogni componente che lo usa, in tutti i temi.",vis:"sys",st:[["370","componenti"],["1.000","token"],["48","stili"]]},
 {n:"05",h:"Il risultato",p:"Un sistema che nessuno adotta è una libreria morta, e il lavoro vero non è costruire i componenti ma renderli la strada più semplice da percorrere. Oggi i componenti sono in produzione su vetture in commercio.",li:["<b>Formazione diretta dei team.</b> Un sistema si adotta quando chi lo usa sa dove cercare, non quando è completo: ho lavorato con i designer dentro il loro processo, non accanto.","<b>Documentazione con dos e don’ts</b> per ogni componente, così l’uso corretto non dipende da chi te l’ha spiegato a voce.","<b>Naming semantico e API prevedibili,</b> perché chi sviluppa non debba indovinare cosa fa una proprietà.","<b>Manutenzione continua.</b> Nuovi componenti, correzioni, rilasci: il sistema è un prodotto, non una consegna."],st:[["111","team usano la libreria"],["10.400","inserimenti in una settimana"]]},
 {n:"06",h:"Cosa resta",p:"I numeri di adozione nascondono una cosa: l’uso è molto concentrato. Due soli programmi generano l’87% degli inserimenti, mentre diversi team restano sotto l’1%. Un sistema usato da 111 team sembra adottato, ma è la coda lunga a dire dove il lavoro non è finito. Oggi partirei da lì: affiancherei prima i team a bassa adozione per capire cosa li blocca, invece di leggere il numero complessivo come un risultato raggiunto."}]},
  en:{t:"Audi Design System",cl:"Audi · Italdesign",tag:"A shared language for in-car interfaces",role:"Product Designer",team:"3 designers",dur:"1 year",tools:"Figma",
-ds:"370 components and 1,000 variables holding together the in-car interfaces of several vehicle lines. The library is used by 111 teams today.",
-sm:"For a year I built, with two other designers, the design system behind Audi’s in-car interfaces: 370 components and 1,000 variables. It is used by 111 teams today and is in production in cars on the market.",
+ds:"370 components and 1,000 tokens holding together the in-car interfaces of several vehicle lines. The library is used by 111 teams today.",
+sm:"For a year I built, with two other designers, the design system behind Audi’s in-car interfaces: 370 components and 1,000 tokens. It is used by 111 teams today and is in production in cars on the market.",
 sec:[
-{n:"01",h:"The challenge",p:["Audi builds in-car interfaces for different vehicle lines: sports cars, SUVs, city cars. Each line has its own visual character but the same core functions: profile access, dashboard, settings, climate.","Without a common foundation each team rebuilt the same elements from scratch: a button, a list, a search field. The cost didn’t stop at the time lost redrawing. Downstream, engineers implemented the same component three times with three slightly different behaviours, and every inconsistency between one car and the next reached the person driving. So the first job wasn’t to design: it was to inventory what already existed and how much of it overlapped.","What made this different from a system for the web were four constraints."],li:["<b>There is no single screen.</b> Size, proportion and position change from one vehicle to the next.","<b>The person looking is driving.</b> Every state has to read at a glance, because it competes with the road.","<b>The lifecycle is long.</b> A bad decision on a variable stays in the car for years, not until the next release.","<b>There is no single identity.</b> Each line has to look like itself while using the same components."]},
-{n:"02",h:"My role",p:"For a year I was part of a team of three designers. I owned four things.",li:["<b>Building the library.</b> I designed most of the components in the system.","<b>Variable architecture.</b> I created the variables and applied them across the components, removing hand-written values.","<b>Training the designers.</b> I taught the teams how to fit the kit into their own process.","<b>Maintenance and releases.</b> I looked after the system after launch, shipping new components and keeping the existing ones healthy."]},
-{n:"03",h:"The process",p:"Three architectural decisions defined the system. Each had an alternative that was faster to build and far more expensive to maintain.",stp:[{t:"Themes",s:"a mode, not a library",p:"Each line could have had its own library: we would have had three systems to maintain instead of one. The theme became a mode switch on the variables, so a new line isn’t built, it’s configured."},{t:"Variables",s:"named after the role, not the colour",p:"A descriptive name forces you to rename everything when the value changes; a name tied to function survives a colour change. It is the difference between a system that updates and one that gets rebuilt."},{t:"States",s:"mandatory, not optional",p:"Idle, Pressed, Active and Disabled are part of every interactive component. In a car, a button that doesn’t show it was pressed gets pressed again, and takes eyes off the road."}]},
-{n:"04",h:"The work in summary",p:"The system reads in three layers: variables define the values, components use them, screens compose them. Typography, spacing and radii are bound to variables, so there isn’t a single hand-written value, and changing one variable updates every component that uses it, across all themes.",vis:"sys",st:[["370","components"],["1,000","variables"],["48","styles"]]},
+{n:"01",h:"The challenge",p:["Audi builds in-car interfaces for different vehicle lines: sports cars, SUVs, city cars. Each line has its own visual character but the same core functions: profile access, dashboard, settings, climate.","Without a common foundation each team rebuilt the same elements from scratch: a button, a list, a search field. The cost didn’t stop at the time lost redrawing. Downstream, engineers implemented the same component three times with three slightly different behaviours, and every inconsistency between one car and the next reached the person driving. So the first job wasn’t to design: it was to inventory what already existed and how much of it overlapped.","What made this different from a system for the web were four constraints."],li:["<b>There is no single screen.</b> Size, proportion and position change from one vehicle to the next.","<b>The person looking is driving.</b> Every state has to read at a glance, because it competes with the road.","<b>The lifecycle is long.</b> A bad decision on a token stays in the car for years, not until the next release.","<b>There is no single identity.</b> Each line has to look like itself while using the same components."]},
+{n:"02",h:"My role",p:"For a year I was part of a team of three designers. I owned four things.",li:["<b>Building the library.</b> I designed most of the components in the system.","<b>Token architecture.</b> I created the tokens and applied them across the components, removing hand-written values.","<b>Training the designers.</b> I taught the teams how to fit the kit into their own process.","<b>Maintenance and releases.</b> I looked after the system after launch, shipping new components and keeping the existing ones healthy."]},
+{n:"03",h:"The process",p:"Three architectural decisions defined the system. Each had an alternative that was faster to build and far more expensive to maintain.",stp:[{t:"Themes",s:"a mode, not a library",p:"Each line could have had its own library: we would have had three systems to maintain instead of one. The theme became a mode switch on the tokens, so a new line isn’t built, it’s configured."},{t:"Tokens",s:"named after the role, not the colour",p:"A descriptive name forces you to rename everything when the value changes; a name tied to function survives a colour change. It is the difference between a system that updates and one that gets rebuilt."},{t:"States",s:"mandatory, not optional",p:"Idle, Pressed, Active and Disabled are part of every interactive component. In a car, a button that doesn’t show it was pressed gets pressed again, and takes eyes off the road."}]},
+{n:"04",h:"The work in summary",p:"The system reads in three layers: tokens define the values, components use them, screens compose them. Typography, spacing and radii are bound to tokens, so there isn’t a single hand-written value, and changing one token updates every component that uses it, across all themes.",vis:"sys",st:[["370","components"],["1,000","tokens"],["48","styles"]]},
 {n:"05",h:"The result",p:"A system nobody adopts is a dead library, and the real work isn’t building the components but making them the easiest path to take. The components are in production in cars on the market today.",li:["<b>Training the teams directly.</b> A system gets adopted when the people using it know where to look, not when it is complete: I worked with the designers inside their process, not next to it.","<b>Documentation with dos and don’ts</b> for every component, so correct use doesn’t depend on who explained it to you.","<b>Semantic naming and predictable APIs,</b> so engineers don’t have to guess what a property does.","<b>Continuous maintenance.</b> New components, fixes, releases: the system is a product, not a delivery."],st:[["111","teams use the library"],["10,400","insertions in one week"]]},
 {n:"06",h:"What remains",p:"The adoption numbers hide something: usage is heavily concentrated. Two programmes alone generate 87% of all insertions, while several teams stay below 1%. A system used by 111 teams looks adopted, but it is the long tail that says where the work isn’t finished. Today I’d start there: sit with the low-adoption teams first to find out what blocks them, instead of reading the headline number as a result achieved."}]}},
 {c:"#ff7262",m:95,y:2024,ty:["Dashboard B2B","B2B dashboard"],
@@ -305,18 +324,19 @@ sec:[{n:"01",h:"The challenge",p:"Almost one user in three quit sign-up before o
 var L="it",cur=null,f=0,busy=0,$=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)},scr=$("#scr"),inn=$("#inner");
 function t(k){return U[L][k]}
 function art(i){var p=P[i];
-  if(p.art==="ds")return '<div class="dsart"><div class="lgb"><span>'+p.lg+'</span></div></div><div class="sh1"></div><div class="sh2"></div>';
+  if(p.art==="ds")return '<div class="dsart" style="--c:'+p.c+'"><div class="lgb"><img src="'+p.lg+'" alt="" draggable="false"></div></div><div class="sh1"></div><div class="sh2"></div>';
   var pos=[["52%","-8deg"],["66%","2deg"],["80%","10deg"]];return '<div class="art" style="--c:'+p.c+'">'+pos.map(function(o){return '<div class="mk" style="--l:'+o[0]+';--r:'+o[1]+'"><i></i><i></i><i></i></div>'}).join("")+'</div><div class="sh1"></div><div class="sh2"></div>'}
 function cov(p,d){
-  if(p.thc==="ds")return '<span class="cr2">'+d.cl+'</span><span class="gr"></span><div class="lgp"><span>'+p.lg+'</span></div>';
+  if(p.thc==="ds")return '<span class="cr2">'+d.cl+'</span><span class="gr"></span><div class="lgp"><img src="'+p.lg+'" alt="" draggable="false"></div>';
   return '<i></i><i></i>'}
 function meta(i){var p=P[i];return '<div class="mt"><b>'+t("cs")+'</b><i>•</i><b>'+p.ty[L=="it"?0:1]+'</b><i>•</i><b>'+p.y+'</b></div>'}
 function sys(){return '<div class="sysv"><figure><div class="b"><i></i><i></i><i></i></div><figcaption>'+t("lTok")+'</figcaption></figure><figure><div class="b"><u></u><u></u></div><figcaption>'+t("lCmp")+'</figcaption></figure><figure><div class="b"><s></s><s></s><s></s><s></s></div><figcaption>'+t("lScr")+'</figcaption></figure></div>'}
 function mocks(){return '<div class="mocks"><div class="mk"><i></i><i></i><i></i></div><div class="mk"><i></i><i></i><i></i></div><div class="mk"><i></i><i></i><i></i></div></div>'}
 function bb(){
   var p=P[f],d=p[L];document.body.style.setProperty("--amb",p.c);
-  inn.innerHTML=art(f)+'<div class="bc" style="--c:'+p.c+'">'+(d.cl?'<span class="cl">'+d.cl+'</span>':'')+'<h2 class="ttl">'+d.t+'</h2>'+meta(f)+'<p class="ds">'+d.ds+'</p><div class="bt"><button class="rp" data-play="'+f+'"><svg><use href="#p"/></svg>'+t("play")+'</button><button class="ai" data-info="'+f+'">'+t("more")+'</button></div></div><div class="chp"><span>'+t("rl")+' '+d.role+'</span><span>'+t("wt")+' '+d.tools+'</span></div>';
+  inn.innerHTML=art(f)+'<div class="bc" style="--c:'+p.c+'">'+(d.cl?'<span class="cl">'+d.cl+'</span>':'')+'<h2 class="ttl">'+d.t+'</h2>'+meta(f)+'<p class="ds">'+d.ds+'</p><div class="bt"><button class="rp" data-play="'+f+'"><svg><use href="#p"/></svg>'+t("play")+'</button><button class="ai" data-info="'+f+'">'+t("more")+'</button></div><p class="hint2">'+t("dragHint")+'</p></div><div class="hctl"><div class="dots">'+P.map(function(x,i){return '<button data-pin="'+i+'" class="'+(i===f?"on":"")+'" aria-label="'+x[L].t+'"></button>'}).join("")+'</div><div class="chp"><span>'+t("rl")+' '+d.role+'</span><span>'+t("wt")+' '+d.tools+'</span></div></div>';
 }
+function bbA(){bb();inn.classList.remove("sw");void inn.offsetWidth;inn.classList.add("sw")}
 function mrow(k,v){return v?'<div><dt>'+k+'</dt><dd>'+v+'</dd></div>':''}
 function paras(x){return (x?(typeof x=="string"?[x]:x):[]).map(function(q){return '<p>'+q+'</p>'}).join("")}
 function draw(){
@@ -392,7 +412,8 @@ document.addEventListener("click",function(e){
   if(e.target.closest("#mx")||e.target===$("#md")){$("#md").close();return}
   if(e.target.closest("#cl")){close();return}
   if(e.target.closest("#nxt")){cur=(cur+1)%P.length;f=cur;draw();inn.scrollTop=0;$("#hd").textContent=P[cur][L].t;return}
-  var tl=e.target.closest(".tile");if(tl){play(+tl.dataset.p);return}
+  var pn=e.target.closest("[data-pin]");if(pn){f=+pn.dataset.pin;bbA();return}
+  var tl=e.target.closest(".tile");if(tl){if(SUP){SUP=0;return}play(+tl.dataset.p);return}
   if(e.target.closest("#bell")){var o=$("#pb").hidden;$("#pb").hidden=!o;$("#bell").setAttribute("aria-expanded",o);return}
   var g2=e.target.closest("[data-go2]");if(g2){e.preventDefault();var el=document.getElementById(g2.dataset.go2);if(el)inn.scrollTo({top:el.offsetTop-64,behavior:"smooth"});return}
   if(e.target.closest("#sbtn")){var sb=$("#sb");sb.classList.toggle("open");if(sb.classList.contains("open"))$("#q").focus();else{$("#q").value="";filter()}return}
@@ -404,6 +425,41 @@ $("#q").addEventListener("input",filter);
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){close();pops()}});
 inn.addEventListener("scroll",function(){var m=inn.scrollHeight-inn.clientHeight;$("#pg").style.width=(m>0?inn.scrollTop/m*100:0)+"%"});
 addEventListener("scroll",function(){$("#nav").classList.toggle("sc",scrollY>40)},{passive:true});
+var DRG=null,GH=null,DMV=0,SUP=0,HOV=null;
+function onStage(x,y){var r=$(".stage").getBoundingClientRect();return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom}
+function endDrag(){if(GH){GH.remove();GH=null}document.body.classList.remove("dragging");$(".stage").classList.remove("over");DRG=null;DMV=0}
+if(matchMedia("(hover:hover) and (pointer:fine)").matches){
+  document.addEventListener("pointerdown",function(e){
+    if(e.button!==0||cur!==null||busy)return;
+    var tl=e.target.closest(".tile");if(!tl||e.target.closest(".cb"))return;
+    DRG={i:+tl.dataset.p,x:e.clientX,y:e.clientY,el:tl};DMV=0;
+  });
+  document.addEventListener("pointermove",function(e){
+    if(!DRG)return;
+    if(!GH){
+      if(Math.abs(e.clientX-DRG.x)+Math.abs(e.clientY-DRG.y)<10)return;
+      GH=DRG.el.cloneNode(true);GH.className="ghost";GH.removeAttribute("data-p");document.body.appendChild(GH);
+      document.body.classList.add("dragging");DMV=1;
+    }
+    var ok=onStage(e.clientX,e.clientY);
+    GH.style.transform="translate("+(e.clientX-30)+"px,"+(e.clientY-24)+"px) rotate("+(ok?0:-3)+"deg)";
+    $(".stage").classList.toggle("over",ok);GH.classList.toggle("ok",ok);
+  });
+  document.addEventListener("pointerup",function(e){
+    if(!DRG)return;
+    var i=DRG.i,m=DMV,ok=onStage(e.clientX,e.clientY);
+    endDrag();
+    if(m){SUP=1;setTimeout(function(){SUP=0},300);if(ok)play(i)}
+  });
+  document.addEventListener("pointercancel",endDrag);
+  document.addEventListener("pointerover",function(e){
+    if(cur!==null||busy||DRG)return;
+    var tl=e.target.closest(".tile");if(!tl)return;
+    var i=+tl.dataset.p;if(i===f)return;
+    clearTimeout(HOV);HOV=setTimeout(function(){if(cur===null&&!busy&&!DRG){f=i;bbA()}},220);
+  });
+  document.addEventListener("pointerout",function(e){if(e.target.closest(".tile"))clearTimeout(HOV)});
+}
 var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){$$(".nv a").forEach(function(a){a.classList.toggle("on",a.dataset.t===en.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});
 ["top","row","game","about","exp","contact"].forEach(function(id){io.observe($("#"+id))});
 var nm=$("#nm");

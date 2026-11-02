@@ -2,6 +2,12 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v2.8.0
+- Logo Alten reale nelle cover del case study, su targhetta bianca.
+- Terminologia: "variabili" sostituito da "token" in tutto il case study.
+- Sfondo delle cover derivato dall'accent color del progetto, in versione smorzata; accent passato a un blu Alten.
+- Hero interattiva: passando sopra una card il progetto appare sullo schermo, si può trascinare una card dentro lo schermo per aprirla, e ci sono i pallini per scegliere il progetto.
+
 ## v2.7.0
 - Cover del case study Audi: composizione centrata sul nome Alten, su griglia tecnica sfumata.
 - Rimosso il pulsante avatar "AT" dalla barra di navigazione.
