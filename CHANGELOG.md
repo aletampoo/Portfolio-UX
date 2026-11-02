@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v2.4.0
+- Primo case study reale: Audi Design System al posto del segnaposto "Nido", riscritto con contesto, problema, vincoli dell'automotive, decisioni, sistema, adozione, risultati e riflessione finale.
+- I case study ora supportano sezioni libere con elenchi, statistiche e visuali (schema token/componenti/schermate).
+
 ## v2.3.0
 - Sezione progetti ridisegnata: card più grandi su griglia a 3 colonne, copertine con forme e etichetta del tipo di progetto, pannello hover con la descrizione.
 - Risolto il taglio del contenuto in hover (il contenitore con scorrimento orizzontale ritagliava card e pannello).
