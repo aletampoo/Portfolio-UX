@@ -38,25 +38,13 @@ nav.sc{background:#141414ee;backdrop-filter:blur(14px)}
 .nv a{color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:7px 16px;border-radius:999px;transition:background .2s}
 .nv a:hover{background:#ffffff1f}.nv a.on{background:#ffffff40}
 .rt{margin-left:auto;display:flex;align-items:center;gap:6px}
-.ic{display:grid;place-items:center;width:40px;height:40px;border:0;background:none;border-radius:50%;font-size:24px}
-.ic:hover{background:#ffffff1f}
-.sb{display:flex;align-items:center;border:1px solid transparent;border-radius:999px}
-.sb.open{border-color:#ffffff66;background:#000a}
-.sb input{width:0;opacity:0;border:0;background:none;color:#fff;font:inherit;font-size:14px;outline:0;padding:0;transition:width .3s,opacity .3s}
-.sb.open input{width:min(200px,38vw);opacity:1}
-.pw{position:relative}
 .lt{position:relative;display:flex;align-items:center;gap:2px;background:#ffffff14;border:1px solid #ffffff2e;border-radius:999px;padding:3px;margin-left:4px}
 .lt button{position:relative;z-index:2;display:grid;place-items:center;width:34px;height:26px;border:0;background:none;border-radius:999px;padding:0;opacity:.45;transition:opacity .25s}
 .lt button[aria-pressed=true]{opacity:1}
 .lt .kn{position:absolute;z-index:1;top:3px;left:3px;width:34px;height:26px;border-radius:999px;background:#ffffff2e;box-shadow:0 1px 4px #0007;transition:transform .3s cubic-bezier(.4,0,.2,1)}
 .lt.en .kn{transform:translateX(36px)}
 .fl{width:20px;height:14px;border-radius:2px;display:block;box-shadow:0 0 0 1px #00000070}
-.pop{position:absolute;right:0;top:calc(100% + 8px);width:min(300px,88vw);background:#000e;border:1px solid #ffffff26;border-radius:8px;padding:8px;backdrop-filter:blur(14px)}
-.pop[hidden]{display:none}
-.pop h4{margin:6px 10px;font-size:13px;color:var(--mut);font-weight:600}
-.pop button{display:block;width:100%;text-align:left;background:none;border:0;border-radius:6px;padding:10px;font-size:14px}
-.pop button:hover,.pop button[aria-pressed=true]{background:#ffffff1f}
-body.fs .logo,body.fs .nv,body.fs .sb,body.fs #bell{opacity:0;pointer-events:none}
+body.fs .logo,body.fs .nv{opacity:0;pointer-events:none}
 body.fs nav{background:none;backdrop-filter:none;pointer-events:none}
 body.fs .rt{pointer-events:auto}
 .stage{position:relative;margin:80px clamp(12px,2vw,40px) 0;height:clamp(400px,min(42vw,56vh),700px)}
@@ -79,19 +67,30 @@ body.fs .rt{pointer-events:auto}
 .bt button{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:.7em 1.6em;font-weight:700;font-size:clamp(.9rem,1.3cqw,1.25rem)}
 .rp{background:#fff;color:#000}.rp:hover{background:#ffffffd0}
 .ai{background:#6d6d6eb3;color:#fff;backdrop-filter:blur(8px)}.ai:hover{background:#6d6d6e80}
-.hctl{position:absolute;z-index:4;right:clamp(14px,2.4cqw,40px);bottom:clamp(14px,2.4cqw,40px);display:grid;gap:12px;justify-items:end}
 .chp{display:flex;gap:10px}
-.dots{display:flex;gap:8px}
-.dots button{width:10px;height:10px;border-radius:50%;border:0;padding:0;background:#ffffff52;transition:width .25s,background .25s}
-.dots button.on{width:26px;border-radius:999px;background:#fff}
-.dots button:hover{background:#ffffff99}
-.hint2{margin:1.4cqw 0 0;font-size:clamp(.72rem,1.05cqw,.92rem);color:#ffffff8a;font-weight:500}
-.dz{position:absolute;inset:0;z-index:7;display:none;place-items:center;background:#000000ad;backdrop-filter:blur(3px);pointer-events:none}
-.stage.over .dz{display:grid}
-.dz span{display:flex;align-items:center;gap:14px;font-weight:700;font-size:clamp(1rem,2vw,1.5rem);border:2px dashed #ffffff73;border-radius:16px;padding:18px 30px;background:#ffffff0f}
-.dz em{font-style:normal}
-.dz svg{width:1.1em;height:1.1em;color:var(--red)}
 .stage.over .screen{box-shadow:0 10px 50px #0009,0 0 0 3px var(--red)}
+.dbg{position:absolute;inset:0;background:radial-gradient(58% 70% at 50% 44%,#ffffff12,transparent 72%),linear-gradient(140deg,#21262c,#0c0f12 78%);transition:background .4s}
+.dbg::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff0d 0 1px,transparent 1px 6cqw),repeating-linear-gradient(90deg,#ffffff0d 0 1px,transparent 1px 6cqw);-webkit-mask-image:radial-gradient(52% 66% at 50% 46%,#000,transparent 80%);mask-image:radial-gradient(52% 66% at 50% 46%,#000,transparent 80%)}
+.stage.over .dbg{background:radial-gradient(58% 70% at 50% 44%,#e5091430,transparent 72%),linear-gradient(140deg,#2a2025,#0c0f12 78%)}
+.dui{position:absolute;inset:0;z-index:2;display:grid;place-content:center;justify-items:center;gap:clamp(12px,2.2cqw,26px);text-align:center;padding:5%}
+.slot{position:relative;width:clamp(140px,25cqw,270px);aspect-ratio:16/10;border:2px dashed #ffffff30;border-radius:clamp(12px,1.8cqw,22px);background:#ffffff08;display:grid;place-items:center;transition:border-color .3s,background .3s,scale .3s}
+.stage.ready .slot{border-color:#ffffff5c;background:#ffffff14}
+.stage.over .slot{border-color:var(--red);background:#e5091417;scale:1.05}
+.fan{position:relative;width:64%;aspect-ratio:16/9}
+.fan i{position:absolute;inset:0;border-radius:clamp(5px,.8cqw,10px);background:linear-gradient(140deg,var(--c),#15181c 86%);border:1px solid #ffffff26;box-shadow:0 .9cqw 2.2cqw #000a;animation:bob 4.8s ease-in-out infinite;transition:transform .4s cubic-bezier(.3,1.5,.5,1)}
+.fan i:nth-child(1){transform:translate(-27%,7%) rotate(-11deg);animation-delay:-.7s}
+.fan i:nth-child(2){transform:translateY(-5%) rotate(2deg);animation-delay:-2.2s}
+.fan i:nth-child(3){transform:translate(27%,7%) rotate(11deg);animation-delay:-3.5s}
+.stage.over .fan i:nth-child(1){transform:translate(-46%,1%) rotate(-19deg)}
+.stage.over .fan i:nth-child(2){transform:translateY(-16%) rotate(0deg)}
+.stage.over .fan i:nth-child(3){transform:translate(46%,1%) rotate(19deg)}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -7%}}
+.dui h2{margin:0;font-size:clamp(1.25rem,3.3cqw,2.5rem);font-weight:800;letter-spacing:-.035em;line-height:1.1}
+.dui h2 .b{display:none}
+.stage.over .dui h2 .a{display:none}
+.stage.over .dui h2 .b{display:inline;color:var(--red)}
+.dui p{margin:0;max-width:36ch;color:#b4b4b4;font-size:clamp(.8rem,1.3cqw,1.05rem);line-height:1.5;transition:opacity .3s}
+.stage.over .dui p{opacity:0}
 .ghost{position:fixed;left:0;top:0;z-index:300;width:230px;pointer-events:none;opacity:.92;border-radius:10px;filter:drop-shadow(0 20px 34px #000b);transform-origin:top left}
 .ghost .ti,.ghost .cr2{display:none}
 .ghost.ok{outline:3px solid var(--red);outline-offset:3px}
@@ -191,7 +190,6 @@ body.dragging{user-select:none;cursor:grabbing}
 .cb:hover{border-color:#fff;transform:scale(1.08)}
 .ti small{display:flex;gap:10px;align-items:center;color:var(--mut);flex-wrap:wrap}
 .ti small i{color:#46d369;font-style:normal;font-weight:700}
-#none{color:var(--mut);padding:8px 4px}
 .sx{max-width:1300px;margin:0 auto;padding:56px clamp(16px,3.4vw,64px) 8px}
 .ab{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
 .ab p{margin:0;font-size:1.2rem;color:#d6d6d6;max-width:58ch}
@@ -241,14 +239,12 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
 </style>
 </head>
 <body class="lock">
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="s" viewBox="0 0 24 24"><path d="M10 3a7 7 0 105.2 11.7l4.6 4.6 1.4-1.4-4.6-4.6A7 7 0 0010 3zm0 2a5 5 0 110 10 5 5 0 010-10z"/></symbol><symbol id="b" viewBox="0 0 24 24"><path d="M12 22a2.5 2.5 0 002.4-2H9.6A2.5 2.5 0 0012 22zm7-6v-5a7 7 0 00-5.5-6.8V3a1.5 1.5 0 00-3 0v1.2A7 7 0 005 11v5l-2 2v1h18v-1z"/></symbol><symbol id="p" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></symbol><symbol id="i" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="p" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></symbol><symbol id="i" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></symbol></svg>
 <div id="intro" role="presentation"><div class="ib"><h1 class="nm" id="nm" aria-label="Alessio Tampone"></h1><div class="rl">Product Designer</div></div></div>
 <nav id="nav">
   <a class="logo" href="#top">Alessio Tampone</a>
   <div class="nv"><a href="#top" data-t="top" class="on" data-i="n0"></a><a href="#row" data-t="row" data-i="n1"></a><a href="#game" data-t="game" data-i="n5"></a><a href="#about" data-t="about" data-i="n2"></a><a href="#exp" data-t="exp" data-i="n3"></a><a href="#contact" data-t="contact" data-i="n4"></a></div>
   <div class="rt">
-    <div class="sb" id="sb"><input id="q" type="search" aria-label="Search"><button class="ic" id="sbtn" aria-label="Search"><svg><use href="#s"/></svg></button></div>
-    <div class="pw"><button class="ic" id="bell" aria-label="Notifications" aria-expanded="false"><svg><use href="#b"/></svg></button><div class="pop" id="pb" hidden></div></div>
     <div class="lt" id="lt" role="group" aria-label="Lingua / Language"><span class="kn"></span><button data-lang="it" aria-pressed="true" title="Italiano" aria-label="Italiano"><svg class="fl" viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#008C45"/><rect x="8" width="8" height="16" fill="#F4F5F0"/><rect x="16" width="8" height="16" fill="#CD212A"/></svg></button><button data-lang="en" aria-pressed="false" title="English" aria-label="English"><svg class="fl" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#012169"/><path d="M0 0 24 16M24 0 0 16" fill="none" stroke="#fff" stroke-width="3.4"/><path d="M0 0 24 16M24 0 0 16" fill="none" stroke="#C8102E" stroke-width="2"/><path d="M12 0v16M0 8h24" fill="none" stroke="#fff" stroke-width="5.6"/><path d="M12 0v16M0 8h24" fill="none" stroke="#C8102E" stroke-width="3.4"/></svg></button></div>
   </div>
 </nav>
@@ -256,12 +252,11 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
   <h1 class="sr">Alessio Tampone, Product Designer</h1>
   <div class="stage"><div class="screen" id="scr">
     <div class="head"><button class="x" id="cl"></button><span class="hd" id="hd"></span><div class="prog" id="pg"></div></div>
-    <div class="dz" aria-hidden="true"><span><svg><use href="#p"/></svg><em data-i="drop"></em></span></div>
     <div class="inner" id="inner"></div>
   </div></div>
 </header>
 <main>
-  <section class="row" id="row"><div class="rw"><div class="rc"><h2 data-i="rowT"></h2><p class="rsub" data-i="rowS"></p><div class="tiles" id="tiles"></div><p id="none" hidden data-i="none"></p></div>
+  <section class="row" id="row"><div class="rw"><div class="rc"><h2 data-i="rowT"></h2><p class="rsub" data-i="rowS"></p><div class="tiles" id="tiles"></div></div>
     <div class="rg" id="game"><h2 data-i="gT"></h2>
       <div class="gf" id="gf" tabindex="0"><canvas id="gc" role="img" aria-label="UX Dash"></canvas>
         <div class="hud"><span class="gn" data-i="gN"></span><span><b id="gs"></b> &nbsp; <span id="gbst"></span></span></div>
@@ -277,9 +272,9 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
 <dialog class="md" id="md"><div class="mh" id="mh"></div><button class="mx" id="mx" aria-label="Close">✕</button><div class="mb" id="mb"></div></dialog>
 
 <script>
-var U={it:{n0:"Home",n1:"Progetti",n2:"Chi sono",n3:"Esperienza",n4:"Contatti",lang:"Lingua",ph:"Titoli, tag",none:"Nessun progetto trovato.",nt:"Notifiche",play:"Riproduci",more:"Altre info",cs:"Case study",rl:"Ruolo:",wt:"Con",rowT:"I miei progetti",rowS:"Passa sopra una card per i dettagli, clicca per aprire il case study.",n5:"Giochi",gT:"Giochi",gN:"UX Dash",gD:"Schiva i commenti di clienti e stakeholder. Clic, tap o barra spaziatrice per saltare.",gStart:"Gioca",gRetry:"Riprova",gOver:"Commento non risolto!",gScore:"Punti",gBest:"Record",now:"Ora in riproduzione",scroll:"Scorri per continuare",close:"✕ Chiudi",next:"Prossimo progetto",role:"Ruolo",dur:"Durata",tools:"Strumenti",client:"Cliente",year:"Anno",team:"Team",pr:"Il problema",so:"La soluzione",rs:"I risultati",lTok:"Token",lCmp:"Componenti",lScr:"Schermate",drop:"Rilascia per riprodurre",dragHint:"Passa sopra un progetto per vederlo qui, trascinalo dentro per riprodurlo.",nw:"Nuovo case study:",
+var U={it:{n0:"Home",n1:"Progetti",n2:"Chi sono",n3:"Esperienza",n4:"Contatti",lang:"Lingua",ph:"Titoli, tag",none:"Nessun progetto trovato.",nt:"Notifiche",play:"Riproduci",more:"Altre info",cs:"Case study",rl:"Ruolo:",wt:"Con",rowT:"I miei progetti",rowS:"Passa sopra una card per i dettagli, clicca per aprire il case study.",n5:"Giochi",gT:"Giochi",gN:"UX Dash",gD:"Schiva i commenti di clienti e stakeholder. Clic, tap o barra spaziatrice per saltare.",gStart:"Gioca",gRetry:"Riprova",gOver:"Commento non risolto!",gScore:"Punti",gBest:"Record",now:"Ora in riproduzione",scroll:"Scorri per continuare",close:"✕ Chiudi",next:"Prossimo progetto",role:"Ruolo",dur:"Durata",tools:"Strumenti",client:"Cliente",year:"Anno",team:"Team",pr:"Il problema",so:"La soluzione",rs:"I risultati",lTok:"Token",lCmp:"Componenti",lScr:"Schermate",drop:"Rilascia per riprodurre",dropT:"Trascina qui un progetto",dropP:"Prendi una card dalla riga qui sotto e lasciala cadere nello schermo per aprire il case study.",tapT:"Scegli un progetto",tapP:"Tocca una card nella riga qui sotto per aprire il case study.",nw:"Nuovo case study:",
 ttl:"Alessio Tampone | Product Designer",abT:"Chi sono",abP:"Sono Alessio, Product Designer. Mi occupo di ricerca, interfacce e design system con un obiettivo semplice: prodotti che le persone capiscono al primo colpo e usano volentieri. Lavoro a stretto contatto con sviluppatori e team di prodotto, dal primo schizzo al rilascio.",f1:"anni di esperienza",f2:"progetti consegnati",f3:"settori esplorati",skT:"Competenze e strumenti",sk:["Ricerca utenti","Wireframe","Prototipi","Design system","Accessibilità","Test di usabilità","Figma","FigJam","Framer","Maze","Notion"],exT:"Esperienza",ex:[["2024 – oggi","Product Designer","Studio Esempio","Guido il design di un prodotto B2B, dalla ricerca al rilascio."],["2022 – 2024","UX/UI Designer","Agenzia Esempio","Progetti per banche e retail con un design system condiviso."],["2020 – 2022","Junior Designer","Startup Esempio","Prime responsabilità su app mobile e test con gli utenti."]],ctT:"Lavoriamo insieme?",ctS:"Raccontami il tuo progetto: rispondo entro 24 ore.",mail:"Copia la mia email",copied:"Email copiata:",foot:"Fine dei titoli di coda. Grazie per aver guardato."},
-en:{n0:"Home",n1:"Projects",n2:"About",n3:"Experience",n4:"Contact",lang:"Language",ph:"Titles, tags",none:"No projects found.",nt:"Notifications",play:"Play",more:"More info",cs:"Case study",rl:"Role:",wt:"With",rowT:"My projects",rowS:"Hover a card for details, click to open the case study.",n5:"Games",gT:"Games",gN:"UX Dash",gD:"Dodge the comments from clients and stakeholders. Click, tap or press space to jump.",gStart:"Play",gRetry:"Try again",gOver:"Unresolved comment!",gScore:"Score",gBest:"Best",now:"Now playing",scroll:"Scroll to continue",close:"✕ Close",next:"Next project",role:"Role",dur:"Duration",tools:"Tools",client:"Client",year:"Year",team:"Team",pr:"The problem",so:"The solution",rs:"The results",lTok:"Tokens",lCmp:"Components",lScr:"Screens",drop:"Drop to play",dragHint:"Hover a project to see it here, drag it in to play.",nw:"New case study:",
+en:{n0:"Home",n1:"Projects",n2:"About",n3:"Experience",n4:"Contact",lang:"Language",ph:"Titles, tags",none:"No projects found.",nt:"Notifications",play:"Play",more:"More info",cs:"Case study",rl:"Role:",wt:"With",rowT:"My projects",rowS:"Hover a card for details, click to open the case study.",n5:"Games",gT:"Games",gN:"UX Dash",gD:"Dodge the comments from clients and stakeholders. Click, tap or press space to jump.",gStart:"Play",gRetry:"Try again",gOver:"Unresolved comment!",gScore:"Score",gBest:"Best",now:"Now playing",scroll:"Scroll to continue",close:"✕ Close",next:"Next project",role:"Role",dur:"Duration",tools:"Tools",client:"Client",year:"Year",team:"Team",pr:"The problem",so:"The solution",rs:"The results",lTok:"Tokens",lCmp:"Components",lScr:"Screens",drop:"Drop to play",dropT:"Drag a project in here",dropP:"Pick a card from the row below and drop it into the screen to open the case study.",tapT:"Pick a project",tapP:"Tap a card in the row below to open the case study.",nw:"New case study:",
 ttl:"Alessio Tampone | Product Designer",abT:"About me",abP:"I’m Alessio, a Product Designer. I work on research, interfaces and design systems with one simple goal: products people understand at first glance and enjoy using. I work closely with developers and product teams, from the first sketch to release.",f1:"years of experience",f2:"projects delivered",f3:"industries explored",skT:"Skills and tools",sk:["User research","Wireframes","Prototyping","Design systems","Accessibility","Usability testing","Figma","FigJam","Framer","Maze","Notion"],exT:"Experience",ex:[["2024 – today","Product Designer","Example Studio","I lead the design of a B2B product, from research to release."],["2022 – 2024","UX/UI Designer","Example Agency","Projects for banks and retail with a shared design system."],["2020 – 2022","Junior Designer","Example Startup","First responsibilities on mobile apps and user testing."]],ctT:"Shall we work together?",ctS:"Tell me about your project: I reply within 24 hours.",mail:"Copy my email",copied:"Email copied:",foot:"End credits. Thanks for watching."}};
 var P=[
 {c:"#3e9fd1",m:99,y:2025,art:"ds",thc:"ds",lg:"alten-logo.png",ty:["Design system","Design system"],
@@ -332,11 +327,11 @@ function cov(p,d){
 function meta(i){var p=P[i];return '<div class="mt"><b>'+t("cs")+'</b><i>•</i><b>'+p.ty[L=="it"?0:1]+'</b><i>•</i><b>'+p.y+'</b></div>'}
 function sys(){return '<div class="sysv"><figure><div class="b"><i></i><i></i><i></i></div><figcaption>'+t("lTok")+'</figcaption></figure><figure><div class="b"><u></u><u></u></div><figcaption>'+t("lCmp")+'</figcaption></figure><figure><div class="b"><s></s><s></s><s></s><s></s></div><figcaption>'+t("lScr")+'</figcaption></figure></div>'}
 function mocks(){return '<div class="mocks"><div class="mk"><i></i><i></i><i></i></div><div class="mk"><i></i><i></i><i></i></div><div class="mk"><i></i><i></i><i></i></div></div>'}
+var FINE=matchMedia("(hover:hover) and (pointer:fine)").matches;
 function bb(){
-  var p=P[f],d=p[L];document.body.style.setProperty("--amb",p.c);
-  inn.innerHTML=art(f)+'<div class="bc" style="--c:'+p.c+'">'+(d.cl?'<span class="cl">'+d.cl+'</span>':'')+'<h2 class="ttl">'+d.t+'</h2>'+meta(f)+'<p class="ds">'+d.ds+'</p><div class="bt"><button class="rp" data-play="'+f+'"><svg><use href="#p"/></svg>'+t("play")+'</button><button class="ai" data-info="'+f+'">'+t("more")+'</button></div><p class="hint2">'+t("dragHint")+'</p></div><div class="hctl"><div class="dots">'+P.map(function(x,i){return '<button data-pin="'+i+'" class="'+(i===f?"on":"")+'" aria-label="'+x[L].t+'"></button>'}).join("")+'</div><div class="chp"><span>'+t("rl")+' '+d.role+'</span><span>'+t("wt")+' '+d.tools+'</span></div></div>';
+  document.body.style.removeProperty("--amb");
+  inn.innerHTML='<div class="dbg"></div><div class="dui"><div class="slot"><div class="fan">'+P.map(function(x){return '<i style="--c:'+x.c+'"></i>'}).join("")+'</div></div><h2><span class="a">'+t(FINE?"dropT":"tapT")+'</span><span class="b">'+t("drop")+'</span></h2><p>'+t(FINE?"dropP":"tapP")+'</p></div>';
 }
-function bbA(){bb();inn.classList.remove("sw");void inn.offsetWidth;inn.classList.add("sw")}
 function mrow(k,v){return v?'<div><dt>'+k+'</dt><dd>'+v+'</dd></div>':''}
 function paras(x){return (x?(typeof x=="string"?[x]:x):[]).map(function(q){return '<p>'+q+'</p>'}).join("")}
 function draw(){
@@ -360,11 +355,10 @@ function draw(){
 function stat(){
   document.documentElement.lang=L;document.title=t("ttl");
   $$("[data-i]").forEach(function(e){var v=t(e.dataset.i);if(v!==undefined)e.textContent=v});
-  $("#cl").textContent=t("close");$("#q").placeholder=t("ph");$("#mail").textContent=t("mail");
+  $("#cl").textContent=t("close");$("#mail").textContent=t("mail");
   $("#sk").innerHTML=U[L].sk.map(function(x){return "<span>"+x+"</span>"}).join("");
   $("#ex").innerHTML=U[L].ex.map(function(e){return '<article class="ex"><small>'+e[0]+'</small><h3>'+e[1]+'</h3><span>'+e[2]+'</span><p>'+e[3]+'</p></article>'}).join("");
   $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><div class="th'+(p.thc?" "+p.thc:"")+'" style="--c:'+p.c+'">'+cov(p,d)+'<span class="tp">'+p.ty[L=="it"?0:1]+'</span><span class="tl">'+d.t+'</span></div><div class="ti"><p>'+d.tag+'</p><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><i>'+p.m+'% match</i><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></small></div></div>'}).join("");
-  $("#pb").innerHTML='<h4>'+t("nt")+'</h4>'+P.map(function(p,i){return '<button data-play="'+i+'">'+t("nw")+' '+p[L].t+'</button>'}).join("");
   $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===L)});$("#lt").classList.toggle("en",L==="en");
   try{localStorage.setItem("at-lang",L)}catch(e){}
   if(cur!==null){var s=inn.scrollTop;draw();inn.scrollTop=s}else bb();
@@ -404,31 +398,24 @@ function close(){
   cur=null;f=i;inn.scrollTop=0;bb();inn.classList.remove("sw");void inn.offsetWidth;inn.classList.add("sw");
   setTimeout(function(){scr.style.cssText="transition:none";scr.offsetWidth;scr.removeAttribute("style");busy=0;var b=document.querySelector('[data-p="'+i+'"] .cb');if(b)b.focus({preventScroll:true})},780);
 }
-function pops(){$("#pb").hidden=true;$("#bell").setAttribute("aria-expanded","false")}
 document.addEventListener("click",function(e){
-  var g=e.target.closest("[data-lang]");if(g){L=g.dataset.lang;stat();pops();return}
-  var pl=e.target.closest("[data-play]");if(pl){pops();play(+pl.dataset.play);return}
+  var g=e.target.closest("[data-lang]");if(g){L=g.dataset.lang;stat();return}
+  var pl=e.target.closest("[data-play]");if(pl){play(+pl.dataset.play);return}
   var inf=e.target.closest("[data-info]");if(inf){info(+inf.dataset.info);return}
   if(e.target.closest("#mx")||e.target===$("#md")){$("#md").close();return}
   if(e.target.closest("#cl")){close();return}
   if(e.target.closest("#nxt")){cur=(cur+1)%P.length;f=cur;draw();inn.scrollTop=0;$("#hd").textContent=P[cur][L].t;return}
-  var pn=e.target.closest("[data-pin]");if(pn){f=+pn.dataset.pin;bbA();return}
   var tl=e.target.closest(".tile");if(tl){if(SUP){SUP=0;return}play(+tl.dataset.p);return}
-  if(e.target.closest("#bell")){var o=$("#pb").hidden;$("#pb").hidden=!o;$("#bell").setAttribute("aria-expanded",o);return}
   var g2=e.target.closest("[data-go2]");if(g2){e.preventDefault();var el=document.getElementById(g2.dataset.go2);if(el)inn.scrollTo({top:el.offsetTop-64,behavior:"smooth"});return}
-  if(e.target.closest("#sbtn")){var sb=$("#sb");sb.classList.toggle("open");if(sb.classList.contains("open"))$("#q").focus();else{$("#q").value="";filter()}return}
   if(e.target.closest("#mail")){var m=$("#mail").dataset.email;try{navigator.clipboard.writeText(m)}catch(x){}$("#copied").textContent=t("copied")+" "+m;return}
-  if(!e.target.closest(".pw"))pops();
 });
-function filter(){var q=$("#q").value.trim().toLowerCase(),n=0;$$(".tile").forEach(function(x){var ok=!q||x.dataset.s.indexOf(q)>-1;x.style.display=ok?"":"none";if(ok)n++});$("#none").hidden=n>0}
-$("#q").addEventListener("input",filter);
-document.addEventListener("keydown",function(e){if(e.key==="Escape"){close();pops()}});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
 inn.addEventListener("scroll",function(){var m=inn.scrollHeight-inn.clientHeight;$("#pg").style.width=(m>0?inn.scrollTop/m*100:0)+"%"});
 addEventListener("scroll",function(){$("#nav").classList.toggle("sc",scrollY>40)},{passive:true});
 var DRG=null,GH=null,DMV=0,SUP=0,HOV=null;
 function onStage(x,y){var r=$(".stage").getBoundingClientRect();return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom}
-function endDrag(){if(GH){GH.remove();GH=null}document.body.classList.remove("dragging");$(".stage").classList.remove("over");DRG=null;DMV=0}
-if(matchMedia("(hover:hover) and (pointer:fine)").matches){
+function endDrag(){if(GH){GH.remove();GH=null}document.body.classList.remove("dragging");$(".stage").classList.remove("over","ready");DRG=null;DMV=0}
+if(FINE){
   document.addEventListener("pointerdown",function(e){
     if(e.button!==0||cur!==null||busy)return;
     var tl=e.target.closest(".tile");if(!tl||e.target.closest(".cb"))return;
@@ -453,12 +440,9 @@ if(matchMedia("(hover:hover) and (pointer:fine)").matches){
   });
   document.addEventListener("pointercancel",endDrag);
   document.addEventListener("pointerover",function(e){
-    if(cur!==null||busy||DRG)return;
-    var tl=e.target.closest(".tile");if(!tl)return;
-    var i=+tl.dataset.p;if(i===f)return;
-    clearTimeout(HOV);HOV=setTimeout(function(){if(cur===null&&!busy&&!DRG){f=i;bbA()}},220);
+    if(cur!==null||busy)return;
+    $(".stage").classList.toggle("ready",!!e.target.closest(".tile"));
   });
-  document.addEventListener("pointerout",function(e){if(e.target.closest(".tile"))clearTimeout(HOV)});
 }
 var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){$$(".nv a").forEach(function(a){a.classList.toggle("on",a.dataset.t===en.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});
 ["top","row","game","about","exp","contact"].forEach(function(id){io.observe($("#"+id))});
