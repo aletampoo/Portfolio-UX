@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v2.11.0
+- Hero ridotta a un solo elemento: un pulsante play al centro, in vetro smerigliato, con anello di avanzamento nel colore del progetto e alone pulsante. Premendolo si apre il progetto mostrato dallo slideshow.
+- Slideshow di sfondo più visibile e velatura alleggerita.
+
 ## v2.10.0
 - Slideshow animato dietro la hero: una scena per progetto, nei suoi colori, con forme che fluttuano e lento ingrandimento, in dissolvenza incrociata ogni 6,5 secondi. Attenuato da una velatura scura perché non disturbi la UI sopra.
 
