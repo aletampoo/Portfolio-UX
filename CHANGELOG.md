@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v2.6.0
+- Case study riorganizzato: testo allineato a sinistra su colonna singola, sommario con metadati (cliente, anno, ruolo, team, durata, strumenti), sezioni numerate 01-06 e processo a passi verticali.
+- Selettore lingua: toggle con bandiera italiana e inglese al posto del menu a tendina.
+- Rimossi i numeri grandi accanto alle card dei progetti: le copertine occupano tutta la larghezza della card.
+
 ## v2.5.0
 - Case study Audi: dati reali dalle analytics della libreria (370 componenti, 1.000 variabili, 48 stili, 111 team, 10.400 inserimenti a settimana), durata di 1 anno, sezione "Il mio ruolo", riflessione finale sulla concentrazione dell'adozione.
 - Cover dedicata al design system (cockpit e variabili) per card e billboard, con il credito "Audi · Italdesign".
