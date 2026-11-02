@@ -56,7 +56,7 @@ nav.sc{background:#141414ee;backdrop-filter:blur(14px)}
 body.fs .logo,body.fs .nv,body.fs .sb,body.fs #bell{opacity:0;pointer-events:none}
 body.fs nav{background:none;backdrop-filter:none;pointer-events:none}
 body.fs .rt{pointer-events:auto}
-.stage{position:relative;margin:80px clamp(12px,2vw,40px) 0;height:clamp(460px,50vw,800px)}
+.stage{position:relative;margin:80px clamp(12px,2vw,40px) 0;height:clamp(400px,min(42vw,56vh),700px)}
 .screen{position:absolute;inset:0;border-radius:22px;overflow:hidden;container-type:size;background:#000;box-shadow:0 10px 50px #0009;z-index:2;transition:top .7s cubic-bezier(.65,0,.25,1),left .7s cubic-bezier(.65,0,.25,1),width .7s cubic-bezier(.65,0,.25,1),height .7s cubic-bezier(.65,0,.25,1),border-radius .7s}
 .screen.full{position:fixed;top:0!important;left:0!important;width:100vw!important;height:100%!important;border-radius:0;z-index:90}
 .inner{position:absolute;inset:0;overflow:hidden}
@@ -104,7 +104,7 @@ body.fs .rt{pointer-events:auto}
 .res b{display:block;font-size:3.6rem;line-height:1;font-weight:800;letter-spacing:-.04em;color:var(--c)}.res span{color:#ddd}
 .nx{padding:80px 24px 120px;text-align:center}
 .nb{background:#fff;color:#000;border:0;border-radius:999px;padding:14px 28px;font-weight:700}.nb:hover{background:#ddd}
-.row{padding:44px clamp(16px,3.4vw,64px) 20px}
+.row{padding:28px clamp(16px,3.4vw,64px) 20px}
 .row h2,.sx h2{margin:0 0 16px;font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
 .tiles{display:flex;gap:10px;overflow-x:auto;padding:12px 4px 110px;margin-bottom:-90px;scroll-snap-type:x mandatory}
 .tile{flex:0 0 min(360px,78vw);scroll-snap-align:start;position:relative;border-radius:8px;transition:transform .3s;cursor:pointer}
@@ -157,7 +157,12 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
 .go2 p{margin:0 auto 18px;max-width:36ch;color:#ddd}
 .rg .gf{max-width:none}
 .gf canvas{aspect-ratio:8/3}
-@media (min-width:861px){.tile{flex:1 1 0;min-width:0}}
+.tile{container-type:inline-size}
+.th{margin-left:32%;position:relative;z-index:1}
+.th b{display:none}
+.ti{left:32%}
+.rk{position:absolute;left:0;bottom:-3.5cqw;font-size:50cqw;line-height:.8;font-weight:800;letter-spacing:-.09em;color:#141414;-webkit-text-stroke:4px #6b6b6b;paint-order:stroke fill;pointer-events:none}
+@media (min-width:861px){.tile{flex:0 0 clamp(260px,26vw,360px)}}
 .rg{margin-top:36px}
 @media (max-width:860px){.nv{display:none}.ab,.mb{grid-template-columns:1fr}.chp{display:none}.art .mk:nth-child(n+2){display:none}.art .mk{width:22cqw;height:44cqw;top:8cqw}.stage{height:clamp(440px,120vw,640px)}.sx{padding-top:44px}.sh1{background:linear-gradient(90deg,#000a,#0000 90%)}}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important;scroll-behavior:auto!important}}
@@ -234,7 +239,7 @@ function stat(){
   $("#cl").textContent=t("close");$("#q").placeholder=t("ph");$("#mail").textContent=t("mail");
   $("#sk").innerHTML=U[L].sk.map(function(x){return "<span>"+x+"</span>"}).join("");
   $("#ex").innerHTML=U[L].ex.map(function(e){return '<article class="ex"><small>'+e[0]+'</small><h3>'+e[1]+'</h3><span>'+e[2]+'</span><p>'+e[3]+'</p></article>'}).join("");
-  $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><div class="th" style="background:linear-gradient(135deg,'+p.c+',#141414 85%)"><b>'+(i+1)+'</b><em>'+d.t+'</em></div><div class="ti"><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><i>'+p.m+'% match</i><span>'+p.y+'</span><span>'+d.dur+'</span></small></div></div>'}).join("");
+  $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><span class="rk" aria-hidden="true">'+(i+1)+'</span><div class="th" style="background:linear-gradient(135deg,'+p.c+',#141414 85%)"><em>'+d.t+'</em></div><div class="ti"><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><i>'+p.m+'% match</i><span>'+p.y+'</span><span>'+d.dur+'</span></small></div></div>'}).join("");
   $("#pb").innerHTML='<h4>'+t("nt")+'</h4>'+P.map(function(p,i){return '<button data-play="'+i+'">'+t("nw")+' '+p[L].t+'</button>'}).join("");
   $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===L)});
   try{localStorage.setItem("at-lang",L)}catch(e){}

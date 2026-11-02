@@ -1,0 +1,8 @@
+{
+  // Sito statico: nessun codice Worker, solo i file della cartella public/
+  "name": "alessio-tampone-portfolio",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public"
+  }
+}
