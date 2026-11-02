@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v2.5.0
+- Case study Audi: dati reali dalle analytics della libreria (370 componenti, 1.000 variabili, 48 stili, 111 team, 10.400 inserimenti a settimana), durata di 1 anno, sezione "Il mio ruolo", riflessione finale sulla concentrazione dell'adozione.
+- Cover dedicata al design system (cockpit e variabili) per card e billboard, con il credito "Audi · Italdesign".
+
 ## v2.4.0
 - Primo case study reale: Audi Design System al posto del segnaposto "Nido", riscritto con contesto, problema, vincoli dell'automotive, decisioni, sistema, adozione, risultati e riflessione finale.
 - I case study ora supportano sezioni libere con elenchi, statistiche e visuali (schema token/componenti/schermate).
