@@ -407,8 +407,8 @@ nav{height:60px;padding:0 14px}
 
 /* ===== Linguaggio olografico del sito ===== */
 .hro{opacity:0}
-.hro.hri{animation:hin .95s cubic-bezier(.2,.7,.2,1) both}
-@keyframes hin{0%{opacity:0;clip-path:inset(-40px -40px 100% -40px);filter:brightness(2.2) saturate(1.4);transform:translateY(10px)}30%{opacity:.9}38%{opacity:.3}52%{opacity:1;clip-path:inset(-40px -40px -40px -40px)}60%{opacity:.55}70%{opacity:1}100%{opacity:1;clip-path:inset(-40px -40px -40px -40px);filter:none;transform:none}}
+.hro.hri{animation:hin .9s cubic-bezier(.25,.6,.25,1) both}
+@keyframes hin{0%{opacity:0;transform:translateY(8px);filter:blur(3px) brightness(1.25)}60%{filter:blur(0) brightness(1.08)}100%{opacity:1;transform:none;filter:none}}
 @keyframes hpl{50%{box-shadow:0 0 4px var(--hc);opacity:.65}}
 @keyframes hln{from{background-position:-90px 0,0 0}to{background-position:calc(100% + 90px) 0,0 0}}
 /* titoli di sezione: rombo luminoso + linea con un lampo che scorre */
@@ -925,7 +925,7 @@ try{var sl=localStorage.getItem("at-lang");if(sl&&U[sl])L=sl;else if((navigator.
 var HSEL=".sx>h2,.row h2,.rsub,.abp,.lkb,.skg,.ex,.lead,.mta>div,.cs2 h3,.cs2>p,.sl li,.stp article,.sysv figure,.mocks,.res>div,.nx",HIO=null;
 function hrv(root){
   if(!root||RMO||!("IntersectionObserver" in window))return;
-  if(!HIO)HIO=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;HIO.unobserve(el);el.style.animationDelay=(k++*90)+"ms";el.classList.add("hri");var b=el.matches(".res>div")&&el.querySelector("b");if(b)setTimeout(function(){hcount(b)},k*90)})},{threshold:.12});
+  if(!HIO)HIO=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;HIO.unobserve(el);el.style.animationDelay=(k++*60)+"ms";el.classList.add("hri");var b=el.matches(".res>div")&&el.querySelector("b");if(b)setTimeout(function(){hcount(b)},k*90)})},{threshold:.12});
   root.querySelectorAll(HSEL).forEach(function(el){if(el.dataset.hr)return;el.dataset.hr=1;el.classList.add("hro");HIO.observe(el)});
 }
 function hcount(b){

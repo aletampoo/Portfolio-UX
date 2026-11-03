@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.3.1
+- Comparsa degli elementi più morbida: niente più scansione e sfarfallio, solo una dissolvenza con leggera sfocatura e un piccolo bagliore che si spegne, con un ritardo più breve tra un elemento e l'altro.
+
 ## v5.3.0
 Il linguaggio olografico diventa il design language di tutto il sito.
 - Comparsa "materializzata": titoli, paragrafi, pannelli, esperienze e blocchi dei case study appaiono allo scroll con una scansione dall'alto, un lampo di luce e un leggero sfarfallio, uno dopo l'altro.
