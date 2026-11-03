@@ -2,6 +2,13 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v4.2.0
+- Abitacolo ridisegnato in SVG per un effetto più realistico: volante sportivo in pelle con cuciture, razze con tasti, palette del cambio, airbag e tacca rossa in alto; il volante gira seguendo la curva della strada.
+- Strumentazione digitale nella palpebra dietro al volante (tachimetro ad arco, marcia, temperatura), schermo centrale con navigatore, bocchette d'aria, luce ambiente nel colore del progetto, cuciture sulla plancia.
+- Montanti con bordo serigrafato, alette parasole, cielo dell'abitacolo, specchietto interno con riflesso del lunotto e specchietti laterali.
+- Guida a sinistra: su mobile l'inquadratura si centra sul volante; leggera vibrazione della scocca in base alla velocità (disattivata con riduzione movimento).
+- Titolo dell'ologramma non più tagliato su tablet.
+
 ## v4.1.0
 - Hero a tutta pagina, senza cornice arrotondata: l'abitacolo parte sotto la barra e il cruscotto sfuma nello sfondo della pagina, con la riga dei progetti che ci sale sopra.
 - Strada disegnata con proporzioni reali su qualsiasi schermo (niente deformazioni in verticale).
