@@ -2,6 +2,12 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v3.0.0
+- Case study: aggiunta la migrazione del sistema da HTML a Figma e la pipeline dei token verso il codice (Tokens Studio, GitHub); il processo passa da 3 a 5 passi, il ruolo da 4 a 5 voci con la validazione in auto.
+- Punti dell'esperienza riscritti per comunicare il livello del ruolo, con numeri e ownership in apertura.
+- Competenze riorganizzate in cinque gruppi: design system, ricerca, design di prodotto, strumenti, modo di lavorare.
+- Chi sono riscritto su tre paragrafi a partire dal profilo reale; il dato inventato "20+ progetti" sostituito da "111 team usano il design system".
+
 ## v2.13.0
 - Sezione Esperienza con i dati reali: ALTEN, Tata Consultancy Services, Auto Gest, TESYouth, con ruolo, tipo di contratto, periodo, luogo e punti di attivita, in italiano e inglese.
 - Esperienza ridisegnata come timeline verticale al posto delle card.
