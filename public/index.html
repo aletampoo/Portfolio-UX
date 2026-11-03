@@ -74,16 +74,11 @@ body.fs .rt{pointer-events:auto}
 .stage.over .c3::before{content:"";position:absolute;inset:0;z-index:8;pointer-events:none;box-shadow:inset 0 0 0 3px var(--red),inset 0 0 120px #e5091440}
 .c3{position:absolute;inset:0;overflow:hidden;background:#04060a;--pc:#3e9fd1;-webkit-mask-image:linear-gradient(#000 56%,#000000e0 66%,#00000099 77%,#0000004d 88%,#00000014 96%,#0000);mask-image:linear-gradient(#000 56%,#000000e0 66%,#00000099 77%,#0000004d 88%,#00000014 96%,#0000)}
 .screen:not(.full){background:transparent}
-main{overflow-x:clip}
+main{position:relative;overflow-x:clip}
 @property --gc{syntax:"<color>";inherits:true;initial-value:#3e9fd1}
-.pglow{position:absolute;z-index:-1;left:50%;width:100vw;transform:translateX(-50%);top:-34vh;bottom:-80px;overflow:hidden;pointer-events:none;transition:--gc 1.4s ease;-webkit-mask-image:linear-gradient(#0000,#000 32%,#000 78%,#0000);mask-image:linear-gradient(#0000,#000 32%,#000 78%,#0000)}
-.pglow i{position:absolute;width:max(58vw,460px);aspect-ratio:1;border-radius:50%;will-change:transform;background:radial-gradient(closest-side,color-mix(in srgb,var(--gc) 42%,transparent),color-mix(in srgb,var(--gc) 14%,transparent) 55%,transparent)}
-.pglow i:nth-child(1){left:-14%;top:12%;animation:gl1 21s ease-in-out infinite alternate}
-.pglow i:nth-child(2){right:-18%;top:26%;background:radial-gradient(closest-side,color-mix(in srgb,color-mix(in srgb,var(--gc) 70%,#fff) 32%,transparent),transparent);animation:gl2 27s ease-in-out infinite alternate}
-.pglow i:nth-child(3){left:28%;top:48%;width:max(46vw,380px);background:radial-gradient(closest-side,color-mix(in srgb,color-mix(in srgb,var(--gc) 75%,#000) 40%,transparent),transparent);animation:gl3 33s ease-in-out infinite alternate}
-@keyframes gl1{50%{transform:translate(14vw,10%) scale(1.18)}to{transform:translate(26vw,-4%) scale(.92)}}
-@keyframes gl2{50%{transform:translate(-16vw,-8%) scale(.86)}to{transform:translate(-30vw,12%) scale(1.15)}}
-@keyframes gl3{50%{transform:translate(-18vw,-14%) scale(1.22)}to{transform:translate(12vw,6%) scale(.9)}}
+.pglow{position:absolute;z-index:0;left:0;right:0;top:-30vh;height:calc(30vh + 900px);overflow:hidden;pointer-events:none;transition:--gc 1.4s ease;-webkit-mask-image:linear-gradient(#0000,#000 35%,#000 70%,#0000);mask-image:linear-gradient(#0000,#000 35%,#000 70%,#0000)}
+.pglow i{position:absolute;left:50%;top:50%;width:min(1300px,120vw);height:70%;border-radius:50%;translate:-50% -50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--gc) 30%,transparent),transparent);animation:glw 14s ease-in-out infinite alternate}
+@keyframes glw{from{transform:translateX(-6%) scale(.92);opacity:.7}to{transform:translateX(6%) scale(1.08);opacity:1}}
 .rd{position:absolute;inset:0;width:100%;height:100%;display:block}
 .glass{position:absolute;z-index:1;left:0;right:0;top:0;height:62%;pointer-events:none;background:linear-gradient(112deg,#ffffff12 0%,#ffffff00 22%,#ffffff00 64%,#ffffff0b 82%,#ffffff00 100%)}
 .glass::after{content:"";position:absolute;inset:0;background:linear-gradient(#060a14b3,#060a1400 30%)}
@@ -377,8 +372,8 @@ nav{height:60px;padding:0 14px}
     <div class="inner" id="inner"></div>
   </div></div>
 </header>
-<main>
-  <section class="row" id="row"><div class="pglow" id="pglow" aria-hidden="true"><i></i><i></i><i></i></div><div class="rw"><div class="rc"><h2 data-i="rowT"></h2><p class="rsub" data-i="rowS"></p><div class="tiles" id="tiles"></div></div>
+<main><div class="pglow" id="pglow" aria-hidden="true"><i></i></div>
+  <section class="row" id="row"><div class="rw"><div class="rc"><h2 data-i="rowT"></h2><p class="rsub" data-i="rowS"></p><div class="tiles" id="tiles"></div></div>
     <div class="rg" id="game"><h2 data-i="gT"></h2>
       <div class="gf" id="gf" tabindex="0"><canvas id="gc" role="img" aria-label="UX Dash"></canvas>
         <div class="hud"><span class="gn" data-i="gN"></span><span><b id="gs"></b> &nbsp; <span id="gbst"></span></span></div>

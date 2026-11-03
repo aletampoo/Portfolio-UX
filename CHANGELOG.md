@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v4.4.1
+- Lo sfondo colorato ora sta sotto l'hero: l'abitacolo resta sempre in primo piano e il colore si vede solo dove l'hero sfuma.
+- Animazione dietro i case study semplificata: un solo alone morbido nel colore del progetto che respira e oscilla lentamente.
+
 ## v4.4.0
 - L'hero non si interrompe più di netto: l'abitacolo sfuma gradualmente verso la sezione dei progetti.
 - Sfondo animato dietro ai case study: macchie di luce morbide che si muovono lentamente nel colore primario del progetto mostrato sul parabrezza; passando su una card il colore passa a quello di quel progetto, con una transizione dolce.
