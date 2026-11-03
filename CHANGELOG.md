@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v3.2.1
+- I tre dati della sezione Chi sono ora raccontano il percorso invece di un progetto: anni di esperienza, paesi, settori.
+
 ## v3.2.0
 - UX Dash in verticale su mobile (21:31): campo di gioco, fisica del salto, velocita e a capo dei commenti ricalcolati perche gli ostacoli restino superabili.
 - Sezione rinominata da "Giochi"/"Games" a "UX Dash".
