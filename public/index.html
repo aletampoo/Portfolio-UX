@@ -72,8 +72,18 @@ body.fs .rt{pointer-events:auto}
 .ai{background:#6d6d6eb3;color:#fff;backdrop-filter:blur(8px)}.ai:hover{background:#6d6d6e80}
 .chp{display:flex;gap:10px}
 .stage.over .c3::before{content:"";position:absolute;inset:0;z-index:8;pointer-events:none;box-shadow:inset 0 0 0 3px var(--red),inset 0 0 120px #e5091440}
-.c3::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18%;z-index:7;pointer-events:none;background:linear-gradient(#14141400,#141414)}
-.c3{position:absolute;inset:0;overflow:hidden;background:#04060a;--pc:#3e9fd1}
+.c3{position:absolute;inset:0;overflow:hidden;background:#04060a;--pc:#3e9fd1;-webkit-mask-image:linear-gradient(#000 56%,#000000e0 66%,#00000099 77%,#0000004d 88%,#00000014 96%,#0000);mask-image:linear-gradient(#000 56%,#000000e0 66%,#00000099 77%,#0000004d 88%,#00000014 96%,#0000)}
+.screen:not(.full){background:transparent}
+main{overflow-x:clip}
+@property --gc{syntax:"<color>";inherits:true;initial-value:#3e9fd1}
+.pglow{position:absolute;z-index:-1;left:50%;width:100vw;transform:translateX(-50%);top:-34vh;bottom:-80px;overflow:hidden;pointer-events:none;transition:--gc 1.4s ease;-webkit-mask-image:linear-gradient(#0000,#000 32%,#000 78%,#0000);mask-image:linear-gradient(#0000,#000 32%,#000 78%,#0000)}
+.pglow i{position:absolute;width:max(58vw,460px);aspect-ratio:1;border-radius:50%;will-change:transform;background:radial-gradient(closest-side,color-mix(in srgb,var(--gc) 42%,transparent),color-mix(in srgb,var(--gc) 14%,transparent) 55%,transparent)}
+.pglow i:nth-child(1){left:-14%;top:12%;animation:gl1 21s ease-in-out infinite alternate}
+.pglow i:nth-child(2){right:-18%;top:26%;background:radial-gradient(closest-side,color-mix(in srgb,color-mix(in srgb,var(--gc) 70%,#fff) 32%,transparent),transparent);animation:gl2 27s ease-in-out infinite alternate}
+.pglow i:nth-child(3){left:28%;top:48%;width:max(46vw,380px);background:radial-gradient(closest-side,color-mix(in srgb,color-mix(in srgb,var(--gc) 75%,#000) 40%,transparent),transparent);animation:gl3 33s ease-in-out infinite alternate}
+@keyframes gl1{50%{transform:translate(14vw,10%) scale(1.18)}to{transform:translate(26vw,-4%) scale(.92)}}
+@keyframes gl2{50%{transform:translate(-16vw,-8%) scale(.86)}to{transform:translate(-30vw,12%) scale(1.15)}}
+@keyframes gl3{50%{transform:translate(-18vw,-14%) scale(1.22)}to{transform:translate(12vw,6%) scale(.9)}}
 .rd{position:absolute;inset:0;width:100%;height:100%;display:block}
 .glass{position:absolute;z-index:1;left:0;right:0;top:0;height:62%;pointer-events:none;background:linear-gradient(112deg,#ffffff12 0%,#ffffff00 22%,#ffffff00 64%,#ffffff0b 82%,#ffffff00 100%)}
 .glass::after{content:"";position:absolute;inset:0;background:linear-gradient(#060a14b3,#060a1400 30%)}
@@ -368,7 +378,7 @@ nav{height:60px;padding:0 14px}
   </div></div>
 </header>
 <main>
-  <section class="row" id="row"><div class="rw"><div class="rc"><h2 data-i="rowT"></h2><p class="rsub" data-i="rowS"></p><div class="tiles" id="tiles"></div></div>
+  <section class="row" id="row"><div class="pglow" id="pglow" aria-hidden="true"><i></i><i></i><i></i></div><div class="rw"><div class="rc"><h2 data-i="rowT"></h2><p class="rsub" data-i="rowS"></p><div class="tiles" id="tiles"></div></div>
     <div class="rg" id="game"><h2 data-i="gT"></h2>
       <div class="gf" id="gf" tabindex="0"><canvas id="gc" role="img" aria-label="UX Dash"></canvas>
         <div class="hud"><span class="gn" data-i="gN"></span><span><b id="gs"></b> &nbsp; <span id="gbst"></span></span></div>
@@ -457,14 +467,18 @@ function cov(p,d){
 function meta(i){var p=P[i];return '<div class="mt"><b>'+t("cs")+'</b><i>•</i><b>'+p.ty[L=="it"?0:1]+'</b><i>•</i><b>'+p.y+'</b></div>'}
 function sys(){return '<div class="sysv"><figure><div class="b"><i></i><i></i><i></i></div><figcaption>'+t("lTok")+'</figcaption></figure><figure><div class="b"><u></u><u></u></div><figcaption>'+t("lCmp")+'</figcaption></figure><figure><div class="b"><s></s><s></s><s></s><s></s></div><figcaption>'+t("lScr")+'</figcaption></figure></div>'}
 function mocks(){return '<div class="mocks"><div class="mk"><i></i><i></i><i></i></div><div class="mk"><i></i><i></i><i></i></div><div class="mk"><i></i><i></i><i></i></div></div>'}
+var GLH=null;
 var FINE=matchMedia("(hover:hover) and (pointer:fine)").matches,SLI=0,RMO=matchMedia("(prefers-reduced-motion:reduce)").matches;
 function slideShow(){
   var ss=inn.querySelectorAll(".hsl");if(!ss.length)return;
   ss.forEach(function(x,j){x.classList.toggle("on",j===SLI)});
   var k=$("#c3");if(k)k.style.setProperty("--pc",P[SLI].c);
+  if(GLH===null)$("#pglow").style.setProperty("--gc",P[SLI].c);
   inn.querySelectorAll(".hdots b").forEach(function(x,j){x.classList.toggle("on",j===SLI)});
   var h=$("#holo");if(h)h.setAttribute("aria-label",t("play")+" "+P[SLI][L].t);
 }
+$("#tiles").addEventListener("pointerover",function(e){var tl=e.target.closest(".tile");if(!tl)return;GLH=+tl.dataset.p;$("#pglow").style.setProperty("--gc",P[GLH].c)});
+$("#tiles").addEventListener("pointerleave",function(){GLH=null;$("#pglow").style.setProperty("--gc",P[SLI].c)});
 function slideNext(){if(cur!==null)return;var n=inn.querySelectorAll(".hsl").length;if(!n)return;SLI=(SLI+1)%n;slideShow()}
 function bb(){
   document.body.style.removeProperty("--amb");

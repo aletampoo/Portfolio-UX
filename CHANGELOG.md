@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v4.4.0
+- L'hero non si interrompe più di netto: l'abitacolo sfuma gradualmente verso la sezione dei progetti.
+- Sfondo animato dietro ai case study: macchie di luce morbide che si muovono lentamente nel colore primario del progetto mostrato sul parabrezza; passando su una card il colore passa a quello di quel progetto, con una transizione dolce.
+
 ## v4.3.0
 - Tolto il pulsante play: ora è la proiezione sul parabrezza (centrata nel vetro) ad aprire il progetto, con clic, tap o Invio; al passaggio si avvicina e si illumina.
 - Frecce olografiche a sinistra e a destra della proiezione con chevron animati e impulso, per scorrere i progetti (anche con le frecce della tastiera); indicatori a pallini e suggerimento "Clicca la proiezione o trascinaci una card".
