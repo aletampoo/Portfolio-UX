@@ -2,6 +2,12 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v4.1.0
+- Hero a tutta pagina, senza cornice arrotondata: l'abitacolo parte sotto la barra e il cruscotto sfuma nello sfondo della pagina, con la riga dei progetti che ci sale sopra.
+- Strada disegnata con proporzioni reali su qualsiasi schermo (niente deformazioni in verticale).
+- Il rilascio delle card vale solo sul parabrezza, non sul fondo sfumato.
+- Testo dell'ologramma adattato su mobile.
+
 ## v4.0.0
 - Hero trasformata nel posto di guida di un'auto sportiva: parabrezza con montanti, tetto e specchietto, cruscotto con volante e tachimetro, strada in prospettiva su canvas con linee, bande d'asfalto, colline e lampioni che scorrono, curva lenta.
 - Lo slideshow dei progetti e proiettato sul parabrezza come ologramma (HUD): pannello traslucido con angoli, linee di scansione, sfarfallio e cono di luce dal cruscotto. Tutta la scena prende il colore del progetto in onda.
