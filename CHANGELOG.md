@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.4.0
+- Intro olografica: su uno sfondo blu notte con griglia, un proiettore accende un fascio di luce dal basso e la proiezione si apre da una linea sottile con un breve sfarfallio. Dentro compaiono "Portfolio", il nome lettera per lettera (bianco con alone e leggera aberrazione cromatica, come l'ologramma della hero), "Product Designer" e una barra di caricamento; una banda di scansione attraversa lo schermo. In chiusura la proiezione sale e si rimpicciolisce, come se andasse a posarsi sul parabrezza.
+
 ## v5.3.2
 - Finestra "Altre info": il pulsante di chiusura torna nell'angolo in alto a destra (lo stile olografico lo aveva spostato nel flusso della pagina).
 
