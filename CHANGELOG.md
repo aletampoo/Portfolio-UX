@@ -2,6 +2,15 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.3.0
+Il linguaggio olografico diventa il design language di tutto il sito.
+- Comparsa "materializzata": titoli, paragrafi, pannelli, esperienze e blocchi dei case study appaiono allo scroll con una scansione dall'alto, un lampo di luce e un leggero sfarfallio, uno dopo l'altro.
+- Titoli di sezione con rombo luminoso che pulsa e una linea su cui scorre un lampo di luce.
+- Chi sono, gruppi di competenze, metadati, punti elenco e risultati dei case study in pannelli di vetro colorato con staffe agli angoli che si allungano al passaggio del mouse; chip delle competenze olografiche.
+- Esperienza: timeline con nodi luminosi pulsanti e un impulso di luce che scorre lungo la linea; puntini e azienda nel colore olografico.
+- Case study: cornice a staffe intorno alla copertina con una banda di scansione che scende, "Now playing" come chip luminoso, numeri delle sezioni in chip olografici, passaggi del processo come nodi luminosi, barra di avanzamento e mockup nel colore del progetto, numeri dei risultati che contano fino al valore finale.
+- Finestra "Altre info" in vetro colorato. Pulsante Chiudi senza a capo su mobile.
+
 ## v5.2.0
 - Tile dei case study in stile olografico: vetro scuro tinto col colore del progetto, bordo luminoso, staffe agli angoli, mockup disegnati come linee di luce, titolo con alone, etichetta e pannello dei dettagli in vetro colorato.
 - Al passaggio del mouse la tile si illumina, le staffe si allungano e una banda di luce scorre dall'alto in basso come una scansione; i pulsanti della tile prendono il colore del progetto.
