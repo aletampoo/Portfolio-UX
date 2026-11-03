@@ -35,7 +35,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;ali
 nav.sc{background:#141414ee;backdrop-filter:blur(14px)}
 .logo{font-weight:800;font-size:22px;letter-spacing:-.03em;color:var(--red);text-decoration:none;white-space:nowrap}
 .nv{display:flex;gap:4px}
-.nv a{color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:7px 16px;border-radius:999px;transition:background .2s}
+.nv a{color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:7px 16px;border-radius:999px;white-space:nowrap;flex:0 0 auto;transition:background .2s}
 .nv a:hover{background:#ffffff1f}.nv a.on{background:#ffffff40}
 .rt{margin-left:auto;display:flex;align-items:center;gap:6px}
 .lt{position:relative;display:flex;align-items:center;gap:2px;background:#ffffff14;border:1px solid #ffffff2e;border-radius:999px;padding:3px;margin-left:4px}
@@ -259,6 +259,7 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
 .gf{position:relative;max-width:1100px;border-radius:16px;overflow:hidden;background:#0d0d0d;border:1px solid #ffffff1f;outline:none;touch-action:manipulation;user-select:none}
 .gf:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .gf canvas{display:block;width:100%;aspect-ratio:8/3}
+@media (max-width:620px){.gf canvas{aspect-ratio:21/31}}
 .hud{position:absolute;top:12px;left:18px;right:18px;display:flex;justify-content:space-between;font-weight:700;pointer-events:none;text-shadow:0 1px 6px #000}
 .hud .gn{color:var(--red);letter-spacing:-.02em}
 .go2{position:absolute;inset:0;display:grid;place-items:center;background:#000a;text-align:center;padding:16px}
@@ -266,14 +267,16 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
 .go2 h3{margin:0 0 6px;font-size:clamp(1.6rem,4vw,2.6rem);font-weight:800;letter-spacing:-.04em}
 .go2 p{margin:0 auto 18px;max-width:36ch;color:#ddd}
 .rg .gf{max-width:none}
-.gf canvas{aspect-ratio:8/3}
 .rg{margin-top:44px}
 
 /* Tablet */
 @media (max-width:1024px){
 .tiles{grid-template-columns:repeat(2,1fr)}
-.nv a{padding:7px 12px;font-size:13px}
-nav{gap:18px}
+.nv a{padding:7px 11px;font-size:12.5px}
+nav{gap:14px}
+.logo{font-size:19px}
+.nv{flex:1 1 auto;min-width:0;overflow-x:auto;scrollbar-width:none}
+.nv::-webkit-scrollbar{display:none}
 .ab{grid-template-columns:1fr;gap:30px}
 .facts{max-width:520px}
 .stage{height:clamp(360px,46vw,520px)}
@@ -359,7 +362,7 @@ nav{height:60px;padding:0 14px}
 <dialog class="md" id="md"><div class="mh" id="mh"></div><button class="mx" id="mx" aria-label="Close">✕</button><div class="mb" id="mb"></div></dialog>
 
 <script>
-var U={it:{n0:"Home",n1:"Progetti",n2:"Chi sono",n3:"Esperienza",n4:"Contatti",lang:"Lingua",ph:"Titoli, tag",none:"Nessun progetto trovato.",nt:"Notifiche",play:"Riproduci",more:"Altre info",cs:"Case study",rl:"Ruolo:",wt:"Con",rowT:"I miei progetti",rowS:"Passa sopra una card per i dettagli, clicca per aprire il case study.",n5:"Giochi",gT:"Giochi",gN:"UX Dash",gD:"Schiva i commenti di clienti e stakeholder. Clic, tap o barra spaziatrice per saltare.",gStart:"Gioca",gRetry:"Riprova",gOver:"Commento non risolto!",gScore:"Punti",gBest:"Record",now:"Ora in riproduzione",scroll:"Scorri per continuare",close:"✕ Chiudi",next:"Prossimo progetto",role:"Ruolo",dur:"Durata",tools:"Strumenti",client:"Cliente",year:"Anno",team:"Team",pr:"Il problema",so:"La soluzione",rs:"I risultati",lTok:"Token",lCmp:"Componenti",lScr:"Schermate",drop:"Rilascia per riprodurre",dropT:"Trascina qui un progetto",dropP:"Prendi una card dalla riga qui sotto e lasciala cadere nello schermo per aprire il case study.",tapT:"Scegli un progetto",tapP:"Tocca una card nella riga qui sotto per aprire il case study.",nw:"Nuovo case study:",
+var U={it:{n0:"Home",n1:"Progetti",n2:"Chi sono",n3:"Esperienza",n4:"Contatti",lang:"Lingua",ph:"Titoli, tag",none:"Nessun progetto trovato.",nt:"Notifiche",play:"Riproduci",more:"Altre info",cs:"Case study",rl:"Ruolo:",wt:"Con",rowT:"I miei progetti",rowS:"Passa sopra una card per i dettagli, clicca per aprire il case study.",n5:"UX Dash",gT:"UX Dash",gN:"UX Dash",gD:"Schiva i commenti di clienti e stakeholder. Clic, tap o barra spaziatrice per saltare.",gStart:"Gioca",gRetry:"Riprova",gOver:"Commento non risolto!",gScore:"Punti",gBest:"Record",now:"Ora in riproduzione",scroll:"Scorri per continuare",close:"✕ Chiudi",next:"Prossimo progetto",role:"Ruolo",dur:"Durata",tools:"Strumenti",client:"Cliente",year:"Anno",team:"Team",pr:"Il problema",so:"La soluzione",rs:"I risultati",lTok:"Token",lCmp:"Componenti",lScr:"Schermate",drop:"Rilascia per riprodurre",dropT:"Trascina qui un progetto",dropP:"Prendi una card dalla riga qui sotto e lasciala cadere nello schermo per aprire il case study.",tapT:"Scegli un progetto",tapP:"Tocca una card nella riga qui sotto per aprire il case study.",nw:"Nuovo case study:",
 ttl:"Alessio Tampone | Product Designer",abT:"Chi sono",abP:["Sono Alessio, Senior Product Designer in ALTEN. Da cinque anni lavoro su prodotti dove il problema principale è la complessità: interfacce di bordo per l’automotive, piattaforme bancarie, strumenti interni che le persone usano tutti i giorni.","Il mio lavoro si muove su due binari che si tengono. Da una parte i design system: architetture di token e librerie di componenti che fanno parlare design e sviluppo la stessa lingua, fino al codice. Dall’altra la ricerca: interviste, journey mapping, test con gli utenti, anche seduto in auto con loro, perché un’interfaccia si giudica dove viene usata e non in una presentazione.","Lavoro fianco a fianco con sviluppatori, product manager e referenti di altri reparti, e do il meglio quando c’è da tradurre un vincolo tecnico in una scelta di design. Vivo a Torino e lavoro in italiano e in inglese."],f1:"anni di esperienza",f2:"team usano il design system",f3:"settori: automotive, banche, ferroviario, CRM, formazione",skT:"Competenze e strumenti",sk:[
 {h:"Design system",i:["Architettura dei token","Librerie di componenti","Temi e modalità","Documentazione e governance","Consegna verso il codice","Migrazione di sistemi esistenti"]},
 {h:"Ricerca",i:["Interviste","Journey mapping","Test di usabilità","Test in auto con gli utenti","Eye-tracking","Test A/B","Valutazione euristica","Analisi competitiva"]},
@@ -370,7 +373,7 @@ ttl:"Alessio Tampone | Product Designer",abT:"Chi sono",abP:["Sono Alessio, Seni
 {r:"Product Designer",c:"Tata Consultancy Services",t:"Tempo pieno",d:"Set 2022 – Nov 2023",l:"Londra, Regno Unito · Ibrido",b:["Ho guidato dall’inizio alla fine il design di un nuovo MVP per una grande banca britannica: oltre 40 schermate e il design system che le regge, dalla ricerca ai test con gli utenti.","Ho guidato benchmark e analisi competitiva per una delle prime tre banche del Regno Unito, e ho presentato percorsi, attriti e modelli mentali dei clienti a oltre 50 stakeholder.","Ho alzato del 20% l’usabilità della web app di una grande società ferroviaria europea, combinando valutazione euristica, ricerca mista, eye-tracking e test A/B."]},
 {r:"Product Designer",c:"Auto Gest S.R.L",t:"Collaborazione",d:"Gen 2022 – Giu 2022",l:"Europa · Da remoto",b:["Ho facilitato i workshop e costruito i percorsi utente di strumenti interni e dashboard, portando a galla attriti e opportunità che i team non vedevano.","Ho ridisegnato gli strumenti CRM con un approccio centrato sull’utente: errori in calo del 15% e utilizzo in crescita del 10%.","Ho rivisto i flussi sulla base di ricerca e analytics, tagliando gli errori del 30% e allineando gli esiti con i team SCRUM e i referenti."]},
 {r:"Product Designer",c:"TESYouth",t:"Collaborazione",d:"Mag 2020 – Apr 2021",l:"Londra, Regno Unito · Da remoto",b:["Ho trasformato dati di mercato e analisi della concorrenza in indicazioni operative per la strategia e lo sviluppo di prodotto.","Ho progettato e gestito sondaggi e raccolta dati, andando oltre le aspettative del cliente.","Ho reso i dati leggibili a chi decide, con report che hanno migliorato l’allineamento del prodotto."]}],ctT:"Lavoriamo insieme?",ctS:"Raccontami il tuo progetto: rispondo entro 24 ore.",mail:"Copia la mia email",copied:"Email copiata:",foot:"Fine dei titoli di coda. Grazie per aver guardato."},
-en:{n0:"Home",n1:"Projects",n2:"About",n3:"Experience",n4:"Contact",lang:"Language",ph:"Titles, tags",none:"No projects found.",nt:"Notifications",play:"Play",more:"More info",cs:"Case study",rl:"Role:",wt:"With",rowT:"My projects",rowS:"Hover a card for details, click to open the case study.",n5:"Games",gT:"Games",gN:"UX Dash",gD:"Dodge the comments from clients and stakeholders. Click, tap or press space to jump.",gStart:"Play",gRetry:"Try again",gOver:"Unresolved comment!",gScore:"Score",gBest:"Best",now:"Now playing",scroll:"Scroll to continue",close:"✕ Close",next:"Next project",role:"Role",dur:"Duration",tools:"Tools",client:"Client",year:"Year",team:"Team",pr:"The problem",so:"The solution",rs:"The results",lTok:"Tokens",lCmp:"Components",lScr:"Screens",drop:"Drop to play",dropT:"Drag a project in here",dropP:"Pick a card from the row below and drop it into the screen to open the case study.",tapT:"Pick a project",tapP:"Tap a card in the row below to open the case study.",nw:"New case study:",
+en:{n0:"Home",n1:"Projects",n2:"About",n3:"Experience",n4:"Contact",lang:"Language",ph:"Titles, tags",none:"No projects found.",nt:"Notifications",play:"Play",more:"More info",cs:"Case study",rl:"Role:",wt:"With",rowT:"My projects",rowS:"Hover a card for details, click to open the case study.",n5:"UX Dash",gT:"UX Dash",gN:"UX Dash",gD:"Dodge the comments from clients and stakeholders. Click, tap or press space to jump.",gStart:"Play",gRetry:"Try again",gOver:"Unresolved comment!",gScore:"Score",gBest:"Best",now:"Now playing",scroll:"Scroll to continue",close:"✕ Close",next:"Next project",role:"Role",dur:"Duration",tools:"Tools",client:"Client",year:"Year",team:"Team",pr:"The problem",so:"The solution",rs:"The results",lTok:"Tokens",lCmp:"Components",lScr:"Screens",drop:"Drop to play",dropT:"Drag a project in here",dropP:"Pick a card from the row below and drop it into the screen to open the case study.",tapT:"Pick a project",tapP:"Tap a card in the row below to open the case study.",nw:"New case study:",
 ttl:"Alessio Tampone | Product Designer",abT:"About me",abP:["I’m Alessio, a Senior Product Designer at ALTEN. For five years I’ve worked on products where the main problem is complexity: in-car interfaces for automotive, banking platforms, internal tools people use every day.","My work runs on two tracks that hold each other up. On one side, design systems: token architectures and component libraries that make design and engineering speak the same language, all the way to the code. On the other, research: interviews, journey mapping, user testing, including sitting in the car with people, because an interface is judged where it is used and not in a presentation.","I work side by side with developers, product managers and stakeholders from other departments, and I’m at my best when a technical constraint has to become a design decision. I live in Turin and work in Italian and English."],f1:"years of experience",f2:"teams use the design system",f3:"sectors: automotive, banking, rail, CRM, education",skT:"Skills and tools",sk:[
 {h:"Design systems",i:["Token architecture","Component libraries","Theming and modes","Documentation and governance","Handoff to code","Migrating existing systems"]},
 {h:"Research",i:["Interviews","Journey mapping","Usability testing","In-car testing with users","Eye-tracking","A/B testing","Heuristic evaluation","Competitive analysis"]},
@@ -571,7 +574,14 @@ $("#intro").onclick=endIntro;
 setTimeout(endIntro,matchMedia("(prefers-reduced-motion:reduce)").matches?300:3500);
 try{var sl=localStorage.getItem("at-lang");if(sl&&U[sl])L=sl;else if((navigator.language||"").slice(0,2)==="en")L="en"}catch(e){}
 (function(){
-  var cv=$("#gc"),c=cv.getContext("2d"),gf=$("#gf"),ov=$("#gov"),W=960,H=360,GR=300,SZ=38,PX=96,sc=0;
+  var cv=$("#gc"),c=cv.getContext("2d"),gf=$("#gf"),ov=$("#gov"),sc=0;
+  var POR=0,W=960,H=360,GR=300,SZ=38,PX=96,FW=1,SPB=340,SPM=240,JV=-800,GRV=2000;
+  function dims(){
+    var p=cv.clientWidth<620?1:0;if(p===POR&&sc)return false;POR=p;
+    if(POR){W=420;H=620;GR=560;SZ=36;PX=92;FW=.58;SPB=185;SPM=110;JV=-960;GRV=1900}
+    else{W=960;H=360;GR=300;SZ=38;PX=96;FW=1;SPB=340;SPM=240;JV=-800;GRV=2000}
+    return true;
+  }
   var FF='-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif';
   var best=0;try{best=+localStorage.getItem("at-best")||0}catch(e){}
   var MM={it:[["Cliente","Puoi ingrandire\nil logo di 1px?"],["CEO","Fallo più pop,\nma sobrio"],["Marketing","Serve per ieri.\nPuoi farcela?"],["Dev","Questo non\nera nel Figma"],["Cliente","Metti tutto\nsopra la piega"],["Stakeholder","Mio cugino lo fa\ngratis in 5 minuti"],["Cliente","Possiamo avere 5\nopzioni per domani?"],["CEO","Facciamo tutto\nin Comic Sans?"],["Marketing","Più grande. No,\npiù piccolo. No…"],["Cliente","Sì, ma senza\ncambiare nulla"]],
@@ -580,28 +590,41 @@ try{var sl=localStorage.getItem("at-lang");if(sl&&U[sl])L=sl;else if((navigator.
   var st=0,y=GR-SZ,vy=0,air=0,ob=[],nx=0,dist=0,sp=340,tm=0,dead=null,deadT=0,vis=true,last=0,shake=0,lastS=-1,bo=0,fc=0,FR=[];
   var CU=[{n:"Sara",col:"#a259ff"},{n:"Luca",col:"#0acf83"},{n:"Giulia",col:"#ff7262"}];
   function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
-  function nf(f,x){f.x=x;f.w=110+Math.random()*50;f.h=70+Math.random()*55;f.y=26+Math.random()*(GR-f.h-70);f.n=++fc}
-  for(var i=0;i<6;i++){var f0={};nf(f0,20+i*170);FR.push(f0)}
+  function nf(f,x){f.x=x;f.w=(110+Math.random()*50)*FW;f.h=(70+Math.random()*55)*FW;f.y=26+Math.random()*(GR-f.h-70);f.n=++fc}
+  function build(){FR=[];fc=0;for(var i=0;i<6;i++){var f0={};nf(f0,20+i*W*.3);FR.push(f0)}CU.forEach(function(u,i){u.x=W*.16+i*W*.2;u.y=60+i*40;pick(u)});st=0;y=GR-SZ;vy=0;air=0;ob=[];nx=W*.6;dist=0;sp=SPB;dead=null;shake=0;ui()}
   function pick(u){
     var cand=FR.filter(function(f){return f.x>30&&f.x+f.w<W-20});
     u.f=cand.length?cand[Math.floor(Math.random()*cand.length)]:FR[0];
     u.mode=Math.random()<.6?"size":"move";u.ph=0;u.t=0;u.dir=Math.random()<.5?-1:1;
   }
-  CU.forEach(function(u,i){u.x=80+i*180;u.y=60+i*40;pick(u)});
-  function size(){var d=Math.min(devicePixelRatio||1,2),w=cv.clientWidth;if(!w)return;cv.width=w*d;cv.height=w*H/W*d;sc=cv.width/W}
+  function size(){
+    var d=Math.min(devicePixelRatio||1,2),w=cv.clientWidth;if(!w)return;
+    var ch=dims();cv.style.aspectRatio=W+"/"+H;
+    cv.width=w*d;cv.height=w*H/W*d;sc=cv.width/W;
+    if(ch)build();
+  }
   function ui(){var t=U[L];ov.hidden=st===1;
     if(st===0){$("#gt").textContent=t.gN;$("#gm").textContent=t.gD;$("#gb").textContent=t.gStart}
     else if(st===2){$("#gt").textContent=t.gOver;$("#gm").textContent=dead.a+": “"+dead.ls.join(" ")+"” ("+t.gScore+": "+Math.floor(dist/10)+")";$("#gb").textContent=t.gRetry}
     $("#gbst").textContent=t.gBest+" "+best;lastS=-1}
   window.gUpdate=ui;
-  function start(){st=1;y=GR-SZ;vy=0;air=0;ob=[];nx=260;dist=0;sp=340;dead=null;shake=0;ui();gf.focus({preventScroll:true})}
+  function start(){st=1;y=GR-SZ;vy=0;air=0;ob=[];nx=W*.6;dist=0;sp=SPB;dead=null;shake=0;ui();gf.focus({preventScroll:true})}
   function end(o){st=2;dead=o;shake=.4;deadT=tm;var s=Math.floor(dist/10);if(s>best){best=s;try{localStorage.setItem("at-best",best)}catch(e){}}ui()}
-  function jump(){if(st===1&&y>=GR-SZ-1)vy=-800}
+  function jump(){if(st===1&&y>=GR-SZ-1)vy=JV}
   function rr(x,yy,w,h,r){c.beginPath();c.moveTo(x+r,yy);c.arcTo(x+w,yy,x+w,yy+h,r);c.arcTo(x+w,yy+h,x,yy+h,r);c.arcTo(x,yy+h,x,yy,r);c.arcTo(x,yy,x+w,yy,r);c.closePath()}
   function tx(s,x,yy,sz,col,wt,al){c.fillStyle=col;c.font=(wt||700)+" "+sz+"px "+FF;c.textAlign=al||"center";c.textBaseline="middle";c.fillText(s,x,yy)}
   function spawn(){
-    var m=MM[L][Math.floor(Math.random()*MM[L].length)],ls=m[1].split("\n"),w=0;
-    c.font="600 11px "+FF;ls.forEach(function(l){w=Math.max(w,c.measureText(l).width)});
+    var m=MM[L][Math.floor(Math.random()*MM[L].length)],ls,w=0;
+    c.font="600 11px "+FF;
+    if(POR){
+      var mx=W*.22,cl="";ls=[];
+      m[1].replace(/\n/g," ").split(" ").forEach(function(q){
+        var tt=cl?cl+" "+q:q;
+        if(cl&&c.measureText(tt).width>mx){ls.push(cl);cl=q}else cl=tt;
+      });
+      if(cl)ls.push(cl);
+    }else ls=m[1].split("\n");
+    ls.forEach(function(l){w=Math.max(w,c.measureText(l).width)});
     ob.push({a:m[0],ls:ls,w:Math.ceil(w)+26,h:30+ls.length*14,x:W+20,col:COL[(m[0].length+ls[0].length)%COL.length]});
   }
   function step(dt){
@@ -620,11 +643,11 @@ try{var sl=localStorage.getItem("at-lang");if(sl&&U[sl])L=sl;else if((navigator.
       }else if(u.ph===2&&u.t>.6)pick(u);
     });
     if(st===1){
-      sp=340+Math.min(240,dist/12);dist+=sp*dt;
-      vy+=2000*dt;y+=vy*dt;
+      sp=SPB+Math.min(SPM,dist/12);dist+=sp*dt;
+      vy+=GRV*dt;y+=vy*dt;
       if(y>=GR-SZ){y=GR-SZ;vy=0;air=0}else air+=dt;
       nx-=sp*dt;
-      if(nx<=0){spawn();nx=sp*.8+90+Math.random()*180}
+      if(nx<=0){spawn();nx=sp*(POR?1.15:.8)+(POR?90:90)+Math.random()*(POR?130:180)}
       ob.forEach(function(o){o.x-=sp*dt});ob=ob.filter(function(o){return o.x+o.w>-20});
       var px=PX+5,py=y+5,pw=SZ-10,ph=SZ-10;
       for(var i=0;i<ob.length;i++){var o=ob[i],ox=o.x+3,oy=GR-o.h+3;if(px<ox+o.w-6&&px+pw>ox&&py<oy+o.h-6&&py+ph>oy){end(o);break}}
@@ -643,7 +666,7 @@ try{var sl=localStorage.getItem("at-lang");if(sl&&U[sl])L=sl;else if((navigator.
     var g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,"#1c1c1c");g.addColorStop(1,"#0b0b0b");c.fillStyle=g;c.fillRect(0,0,W,H);
     c.save();if(shake>0)c.translate((Math.random()-.5)*25*shake,(Math.random()-.5)*25*shake);
     c.fillStyle="#ffffff14";var o1=bo%30;
-    for(var i=-1;i<W/30+2;i++)for(var j=0;j<10;j++)c.fillRect(i*30-o1,15+j*30,2,2);
+    for(var i=-1;i<W/30+2;i++)for(var j=0;j<H/30;j++)c.fillRect(i*30-o1,15+j*30,2,2);
     FR.forEach(function(f){c.fillStyle="#ffffff08";c.fillRect(f.x,f.y,f.w,f.h);c.strokeStyle="#ffffff26";c.lineWidth=1.2;c.strokeRect(f.x,f.y,f.w,f.h);tx("Frame "+f.n,f.x,f.y-8,10,"#ffffff55",600,"left")});
     CU.forEach(function(u){
       var f=u.f;c.strokeStyle=u.col;c.lineWidth=1.8;c.strokeRect(f.x,f.y,f.w,f.h);

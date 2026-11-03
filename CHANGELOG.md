@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v3.2.0
+- UX Dash in verticale su mobile (21:31): campo di gioco, fisica del salto, velocita e a capo dei commenti ricalcolati perche gli ostacoli restino superabili.
+- Sezione rinominata da "Giochi"/"Games" a "UX Dash".
+- Corretti i link della barra che andavano a capo tra 760 e 1024px: testo su una riga sola e barra scorrevole in orizzontale se lo spazio non basta.
+
 ## v3.1.0
 - Header del case study: resta sfumato in cima e diventa pieno e sfocato appena si scorre, cosi il testo non ci passa sotto.
 - Responsive rivisto su tre soglie: tablet a 1024px (case study su due colonne), mobile a 760px (case study in colonna, pannelli sempre aperti), telefoni stretti a 420px.
