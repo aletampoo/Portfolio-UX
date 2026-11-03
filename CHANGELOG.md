@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v2.13.0
+- Sezione Esperienza con i dati reali: ALTEN, Tata Consultancy Services, Auto Gest, TESYouth, con ruolo, tipo di contratto, periodo, luogo e punti di attivita, in italiano e inglese.
+- Esperienza ridisegnata come timeline verticale al posto delle card.
+- Link LinkedIn al profilo reale; il numero dei settori passa da 3 a 5.
+
 ## v2.12.0
 - Il nome del cliente non compare piu: il case study si chiama "Automotive Design System" e il cliente e indicato come "Il cliente".
 - Sfondo animato del case study: tre aloni sfocati nel colore del progetto che derivano lentamente, griglia sottile e grana, con una velatura dietro la colonna di testo per tenerlo leggibile.
