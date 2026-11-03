@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v2.12.0
+- Il nome del cliente non compare piu: il case study si chiama "Automotive Design System" e il cliente e indicato come "Il cliente".
+- Sfondo animato del case study: tre aloni sfocati nel colore del progetto che derivano lentamente, griglia sottile e grana, con una velatura dietro la colonna di testo per tenerlo leggibile.
+
 ## v2.11.0
 - Hero ridotta a un solo elemento: un pulsante play al centro, in vetro smerigliato, con anello di avanzamento nel colore del progetto e alone pulsante. Premendolo si apre il progetto mostrato dallo slideshow.
 - Slideshow di sfondo più visibile e velatura alleggerita.
