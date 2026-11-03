@@ -2,6 +2,12 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v4.0.0
+- Hero trasformata nel posto di guida di un'auto sportiva: parabrezza con montanti, tetto e specchietto, cruscotto con volante e tachimetro, strada in prospettiva su canvas con linee, bande d'asfalto, colline e lampioni che scorrono, curva lenta.
+- Lo slideshow dei progetti e proiettato sul parabrezza come ologramma (HUD): pannello traslucido con angoli, linee di scansione, sfarfallio e cono di luce dal cruscotto. Tutta la scena prende il colore del progetto in onda.
+- Il play apre il progetto mostrato; trascinando una card sullo schermo l'auto accelera a 210 km/h e il quadro diventa rosso.
+- Su touch la frase sotto I miei progetti dice "Tocca una card" invece di "Passa sopra".
+
 ## v3.3.0
 - Nome in alto trattato come un logotipo: maiuscolo, rosso, molto pesante, lettere strette e leggermente allungate in altezza, con ombra. Stesso trattamento nell'intro. Sui telefoni stretti diventa il monogramma AT.
 
