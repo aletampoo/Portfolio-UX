@@ -115,9 +115,10 @@ body.fs .rt{pointer-events:auto}
 .ghost.ok{outline:3px solid var(--red);outline-offset:3px}
 body.dragging{user-select:none;cursor:grabbing}
 .tile img{-webkit-user-drag:none;user-select:none}
-@media (hover:none),(pointer:coarse){.hint2{display:none}}
+
 .chp span{display:flex;align-items:center;gap:7px;background:#0007;border-radius:8px;padding:7px 12px;font-size:clamp(.7rem,1cqw,.9rem);font-weight:600;backdrop-filter:blur(8px)}
-.head{position:absolute;top:0;left:0;right:0;z-index:5;display:none;align-items:center;gap:16px;padding:14px 150px 14px 20px;background:linear-gradient(#000d,#0000)}
+.head{position:absolute;top:0;left:0;right:0;z-index:5;display:none;align-items:center;gap:16px;padding:14px 150px 14px 20px;background:linear-gradient(#000000d9,#0000);transition:background .25s,backdrop-filter .25s,box-shadow .25s}
+.screen.full.hsc .head{background:#0e1115f5;backdrop-filter:blur(16px);box-shadow:0 1px 0 #ffffff1a}
 .screen.full .head{display:flex}
 .x{background:#ffffff22;border:0;border-radius:6px;padding:7px 14px;font-weight:600}
 .x:hover{background:#ffffff44}
@@ -174,7 +175,7 @@ body.dragging{user-select:none;cursor:grabbing}
 .sysv u{display:block;width:72%;height:24px;border-radius:999px;background:var(--c);text-decoration:none}
 .sysv u+u{background:none;border:1.5px solid #ffffff59}
 .sysv s{display:block;width:38%;height:28px;border-radius:6px;background:#ffffff1f;text-decoration:none}
-@media (max-width:620px){.sysv{grid-template-columns:1fr}}
+@media (max-width:760px){.sysv{grid-template-columns:1fr}}
 .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;justify-items:center}
 .meta span{display:block;color:var(--mut);font-size:13px}.meta b{font-weight:600;font-size:1.1rem}
 .mocks{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:34px}
@@ -266,14 +267,60 @@ footer{padding:50px 5% 60px;text-align:center;color:var(--mut)}footer p{margin:0
 .go2 p{margin:0 auto 18px;max-width:36ch;color:#ddd}
 .rg .gf{max-width:none}
 .gf canvas{aspect-ratio:8/3}
-@media (max-width:860px){
-.tiles{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:8px;margin-inline:calc(clamp(16px,3.4vw,64px)*-1);padding-inline:clamp(16px,3.4vw,64px)}
-.tile{flex:0 0 82vw;scroll-snap-align:start}
-.tile:hover,.tile:focus-within{transform:none}
-.ti{position:static;max-height:none;opacity:1;padding:12px 0 0;background:none;border:0;box-shadow:none}
-}
 .rg{margin-top:44px}
-@media (max-width:860px){.nv{display:none}.ab,.mb{grid-template-columns:1fr}.chp{display:none}.art .mk:nth-child(n+2){display:none}.art .mk{width:22cqw;height:44cqw;top:8cqw}.stage{height:clamp(440px,120vw,640px)}.sx{padding-top:44px}.sh1{background:linear-gradient(90deg,#000a,#0000 90%)}}
+
+/* Tablet */
+@media (max-width:1024px){
+.tiles{grid-template-columns:repeat(2,1fr)}
+.nv a{padding:7px 12px;font-size:13px}
+nav{gap:18px}
+.ab{grid-template-columns:1fr;gap:30px}
+.facts{max-width:520px}
+.stage{height:clamp(360px,46vw,520px)}
+.head{padding-right:118px}
+}
+
+/* Mobile: tutto in colonna */
+@media (max-width:760px){
+.tiles{grid-template-columns:1fr;gap:26px}
+.tile:hover,.tile:focus-within{transform:none;z-index:auto}
+.ti{position:static;max-height:none;opacity:1;padding:12px 0 0;background:none;border:0;box-shadow:none}
+.tl{font-size:1.3rem}
+.nv{display:none}
+.mb{grid-template-columns:1fr}
+.chp{display:none}
+.art .mk:nth-child(n+2){display:none}
+.art .mk{width:22cqw;height:44cqw;top:8cqw}
+.sh1{background:linear-gradient(90deg,#000a,#0000 90%)}
+.stage{margin-top:72px;height:clamp(300px,62vw,420px)}
+.lgb img{height:16cqw}
+.sx,.row{padding-left:18px;padding-right:18px}
+.sx{padding-top:44px}
+.facts{grid-template-columns:repeat(3,1fr);gap:9px}
+.facts div{padding:12px 10px}
+.facts dt{font-size:1.65rem}
+.facts dd{font-size:11.5px}
+.csw{padding:0 18px}
+.head{padding:12px 96px 12px 14px;gap:10px}
+.hd{font-size:17px}
+.x{padding:7px 11px;font-size:14px}
+.stp article{padding-left:30px;padding-bottom:24px}
+.stp i{left:-12px;width:24px;height:24px;font-size:10px}
+.ex{padding-left:26px;padding-bottom:30px}
+.sl li{padding:12px 15px;font-size:.97rem}
+.cs2{padding-top:44px}
+.ct{padding-top:72px}
+}
+
+/* Telefoni stretti */
+@media (max-width:420px){
+.logo{font-size:19px}
+nav{height:60px;padding:0 14px}
+.stage{margin-top:66px;margin-inline:10px}
+.facts{grid-template-columns:1fr 1fr}
+.mta{grid-template-columns:1fr 1fr;gap:16px 18px}
+.links{gap:16px}
+}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important;scroll-behavior:auto!important}.sld:first-child{opacity:1}}
 </style>
 </head>
@@ -465,7 +512,7 @@ function close(){
   var h=$(".stage").getBoundingClientRect();
   scr.classList.remove("full");
   Object.assign(scr.style,{top:h.top+"px",left:h.left+"px",width:h.width+"px",height:h.height+"px"});
-  cur=null;f=i;inn.scrollTop=0;bb();inn.classList.remove("sw");void inn.offsetWidth;inn.classList.add("sw");
+  cur=null;f=i;inn.scrollTop=0;scr.classList.remove("hsc");bb();inn.classList.remove("sw");void inn.offsetWidth;inn.classList.add("sw");
   setTimeout(function(){scr.style.cssText="transition:none";scr.offsetWidth;scr.removeAttribute("style");busy=0;var b=document.querySelector('[data-p="'+i+'"] .cb');if(b)b.focus({preventScroll:true})},780);
 }
 document.addEventListener("click",function(e){
@@ -481,7 +528,7 @@ document.addEventListener("click",function(e){
   if(e.target.closest("#mail")){var m=$("#mail").dataset.email;try{navigator.clipboard.writeText(m)}catch(x){}$("#copied").textContent=t("copied")+" "+m;return}
 });
 document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
-inn.addEventListener("scroll",function(){var m=inn.scrollHeight-inn.clientHeight;$("#pg").style.width=(m>0?inn.scrollTop/m*100:0)+"%"});
+inn.addEventListener("scroll",function(){var m=inn.scrollHeight-inn.clientHeight;$("#pg").style.width=(m>0?inn.scrollTop/m*100:0)+"%";scr.classList.toggle("hsc",inn.scrollTop>24)});
 addEventListener("scroll",function(){$("#nav").classList.toggle("sc",scrollY>40)},{passive:true});
 var DRG=null,GH=null,DMV=0,SUP=0,HOV=null;
 function onStage(x,y){var r=$(".stage").getBoundingClientRect();return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom}

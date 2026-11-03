@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v3.1.0
+- Header del case study: resta sfumato in cima e diventa pieno e sfocato appena si scorre, cosi il testo non ci passa sotto.
+- Responsive rivisto su tre soglie: tablet a 1024px (case study su due colonne), mobile a 760px (case study in colonna, pannelli sempre aperti), telefoni stretti a 420px.
+
 ## v3.0.0
 - Case study: aggiunta la migrazione del sistema da HTML a Figma e la pipeline dei token verso il codice (Tokens Studio, GitHub); il processo passa da 3 a 5 passi, il ruolo da 4 a 5 voci con la validazione in auto.
 - Punti dell'esperienza riscritti per comunicare il livello del ruolo, con numeri e ownership in apertura.
