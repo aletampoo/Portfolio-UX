@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v3.3.0
+- Nome in alto trattato come un logotipo: maiuscolo, rosso, molto pesante, lettere strette e leggermente allungate in altezza, con ombra. Stesso trattamento nell'intro. Sui telefoni stretti diventa il monogramma AT.
+
 ## v3.2.1
 - I tre dati della sezione Chi sono ora raccontano il percorso invece di un progetto: anni di esperienza, paesi, settori.
 
