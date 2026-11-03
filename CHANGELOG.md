@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.3.2
+- Finestra "Altre info": il pulsante di chiusura torna nell'angolo in alto a destra (lo stile olografico lo aveva spostato nel flusso della pagina).
+
 ## v5.3.1
 - Comparsa degli elementi più morbida: niente più scansione e sfarfallio, solo una dissolvenza con leggera sfocatura e un piccolo bagliore che si spegne, con un ritardo più breve tra un elemento e l'altro.
 
