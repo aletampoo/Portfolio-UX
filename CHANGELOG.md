@@ -2,6 +2,12 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v4.3.0
+- Tolto il pulsante play: ora è la proiezione sul parabrezza (centrata nel vetro) ad aprire il progetto, con clic, tap o Invio; al passaggio si avvicina e si illumina.
+- Frecce olografiche a sinistra e a destra della proiezione con chevron animati e impulso, per scorrere i progetti (anche con le frecce della tastiera); indicatori a pallini e suggerimento "Clicca la proiezione o trascinaci una card".
+- Navigatore animato: la mappa scorre con la velocità e ruota in curva, il percorso fluisce, distanza alla prossima svolta e orario di arrivo aggiornati, freccia di svolta che cambia lato.
+- Volante che sterza davvero seguendo la curva con piccole correzioni; frecce di direzione che lampeggiano nel quadro in curva; luce ambiente che respira; scocca che si inclina leggermente in curva.
+
 ## v4.2.0
 - Abitacolo ridisegnato in SVG per un effetto più realistico: volante sportivo in pelle con cuciture, razze con tasti, palette del cambio, airbag e tacca rossa in alto; il volante gira seguendo la curva della strada.
 - Strumentazione digitale nella palpebra dietro al volante (tachimetro ad arco, marcia, temperatura), schermo centrale con navigatore, bocchette d'aria, luce ambiente nel colore del progetto, cuciture sulla plancia.
