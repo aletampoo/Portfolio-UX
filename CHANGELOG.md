@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.1.0
+- Tutti i pulsanti nello stile dell'ologramma: vetro colorato semitrasparente, bordo luminoso sottile, angoli a staffa in alto a sinistra e in basso a destra, righe di scansione e testo con alone. Vale per menu, selettore lingua, LinkedIn, pulsanti delle card, Chiudi e Progetto successivo.
+- Nel case study i pulsanti prendono il colore del progetto aperto.
+
 ## v5.0.0
 - La proiezione olografica ora presenta Alessio: "Product Designer · Torino", nome e cognome e la headline "Rendo semplici i prodotti complessi." Cliccandola si scende ai progetti; le card si aprono ancora trascinandole sul parabrezza. Tolte frecce e pallini dei progetti.
 - UX Dash nascosto (sezione e voce di menu), il codice resta nel file per riattivarlo.
