@@ -2,6 +2,13 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.0.0
+- La proiezione olografica ora presenta Alessio: "Product Designer · Torino", nome e cognome e la headline "Rendo semplici i prodotti complessi." Cliccandola si scende ai progetti; le card si aprono ancora trascinandole sul parabrezza. Tolte frecce e pallini dei progetti.
+- UX Dash nascosto (sezione e voce di menu), il codice resta nel file per riattivarlo.
+- Chi sono riassunto in un solo paragrafo; al posto dei tre riquadri numerici c'è il pulsante per il profilo LinkedIn.
+- Esperienza: le parti chiave di ogni punto sono evidenziate come una selezione di Figma (bordo blu, maniglie agli angoli, etichetta "Frame" al passaggio del mouse).
+- Rimossa la sezione "Lavoriamo insieme?" e la voce Contatti dal menu.
+
 ## v4.4.1
 - Lo sfondo colorato ora sta sotto l'hero: l'abitacolo resta sempre in primo piano e il colore si vede solo dove l'hero sfuma.
 - Animazione dietro i case study semplificata: un solo alone morbido nel colore del progetto che respira e oscilla lentamente.
