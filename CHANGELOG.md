@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.1.2
+- Menu: la voce attiva segue lo scroll in modo affidabile. "Progetti" si evidenzia mentre le card sono a schermo e anche dopo il clic sulla voce; nessun momento senza voce attiva tra una sezione e l'altra.
+
 ## v5.1.1
 - Pulsanti olografici con riempimento semplice: tolte le righe di scansione, resta solo la sfumatura di colore.
 

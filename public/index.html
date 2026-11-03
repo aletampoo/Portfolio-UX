@@ -695,8 +695,13 @@ if(FINE){
     $(".stage").classList.toggle("ready",!!e.target.closest(".tile"));
   });
 }
-var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){$$(".nv a").forEach(function(a){a.classList.toggle("on",a.dataset.t===en.target.id)})}})},{rootMargin:"-40% 0px -55% 0px"});
-["top","row","about","exp"].forEach(function(id){var el=$("#"+id);if(el)io.observe(el)});
+/* voce attiva del menu: la sezione che occupa di più la fascia tra il 20% e il 50% dello schermo */
+var SPY=["top","row","about","exp"],SPYR=0;
+function spy(){SPYR=0;var h=innerHeight,y0=h*.2,y1=h*.5,best=null,bv=-Infinity;
+  SPY.forEach(function(id){var el=$("#"+id);if(!el||el.hidden)return;var r=el.getBoundingClientRect(),v=Math.min(r.bottom,y1)-Math.max(r.top,y0);if(r.top>y1)return;if(v<=0)v=-1e4+r.top;if(v>bv){bv=v;best=id}});
+  if(innerHeight+scrollY>=document.documentElement.scrollHeight-4)best=SPY[SPY.length-1];
+  $$(".nv a").forEach(function(a){a.classList.toggle("on",a.dataset.t===best)})}
+addEventListener("scroll",function(){if(!SPYR){SPYR=1;requestAnimationFrame(spy)}},{passive:true});addEventListener("resize",spy);spy();
 var nm=$("#nm");
 "Alessio Tampone".split(" ").forEach(function(w,wi){var s=document.createElement("span");s.className="w";w.split("").forEach(function(c,i){var l=document.createElement("span");l.textContent=c;l.style.animationDelay=(.3+(wi*7+i)*.07)+"s";s.appendChild(l)});nm.appendChild(s)});
 function endIntro(){var el=$("#intro");if(!el)return;el.classList.add("out");document.body.classList.remove("lock");setTimeout(function(){el.remove()},600)}
