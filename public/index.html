@@ -383,6 +383,26 @@ nav{height:60px;padding:0 14px}
 .cb:hover{transform:scale(1.08)}
 .x,.mx{border-radius:10px}
 .lt .kn{background:color-mix(in srgb,var(--hc) 38%,#0000);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--hc) 80%,transparent),0 0 12px color-mix(in srgb,var(--hc) 40%,transparent)}
+
+/* ===== Tile dei case study in stile olografico ===== */
+.th{border-radius:12px;background:radial-gradient(80% 90% at 75% 25%,color-mix(in srgb,var(--c) 34%,transparent),transparent 70%),linear-gradient(160deg,color-mix(in srgb,var(--c) 22%,#0a0e14),#06080c 88%);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 50%,transparent),0 0 24px color-mix(in srgb,var(--c) 18%,transparent),0 14px 30px #0009;transition:box-shadow .35s,filter .35s}
+.th.ds{background:radial-gradient(80% 90% at 50% 30%,color-mix(in srgb,var(--c) 30%,transparent),transparent 70%),linear-gradient(160deg,color-mix(in srgb,var(--c) 22%,#0a0e14),#06080c 88%)}
+.th .art{opacity:.5;mix-blend-mode:screen;filter:saturate(.85)}
+.th>i{background:color-mix(in srgb,var(--c) 14%,transparent);border-color:color-mix(in srgb,var(--c) 70%,#fff);box-shadow:0 0 16px color-mix(in srgb,var(--c) 30%,transparent)}
+.th::after{background:linear-gradient(0deg,#03050ad9,#0000 60%)}
+.hx{position:absolute;inset:0;z-index:3;pointer-events:none;border-radius:inherit;background:linear-gradient(transparent,color-mix(in srgb,var(--c) 22%,transparent) 50%,transparent) 0 -120%/100% 45% no-repeat}
+.hx::before,.hx::after{content:"";position:absolute;width:26px;height:26px;border:2px solid color-mix(in srgb,var(--c) 75%,#fff);opacity:.85;transition:width .35s,height .35s,opacity .35s}
+.hx::before{left:-1px;top:-1px;border-right:0;border-bottom:0;border-radius:12px 0 0 0}
+.hx::after{right:-1px;bottom:-1px;border-left:0;border-top:0;border-radius:0 0 12px 0}
+.tile:hover .th,.tile:focus-within .th{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 85%,transparent),0 0 40px color-mix(in srgb,var(--c) 38%,transparent),0 18px 36px #000a;filter:brightness(1.12)}
+.tile:hover .hx,.tile:focus-within .hx{animation:hxs 1.6s ease-in-out}
+.tile:hover .hx::before,.tile:hover .hx::after,.tile:focus-within .hx::before,.tile:focus-within .hx::after{width:40px;height:40px;opacity:1}
+@keyframes hxs{to{background-position:0 220%}}
+.tl{text-shadow:0 0 18px color-mix(in srgb,var(--c) 75%,transparent),0 2px 10px #000a}
+.tp{background:color-mix(in srgb,var(--c) 16%,#000b);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 55%,transparent);color:#eaf6ff;border-radius:6px}
+.cr2{color:color-mix(in srgb,var(--c) 40%,#fff)}
+.ti{background:linear-gradient(color-mix(in srgb,var(--c) 14%,#0b0f15f2),#0b0e13f2);border:0;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 40%,transparent),0 20px 40px #000b;backdrop-filter:blur(10px);border-radius:0 0 12px 12px}
+@media (max-width:760px){.ti{background:none;box-shadow:none;backdrop-filter:none}}
 </style>
 </head>
 <body class="lock">
@@ -607,7 +627,7 @@ function stat(){
   $("#abp").innerHTML=U[L].abP.map(function(x){return "<p>"+x+"</p>"}).join("");
   $("#sk").innerHTML=U[L].sk.map(function(g){return '<div class="skg"><h3>'+g.h+'</h3><div class="chips2">'+g.i.map(function(x){return "<span>"+x+"</span>"}).join("")+'</div></div>'}).join("");
   $("#ex").innerHTML=U[L].ex.map(function(e){return '<article class="ex"><h3>'+e.r+'</h3><span class="exc">'+e.c+' · '+e.t+'</span><span class="exm">'+e.d+' · '+e.l+'</span><ul>'+e.b.map(function(x){return '<li>'+x.replace(/\[\[(.+?)\]\]/g,'<mark class="fk"><span class="fkl">Frame</span>$1</mark>')+'</li>'}).join("")+'</ul></article>'}).join("");
-  $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><div class="th'+(p.thc?" "+p.thc:"")+'" style="--c:'+p.c+'">'+cov(p,d)+'<span class="tp">'+p.ty[L=="it"?0:1]+'</span><span class="tl">'+d.t+'</span></div><div class="ti"><p>'+d.tag+'</p><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><i>'+p.m+'% match</i><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></small></div></div>'}).join("");
+  $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" style="--c:'+p.c+';--hc:'+p.c+'" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><div class="th'+(p.thc?" "+p.thc:"")+'" style="--c:'+p.c+'">'+cov(p,d)+'<b class="hx" aria-hidden="true"></b><span class="tp">'+p.ty[L=="it"?0:1]+'</span><span class="tl">'+d.t+'</span></div><div class="ti"><p>'+d.tag+'</p><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><i>'+p.m+'% match</i><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></small></div></div>'}).join("");
   $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===L)});$("#lt").classList.toggle("en",L==="en");
   try{localStorage.setItem("at-lang",L)}catch(e){}
   if(cur!==null){var s=inn.scrollTop;draw();inn.scrollTop=s}else bb();

@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.2.0
+- Tile dei case study in stile olografico: vetro scuro tinto col colore del progetto, bordo luminoso, staffe agli angoli, mockup disegnati come linee di luce, titolo con alone, etichetta e pannello dei dettagli in vetro colorato.
+- Al passaggio del mouse la tile si illumina, le staffe si allungano e una banda di luce scorre dall'alto in basso come una scansione; i pulsanti della tile prendono il colore del progetto.
+
 ## v5.1.2
 - Menu: la voce attiva segue lo scroll in modo affidabile. "Progetti" si evidenzia mentre le card sono a schermo e anche dopo il clic sulla voce; nessun momento senza voce attiva tra una sezione e l'altra.
 
