@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.13.2
+- GiftIt: schermate ricomposte senza le bande nere tra un telefono e l'altro (sfondo trasparente, spazi più stretti, ombra sui singoli schermi). Logo e nome del cliente sfocati in tutte le schermate e nell'immagine principale, compreso l'indirizzo nella barra del browser.
+
 ## v5.13.1
 - GiftIt: immagine principale con i due schermi del compleanno di Jake (anche come copertina della card nella home) e, nel risultato, galleria "Schermate del prodotto" con le quattro righe di schermate a tutta larghezza: scartare i regali, il regalo svelato, ringraziare e timeline, imparare (risparmio, spesa, investimento). File: public/gift-hero.webp, gift-row1..4.webp.
 
