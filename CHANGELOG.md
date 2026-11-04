@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.10.1
+- Case study: testi in peso regular e più chiari (lead bianco, paragrafi e schede quasi bianchi) e a tutta larghezza della colonna, senza il limite di caratteri per riga.
+
 ## v5.10.0
 - Case study automotive, "Il risultato": nuova galleria "Schermate reali" con tre schermate dell'interfaccia in produzione (home con widget e clima, assistente al parcheggio con telecamera, lista con tab), ritagliate dall'immagine fornita e senza la cornice bianca. Prima immagine a tutta larghezza, le altre due affiancate; una colonna su mobile. File: public/ds-real-home.jpg, ds-real-park.jpg, ds-real-list.jpg.
 
