@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.2.5
+- Su cosa sono forte: padding uniforme di 28 px nelle schede, più spazio tra titolo e punti e tra un punto e l'altro.
+
 ## v6.2.4
 - Su cosa sono forte: tolti i numeri 01, 02, 03 dalle schede.
 
