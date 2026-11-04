@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.13.1
+- GiftIt: immagine principale con i due schermi del compleanno di Jake (anche come copertina della card nella home) e, nel risultato, galleria "Schermate del prodotto" con le quattro righe di schermate a tutta larghezza: scartare i regali, il regalo svelato, ringraziare e timeline, imparare (risparmio, spesa, investimento). File: public/gift-hero.webp, gift-row1..4.webp.
+
 ## v5.13.0
 - Secondo case study: GiftIt per NatWest (2023, Product Designer, 3 designer, 6 mesi) al posto di Pulse, con la stessa struttura del primo: apertura con dati, etichette e "In breve", poi La sfida (5 obiettivi), Il mio ruolo, Cosa abbiamo scoperto (3 insight → scelte), La soluzione (bambino, genitore, chi regala), Il risultato (70% dei bambini attivi in 3 settimane) e Cosa farei dopo. Testi in italiano e inglese, colore viola. Immagine principale ancora da inserire.
 
