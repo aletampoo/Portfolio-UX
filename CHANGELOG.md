@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.13.0
+- Secondo case study: GiftIt per NatWest (2023, Product Designer, 3 designer, 6 mesi) al posto di Pulse, con la stessa struttura del primo: apertura con dati, etichette e "In breve", poi La sfida (5 obiettivi), Il mio ruolo, Cosa abbiamo scoperto (3 insight → scelte), La soluzione (bambino, genitore, chi regala), Il risultato (70% dei bambini attivi in 3 settimane) e Cosa farei dopo. Testi in italiano e inglese, colore viola. Immagine principale ancora da inserire.
+
 ## v5.12.2
 - Chi sono: al posto della ricerca "seduto in auto con gli utenti", un passaggio che evidenzia, oltre ai design system, la progettazione UX/UI end-to-end e il design thinking.
 
