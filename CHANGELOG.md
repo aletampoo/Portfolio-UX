@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.9.0
+- Case study automotive, sezione "Il sistema": i tre schemi grigi sono sostituiti da tre immagini generate con Higgsfield nello stile olografico del sito: Tokens (campioni di colore, spaziature, raggi, chip "Aa"), Components (pulsanti nei quattro stati, interruttori, cursori, liste, ricerca) e Screens (cruscotto, clima, impostazioni, profilo). Layout: Tokens e Components affiancati, Screens a tutta larghezza; una colonna su mobile. Rimosso il watermark di Higgsfield ritagliando il bordo inferiore. File: public/ds-tokens.jpg, ds-components.jpg, ds-screens.jpg (~60 KB l'una).
+
 ## v5.8.0
 - Nuova sezione Formazione / Education, identica a Esperienza (timeline con nodi luminosi e impulso), con voce nel menu: MSc User Experience Design (Loughborough University, 2021–2022), BSc International Business & Management (Anglia Ruskin University, Cambridge, 2017–2019), Diploma (IIS Europa Unita, Chivasso, 2010–2016).
 - Rimosso il drag and drop delle card sul parabrezza: le card si aprono con un clic. Il suggerimento sotto l'ologramma diventa "Clicca per vedere i progetti".

@@ -517,6 +517,13 @@ nav{height:60px;padding:0 14px}
 .hbg::after{content:"";position:absolute;inset:0;opacity:.04;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") 0 0/180px 180px}
 body{background:#0b0c0e}
 @media (prefers-reduced-motion:reduce){.hbg i{animation:none}}
+
+.sysv.sysi{grid-template-columns:1fr 1fr;gap:14px}
+.sysv.sysi figure:last-child{grid-column:1/-1}
+.sysv.sysi img{display:block;width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:14px;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--hc) 40%,transparent),0 0 30px color-mix(in srgb,var(--hc) 16%,transparent);outline:1px solid color-mix(in srgb,var(--hc) 35%,transparent);outline-offset:-1px}
+.sysv.sysi figure{position:relative}
+.sysv.sysi figcaption{margin-top:8px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--hc) 45%,#fff)}
+@media (max-width:760px){.sysv.sysi{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="lock">
@@ -578,7 +585,7 @@ ttl:"Alessio Tampone | Product Designer",abT:"About me",abP:["I’m Alessio, a S
 {r:"Product Designer",c:"Auto Gest S.R.L",t:"Contract",d:"Jan 2022 – Jun 2022",l:"Europe · Remote",b:["I [[facilitated the workshops]] and built the user journeys for internal tools and dashboards, surfacing friction and opportunities the teams could not see.","I redesigned the CRM tools around a user-centred approach: [[errors down 15% and engagement up 10%]].","I reworked the flows on research and analytics, [[cutting errors by 30%]] and aligning outcomes with SCRUM teams and stakeholders."]},
 {r:"Product Designer",c:"TESYouth",t:"Contract",d:"May 2020 – Apr 2021",l:"London, United Kingdom · Remote",b:["I turned market data and competitive analysis into [[actionable direction]] for strategy and product development.","I designed and ran surveys and data collection, [[going beyond what the client expected]].","I made the data readable for decision-makers, with [[reports that improved product alignment]]."]}],ctT:"Shall we work together?",ctS:"Tell me about your project: I reply within 24 hours.",mail:"Copy my email",copied:"Email copied:",foot:"End credits. Thanks for watching."}};
 var P=[
-{c:"#3e9fd1",m:99,y:2025,art:"ds",cimg:"cover-automotive.jpg",thc:"ds",lg:"alten-logo.png",ty:["Design system","Design system"],
+{c:"#3e9fd1",m:99,y:2025,art:"ds",cimg:"cover-automotive.jpg",simg:["ds-tokens.jpg","ds-components.jpg","ds-screens.jpg"],thc:"ds",lg:"alten-logo.png",ty:["Design system","Design system"],
 it:{t:"Automotive Design System",cl:"Alten",tag:"Un linguaggio condiviso per le interfacce di bordo",role:"Product Designer",team:"3 designer",dur:"1 anno",tools:"Figma, Tokens Studio",
 ds:"Il design system delle interfacce di bordo di più linee di veicoli: 370 componenti, 1.000 token, usato da 111 team.",
 sm:"In un team di tre designer ho costruito per un anno il design system delle interfacce di bordo del cliente: 370 componenti e 1.000 token, usato da 111 team e in produzione su vetture in commercio.",
@@ -628,7 +635,7 @@ function cov(p,d){
   if(p.thc==="ds")return (p.cimg?'<img class="cimg" src="'+p.cimg+'" alt="" draggable="false">':'')+'<span class="cr2">'+d.cl+'</span><span class="gr"></span><div class="lgp"><img src="'+p.lg+'" alt="" draggable="false"></div>';
   return '<i></i><i></i>'}
 function meta(i){var p=P[i];return '<div class="mt"><b>'+t("cs")+'</b><i>•</i><b>'+p.ty[L=="it"?0:1]+'</b><i>•</i><b>'+p.y+'</b></div>'}
-function sys(){return '<div class="sysv"><figure><div class="b"><i></i><i></i><i></i></div><figcaption>'+t("lTok")+'</figcaption></figure><figure><div class="b"><u></u><u></u></div><figcaption>'+t("lCmp")+'</figcaption></figure><figure><div class="b"><s></s><s></s><s></s><s></s></div><figcaption>'+t("lScr")+'</figcaption></figure></div>'}
+function sys(p){if(p&&p.simg)return '<div class="sysv sysi">'+[t("lTok"),t("lCmp"),t("lScr")].map(function(c,k){return '<figure><img src="'+p.simg[k]+'" alt="'+c+'" loading="lazy" draggable="false"><figcaption>'+c+'</figcaption></figure>'}).join("")+'</div>';return '<div class="sysv"><figure><div class="b"><i></i><i></i><i></i></div><figcaption>'+t("lTok")+'</figcaption></figure><figure><div class="b"><u></u><u></u></div><figcaption>'+t("lCmp")+'</figcaption></figure><figure><div class="b"><s></s><s></s><s></s><s></s></div><figcaption>'+t("lScr")+'</figcaption></figure></div>'}
 function mocks(){return '<div class="mocks"><div class="mk"><i></i><i></i><i></i></div><div class="mk"><i></i><i></i><i></i></div><div class="mk"><i></i><i></i><i></i></div></div>'}
 var GLH=null;
 var FINE=matchMedia("(hover:hover) and (pointer:fine)").matches,SLI=0,RMO=matchMedia("(prefers-reduced-motion:reduce)").matches;
@@ -732,7 +739,7 @@ function draw(){
     var h='<section class="cs2" id="s'+i+'" style="--c:'+p.c+'"><h3><b>'+s.n+'</b>'+s.h+'</h3>'+paras(s.p);
     if(s.li)h+='<ul class="sl">'+s.li.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul>';
     if(s.stp)h+='<div class="stp">'+s.stp.map(function(x,j){return '<article><i>'+(j+1)+'</i><h4>'+x.t+'<span>'+x.s+'</span></h4><p>'+x.p+'</p></article>'}).join("")+'</div>';
-    if(s.vis==="sys")h+=sys();
+    if(s.vis==="sys")h+=sys(p);
     if(s.vis==="mocks")h+=mocks();
     if(s.st)h+='<div class="res">'+s.st.map(function(r){return '<div><b>'+r[0]+'</b><span>'+r[1]+'</span></div>'}).join("")+'</div>';
     return h+'</section>';
