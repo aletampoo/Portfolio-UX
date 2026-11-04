@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.12.2
+- Chi sono: al posto della ricerca "seduto in auto con gli utenti", un passaggio che evidenzia, oltre ai design system, la progettazione UX/UI end-to-end e il design thinking.
+
 ## v5.12.1
 - Schede dei case study (vincoli, ruolo, scelte chiave, risultato): griglia che riempie sempre le righe. 3 schede in tre terzi, 4 in 2×2, 5 in 3 + 2. Prima, con la colonna più larga, l'ultima riga restava con una scheda isolata o una a tutta larghezza. Tablet: due colonne; mobile: una colonna.
 
