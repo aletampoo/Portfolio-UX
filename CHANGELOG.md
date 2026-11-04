@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.2.2
+- Ologramma: headline riscritta in linea con i case study, "Design system e UX per automotive, fintech e tool enterprise".
+
 ## v6.2.1
 - Il mio percorso: l'etichetta "Oggi" non viene più tagliata in alto; tutte le date hanno la stessa altezza e la linea passa al centro delle icone.
 
