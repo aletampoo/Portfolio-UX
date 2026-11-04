@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.1.0
+- Su cosa sono forte: spostata sotto i progetti, solo titoli, frase e punti (tolti i blocchi delle prove).
+- Chi sono: nuova sezione "Cosa dicono i colleghi" con quattro raccomandazioni LinkedIn (Pooja Sehgal, Reuben Valpy-White, Gareth Byrne, Nunzio Digregorio) in schede olografiche con iniziali, ruolo e rapporto di lavoro.
+- Competenze e strumenti: da cinque pannelli con chip a una scheda tecnica compatta, una riga per area con le voci separate da "/" che si illuminano al passaggio del mouse.
+
 ## v6.0.1
 - Su cosa sono forte: le prove nei pilastri non sono più link ai case study.
 - I miei progetti: card senza copertina, con il nome del progetto al centro in stile olografico.
