@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.14.1
+- Bugzer: aggiunti gli strumenti (Figma, Crazy 8s) e la sezione 06 "Cosa farei dopo" con quattro lezioni coerenti con il case study.
+
 ## v5.14.0
 - Terzo case study: Bugzer per Italdesign (2026, Senior Product Designer, 2 designer, 6 mesi) al posto di Fiore, con la stessa struttura: In breve, La sfida con l'interfaccia originale ("Prima"), Il mio ruolo, Il processo in 4 passi, La soluzione con quattro schermate del redesign, Il risultato (49 problemi, 31 schermate, 5 flussi). Immagini scontornate dallo sfondo trasparente e ottimizzate (bug-hero, bug-before, bug-states). Colore ciano.
 
