@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.2.1
+- Il mio percorso: l'etichetta "Oggi" non viene più tagliata in alto; tutte le date hanno la stessa altezza e la linea passa al centro delle icone.
+
 ## v6.2.0
 - Chi sono: timeline orizzontale "Il mio percorso" sopra il testo: 2017 Torino, 2018–2021 Cambridge, 2022 Loughborough, 2023 Londra, oggi Torino. Ogni tappa ha un'icona al tratto luminoso del monumento simbolo (Mole Antonelliana, King's College Chapel, Carillon Tower, Elizabeth Tower), con un impulso di luce che scorre sulla linea e la tappa attuale evidenziata. Su mobile scorre in orizzontale.
 
