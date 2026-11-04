@@ -248,6 +248,14 @@ body.dragging{user-select:none;cursor:grabbing}
 .lgp img{display:block;height:19cqw;width:auto}
 .dsart{position:absolute;inset:0;background:linear-gradient(140deg,color-mix(in srgb,var(--c) 28%,#0e1217),#0a0d11 78%)}
 .dsart::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff10 0 1px,transparent 1px 7cqw),repeating-linear-gradient(90deg,#ffffff10 0 1px,transparent 1px 7cqw);-webkit-mask-image:radial-gradient(44% 64% at 50% 40%,#000,transparent 78%);mask-image:radial-gradient(44% 64% at 50% 40%,#000,transparent 78%)}
+.th .cimg{opacity:.85}
+.th:has(.cimg) .gr{display:none}
+.th:has(.cimg) .lgp{left:auto;top:auto;right:4%;bottom:6%;transform:none;padding:2% 3%;border-radius:7px}
+.th:has(.cimg) .lgp img{height:7cqw}
+.th:has(.cimg) .cr2{position:relative;z-index:2}
+.dsart:has(.cimg) .lgb{left:auto;top:auto;right:3cqw;bottom:3.4cqw;transform:none;padding:1cqw 1.5cqw;border-radius:.8cqw}
+.dsart:has(.cimg) .lgb img{height:4.6cqw}
+.cimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.8;filter:saturate(1.1)}
 .dsart::after{content:"";position:absolute;inset:0;background:radial-gradient(40% 56% at 50% 40%,color-mix(in srgb,var(--c) 24%,transparent),transparent 74%)}
 .lgb{position:absolute;z-index:2;left:50%;top:40%;transform:translate(-50%,-50%);display:grid;place-items:center;padding:2.2cqw 3.2cqw;border-radius:1.2cqw;background:#fff;box-shadow:0 1.6cqw 4cqw #00000080}
 .lgb img{display:block;height:11cqw;width:auto}
@@ -554,7 +562,7 @@ ttl:"Alessio Tampone | Product Designer",abT:"About me",abP:["I’m Alessio, a S
 {r:"Product Designer",c:"Auto Gest S.R.L",t:"Contract",d:"Jan 2022 – Jun 2022",l:"Europe · Remote",b:["I [[facilitated the workshops]] and built the user journeys for internal tools and dashboards, surfacing friction and opportunities the teams could not see.","I redesigned the CRM tools around a user-centred approach: [[errors down 15% and engagement up 10%]].","I reworked the flows on research and analytics, [[cutting errors by 30%]] and aligning outcomes with SCRUM teams and stakeholders."]},
 {r:"Product Designer",c:"TESYouth",t:"Contract",d:"May 2020 – Apr 2021",l:"London, United Kingdom · Remote",b:["I turned market data and competitive analysis into [[actionable direction]] for strategy and product development.","I designed and ran surveys and data collection, [[going beyond what the client expected]].","I made the data readable for decision-makers, with [[reports that improved product alignment]]."]}],ctT:"Shall we work together?",ctS:"Tell me about your project: I reply within 24 hours.",mail:"Copy my email",copied:"Email copied:",foot:"End credits. Thanks for watching."}};
 var P=[
-{c:"#3e9fd1",m:99,y:2025,art:"ds",thc:"ds",lg:"alten-logo.png",ty:["Design system","Design system"],
+{c:"#3e9fd1",m:99,y:2025,art:"ds",cimg:"cover-automotive.jpg",thc:"ds",lg:"alten-logo.png",ty:["Design system","Design system"],
 it:{t:"Automotive Design System",cl:"Il cliente · Alten",tag:"Un linguaggio condiviso per le interfacce di bordo",role:"Product Designer",team:"3 designer",dur:"1 anno",tools:"Figma, Tokens Studio",
 ds:"Il design system delle interfacce di bordo di più linee di veicoli: 370 componenti, 1.000 token, usato da 111 team.",
 sm:"In un team di tre designer ho costruito per un anno il design system delle interfacce di bordo del cliente: 370 componenti e 1.000 token, usato da 111 team e in produzione su vetture in commercio.",
@@ -598,10 +606,10 @@ sec:[{n:"01",h:"The challenge",p:"Almost one user in three quit sign-up before o
 var L="it",cur=null,f=0,busy=0,$=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)},scr=$("#scr"),inn=$("#inner");
 function t(k){return U[L][k]}
 function art(i){var p=P[i];
-  if(p.art==="ds")return '<div class="dsart" style="--c:'+p.c+'"><div class="lgb"><img src="'+p.lg+'" alt="" draggable="false"></div></div><div class="sh1"></div><div class="sh2"></div>';
+  if(p.art==="ds")return '<div class="dsart" style="--c:'+p.c+'">'+(p.cimg?'<img class="cimg" src="'+p.cimg+'" alt="" draggable="false">':'')+'<div class="lgb"><img src="'+p.lg+'" alt="" draggable="false"></div></div><div class="sh1"></div><div class="sh2"></div>';
   var pos=[["52%","-8deg"],["66%","2deg"],["80%","10deg"]];return '<div class="art" style="--c:'+p.c+'">'+pos.map(function(o){return '<div class="mk" style="--l:'+o[0]+';--r:'+o[1]+'"><i></i><i></i><i></i></div>'}).join("")+'</div><div class="sh1"></div><div class="sh2"></div>'}
 function cov(p,d){
-  if(p.thc==="ds")return '<span class="cr2">'+d.cl+'</span><span class="gr"></span><div class="lgp"><img src="'+p.lg+'" alt="" draggable="false"></div>';
+  if(p.thc==="ds")return (p.cimg?'<img class="cimg" src="'+p.cimg+'" alt="" draggable="false">':'')+'<span class="cr2">'+d.cl+'</span><span class="gr"></span><div class="lgp"><img src="'+p.lg+'" alt="" draggable="false"></div>';
   return '<i></i><i></i>'}
 function meta(i){var p=P[i];return '<div class="mt"><b>'+t("cs")+'</b><i>•</i><b>'+p.ty[L=="it"?0:1]+'</b><i>•</i><b>'+p.y+'</b></div>'}
 function sys(){return '<div class="sysv"><figure><div class="b"><i></i><i></i><i></i></div><figcaption>'+t("lTok")+'</figcaption></figure><figure><div class="b"><u></u><u></u></div><figcaption>'+t("lCmp")+'</figcaption></figure><figure><div class="b"><s></s><s></s><s></s><s></s></div><figcaption>'+t("lScr")+'</figcaption></figure></div>'}
@@ -699,7 +707,7 @@ function paras(x){return (x?(typeof x=="string"?[x]:x):[]).map(function(q){retur
 function draw(){
   var p=P[cur],d=p[L],n=P[(cur+1)%P.length][L].t;
   $("#hd").textContent=d.t;$(".csbg").style.setProperty("--cc",p.c);scr.style.setProperty("--hc",p.c);
-  inn.innerHTML='<div class="cover" style="background:radial-gradient(120% 90% at 15% 100%,'+p.c+'aa,transparent 60%),linear-gradient(#0009,#000)"><span class="np">'+t("now")+'</span><h2>'+d.t+'</h2><p>'+d.tag+'</p><div class="chips">'+(d.cl?'<b style="color:#fff">'+d.cl+'</b>':'')+'<b>'+p.m+'% match</b><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></div><span class="sd">'+t("scroll")+'</span></div>'+
+  inn.innerHTML='<div class="cover" style="background:'+(p.cimg?'linear-gradient(#000000b8,#00000070 40%,#000000e6),radial-gradient(120% 90% at 15% 100%,'+p.c+'66,transparent 60%),url('+p.cimg+') center/cover':'radial-gradient(120% 90% at 15% 100%,'+p.c+'aa,transparent 60%),linear-gradient(#0009,#000)')+'"><span class="np">'+t("now")+'</span><h2>'+d.t+'</h2><p>'+d.tag+'</p><div class="chips">'+(d.cl?'<b style="color:#fff">'+d.cl+'</b>':'')+'<b>'+p.m+'% match</b><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></div><span class="sd">'+t("scroll")+'</span></div>'+
   '<div class="csw"><p class="lead">'+d.ds+'</p><dl class="mta">'+
   mrow(t("client"),d.cl)+mrow(t("year"),p.y)+mrow(t("role"),d.role)+mrow(t("team"),d.team)+mrow(t("dur"),d.dur)+mrow(t("tools"),d.tools)+
   '</dl>'+

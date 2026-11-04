@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.6.0
+- Copertina del case study Automotive Design System generata con Higgsfield (Nano Banana Pro, 16:9): abitacolo di un'auto sportiva di notte con componenti del design system proiettati come ologrammi sopra la plancia. Lo stemma sul volante è stato rimosso per mantenere anonimo il cliente.
+- La copertina è usata nella card del progetto (logo Alten spostato in basso a destra) e come sfondo della copertina del case study, scurita per la leggibilità del titolo. File: public/cover-automotive.jpg (113 KB).
+
 ## v5.5.0
 Case study Automotive Design System riscritto per essere letto in fretta.
 - Testi ridotti di circa la metà, in italiano e in inglese: ogni sezione apre con una frase, il resto è in punti brevi.
