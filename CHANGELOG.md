@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.11.0
+- Nuova apertura dei case study, al posto della copertina a tutto schermo: riga in stile terminale con cursore lampeggiante, titolo grande con alone, descrizione breve, dati del progetto in una fascia con divisori (Cliente, Anno, Ruolo, Team, Durata, Strumenti), etichette, "In breve" e poi l'immagine del progetto in una cornice luminosa ridotta con griglia e didascalie in monospace. La colonna dei case study passa da 780 a 1080 px.
+
 ## v5.10.1
 - Case study: testi in peso regular e più chiari (lead bianco, paragrafi e schede quasi bianchi) e a tutta larghezza della colonna, senza il limite di caratteri per riga.
 

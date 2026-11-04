@@ -538,6 +538,33 @@ body{background:#0b0c0e}
 .lead{font-weight:400;color:#fff;max-width:none}
 .cs2 p,.cs2>p{font-weight:400;color:#e9edf1;max-width:none}
 .tld p,.sl li,.stp p{font-weight:400;color:#dfe5eb}
+
+/* ===== Apertura del case study: titolo, descrizione, dati, in breve, immagine ===== */
+.csw{max-width:1080px}
+.cshd{padding-top:clamp(96px,14vh,130px)}
+.csk{display:block;word-break:break-word;font:600 13px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:color-mix(in srgb,var(--hc) 60%,#fff);letter-spacing:.02em;text-shadow:0 0 10px color-mix(in srgb,var(--hc) 60%,transparent)}
+.csk b{color:#fff;font-weight:700}
+.csk .cur{display:inline-block;vertical-align:-2px;margin-left:.4em;width:.55em;height:1em;background:var(--hc);box-shadow:0 0 8px var(--hc);animation:blk 1s steps(1) infinite}
+@keyframes blk{50%{opacity:0}}
+.cst{margin:18px 0 0;font-size:clamp(2.4rem,7vw,5.4rem);line-height:.98;font-weight:800;letter-spacing:-.045em;color:#f2fbff;text-shadow:0 0 28px color-mix(in srgb,var(--hc) 70%,transparent),0 0 2px color-mix(in srgb,var(--hc) 40%,#fff)}
+.cshd .lead{margin:22px 0 0;max-width:62ch;font-size:clamp(1.05rem,1.8vw,1.3rem);line-height:1.5;color:color-mix(in srgb,var(--hc) 25%,#fff)}
+.cshd .mta{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;margin:36px 0 0;padding:0;border-top:1px solid color-mix(in srgb,var(--hc) 38%,transparent);border-bottom:1px solid color-mix(in srgb,var(--hc) 38%,transparent)}
+.cshd .mta>div{background:none;box-shadow:none;border-radius:0;backdrop-filter:none;padding:16px 18px;border-left:1px solid color-mix(in srgb,var(--hc) 30%,transparent)}
+.cshd .mta>div:first-child{border-left:0;padding-left:0}
+.cshd .mta>div::before,.cshd .mta>div::after{display:none}
+.cshd .mta dt{font:500 12px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.02em;color:color-mix(in srgb,var(--hc) 55%,#fff);margin-bottom:9px}
+.cshd .mta dd{font-weight:500;color:#fff}
+.cstags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.cstags span{font:500 12px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;padding:7px 10px;border:1px solid color-mix(in srgb,var(--hc) 55%,transparent);border-radius:3px;color:color-mix(in srgb,var(--hc) 30%,#fff);background:color-mix(in srgb,var(--hc) 8%,transparent)}
+.cshd .tld{margin-top:40px}
+.csimg{position:relative;margin:44px 0 0;padding:6px;border:1px solid color-mix(in srgb,var(--hc) 70%,#fff);border-radius:4px;box-shadow:0 0 22px color-mix(in srgb,var(--hc) 40%,transparent),inset 0 0 22px color-mix(in srgb,var(--hc) 20%,transparent)}
+.csimg img,.csph{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px}
+.csph{position:relative;background:radial-gradient(60% 70% at 50% 50%,color-mix(in srgb,var(--hc) 22%,transparent),transparent),#07090c;display:grid;place-items:center}
+.csph .mocks{width:70%;margin:0}
+.csimg::after{content:"";position:absolute;inset:6px;pointer-events:none;background:repeating-linear-gradient(0deg,#ffffff0a 0 1px,transparent 1px 24px),repeating-linear-gradient(90deg,#ffffff0a 0 1px,transparent 1px 24px)}
+.csimg figcaption{position:absolute;left:20px;right:20px;bottom:16px;z-index:1;display:flex;justify-content:space-between;font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:color-mix(in srgb,var(--hc) 40%,#fff);text-shadow:0 0 8px #000,0 0 10px color-mix(in srgb,var(--hc) 70%,transparent)}
+.cshd+.cs2,.csimg+.cs2{margin-top:30px}
+@media (max-width:760px){.cshd .mta{grid-template-columns:1fr 1fr}.cshd .mta>div{border-left:0;padding-left:0;border-bottom:1px solid color-mix(in srgb,var(--hc) 20%,transparent)}.cshd .mta>div:nth-child(even){padding-left:14px;border-left:1px solid color-mix(in srgb,var(--hc) 30%,transparent)}.csimg figcaption{font-size:10px;left:14px;right:14px;bottom:12px}}
 </style>
 </head>
 <body class="lock">
@@ -600,7 +627,7 @@ ttl:"Alessio Tampone | Product Designer",abT:"About me",abP:["I’m Alessio, a S
 {r:"Product Designer",c:"TESYouth",t:"Contract",d:"May 2020 – Apr 2021",l:"London, United Kingdom · Remote",b:["I turned market data and competitive analysis into [[actionable direction]] for strategy and product development.","I designed and ran surveys and data collection, [[going beyond what the client expected]].","I made the data readable for decision-makers, with [[reports that improved product alignment]]."]}],ctT:"Shall we work together?",ctS:"Tell me about your project: I reply within 24 hours.",mail:"Copy my email",copied:"Email copied:",foot:"End credits. Thanks for watching."}};
 var P=[
 {c:"#3e9fd1",m:99,y:2025,art:"ds",cimg:"cover-automotive.jpg",simg:["ds-tokens.jpg","ds-components.jpg","ds-screens.jpg"],thc:"ds",lg:"alten-logo.png",ty:["Design system","Design system"],
-it:{t:"Automotive Design System",cl:"Alten",tag:"Un linguaggio condiviso per le interfacce di bordo",role:"Product Designer",team:"3 designer",dur:"1 anno",tools:"Figma, Tokens Studio",
+it:{t:"Automotive Design System",cl:"Alten",tags:["Automotive","HMI","Design system"],tag:"Un linguaggio condiviso per le interfacce di bordo",role:"Product Designer",team:"3 designer",dur:"1 anno",tools:"Figma, Tokens Studio",
 ds:"Il design system delle interfacce di bordo di più linee di veicoli: 370 componenti, 1.000 token, usato da 111 team.",
 sm:"In un team di tre designer ho costruito per un anno il design system delle interfacce di bordo del cliente: 370 componenti e 1.000 token, usato da 111 team e in produzione su vetture in commercio.",
 tl:[["Problema","Il sistema esisteva solo nel codice. I designer lo ridisegnavano a mano e ogni team ricostruiva gli stessi componenti."],["Soluzione","Un design system in Figma basato sui token, con un tema per ogni linea di veicoli e collegato direttamente al codice."],["Risultato","370 componenti e 1.000 token, usati da 111 team. In produzione su vetture in commercio."]],
@@ -611,7 +638,7 @@ sec:[
 {n:"04",h:"Il sistema",p:"Tre livelli: i token definiscono i valori, i componenti li usano, le schermate li compongono. Cambiare un token aggiorna ogni componente, in tutti i temi.",vis:"sys",st:[["370","componenti"],["1.000","token"],["48","stili"]]},
 {n:"05",h:"Il risultato",shH:"Schermate reali",shots:[["ds-real-home.jpg","Home: widget, media e controlli clima"],["ds-real-park.jpg","Assistente al parcheggio con telecamera"],["ds-real-list.jpg","Lista con tab e selezione"]],p:"I componenti sono in produzione su vetture in commercio. L’adozione è arrivata da quattro scelte:",li:["<b>Formazione nei team</b>Affiancamento dentro il loro processo, non accanto.","<b>Dos e don’ts</b>Documentati per ogni componente.","<b>Nomi semantici</b>API prevedibili per chi sviluppa.","<b>Manutenzione continua</b>Il sistema è un prodotto, non una consegna."],st:[["111","team usano la libreria"],["10.400","inserimenti in una settimana"]]},
 {n:"06",h:"Cosa farei dopo",p:"L’uso è concentrato: due programmi generano l’87% degli inserimenti, mentre diversi team restano sotto l’1%. Il prossimo passo è affiancare i team a bassa adozione per capire cosa li blocca."}]},
- en:{t:"Automotive Design System",cl:"Alten",tag:"A shared language for in-car interfaces",role:"Product Designer",team:"3 designers",dur:"1 year",tools:"Figma, Tokens Studio",
+ en:{t:"Automotive Design System",cl:"Alten",tags:["Automotive","HMI","Design system"],tag:"A shared language for in-car interfaces",role:"Product Designer",team:"3 designers",dur:"1 year",tools:"Figma, Tokens Studio",
 ds:"The design system behind the in-car interfaces of several vehicle lines: 370 components, 1,000 tokens, used by 111 teams.",
 sm:"In a team of three designers, I spent a year building the design system behind the client’s in-car interfaces: 370 components and 1,000 tokens, used by 111 teams and in production in cars on the market.",
 tl:[["Problem","The system only existed in code. Designers redrew it by hand and every team rebuilt the same components."],["Solution","A token-based design system in Figma, with one theme per vehicle line and a direct link to the code."],["Result","370 components and 1,000 tokens, used by 111 teams. In production in cars on the market."]],
@@ -744,11 +771,12 @@ function paras(x){return (x?(typeof x=="string"?[x]:x):[]).map(function(q){retur
 function draw(){
   var p=P[cur],d=p[L],n=P[(cur+1)%P.length][L].t;
   $("#hd").textContent=d.t;$(".csbg").style.setProperty("--cc",p.c);scr.style.setProperty("--hc",p.c);
-  inn.innerHTML='<div class="cover" style="background:'+(p.cimg?'linear-gradient(#000000b8,#00000070 40%,#000000e6),radial-gradient(120% 90% at 15% 100%,'+p.c+'66,transparent 60%),url('+p.cimg+') center/cover':'radial-gradient(120% 90% at 15% 100%,'+p.c+'aa,transparent 60%),linear-gradient(#0009,#000)')+'"><span class="np">'+t("now")+'</span><h2>'+d.t+'</h2><p>'+d.tag+'</p><div class="chips">'+(d.cl?'<b style="color:#fff">'+d.cl+'</b>':'')+'<b>'+p.m+'% match</b><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></div><span class="sd">'+t("scroll")+'</span></div>'+
-  '<div class="csw"><p class="lead">'+d.ds+'</p><dl class="mta">'+
+  var slug=d.t.toLowerCase().replace(/[^a-z0-9]+/g,"-");
+  inn.innerHTML='<div class="csw cshd"><span class="csk">PORTFOLIO://case-study/0'+(cur+1)+' <b>'+slug+'</b><i class="cur"></i></span><h1 class="cst">'+d.t+'</h1><p class="lead">'+d.ds+'</p><dl class="mta">'+
   mrow(t("client"),d.cl)+mrow(t("year"),p.y)+mrow(t("role"),d.role)+mrow(t("team"),d.team)+mrow(t("dur"),d.dur)+mrow(t("tools"),d.tools)+
-  '</dl>'+
+  '</dl><div class="cstags">'+(d.tags||[p.ty[L=="it"?0:1]]).map(function(x){return '<span>'+x+'</span>'}).join("")+'</div>'+
   (d.tl?'<div class="tld"><h3>'+t("tlH")+'</h3><div>'+d.tl.map(function(x,k){return '<article><span>'+x[0]+'</span><p>'+x[1]+'</p></article>'}).join("")+'</div></div>':'')+
+  '<figure class="csimg">'+(p.cimg?'<img src="'+p.cimg+'" alt="'+d.t+'">':'<div class="csph">'+mocks()+'</div>')+'<figcaption><span>'+slug.toUpperCase().replace(/-/g,"_")+'.IMG</span><span>'+(p.cimg?'1376 × 768':'16 : 9')+'</span></figcaption></figure>'+
   d.sec.map(function(s,i){
     var h='<section class="cs2" id="s'+i+'" style="--c:'+p.c+'"><h3><b>'+s.n+'</b>'+s.h+'</h3>'+paras(s.p);
     if(s.li)h+='<ul class="sl">'+s.li.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul>';
@@ -978,7 +1006,7 @@ try{var sl=localStorage.getItem("at-lang");if(sl&&U[sl])L=sl;else if((navigator.
 })();
 
 /* ===== Linguaggio olografico: comparsa "materializzata" e numeri che contano ===== */
-var HSEL=".sx>h2,.row h2,.rsub,.abp,.lkb,.skg,.ex,.lead,.mta>div,.cs2 h3,.cs2>p,.sl li,.stp article,.tld h3,.tld article,.shots figure,.sysv figure,.mocks,.res>div,.nx",HIO=null;
+var HSEL=".sx>h2,.row h2,.rsub,.abp,.lkb,.skg,.ex,.lead,.mta>div,.cs2 h3,.cs2>p,.csk,.cst,.cstags,.csimg,.sl li,.stp article,.tld h3,.tld article,.shots figure,.sysv figure,.mocks,.res>div,.nx",HIO=null;
 function hrv(root){
   if(!root||RMO||!("IntersectionObserver" in window))return;
   if(!HIO)HIO=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;HIO.unobserve(el);el.style.animationDelay=(k++*60)+"ms";el.classList.add("hri");var b=el.matches(".res>div")&&el.querySelector("b");if(b)setTimeout(function(){hcount(b)},k*90)})},{threshold:.12});
