@@ -2,6 +2,14 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.17.0
+Case study più solidi, su tutti e tre i progetti:
+- "Cosa ho fatto io / Con il team" nella sezione del ruolo.
+- Un artefatto di processo per progetto (struttura dei token, sketch e Crazy 8s, estratto dell'audit), per ora come placeholder.
+- "Prima e dopo" con tre note numerate in stile frame Figma che spiegano le decisioni. Italdesign con le immagini reali; Audi e NatWest con il "prima" come placeholder.
+- Italdesign: "Prima e dopo, in numeri" con tre metriche da inserire (tempo per esportare un report, errori per sessione, SUS). L'interfaccia originale si è spostata dalla sfida al prima/dopo.
+- Placeholder riconoscibili: bordo tratteggiato, righe diagonali, etichetta "Immagine da inserire" / "Dato da inserire".
+
 ## v5.16.1
 - Card Audi: rimosso il logo Alten dalla copertina.
 
