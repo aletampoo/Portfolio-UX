@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.2.3
+- Su cosa sono forte: tolta la frase sotto il titolo di ogni scheda; restano numero, titolo e punti.
+
 ## v6.2.2
 - Ologramma: headline riscritta in linea con i case study, "Design system e UX per automotive, fintech e tool enterprise".
 

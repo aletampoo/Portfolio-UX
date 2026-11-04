@@ -1054,7 +1054,7 @@ function stat(){
   $("#jrl").innerHTML=U[L].jr.map(function(q,k){return '<li class="jrs'+(q.now?' now':'')+'" style="--d:'+(k*.12)+'s"><span class="jry">'+q.y+'</span><span class="jri"><svg viewBox="0 0 64 64" aria-hidden="true">'+JIC[q.i]+'</svg></span><b>'+q.c+'</b><small>'+q.s+'</small></li>'}).join("");
   $("#tsg").innerHTML=U[L].ts.map(function(q){var ini=q.n.split(" ").map(function(w){return w[0]}).join("").slice(0,2);return '<figure class="tsc"><blockquote>'+q.q+'</blockquote><figcaption><span class="tsa">'+ini+'</span><span><b>'+q.n+'</b><small>'+q.r+'</small><em>'+q.w+' · '+t("tsR")+'</em></span></figcaption></figure>'}).join("");
   function exl(a){return a.map(function(e){return '<article class="ex"><h3>'+e.r+'</h3><span class="exc">'+e.c+(e.t?' · '+e.t:'')+'</span><span class="exm">'+e.d+' · '+e.l+'</span>'+(e.b.length?'<ul>'+e.b.map(function(x){return '<li>'+x.replace(/\[\[(.+?)\]\]/g,'<mark class="fk"><span class="fkl">Frame</span>$1</mark>')+'</li>'}).join("")+'</ul>':'')+'</article>'}).join("")}
-  $("#pig").innerHTML=U[L].pi.map(function(q){return '<article class="pc"><span class="pk">'+q.k+'</span><h3>'+q.h+'</h3><p class="pcl">'+q.c+'</p><ul>'+q.l.map(function(z){return '<li>'+z+'</li>'}).join("")+'</ul></article>'}).join("");
+  $("#pig").innerHTML=U[L].pi.map(function(q){return '<article class="pc"><span class="pk">'+q.k+'</span><h3>'+q.h+'</h3><ul>'+q.l.map(function(z){return '<li>'+z+'</li>'}).join("")+'</ul></article>'}).join("");
   function hwl(a){return a.map(function(q){return '<article'+(q.ph?' class="phc"':'')+'><h4>'+q.h+'</h4><p>'+q.p+'</p></article>'}).join("")}
   $("#hwg").innerHTML=hwl(U[L].hw);$("#labg").innerHTML=hwl(U[L].lab);
   $("#ex").innerHTML=exl(U[L].ex);$("#ed").innerHTML=exl(U[L].ed);fkInit();
