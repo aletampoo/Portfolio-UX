@@ -524,6 +524,15 @@ body{background:#0b0c0e}
 .sysv.sysi figure{position:relative}
 .sysv.sysi figcaption{margin-top:8px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--hc) 45%,#fff)}
 @media (max-width:760px){.sysv.sysi{grid-template-columns:1fr}}
+
+.shots{margin-top:30px}
+.shots h4{margin:0 0 14px;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:color-mix(in srgb,var(--hc) 50%,#fff)}
+.shots>div{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.shots figure{margin:0}
+.shots figure:first-child{grid-column:1/-1}
+.shots img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 0 0 1px color-mix(in srgb,var(--hc) 40%,transparent),0 0 34px color-mix(in srgb,var(--hc) 18%,transparent),0 18px 40px #000a}
+.shots figcaption{margin-top:9px;font-size:.88rem;color:#bfc8d2}
+@media (max-width:760px){.shots>div{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="lock">
@@ -595,7 +604,7 @@ sec:[
 {n:"02",h:"Il mio ruolo",p:"Uno di tre designer, per un anno.",li:["<b>Libreria</b>Ho disegnato gran parte dei componenti.","<b>Token</b>Li ho creati e applicati, eliminando i valori scritti a mano.","<b>Formazione</b>Ho insegnato ai team a usare il kit nel loro processo.","<b>Manutenzione</b>Nuovi componenti e rilasci dopo il lancio.","<b>Test in auto</b>Ho provato i prototipi alla guida con gli utenti."]},
 {n:"03",h:"Le scelte chiave",p:"Cinque decisioni, prese per un sistema facile da mantenere, non solo veloce da costruire.",stp:[{t:"Migrazione",s:"da HTML a Figma",p:"Ogni elemento ricostruito come componente con proprietà e stati. Quello che nessuno usava è stato eliminato."},{t:"Temi",s:"una modalità, non una libreria",p:"Una nuova linea di veicoli si configura cambiando la modalità dei token, non si costruisce da zero."},{t:"Token",s:"nominati per ruolo, non per colore",p:"Il nome legato alla funzione resiste al cambio di valore: niente rinomine a ogni restyling."},{t:"Stati",s:"sempre presenti",p:"Idle, Pressed, Active e Disabled in ogni componente: in auto un tocco senza feedback viene ripetuto e distrae dalla strada."},{t:"Pipeline",s:"un valore, un solo punto",p:"Da Figma al codice con Tokens Studio e GitHub: un colore cambia in un punto e arriva ovunque."}]},
 {n:"04",h:"Il sistema",p:"Tre livelli: i token definiscono i valori, i componenti li usano, le schermate li compongono. Cambiare un token aggiorna ogni componente, in tutti i temi.",vis:"sys",st:[["370","componenti"],["1.000","token"],["48","stili"]]},
-{n:"05",h:"Il risultato",p:"I componenti sono in produzione su vetture in commercio. L’adozione è arrivata da quattro scelte:",li:["<b>Formazione nei team</b>Affiancamento dentro il loro processo, non accanto.","<b>Dos e don’ts</b>Documentati per ogni componente.","<b>Nomi semantici</b>API prevedibili per chi sviluppa.","<b>Manutenzione continua</b>Il sistema è un prodotto, non una consegna."],st:[["111","team usano la libreria"],["10.400","inserimenti in una settimana"]]},
+{n:"05",h:"Il risultato",shH:"Schermate reali",shots:[["ds-real-home.jpg","Home: widget, media e controlli clima"],["ds-real-park.jpg","Assistente al parcheggio con telecamera"],["ds-real-list.jpg","Lista con tab e selezione"]],p:"I componenti sono in produzione su vetture in commercio. L’adozione è arrivata da quattro scelte:",li:["<b>Formazione nei team</b>Affiancamento dentro il loro processo, non accanto.","<b>Dos e don’ts</b>Documentati per ogni componente.","<b>Nomi semantici</b>API prevedibili per chi sviluppa.","<b>Manutenzione continua</b>Il sistema è un prodotto, non una consegna."],st:[["111","team usano la libreria"],["10.400","inserimenti in una settimana"]]},
 {n:"06",h:"Cosa farei dopo",p:"L’uso è concentrato: due programmi generano l’87% degli inserimenti, mentre diversi team restano sotto l’1%. Il prossimo passo è affiancare i team a bassa adozione per capire cosa li blocca."}]},
  en:{t:"Automotive Design System",cl:"Alten",tag:"A shared language for in-car interfaces",role:"Product Designer",team:"3 designers",dur:"1 year",tools:"Figma, Tokens Studio",
 ds:"The design system behind the in-car interfaces of several vehicle lines: 370 components, 1,000 tokens, used by 111 teams.",
@@ -606,7 +615,7 @@ sec:[
 {n:"02",h:"My role",p:"One of three designers, for a year.",li:["<b>Library</b>I designed most of the components.","<b>Tokens</b>I created and applied them, removing hand-written values.","<b>Training</b>I taught teams to fit the kit into their process.","<b>Maintenance</b>New components and releases after launch.","<b>In-car testing</b>I tested prototypes with users while driving."]},
 {n:"03",h:"Key decisions",p:"Five decisions, made for a system that is easy to maintain, not just quick to build.",stp:[{t:"Migration",s:"from HTML to Figma",p:"Every element rebuilt as a component with properties and states. Whatever nobody used was dropped."},{t:"Themes",s:"a mode, not a library",p:"A new vehicle line is configured by switching the token mode, not built from scratch."},{t:"Tokens",s:"named by role, not colour",p:"A name tied to function survives a value change: no renaming at every restyle."},{t:"States",s:"always there",p:"Idle, Pressed, Active and Disabled in every component: in a car, a tap with no feedback gets repeated and pulls eyes off the road."},{t:"Pipeline",s:"one value, one place",p:"From Figma to code through Tokens Studio and GitHub: a colour changes in one place and lands everywhere."}]},
 {n:"04",h:"The system",p:"Three layers: tokens define the values, components use them, screens compose them. Changing a token updates every component, in every theme.",vis:"sys",st:[["370","components"],["1,000","tokens"],["48","styles"]]},
-{n:"05",h:"The result",p:"The components are in production in cars on the market. Adoption came from four choices:",li:["<b>Training inside teams</b>Working within their process, not next to it.","<b>Dos and don’ts</b>Documented for every component.","<b>Semantic naming</b>Predictable APIs for engineers.","<b>Continuous maintenance</b>The system is a product, not a delivery."],st:[["111","teams use the library"],["10,400","insertions in one week"]]},
+{n:"05",h:"The result",shH:"Real screens",shots:[["ds-real-home.jpg","Home: widgets, media and climate controls"],["ds-real-park.jpg","Parking assist with camera view"],["ds-real-list.jpg","List with tabs and selection"]],p:"The components are in production in cars on the market. Adoption came from four choices:",li:["<b>Training inside teams</b>Working within their process, not next to it.","<b>Dos and don’ts</b>Documented for every component.","<b>Semantic naming</b>Predictable APIs for engineers.","<b>Continuous maintenance</b>The system is a product, not a delivery."],st:[["111","teams use the library"],["10,400","insertions in one week"]]},
 {n:"06",h:"What I’d do next",p:"Usage is concentrated: two programmes generate 87% of insertions, while several teams stay below 1%. The next step is to sit with the low-adoption teams and find out what blocks them."}]}},
 {c:"#ff7262",m:95,y:2024,ty:["Dashboard B2B","B2B dashboard"],
 it:{t:"Pulse",tag:"Dashboard per team B2B",role:"UX/UI designer",dur:"8 settimane",tools:"Figma, Notion",ds:"Una dashboard con ricerca globale e viste salvate: il report giusto è a un clic.",sm:"Ho ridisegnato la dashboard di uno strumento B2B. Ricerca globale e viste salvate hanno portato il tempo per trovare un report da due minuti a venti secondi.",
@@ -738,6 +747,7 @@ function draw(){
   d.sec.map(function(s,i){
     var h='<section class="cs2" id="s'+i+'" style="--c:'+p.c+'"><h3><b>'+s.n+'</b>'+s.h+'</h3>'+paras(s.p);
     if(s.li)h+='<ul class="sl">'+s.li.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul>';
+    if(s.shots)h+='<div class="shots"><h4>'+s.shH+'</h4><div>'+s.shots.map(function(x){return '<figure><img src="'+x[0]+'" alt="'+x[1]+'" loading="lazy" draggable="false"><figcaption>'+x[1]+'</figcaption></figure>'}).join("")+'</div></div>';
     if(s.stp)h+='<div class="stp">'+s.stp.map(function(x,j){return '<article><i>'+(j+1)+'</i><h4>'+x.t+'<span>'+x.s+'</span></h4><p>'+x.p+'</p></article>'}).join("")+'</div>';
     if(s.vis==="sys")h+=sys(p);
     if(s.vis==="mocks")h+=mocks();
@@ -963,7 +973,7 @@ try{var sl=localStorage.getItem("at-lang");if(sl&&U[sl])L=sl;else if((navigator.
 })();
 
 /* ===== Linguaggio olografico: comparsa "materializzata" e numeri che contano ===== */
-var HSEL=".sx>h2,.row h2,.rsub,.abp,.lkb,.skg,.ex,.lead,.mta>div,.cs2 h3,.cs2>p,.sl li,.stp article,.tld h3,.tld article,.sysv figure,.mocks,.res>div,.nx",HIO=null;
+var HSEL=".sx>h2,.row h2,.rsub,.abp,.lkb,.skg,.ex,.lead,.mta>div,.cs2 h3,.cs2>p,.sl li,.stp article,.tld h3,.tld article,.shots figure,.sysv figure,.mocks,.res>div,.nx",HIO=null;
 function hrv(root){
   if(!root||RMO||!("IntersectionObserver" in window))return;
   if(!HIO)HIO=new IntersectionObserver(function(es){var k=0;es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;HIO.unobserve(el);el.style.animationDelay=(k++*60)+"ms";el.classList.add("hri");var b=el.matches(".res>div")&&el.querySelector("b");if(b)setTimeout(function(){hcount(b)},k*90)})},{threshold:.12});

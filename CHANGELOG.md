@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.10.0
+- Case study automotive, "Il risultato": nuova galleria "Schermate reali" con tre schermate dell'interfaccia in produzione (home con widget e clima, assistente al parcheggio con telecamera, lista con tab), ritagliate dall'immagine fornita e senza la cornice bianca. Prima immagine a tutta larghezza, le altre due affiancate; una colonna su mobile. File: public/ds-real-home.jpg, ds-real-park.jpg, ds-real-list.jpg.
+
 ## v5.9.0
 - Case study automotive, sezione "Il sistema": i tre schemi grigi sono sostituiti da tre immagini generate con Higgsfield nello stile olografico del sito: Tokens (campioni di colore, spaziature, raggi, chip "Aa"), Components (pulsanti nei quattro stati, interruttori, cursori, liste, ricerca) e Screens (cruscotto, clima, impostazioni, profilo). Layout: Tokens e Components affiancati, Screens a tutta larghezza; una colonna su mobile. Rimosso il watermark di Higgsfield ritagliando il bordo inferiore. File: public/ds-tokens.jpg, ds-components.jpg, ds-screens.jpg (~60 KB l'una).
 
