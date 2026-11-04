@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.15.0
+- I tre progetti prendono il nome del cliente: Audi, NatWest, Italdesign (card, intestazione, "Progetto successivo").
+- Apertura dei case study: al posto del nome, un titolo-headline grande in peso medio con alone luminoso nel colore del progetto ("Un sistema, tante auto", "Regali che restano", "Meno attrito, più analisi"), con la descrizione sotto in tinta.
+
 ## v5.14.1
 - Bugzer: aggiunti gli strumenti (Figma, Crazy 8s) e la sezione 06 "Cosa farei dopo" con quattro lezioni coerenti con il case study.
 
