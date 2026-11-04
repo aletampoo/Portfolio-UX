@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.12.1
+- Schede dei case study (vincoli, ruolo, scelte chiave, risultato): griglia che riempie sempre le righe. 3 schede in tre terzi, 4 in 2×2, 5 in 3 + 2. Prima, con la colonna più larga, l'ultima riga restava con una scheda isolata o una a tutta larghezza. Tablet: due colonne; mobile: una colonna.
+
 ## v5.12.0
 - Case study automotive: l'immagine principale nella cornice è ora il mockup reale con i due display (navigazione e home con Automatic Smart Entry, media e clima), ritagliato e scontornato dallo sfondo chiaro, con ombra e alone nel colore del progetto. La copertina generata resta come sfondo della card nella home. File: public/ds-hero.webp (120 KB).
 
