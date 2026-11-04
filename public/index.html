@@ -565,6 +565,22 @@ body{background:#0b0c0e}
 .csimg figcaption{position:absolute;left:20px;right:20px;bottom:16px;z-index:1;display:flex;justify-content:space-between;font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:color-mix(in srgb,var(--hc) 40%,#fff);text-shadow:0 0 8px #000,0 0 10px color-mix(in srgb,var(--hc) 70%,transparent)}
 .cshd+.cs2,.csimg+.cs2{margin-top:30px}
 @media (max-width:760px){.cshd .mta{grid-template-columns:1fr 1fr}.cshd .mta>div{border-left:0;padding-left:0;border-bottom:1px solid color-mix(in srgb,var(--hc) 20%,transparent)}.cshd .mta>div:nth-child(even){padding-left:14px;border-left:1px solid color-mix(in srgb,var(--hc) 30%,transparent)}.csimg figcaption{font-size:10px;left:14px;right:14px;bottom:12px}}
+
+/* ===== Tile: dettagli in sovrimpressione dentro la card (niente pannello che invade la sezione sotto) ===== */
+.tile{cursor:pointer}
+.th:has(.cimg) .tl{right:calc(4% + 12cqw)}
+.ti h4{margin:0 0 4px;font-size:1.15rem;font-weight:800;letter-spacing:-.02em;color:#fff;text-shadow:0 0 14px color-mix(in srgb,var(--c) 70%,transparent)}
+@media (min-width:761px){
+.ti{top:auto;bottom:0;z-index:4;max-height:none;padding:16px 16px 14px;border:0;border-radius:0 0 12px 12px;opacity:0;transform:translateY(12px);pointer-events:none;background:linear-gradient(transparent,color-mix(in srgb,var(--c) 16%,#05070bf0) 26%,#05070bf5);box-shadow:none;backdrop-filter:none;transition:opacity .25s,transform .3s}
+.tile:hover .ti,.tile:focus-within .ti{max-height:none;padding:16px 16px 14px;opacity:1;transform:none;pointer-events:auto}
+.tl{transition:opacity .2s}
+.tile:hover .tl,.tile:focus-within .tl{opacity:0}
+.tile:hover .lgp,.tile:focus-within .lgp{opacity:0}
+.ti p{margin:0 0 10px;font-size:.88rem;color:#d9e2ea}
+.ti .tc{margin-bottom:8px}
+.ti small{font-size:.8rem}
+}
+@media (max-width:760px){.ti h4{display:none}}
 </style>
 </head>
 <body class="lock">
@@ -798,7 +814,7 @@ function stat(){
   $("#sk").innerHTML=U[L].sk.map(function(g){return '<div class="skg"><h3>'+g.h+'</h3><div class="chips2">'+g.i.map(function(x){return "<span>"+x+"</span>"}).join("")+'</div></div>'}).join("");
   function exl(a){return a.map(function(e){return '<article class="ex"><h3>'+e.r+'</h3><span class="exc">'+e.c+(e.t?' · '+e.t:'')+'</span><span class="exm">'+e.d+' · '+e.l+'</span>'+(e.b.length?'<ul>'+e.b.map(function(x){return '<li>'+x.replace(/\[\[(.+?)\]\]/g,'<mark class="fk"><span class="fkl">Frame</span>$1</mark>')+'</li>'}).join("")+'</ul>':'')+'</article>'}).join("")}
   $("#ex").innerHTML=exl(U[L].ex);$("#ed").innerHTML=exl(U[L].ed);
-  $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" style="--c:'+p.c+';--hc:'+p.c+'" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><div class="th'+(p.thc?" "+p.thc:"")+'" style="--c:'+p.c+'">'+cov(p,d)+'<b class="hx" aria-hidden="true"></b><span class="tp">'+p.ty[L=="it"?0:1]+'</span><span class="tl">'+d.t+'</span></div><div class="ti"><p>'+d.tag+'</p><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><i>'+p.m+'% match</i><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></small></div></div>'}).join("");
+  $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" style="--c:'+p.c+';--hc:'+p.c+'" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><div class="th'+(p.thc?" "+p.thc:"")+'" style="--c:'+p.c+'">'+cov(p,d)+'<b class="hx" aria-hidden="true"></b><span class="tp">'+p.ty[L=="it"?0:1]+'</span><span class="tl">'+d.t+'</span></div><div class="ti"><h4>'+d.t+'</h4><p>'+d.tag+'</p><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><i>'+p.m+'% match</i><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></small></div></div>'}).join("");
   $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===L)});$("#lt").classList.toggle("en",L==="en");
   try{localStorage.setItem("at-lang",L)}catch(e){}
   hrv($("main"));

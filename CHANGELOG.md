@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.11.1
+- Card dei progetti: i dettagli al passaggio del mouse ora compaiono dentro la card, in basso (titolo, descrizione, pulsanti, dati), invece del pannello che scendeva sotto la card e copriva la sezione "Chi sono". Cursore a mano invece che "afferra" (il drag è stato tolto). Il titolo della card con copertina non finisce più sotto il logo Alten.
+
 ## v5.11.0
 - Nuova apertura dei case study, al posto della copertina a tutto schermo: riga in stile terminale con cursore lampeggiante, titolo grande con alone, descrizione breve, dati del progetto in una fascia con divisori (Cliente, Anno, Ruolo, Team, Durata, Strumenti), etichette, "In breve" e poi l'immagine del progetto in una cornice luminosa ridotta con griglia e didascalie in monospace. La colonna dei case study passa da 780 a 1080 px.
 
