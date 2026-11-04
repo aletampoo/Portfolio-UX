@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.8.0
+- Nuova sezione Formazione / Education, identica a Esperienza (timeline con nodi luminosi e impulso), con voce nel menu: MSc User Experience Design (Loughborough University, 2021–2022), BSc International Business & Management (Anglia Ruskin University, Cambridge, 2017–2019), Diploma (IIS Europa Unita, Chivasso, 2010–2016).
+- Rimosso il drag and drop delle card sul parabrezza: le card si aprono con un clic. Il suggerimento sotto l'ologramma diventa "Clicca per vedere i progetti".
+
 ## v5.7.0
 - La home usa lo stesso sfondo dei case study: base quasi nera, griglia sottile, grana leggera e tre aloni sfocati che si muovono lentamente. Il colore segue il progetto proiettato sul parabrezza e cambia con una transizione morbida passando sulle card. Sostituisce il vecchio alone sotto i progetti.
 
