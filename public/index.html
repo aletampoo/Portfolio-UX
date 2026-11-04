@@ -581,6 +581,10 @@ body{background:#0b0c0e}
 .ti small{font-size:.8rem}
 }
 @media (max-width:760px){.ti h4{display:none}}
+
+.cshi{padding:3% 4% 5%}
+.csimg:has(.cshi)::after{opacity:.5}
+.cshi img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 20px 40px #000c) drop-shadow(0 0 30px color-mix(in srgb,var(--hc) 22%,transparent))}
 </style>
 </head>
 <body class="lock">
@@ -642,7 +646,7 @@ ttl:"Alessio Tampone | Product Designer",abT:"About me",abP:["I’m Alessio, a S
 {r:"Product Designer",c:"Auto Gest S.R.L",t:"Contract",d:"Jan 2022 – Jun 2022",l:"Europe · Remote",b:["I [[facilitated the workshops]] and built the user journeys for internal tools and dashboards, surfacing friction and opportunities the teams could not see.","I redesigned the CRM tools around a user-centred approach: [[errors down 15% and engagement up 10%]].","I reworked the flows on research and analytics, [[cutting errors by 30%]] and aligning outcomes with SCRUM teams and stakeholders."]},
 {r:"Product Designer",c:"TESYouth",t:"Contract",d:"May 2020 – Apr 2021",l:"London, United Kingdom · Remote",b:["I turned market data and competitive analysis into [[actionable direction]] for strategy and product development.","I designed and ran surveys and data collection, [[going beyond what the client expected]].","I made the data readable for decision-makers, with [[reports that improved product alignment]]."]}],ctT:"Shall we work together?",ctS:"Tell me about your project: I reply within 24 hours.",mail:"Copy my email",copied:"Email copied:",foot:"End credits. Thanks for watching."}};
 var P=[
-{c:"#3e9fd1",m:99,y:2025,art:"ds",cimg:"cover-automotive.jpg",simg:["ds-tokens.jpg","ds-components.jpg","ds-screens.jpg"],thc:"ds",lg:"alten-logo.png",ty:["Design system","Design system"],
+{c:"#3e9fd1",m:99,y:2025,art:"ds",cimg:"cover-automotive.jpg",himg:"ds-hero.webp",simg:["ds-tokens.jpg","ds-components.jpg","ds-screens.jpg"],thc:"ds",lg:"alten-logo.png",ty:["Design system","Design system"],
 it:{t:"Automotive Design System",cl:"Alten",tags:["Automotive","HMI","Design system"],tag:"Un linguaggio condiviso per le interfacce di bordo",role:"Product Designer",team:"3 designer",dur:"1 anno",tools:"Figma, Tokens Studio",
 ds:"Il design system delle interfacce di bordo di più linee di veicoli: 370 componenti, 1.000 token, usato da 111 team.",
 sm:"In un team di tre designer ho costruito per un anno il design system delle interfacce di bordo del cliente: 370 componenti e 1.000 token, usato da 111 team e in produzione su vetture in commercio.",
@@ -792,7 +796,7 @@ function draw(){
   mrow(t("client"),d.cl)+mrow(t("year"),p.y)+mrow(t("role"),d.role)+mrow(t("team"),d.team)+mrow(t("dur"),d.dur)+mrow(t("tools"),d.tools)+
   '</dl><div class="cstags">'+(d.tags||[p.ty[L=="it"?0:1]]).map(function(x){return '<span>'+x+'</span>'}).join("")+'</div>'+
   (d.tl?'<div class="tld"><h3>'+t("tlH")+'</h3><div>'+d.tl.map(function(x,k){return '<article><span>'+x[0]+'</span><p>'+x[1]+'</p></article>'}).join("")+'</div></div>':'')+
-  '<figure class="csimg">'+(p.cimg?'<img src="'+p.cimg+'" alt="'+d.t+'">':'<div class="csph">'+mocks()+'</div>')+'<figcaption><span>'+slug.toUpperCase().replace(/-/g,"_")+'.IMG</span><span>'+(p.cimg?'1376 × 768':'16 : 9')+'</span></figcaption></figure>'+
+  '<figure class="csimg">'+(p.himg?'<div class="csph cshi"><img src="'+p.himg+'" alt="'+d.t+'"></div>':p.cimg?'<img src="'+p.cimg+'" alt="'+d.t+'">':'<div class="csph">'+mocks()+'</div>')+'<figcaption><span>'+slug.toUpperCase().replace(/-/g,"_")+'.IMG</span><span>'+(p.himg?'HMI · 2 displays':p.cimg?'1376 × 768':'16 : 9')+'</span></figcaption></figure>'+
   d.sec.map(function(s,i){
     var h='<section class="cs2" id="s'+i+'" style="--c:'+p.c+'"><h3><b>'+s.n+'</b>'+s.h+'</h3>'+paras(s.p);
     if(s.li)h+='<ul class="sl">'+s.li.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul>';

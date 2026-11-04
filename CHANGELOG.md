@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.12.0
+- Case study automotive: l'immagine principale nella cornice è ora il mockup reale con i due display (navigazione e home con Automatic Smart Entry, media e clima), ritagliato e scontornato dallo sfondo chiaro, con ombra e alone nel colore del progetto. La copertina generata resta come sfondo della card nella home. File: public/ds-hero.webp (120 KB).
+
 ## v5.11.1
 - Card dei progetti: i dettagli al passaggio del mouse ora compaiono dentro la card, in basso (titolo, descrizione, pulsanti, dati), invece del pannello che scendeva sotto la card e copriva la sezione "Chi sono". Cursore a mano invece che "afferra" (il drag è stato tolto). Il titolo della card con copertina non finisce più sotto il logo Alten.
 
