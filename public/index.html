@@ -505,6 +505,18 @@ nav{height:60px;padding:0 14px}
 .cs2>p{max-width:60ch}
 .sl li:last-child:nth-child(odd),.stp article:last-child:nth-child(odd){grid-column:1/-1}
 @media (max-width:760px){.tld>div{grid-template-columns:1fr}}
+
+/* ===== Sfondo della home, come quello dei case study ===== */
+.pglow{display:none}
+.hbg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:#0b0c0e;--gc2:var(--gc,#3e9fd1);transition:--gc 1.4s ease}
+.hbg i{position:absolute;display:block;border-radius:50%;filter:blur(80px);opacity:.26;will-change:transform}
+.hbg i:nth-child(1){width:54%;aspect-ratio:1;left:-14%;top:-10%;background:var(--gc,#3e9fd1);animation:bl1 28s ease-in-out infinite alternate}
+.hbg i:nth-child(2){width:46%;aspect-ratio:1;right:-12%;top:30%;background:color-mix(in srgb,var(--gc,#3e9fd1) 55%,#8b5cf6);animation:bl2 34s ease-in-out infinite alternate}
+.hbg i:nth-child(3){width:40%;aspect-ratio:1;left:18%;bottom:-16%;background:color-mix(in srgb,var(--gc,#3e9fd1) 60%,#0b0c0e);animation:bl3 40s ease-in-out infinite alternate}
+.hbg::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff07 0 1px,transparent 1px 92px),repeating-linear-gradient(90deg,#ffffff07 0 1px,transparent 1px 92px)}
+.hbg::after{content:"";position:absolute;inset:0;opacity:.04;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") 0 0/180px 180px}
+body{background:#0b0c0e}
+@media (prefers-reduced-motion:reduce){.hbg i{animation:none}}
 </style>
 </head>
 <body class="lock">
@@ -525,6 +537,7 @@ nav{height:60px;padding:0 14px}
     <div class="inner" id="inner"></div>
   </div></div>
 </header>
+<div class="hbg" aria-hidden="true"><i></i><i></i><i></i></div>
 <main><div class="pglow" id="pglow" aria-hidden="true"><i></i></div>
   <section class="row" id="row"><div class="rw"><div class="rc"><h2 data-i="rowT"></h2><p class="rsub" data-i="rowS"></p><div class="tiles" id="tiles"></div></div>
     <div class="rg" id="game" hidden><h2 data-i="gT"></h2>
@@ -622,11 +635,11 @@ function slideShow(){
   var ss=inn.querySelectorAll(".hsl");if(!ss.length)return;
 
   var k=$("#c3");if(k)k.style.setProperty("--pc",P[SLI].c);
-  if(GLH===null)$("#pglow").style.setProperty("--gc",P[SLI].c);
+  if(GLH===null)document.documentElement.style.setProperty("--gc",P[SLI].c);
 
 }
-$("#tiles").addEventListener("pointerover",function(e){var tl=e.target.closest(".tile");if(!tl)return;GLH=+tl.dataset.p;$("#pglow").style.setProperty("--gc",P[GLH].c)});
-$("#tiles").addEventListener("pointerleave",function(){GLH=null;$("#pglow").style.setProperty("--gc",P[SLI].c)});
+$("#tiles").addEventListener("pointerover",function(e){var tl=e.target.closest(".tile");if(!tl)return;GLH=+tl.dataset.p;document.documentElement.style.setProperty("--gc",P[GLH].c)});
+$("#tiles").addEventListener("pointerleave",function(){GLH=null;document.documentElement.style.setProperty("--gc",P[SLI].c)});
 function slideNext(){if(cur!==null)return;var n=inn.querySelectorAll(".hsl").length;if(!n)return;SLI=(SLI+1)%n;slideShow()}
 function bb(){
   document.body.style.removeProperty("--amb");scr.style.removeProperty("--hc");

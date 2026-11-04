@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.7.0
+- La home usa lo stesso sfondo dei case study: base quasi nera, griglia sottile, grana leggera e tre aloni sfocati che si muovono lentamente. Il colore segue il progetto proiettato sul parabrezza e cambia con una transizione morbida passando sulle card. Sostituisce il vecchio alone sotto i progetti.
+
 ## v5.6.2
 - Chi sono: il pannello con il paragrafo occupa tutta la larghezza della sezione.
 
