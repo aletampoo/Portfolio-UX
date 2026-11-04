@@ -2,6 +2,15 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.0.0
+Applicato il feedback di un design manager: mostrare a colpo d'occhio su cosa sei forte.
+- Headline dell'ologramma: "Design system, ricerca utente e AI per prodotti complessi".
+- Nuova sezione "Su cosa sono forte" prima dei progetti: tre pilastri (Design system, Prodotto e ricerca utente, AI nel processo di design), ognuno con come lo fai e una prova che porta al progetto.
+- Progetti etichettati per focus (Audi: design system e visual; NatWest: UX di prodotto e ricerca; Italdesign: ricerca utente e analisi) e riga "altri progetti in fase di colloquio".
+- Case study: "Competenze in questo progetto" all'apertura, scheda "Contesto" in "In breve", ultima sezione evidenziata come "Riflessioni".
+- Nuova sezione "Dal laboratorio: questo portfolio" sul flusso con l'AI (Claude, Higgsfield, R3).
+- "Come lavoro" in Chi sono: team, metodo Agile/SCRUM, lingue ed esperienza nel Regno Unito, formazione continua (placeholder).
+
 ## v5.17.0
 Case study più solidi, su tutti e tre i progetti:
 - "Cosa ho fatto io / Con il team" nella sezione del ruolo.
