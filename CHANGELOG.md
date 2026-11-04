@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.6.2
+- Chi sono: il pannello con il paragrafo occupa tutta la larghezza della sezione.
+
 ## v5.6.1
 - Case study automotive: "Il cliente · Alten" / "The client · Alten" diventa solo "Alten" (card, copertina e metadati).
 
