@@ -2,6 +2,14 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.5.0
+Case study Automotive Design System riscritto per essere letto in fretta.
+- Testi ridotti di circa la metà, in italiano e in inglese: ogni sezione apre con una frase, il resto è in punti brevi.
+- Nuovo blocco "In breve" sotto i metadati: Problema, Soluzione e Risultato in tre pannelli affiancati.
+- Vincoli, ruolo e fattori di adozione in schede su due colonne, con il titolo in evidenza e una riga di spiegazione.
+- "Il processo" diventa "Le scelte chiave": cinque schede numerate in griglia invece di una lunga lista verticale.
+- Sezioni rinominate dove serviva ("Il sistema", "Cosa farei dopo"); Tokens Studio aggiunto agli strumenti.
+
 ## v5.4.0
 - Intro olografica: su uno sfondo blu notte con griglia, un proiettore accende un fascio di luce dal basso e la proiezione si apre da una linea sottile con un breve sfarfallio. Dentro compaiono "Portfolio", il nome lettera per lettera (bianco con alone e leggera aberrazione cromatica, come l'ologramma della hero), "Product Designer" e una barra di caricamento; una banda di scansione attraversa lo schermo. In chiusura la proiezione sale e si rimpicciolisce, come se andasse a posarsi sul parabrezza.
 
