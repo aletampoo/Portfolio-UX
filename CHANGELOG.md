@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.2.4
+- Su cosa sono forte: tolti i numeri 01, 02, 03 dalle schede.
+
 ## v6.2.3
 - Su cosa sono forte: tolta la frase sotto il titolo di ogni scheda; restano numero, titolo e punti.
 
