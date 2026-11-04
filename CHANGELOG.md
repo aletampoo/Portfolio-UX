@@ -2,6 +2,12 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.0.1
+- Su cosa sono forte: le prove nei pilastri non sono più link ai case study.
+- I miei progetti: card senza copertina, con il nome del progetto al centro in stile olografico.
+- Dal laboratorio: sezione nascosta per ora (contenuto mantenuto).
+- Come lavoro: testi delle schede ridotti a una riga.
+
 ## v6.0.0
 Applicato il feedback di un design manager: mostrare a colpo d'occhio su cosa sei forte.
 - Headline dell'ologramma: "Design system, ricerca utente e AI per prodotti complessi".
