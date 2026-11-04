@@ -606,6 +606,18 @@ body{background:#0b0c0e}
 /* titolo del case study come headline luminosa */
 .cst{font-weight:500;font-size:clamp(2.6rem,7.4vw,6rem);line-height:1.02;letter-spacing:-.04em;color:color-mix(in srgb,var(--hc) 30%,#fff);text-shadow:0 0 6px color-mix(in srgb,var(--hc) 70%,transparent),0 0 26px color-mix(in srgb,var(--hc) 75%,transparent),0 0 60px color-mix(in srgb,var(--hc) 35%,transparent);max-width:16ch}
 .cshd .lead{font-weight:500;color:color-mix(in srgb,var(--hc) 55%,#fff);text-shadow:0 0 14px color-mix(in srgb,var(--hc) 35%,transparent)}
+
+/* frame Figma animati */
+.ex{position:relative}
+.fk::before,.fk::after,.fkl{transition:opacity .25s,transform .25s}
+.fk.pre{background:transparent;box-shadow:inset 0 0 0 0 #0d99ff00}
+.fk.pre::before,.fk.pre::after{opacity:0;transform:scale(.2)}
+.fk.pop .fkl{animation:fkl 1.6s ease both}
+@keyframes fkl{0%{opacity:0;transform:translateY(3px)}15%,70%{opacity:1;transform:none}100%{opacity:0}}
+.fcur{position:absolute;left:0;top:0;z-index:6;pointer-events:none;opacity:0;transition:transform .6s cubic-bezier(.45,.05,.25,1),opacity .35s;display:flex;align-items:flex-start;gap:2px;filter:drop-shadow(0 3px 6px #0008)}
+.fcur.on{opacity:1}
+.fcur svg{width:16px;height:20px;flex:none}
+.fcur span{margin-top:14px;padding:2px 7px;border-radius:4px 10px 10px 10px;background:var(--cc);color:#fff;font:600 11px/1.4 var(--f);white-space:nowrap}
 </style>
 </head>
 <body class="lock">
@@ -867,7 +879,7 @@ function stat(){
   $("#abp").innerHTML=U[L].abP.map(function(x){return "<p>"+x+"</p>"}).join("");
   $("#sk").innerHTML=U[L].sk.map(function(g){return '<div class="skg"><h3>'+g.h+'</h3><div class="chips2">'+g.i.map(function(x){return "<span>"+x+"</span>"}).join("")+'</div></div>'}).join("");
   function exl(a){return a.map(function(e){return '<article class="ex"><h3>'+e.r+'</h3><span class="exc">'+e.c+(e.t?' · '+e.t:'')+'</span><span class="exm">'+e.d+' · '+e.l+'</span>'+(e.b.length?'<ul>'+e.b.map(function(x){return '<li>'+x.replace(/\[\[(.+?)\]\]/g,'<mark class="fk"><span class="fkl">Frame</span>$1</mark>')+'</li>'}).join("")+'</ul>':'')+'</article>'}).join("")}
-  $("#ex").innerHTML=exl(U[L].ex);$("#ed").innerHTML=exl(U[L].ed);
+  $("#ex").innerHTML=exl(U[L].ex);$("#ed").innerHTML=exl(U[L].ed);fkInit();
   $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" style="--c:'+p.c+';--hc:'+p.c+'" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><div class="th'+(p.thc?" "+p.thc:"")+'" style="--c:'+p.c+'">'+cov(p,d)+'<b class="hx" aria-hidden="true"></b><span class="tp">'+p.ty[L=="it"?0:1]+'</span><span class="tl">'+d.t+'</span></div><div class="ti"><h4>'+d.t+'</h4><p>'+d.tag+'</p><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><i>'+p.m+'% match</i><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></small></div></div>'}).join("");
   $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===L)});$("#lt").classList.toggle("en",L==="en");
   try{localStorage.setItem("at-lang",L)}catch(e){}
@@ -1087,6 +1099,34 @@ function hcount(b){
   var sep=m[2].match(/[.,]/),to=parseInt(m[2].replace(/[.,]/g,""),10),t0=performance.now();if(!(to>0))return;
   function fmt(v){var x=String(v);return sep?x.replace(/\B(?=(\d{3})+(?!\d))/g,sep[0]):x}
   (function st(t){var p=Math.min(1,(t-t0)/1300),e=1-Math.pow(1-p,3);b.textContent=m[1]+fmt(Math.round(to*e))+m[3];if(p<1)requestAnimationFrame(st)})(t0);
+}
+
+/* ===== Esperienza: cursori stile Figma che selezionano le parti chiave ===== */
+var FKIO=null,FKN=["Alessio","Dev","PM","Research"],FKC=["#0d99ff","#f24e1e","#a259ff","#14ae5c"];
+function fkInit(){
+  var arts=document.querySelectorAll("#ex .ex");
+  if(RMO||!("IntersectionObserver" in window)){return}
+  if(FKIO)FKIO.disconnect();
+  FKIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){FKIO.unobserve(e.target);fkRun(e.target)}})},{threshold:.45});
+  arts.forEach(function(a,i){a.dataset.fki=i;a.querySelectorAll(".fk").forEach(function(m){m.classList.add("pre")});FKIO.observe(a)});
+}
+function fkRun(a){
+  var ms=[].slice.call(a.querySelectorAll(".fk.pre"));if(!ms.length)return;
+  var i=+a.dataset.fki,col=FKC[i%FKC.length],c=document.createElement("div");
+  c.className="fcur";c.style.setProperty("--cc",col);
+  c.innerHTML='<svg viewBox="0 0 16 20" aria-hidden="true"><path d="M1 1l13 10.5-6.2.6 3.6 6.4-2.3 1.2-3.6-6.4L1 17.6z" fill="var(--cc)" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg><span>'+FKN[i%FKN.length]+'</span>';
+  a.appendChild(c);
+  var ar=a.getBoundingClientRect();
+  c.style.transform="translate("+(ar.width*.7)+"px,"+(-10)+"px)";
+  requestAnimationFrame(function(){c.classList.add("on")});
+  var k=0;
+  (function next(){
+    if(k>=ms.length){setTimeout(function(){c.classList.remove("on");setTimeout(function(){c.remove()},500)},700);return}
+    var m=ms[k++],r=m.getClientRects()[0]||m.getBoundingClientRect(),ar=a.getBoundingClientRect();
+    var x=r.right-ar.left-6,y=r.bottom-ar.top-4;
+    c.style.transform="translate("+x+"px,"+y+"px)";
+    setTimeout(function(){m.classList.remove("pre");m.classList.add("pop");setTimeout(next,380)},620);
+  })();
 }
 stat();
 </script>

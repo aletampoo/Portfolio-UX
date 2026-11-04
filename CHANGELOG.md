@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v5.16.0
+- Esperienza: quando un'esperienza entra nello schermo, un cursore stile Figma con etichetta colorata (Alessio, Dev, PM, Research) si sposta sulle parti chiave una alla volta e le seleziona: il frame compare con bordo, maniglie e l'etichetta "Frame" per un attimo. Ogni esperienza ha il suo cursore. Disattivato con riduzione del movimento.
+
 ## v5.15.0
 - I tre progetti prendono il nome del cliente: Audi, NatWest, Italdesign (card, intestazione, "Progetto successivo").
 - Apertura dei case study: al posto del nome, un titolo-headline grande in peso medio con alone luminoso nel colore del progetto ("Un sistema, tante auto", "Regali che restano", "Meno attrito, più analisi"), con la descrizione sotto in tinta.
