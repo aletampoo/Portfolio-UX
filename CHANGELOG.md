@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.1.1
+- Case study: colonna del contenuto più larga (da 820 a 940 px) e pagina fino a 1280 px.
+
 ## v7.1.0
 - Case study: immagine di copertina sotto l'intestazione, in una cornice luminosa con didascalie (non più ripetuta nella galleria).
 - Indice fisso a sinistra mentre si scorre, con la sezione attiva evidenziata; su tablet e mobile torna sopra il contenuto.
