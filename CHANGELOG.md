@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.4.1
+- Ologramma: vetro sfocato e più scuro dietro nome e headline, così la strada e le linee non disturbano la lettura.
+
 ## v6.4.0
 - Rimosse (nascoste) le sezioni "Su cosa sono forte" e "Competenze e strumenti".
 - Chi sono: descrizione ridotta a tre frasi, testo più grande.
