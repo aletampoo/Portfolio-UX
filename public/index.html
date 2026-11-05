@@ -998,6 +998,12 @@ body{background:#0b0c0e}
 .fxto3 li>b{padding-top:4px;font:600 12px/1 ui-monospace,Menlo,Consolas,monospace;color:color-mix(in srgb,var(--hc) 60%,#fff)}
 .fxto3 h4{margin:0 0 4px;font-size:1.1rem;font-weight:700;line-height:1.4;color:#fff}
 .fxto3 p{margin:0;color:#cfd8e0;font-size:1rem;line-height:1.6}
+
+/* v7.5.1 no numbering, holo bullet */
+.fxto3 li{grid-template-columns:20px 1fr;gap:10px;padding-left:0;border-left:0}
+.hdm{width:9px;height:9px;margin-top:9px;transform:rotate(45deg);border:1.5px solid color-mix(in srgb,var(--hc) 70%,#fff);background:linear-gradient(135deg,color-mix(in srgb,var(--hc) 55%,transparent),transparent);box-shadow:0 0 8px color-mix(in srgb,var(--hc) 70%,transparent),inset 0 0 4px color-mix(in srgb,var(--hc) 60%,transparent);animation:hdmp 3.2s ease-in-out infinite}
+@keyframes hdmp{50%{box-shadow:0 0 14px color-mix(in srgb,var(--hc) 90%,transparent),inset 0 0 6px color-mix(in srgb,var(--hc) 80%,transparent)}}
+@media(prefers-reduced-motion:reduce){.hdm{animation:none}}
 </style>
 </head>
 <body class="lock">
@@ -1241,16 +1247,16 @@ function draw(){
   var p=P[cur],d=p[L],x0=FX[cur][L],cvi=p.himg||p.cimg,x={sfida:x0.sfida,ruolo:x0.ruolo,proc:x0.proc,pt:x0.pt,ris:x0.ris,resta:x0.resta,gal:x0.gal.filter(function(q){return q[0]!==cvi})},N=P.length,np=P[(cur+1)%N],pp=P[(cur-1+N)%N];
   $("#hd").textContent=d.t;$(".csbg").style.setProperty("--cc",p.c);scr.style.setProperty("--hc",p.c);
   var slug=d.t.toUpperCase().replace(/[^A-Z0-9]+/g,""),H=t("fxH");
-  function sec(k,inner){return '<section class="fxs" id="fx'+k+'"><h2><b>0'+(k+1)+'</b>'+H[k]+'</h2>'+inner+'</section>'}
+  function sec(k,inner){return '<section class="fxs" id="fx'+k+'"><h2>'+H[k]+'</h2>'+inner+'</section>'}
   inn.innerHTML='<div class="csw fxw">'+
    '<header class="fxh"><p class="fxp">A:\\'+slug+'&gt; type progetto.htm<i class="cur"></i></p><h1 class="cst">'+(d.hl||d.t)+'</h1><p class="lead">'+d.ds+'</p>'+
    '<dl class="fxm">'+mrow(t("client"),d.cl)+mrow(t("year"),p.y)+mrow(t("role"),d.role)+mrow(t("team"),d.team)+'</dl>'+
    '<div class="fxr"><div class="cstags">'+(d.tags||[]).map(function(q){return '<span>'+q+'</span>'}).join("")+'</div><span class="fxd">'+slug+'.DSK <i>'+x.gal.length+' '+t("fxF")+'</i></span></div></header>'+
    (p.himg||p.cimg?'<figure class="fxcv"><img src="'+(p.himg||p.cimg)+'" alt="'+d.t+'"><figcaption><span>'+slug+'.IMG</span><span>'+(p.hcap||'')+'</span></figcaption></figure>':'')+
-   '<div class="fxb"><aside class="fxt" role="navigation" aria-label="Indice"><p class="fxtk">'+t("fxIdx")+'</p>'+H.map(function(h,k){return '<a href="#fx'+k+'" data-fx="'+k+'"><b>0'+(k+1)+'</b>'+h+'</a>'}).join("")+'</aside><div class="fxc2">'+
+   '<div class="fxb"><aside class="fxt" role="navigation" aria-label="Indice"><p class="fxtk">'+t("fxIdx")+'</p>'+H.map(function(h,k){return '<a href="#fx'+k+'" data-fx="'+k+'">'+h+'</a>'}).join("")+'</aside><div class="fxc2">'+
    sec(0,'<p>'+x.sfida+'</p>')+sec(1,'<p>'+x.ruolo+'</p>')+
-   sec(2,'<p>'+x.pt+'</p><div class="fxto3"><h3>'+t("toH")+'</h3><p class="fxtos">'+t("toS")+'</p><ol>'+TO[cur][L].map(function(q,k){return '<li><b>0'+(k+1)+'</b><div><h4>'+q[0]+'</h4><p>'+q[1]+'</p></div></li>'}).join("")+'</ol></div>')+
-   sec(3,'<div class="fxg">'+x.gal.map(function(q,k){return '<a class="fxi" href="'+q[0]+'" target="_blank" rel="noopener"><img src="'+q[0]+'" alt="'+q[1]+'" loading="lazy" draggable="false"><span><b>04.'+(k+1)+'</b>'+q[1]+'<i>↗</i></span></a>'}).join("")+'</div>')+
+   sec(2,'<p>'+x.pt+'</p><div class="fxto3"><h3>'+t("toH")+'</h3><p class="fxtos">'+t("toS")+'</p><ol>'+TO[cur][L].map(function(q,k){return '<li><i class="hdm" aria-hidden="true"></i><div><h4>'+q[0]+'</h4><p>'+q[1]+'</p></div></li>'}).join("")+'</ol></div>')+
+   sec(3,'<div class="fxg">'+x.gal.map(function(q,k){return '<a class="fxi" href="'+q[0]+'" target="_blank" rel="noopener"><img src="'+q[0]+'" alt="'+q[1]+'" loading="lazy" draggable="false"><span>'+q[1]+'<i>↗</i></span></a>'}).join("")+'</div>')+
    sec(4,'<p>'+x.ris+'</p>')+sec(5,'<p>'+x.resta+'</p>')+'</div></div>'+
    '<div class="fxn"><button class="fxc" id="prv"><small>← '+t("fxPrev")+'</small><b>'+pp[L].t+'</b><span>'+(pp[L].hl||'')+'</span></button><button class="fxc nx2" id="nxt"><small>'+t("fxNext")+' →</small><b>'+np[L].t+'</b><span>'+(np[L].hl||'')+'</span></button></div>'+
    '<div class="fxa"><button class="fxl" id="fxback">← '+t("fxBack")+'</button><a class="fxl" href="https://www.linkedin.com/in/alessio-tampone/" target="_blank" rel="noopener">'+t("fxLi")+' ↗</a></div>'+

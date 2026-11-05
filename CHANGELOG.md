@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.5.1 — No numbering in case studies
+
+- Removed 01/02 numbering from section titles, contents, gallery captions and trade-offs.
+- Trade-offs use a small glowing holographic diamond as a bullet.
+
 ## v7.5.0 — Plain-language case studies
 
 - Process is now a short paragraph, like the other sections.
