@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.4.0
+- Rimosse (nascoste) le sezioni "Su cosa sono forte" e "Competenze e strumenti".
+- Chi sono: descrizione ridotta a tre frasi, testo più grande.
+- Pulsante "Scarica il CV" accanto a LinkedIn (public/Alessio-Tampone-CV.pdf).
+
 ## v6.3.0
 - Hero: abitacolo (plancia, volante, specchietto) ridotto; l'ologramma con nome e headline è più grande e al centro del parabrezza. Rimossa l'etichetta "Clicca per vedere i progetti".
 
