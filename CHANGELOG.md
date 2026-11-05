@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.5.0
+- Esperienza e Formazione raccolte in un pannello a scomparsa olografico ("Esperienza e formazione · 4 ruoli in 3 aziende · MSc in User Experience Design"), chiuso di default. Si apre con un'animazione morbida e la freccia che ruota; le voci Esperienza e Formazione del menu lo aprono e scorrono alla sezione. I cursori Figma partono all'apertura.
+
 ## v6.4.3
 - Chi sono: rimossa (nascosta) la sezione "Come lavoro".
 
