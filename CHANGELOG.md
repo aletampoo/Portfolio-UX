@@ -2,6 +2,12 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.4.0 — Simpler process and trade-offs
+
+- Process: three side-by-side steps (stack on mobile), each with a step label, a one-line heading and one or two short sentences.
+- Trade-offs: no cards or strikethrough; each shows the choice, "instead of…", then Why and The cost in two short lines.
+- Shorter IT/EN copy for both sections.
+
 ## v7.3.1 — Case study copy
 
 - Rewrote all three case studies in IT and EN: openings now say what I did and the outcome; the challenge ends on the core question; clearer role, process, result and looking-back sections.
