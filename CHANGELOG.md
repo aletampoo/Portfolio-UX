@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.2.0
+- Case study: blocco "I trade-off" alla fine di "03 Il processo", con due compromessi per progetto, ognuno strutturato in Ho scelto / Invece di (barrato) / Il prezzo / Perché.
+
 ## v7.1.1
 - Case study: colonna del contenuto più larga (da 820 a 940 px) e pagina fino a 1280 px.
 
