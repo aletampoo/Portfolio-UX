@@ -842,7 +842,7 @@ body{background:#0b0c0e}
     </div></div></section>
   <section class="sx pil" id="pil" hidden><h2 data-i="piT"></h2><p class="rsub" data-i="piS"></p><div class="pig" id="pig"></div></section>
   <section class="sx lab" id="lab" hidden><h2 data-i="labT"></h2><p class="rsub" data-i="labS"></p><div class="hwg" id="labg"></div></section>
-  <section class="sx" id="about"><h2 data-i="abT"></h2><div class="ab"><div class="jrn"><h3 data-i="jrT"></h3><ol class="jrl" id="jrl"></ol></div><div class="abp" id="abp"></div><div class="tsm"><h3 data-i="tsT"></h3><div class="tsg" id="tsg"></div></div><div class="abtn"><a class="lkb" href="https://www.linkedin.com/in/alessio-tampone/" target="_blank" rel="noopener"><span data-i="lkB"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="lkb" href="Alessio-Tampone-CV.pdf" download="Alessio-Tampone-CV.pdf"><span data-i="cvB"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="hwb"><h3 data-i="hwT"></h3><div class="hwg" id="hwg"></div></div></section>
+  <section class="sx" id="about"><h2 data-i="abT"></h2><div class="ab"><div class="jrn"><h3 data-i="jrT"></h3><ol class="jrl" id="jrl"></ol></div><div class="abp" id="abp"></div><div class="tsm"><h3 data-i="tsT"></h3><div class="tsg" id="tsg"></div></div><div class="abtn"><a class="lkb" href="https://www.linkedin.com/in/alessio-tampone/" target="_blank" rel="noopener"><span data-i="lkB"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="lkb" id="cvdl" href="Alessio-Tampone-CV.pdf" download="Alessio-Tampone-CV.pdf"><span data-i="cvB"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div><div class="hwb"><h3 data-i="hwT"></h3><div class="hwg" id="hwg"></div></div></section>
   <section class="sx" hidden><h2 data-i="skT"></h2><div class="skw" id="sk"></div></section>
   <section class="sx" id="exp"><h2 data-i="exT"></h2><div class="exs" id="ex"></div></section>
 <section class="sx" id="edu"><h2 data-i="edT"></h2><div class="exs" id="ed"></div></section>
@@ -1365,6 +1365,12 @@ var JIC={
  kings:'<path d="M4 58h56M10 58V30h44v28M8 30h48M10 30v-8l2-4 2 4v8M50 30v-8l2-4 2 4v8M18 30v-5M46 30v-5M18 54V38a2 2 0 0 1 4 0v16M28 54V38a2 2 0 0 1 4 0v16M38 54V38a2 2 0 0 1 4 0v16"/>',
  carillon:'<path d="M8 58h48M24 58V24h16v34M22 24h20M26 24v-8h12v8M28 16l4-8 4 8M28 30h8v8h-8zM29 44h6M29 50h6M20 58l4-6M44 58l-4-6"/><circle cx="32" cy="7" r="1.2"/>',
  bigben:'<path d="M10 58h44M24 58V28h16v30M22 28h20M24 28l2-6h12l2 6M26 22l6-14 6 14M32 8V4M27 46h10M27 52h10"/><circle cx="32" cy="36" r="5"/><path d="M32 36v-3M32 36l2 1.5"/>'};
+
+/* CV: nel viewer di claude.ai il download passa dalla capability "downloads", altrove è un link normale */
+var DLNS=null;if(window.claude&&claude.use)claude.use("downloads").then(function(d){DLNS=d}).catch(function(){});
+document.addEventListener("click",function(e){var a=e.target.closest("#cvdl");if(!a||!DLNS)return;e.preventDefault();
+  fetch(a.getAttribute("href")).then(function(r){return r.blob()}).then(function(b){return DLNS.save({filename:"Alessio-Tampone-CV.pdf",data:b})}).catch(function(){})});
+
 stat();
 </script>
 </body>
