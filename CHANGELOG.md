@@ -2,6 +2,14 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.0.0
+Case study ristrutturati sul modello fredux.design/telepass, tutti e tre con la stessa struttura:
+- Intestazione: riga terminale "A:\CLIENTE> type progetto.htm", titolo, introduzione, dati (Cliente, Anno, Ruolo, Team), etichette e badge "CLIENTE.DSK · N file".
+- Indice numerato 01–06 con link alle sezioni.
+- 01 La sfida, 02 Il mio ruolo (un paragrafo ciascuno), 03 Il processo (tre passi "titolo: sottotitolo" con descrizione), 04 Il lavoro, in sintesi (galleria con didascalie numerate 04.1… e ↗ per aprire l'immagine), 05 Il risultato, 06 Cosa resta.
+- Chiusura: progetto precedente e successivo, "Torna al menu", "Scrivimi su LinkedIn ↗", piè di pagina terminale con Esc e ← → per cambiare progetto (anche da tastiera).
+- Tolti dai case study "In breve", competenze, prima/dopo, metriche e placeholder.
+
 ## v6.7.1
 - Primo case study (design system automotive): nome "Italdesign" al posto di "Alten".
 
