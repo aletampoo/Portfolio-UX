@@ -2,6 +2,12 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.5.0 — Plain-language case studies
+
+- Process is now a short paragraph, like the other sections.
+- Trade-offs: a simple numbered list, each with the choice in bold and one sentence on what it cost and why.
+- All case study copy rewritten in plain, simple Italian and English.
+
 ## v7.4.0 — Simpler process and trade-offs
 
 - Process: three side-by-side steps (stack on mobile), each with a step label, a one-line heading and one or two short sentences.
