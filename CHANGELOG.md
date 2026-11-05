@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.6.0
+- Case study più in evidenza: titolo di sezione "Case study" più grande con sottotitolo "Tre progetti scelti, raccontati dal problema al risultato". Card alte e sempre leggibili (senza bisogno di hover): numero, focus, nome del cliente olografico grande, headline, numero chiave del risultato (111 team, 70%, 49 → 31), anno e ruolo, "Apri il case study →". Al passaggio la card si alza e si illumina; apribili anche da tastiera.
+
 ## v6.5.0
 - Esperienza e Formazione raccolte in un pannello a scomparsa olografico ("Esperienza e formazione · 4 ruoli in 3 aziende · MSc in User Experience Design"), chiuso di default. Si apre con un'animazione morbida e la freccia che ruota; le voci Esperienza e Formazione del menu lo aprono e scorrono alla sezione. I cursori Figma partono all'apertura.
 
