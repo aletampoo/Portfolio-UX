@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.6.5
+- Case study: rimosso il sottotitolo sotto il titolo della sezione.
+
 ## v6.6.4
 - Case study: rimossa la riga "Altri progetti, anche sotto NDA, li racconto volentieri in fase di colloquio".
 

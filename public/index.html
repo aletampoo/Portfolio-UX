@@ -880,6 +880,8 @@ body{background:#0b0c0e}
 .abp::before,.abp::after{display:none!important}
 
 .abp+.jrn{margin-top:14px}
+
+#row h2{margin-bottom:26px!important}
 </style>
 </head>
 <body class="lock">
@@ -903,7 +905,7 @@ body{background:#0b0c0e}
 <div class="hbg" aria-hidden="true"><i></i><i></i><i></i></div>
 <main><div class="pglow" id="pglow" aria-hidden="true"><i></i></div>
   
-  <section class="row" id="row"><div class="rw"><div class="rc"><h2 data-i="rowT"></h2><p class="rsub" data-i="rowS"></p><div class="tiles" id="tiles"></div></div>
+  <section class="row" id="row"><div class="rw"><div class="rc"><h2 data-i="rowT"></h2><div class="tiles" id="tiles"></div></div>
     <div class="rg" id="game" hidden><h2 data-i="gT"></h2>
       <div class="gf" id="gf" tabindex="0"><canvas id="gc" role="img" aria-label="UX Dash"></canvas>
         <div class="hud"><span class="gn" data-i="gN"></span><span><b id="gs"></b> &nbsp; <span id="gbst"></span></span></div>
@@ -1148,7 +1150,7 @@ function draw(){
 function stat(){
   document.documentElement.lang=L;document.title=t("ttl");
   $$("[data-i]").forEach(function(e){var v=t(e.dataset.i);if(v!==undefined)e.textContent=v});
-  $("#cl").textContent=t("close");if($("#mail"))$("#mail").textContent=t("mail");if(!FINE)$(".rsub").textContent=t("rowSt");
+  $("#cl").textContent=t("close");if($("#mail"))$("#mail").textContent=t("mail");
   $("#abp").innerHTML=U[L].abP.map(function(x){return "<p>"+x+"</p>"}).join("");
   $("#sk").innerHTML=U[L].sk.map(function(g,k){return '<div class="skr"><span class="skl"><i>0'+(k+1)+'</i>'+g.h+'</span><p>'+g.i.map(function(x){return "<span>"+x+"</span>"}).join('<b aria-hidden="true">/</b>')+'</p></div>'}).join("");
   $("#jrl").innerHTML=U[L].jr.map(function(q,k){return '<li class="jrs'+(q.now?' now':'')+'" style="--d:'+(k*.12)+'s"><span class="jry">'+q.y+'</span><span class="jri"><svg viewBox="0 0 64 64" aria-hidden="true">'+JIC[q.i]+'</svg></span><b>'+q.c+'</b><small>'+q.s+'</small></li>'}).join("");
