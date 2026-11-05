@@ -2,6 +2,14 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.3.0 — Copy review IT/EN
+
+- Native-speaker pass on all visible copy, in Italian and English: hero, About, journey, CV dropdown, case cards, case studies, trade-offs, experience bullets and footer.
+- Hero label and page title now say Senior Product Designer.
+- Case-study sections renamed: The work / The outcome / Looking back (Il lavoro / Il risultato / In retrospettiva); "Back to menu" becomes "Back to projects".
+- "gifter" becomes "gift-giver"; the CV summary no longer gives an inaccurate company count.
+- No facts, numbers or [[frame]] markers changed.
+
 ## v7.2.1
 - Case study: intestazione (titolo, introduzione, dati, etichette) larga quanto la copertina.
 
