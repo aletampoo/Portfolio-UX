@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.5.3 — Experience timeline fix
+
+- The experience timeline inside the dropdown was clipped on the left; added left padding.
+
 ## v7.5.2 — No numbers on home cards
 
 - Removed 01/02/03 from the case study cards on the home page.
