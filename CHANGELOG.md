@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.4.3
+- Chi sono: rimossa (nascosta) la sezione "Come lavoro".
+
 ## v6.4.2
 - Cosa dicono i colleghi: sezione semplificata. Quattro citazioni brevi in una riga, ognuna con una linea luminosa a sinistra, nome e ruolo; tolti pannelli, iniziali, virgolette decorative e la riga sul rapporto di lavoro.
 
