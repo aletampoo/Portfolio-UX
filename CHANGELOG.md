@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.3.0
+- Hero: abitacolo (plancia, volante, specchietto) ridotto; l'ologramma con nome e headline è più grande e al centro del parabrezza. Rimossa l'etichetta "Clicca per vedere i progetti".
+
 ## v6.2.6
 - Ologramma su mobile: il riquadro si adatta all'altezza del testo, così etichetta, nome e headline restano dentro la cornice.
 
