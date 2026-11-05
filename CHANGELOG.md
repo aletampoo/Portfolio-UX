@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.6.1
+- Chi sono: tolto il pannello di sfondo dietro la descrizione; il testo sta direttamente sulla pagina.
+
 ## v6.6.0
 - Case study più in evidenza: titolo di sezione "Case study" più grande con sottotitolo "Tre progetti scelti, raccontati dal problema al risultato". Card alte e sempre leggibili (senza bisogno di hover): numero, focus, nome del cliente olografico grande, headline, numero chiave del risultato (111 team, 70%, 49 → 31), anno e ruolo, "Apri il case study →". Al passaggio la card si alza e si illumina; apribili anche da tastiera.
 
