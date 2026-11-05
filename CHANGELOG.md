@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.6.6
+- Primo case study: nome "Alten" al posto di "Audi" (card, intestazione, "Progetto successivo").
+
 ## v6.6.5
 - Case study: rimosso il sottotitolo sotto il titolo della sezione.
 
