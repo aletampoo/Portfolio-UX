@@ -2,6 +2,12 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.3.1 — Case study copy
+
+- Rewrote all three case studies in IT and EN: openings now say what I did and the outcome; the challenge ends on the core question; clearer role, process, result and looking-back sections.
+- Trade-offs reworded, and the Bugzer "looking back" no longer contradicts its trade-off.
+- Facts and numbers unchanged.
+
 ## v7.3.0 — Copy review IT/EN
 
 - Native-speaker pass on all visible copy, in Italian and English: hero, About, journey, CV dropdown, case cards, case studies, trade-offs, experience bullets and footer.
