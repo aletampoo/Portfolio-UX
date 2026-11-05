@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.6.2
+- Chi sono: rimossa (nascosta) la sezione "Cosa dicono i colleghi".
+
 ## v6.6.1
 - Chi sono: tolto il pannello di sfondo dietro la descrizione; il testo sta direttamente sulla pagina.
 
