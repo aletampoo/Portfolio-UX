@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v6.7.1
+- Primo case study (design system automotive): nome "Italdesign" al posto di "Alten".
+
 ## v6.7.0
 - Nuova intro di 1,5 secondi: una linea di luce attraversa lo schermo, un anello olografico si disegna attorno al monogramma "AT", il nome si rivela da sinistra a destra con "Senior Product Designer" sotto, poi l'intro si chiude a iride sul sito. Clic per saltarla; con riduzione del movimento dura 0,2 s.
 
