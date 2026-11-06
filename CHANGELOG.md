@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.5.6 — Case study order
+
+- Swapped case studies 2 and 3: the Bugzer redesign now comes second, NatWest third.
+
 ## v7.5.5 — Projects heading
 
 - Home section heading renamed from "Case studies" to "Projects" (IT: "Progetti").
