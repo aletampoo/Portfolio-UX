@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.1.0 — Variables visual, no image links
+
+- Gallery images in case studies are no longer links (no new tab, no ↗).
+- New custom visual of the semantic variables (one name, four drive modes) at the end of The work, full width.
+
 ## v8.0.8 — Climate screen
 
 - The tokens image in The work replaced with the climate controls screen (steering wheel logo blurred).
