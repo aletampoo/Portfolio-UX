@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v7.5.5 — Projects heading
+
+- Home section heading renamed from "Case studies" to "Projects" (IT: "Progetti").
+
 ## v7.5.4 — LinkedIn button label
 
 - The About button now just says "LinkedIn".
