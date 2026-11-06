@@ -2,6 +2,14 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.0.0 — New hero and About features
+
+- New hero: a Figma cursor builds the name, tokens and buttons, then settles into a clean frame as wide as the content; buttons: Go to projects, LinkedIn, Download CV.
+- Easter eggs: click the hero to invite the team (cursors comment and live-edit the page, then everything resets; click again to stop); ⌘/Ctrl+Y toggles Figma outline mode.
+- About: journey timeline merged into the animated heading line; new "Your team, with and without Alessio" simulator (switch, confetti, illustrative numbers).
+- Experience timeline no longer clipped; LinkedIn button removed from About; smaller gap between hero and Projects.
+- Hidden, not deleted: the 2x2 positioning matrix (with PNG export) and the peeking mascot.
+
 ## v7.5.6 — Case study order
 
 - Swapped case studies 2 and 3: the Bugzer redesign now comes second, NatWest third.
