@@ -1425,6 +1425,22 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 .fpr .ftm{font:500 12.5px/1 ui-monospace,Menlo,monospace;color:#ddd;font-variant-numeric:tabular-nums}
 .fh.done .fpl{opacity:1}
 @container (max-width:640px){.fpr .ftt,.fpr .fpx{display:none}.fpr{justify-content:space-between}}
+
+/* ===== Apertura dei case study in stile Netflix, dalla hero ===== */
+.nfx{position:absolute;inset:0;z-index:20;overflow:hidden;background:#000;opacity:0;animation:nfIn .25s ease forwards;display:grid;place-items:center}
+.nfx .rb{position:absolute;inset:0;display:flex;justify-content:center;gap:0}
+.nfx .rb i{width:4.2%;height:100%;transform:scaleY(0);transform-origin:var(--o,bottom);background:linear-gradient(var(--c1),var(--c2));box-shadow:0 0 40px #e5091466;animation:nfRib .5s cubic-bezier(.7,0,.2,1) var(--d) forwards,nfOut .45s cubic-bezier(.6,0,.4,1) calc(var(--d) + .55s) forwards}
+.nfx .tt{position:relative;text-align:center;opacity:0;animation:nfT .45s ease .85s forwards}
+.nfx .tt small{display:block;margin-bottom:10px;font:700 clamp(11px,1.3cqw,14px)/1 Inter,system-ui,sans-serif;letter-spacing:.32em;color:#e50914}
+.nfx .tt b{display:block;font-size:clamp(34px,7cqw,92px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#fff;text-shadow:0 0 30px color-mix(in srgb,var(--c) 60%,transparent)}
+.nfx .tt span{display:block;margin-top:12px;font-size:clamp(14px,1.7cqw,20px);color:#cfcfcf}
+.nfx .bar{position:absolute;left:6%;right:6%;bottom:9%;height:4px;border-radius:4px;background:#ffffff26;opacity:0;animation:nfIn .2s ease 1s forwards}
+.nfx .bar i{position:absolute;inset:0;border-radius:4px;background:#e50914;transform-origin:left;transform:scaleX(0);animation:nfP 1.25s linear 1.05s forwards}
+@keyframes nfIn{to{opacity:1}}
+@keyframes nfRib{to{transform:scaleY(1)}}
+@keyframes nfOut{to{transform:scaleY(1) translateY(var(--y,-110%));opacity:.0}}
+@keyframes nfT{from{opacity:0;transform:scale(.92);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@keyframes nfP{to{transform:scaleX(1)}}
 </style>
 </head>
 <body class="lock">
@@ -2268,6 +2284,22 @@ addEventListener("resize",avPlace);
   if(b.matches(".fpp,.fpb,.fpt"))replay();else if(b.matches(".fpf"))$("#row").scrollIntoView({behavior:"smooth"});else if(b.matches(".fps")){var h=document.querySelector(".stage");if(document.fullscreenElement)document.exitFullscreen();else if(h&&h.requestFullscreen)h.requestFullscreen().catch(function(){})}
  },true);
  var _bbPl=bb;bb=function(){_bbPl.apply(this,arguments);requestAnimationFrame(add)};
+})();
+
+
+/* Apertura dei case study: la hero diventa uno "schermo" Netflix, poi si espande */
+(function(){
+ var _play=play,nb=false;
+ function intro(i,done){var fh=document.querySelector(".fh");if(!fh||RMO){done();return}
+  var p=P[i],d=p[L],n=P.indexOf(p)+1,C=["#e50914","#b20710","#db0510","#831010","#ff2d3a"];
+  var o=document.createElement("div");o.className="nfx";o.style.setProperty("--c",p.c);
+  var rb='';for(var k=0;k<11;k++){var c=C[k%C.length];rb+='<i style="--d:'+(Math.abs(k-5)*.035).toFixed(3)+'s;--c1:'+c+';--c2:'+C[(k+2)%C.length]+';--o:'+(k%2?'top':'bottom')+';--y:'+(k%2?'110%':'-110%')+'"></i>'}
+  o.innerHTML='<div class="rb">'+rb+'</div><div class="tt"><small>'+(L==="it"?"EPISODIO ":"EPISODE ")+n+'</small><b>'+d.t+'</b><span>'+(d.hl||"")+'</span></div><div class="bar"><i></i></div>';
+  fh.appendChild(o);setTimeout(done,2350)}
+ play=function(i){if(cur!==null||busy||nb)return;nb=true;if(window.mpStop)mpStop();
+  var st=document.querySelector(".stage"),r=st.getBoundingClientRect(),wait=(r.top<-10||r.bottom>innerHeight+10)?560:0;
+  if(wait)scrollTo({top:0,behavior:"smooth"});
+  setTimeout(function(){intro(i,function(){nb=false;_play(i)})},wait)};
 })();
 
 stat();

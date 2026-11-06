@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.5.0
+- Case study opening: Netflix-style intro inside the hero (red ribbons, "EPISODE n" + title + headline, red progress bar), then the hero expands into the case study. Scrolls to the hero first if needed; stops the cursors easter egg; skipped with reduced motion.
+
 ## v8.4.0 — Hero as a Netflix-style player
 
 - Hero keeps the Figma build animation and easter eggs, and adds a Netflix-style player bar: red progress synced to the animation, replay, back/forward 10s (forward goes to projects), title "S1:E1", time, subtitles and full screen.
