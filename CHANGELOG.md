@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.0.7 — Gallery cleanup
+
+- Removed "Components in their four states" from The work in the design system case study.
+
 ## v8.0.6 — New list screen
 
 - "List with tabs and selection" in The work now uses the new list screen.
