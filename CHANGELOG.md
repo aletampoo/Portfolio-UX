@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.1.1 — Theme names blurred
+
+- Drive mode / theme names blurred in the variables visual.
+
 ## v8.1.0 — Variables visual, no image links
 
 - Gallery images in case studies are no longer links (no new tab, no ↗).
