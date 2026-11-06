@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.3.0 — NatWest: Rooster Money cover and The work by feature
+
+- New cover: two Rooster Money phones (chores and pots) on the site background.
+- The work rebuilt by feature, each board full width: virtual pocket money (accounts, pots, transactions, boosts), chores (list, edit, repeat), approval and allowance.
+
 ## v8.2.0 — Rooster Money screens in the NatWest case study
 
 - The work (NatWest) now shows the official NatWest Rooster Money app screens, restyled on the site background: goals, family and chores; card, balance and spending limits.
