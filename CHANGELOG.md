@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.0.5 — New parking assist screen
+
+- "Parking assist" in The work now uses the new screen; brand logos on the cars blurred.
+
 ## v8.0.4 — New home screen in The work
 
 - "Home with widgets, media and climate" now uses the new home screen.
