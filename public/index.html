@@ -1427,20 +1427,20 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 @container (max-width:640px){.fpr .ftt,.fpr .fpx{display:none}.fpr{justify-content:space-between}}
 
 /* ===== Apertura dei case study in stile Netflix, dalla hero ===== */
-.nfx{position:absolute;inset:0;z-index:20;overflow:hidden;background:#000;opacity:0;animation:nfIn .25s ease forwards;display:grid;place-items:center}
-.nfx .rb{position:absolute;inset:0;display:flex;justify-content:center;gap:0}
-.nfx .rb i{width:4.2%;height:100%;transform:scaleY(0);transform-origin:var(--o,bottom);background:linear-gradient(var(--c1),var(--c2));box-shadow:0 0 40px #e5091466;animation:nfRib .5s cubic-bezier(.7,0,.2,1) var(--d) forwards,nfOut .45s cubic-bezier(.6,0,.4,1) calc(var(--d) + .55s) forwards}
-.nfx .tt{position:relative;text-align:center;opacity:0;animation:nfT .45s ease .85s forwards}
-.nfx .tt small{display:block;margin-bottom:10px;font:700 clamp(11px,1.3cqw,14px)/1 Inter,system-ui,sans-serif;letter-spacing:.32em;color:#e50914}
-.nfx .tt b{display:block;font-size:clamp(34px,7cqw,92px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#fff;text-shadow:0 0 30px color-mix(in srgb,var(--c) 60%,transparent)}
-.nfx .tt span{display:block;margin-top:12px;font-size:clamp(14px,1.7cqw,20px);color:#cfcfcf}
-.nfx .bar{position:absolute;left:6%;right:6%;bottom:9%;height:4px;border-radius:4px;background:#ffffff26;opacity:0;animation:nfIn .2s ease 1s forwards}
-.nfx .bar i{position:absolute;inset:0;border-radius:4px;background:#e50914;transform-origin:left;transform:scaleX(0);animation:nfP 1.25s linear 1.05s forwards}
+.nfv{position:absolute;inset:0;z-index:3;overflow:hidden;background:#000;opacity:0;animation:nfIn .35s ease forwards;pointer-events:none}
+.nfv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);animation:nfImg 1.4s cubic-bezier(.2,.6,.2,1) .15s forwards}
+.nfv:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000d 0%,#0008 45%,#0000 75%),linear-gradient(0deg,#000e 0%,#0000 45%)}
+.nfv .tt{position:absolute;left:clamp(22px,4cqw,56px);bottom:clamp(70px,11cqh,96px);z-index:1;max-width:60%;opacity:0;animation:nfT .5s ease .45s forwards}
+.nfv .tt small{display:block;margin-bottom:8px;font:700 12px/1 Inter,system-ui,sans-serif;letter-spacing:.28em;color:#e50914}
+.nfv .tt b{display:block;font-size:clamp(30px,5cqw,64px);font-weight:800;letter-spacing:-.03em;line-height:1;color:#fff}
+.nfv .tt span{display:block;margin-top:10px;font-size:clamp(13px,1.5cqw,18px);color:#d6d6d6}
+.ff.nfon .fpl{opacity:1!important}
+.ff.nfon .fpt i{transition:none}
+.nfk{position:fixed;inset:0;z-index:120;background:#000;opacity:0;pointer-events:none;transition:opacity .35s ease}
+.nfk.on{opacity:1}.nfk.out{transition:opacity .7s ease}
 @keyframes nfIn{to{opacity:1}}
-@keyframes nfRib{to{transform:scaleY(1)}}
-@keyframes nfOut{to{transform:scaleY(1) translateY(var(--y,-110%));opacity:.0}}
-@keyframes nfT{from{opacity:0;transform:scale(.92);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
-@keyframes nfP{to{transform:scaleX(1)}}
+@keyframes nfImg{to{opacity:1;transform:none}}
+@keyframes nfT{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body class="lock">
@@ -2287,15 +2287,27 @@ addEventListener("resize",avPlace);
 })();
 
 
-/* Apertura dei case study: la hero diventa uno "schermo" Netflix, poi si espande */
+/* Apertura dei case study: l'episodio parte nel player della hero, poi si apre a schermo intero con un fade, come su Netflix */
 (function(){
- var _play=play,nb=false;
- function intro(i,done){var fh=document.querySelector(".fh");if(!fh||RMO){done();return}
-  var p=P[i],d=p[L],n=P.indexOf(p)+1,C=["#e50914","#b20710","#db0510","#831010","#ff2d3a"];
-  var o=document.createElement("div");o.className="nfx";o.style.setProperty("--c",p.c);
-  var rb='';for(var k=0;k<11;k++){var c=C[k%C.length];rb+='<i style="--d:'+(Math.abs(k-5)*.035).toFixed(3)+'s;--c1:'+c+';--c2:'+C[(k+2)%C.length]+';--o:'+(k%2?'top':'bottom')+';--y:'+(k%2?'110%':'-110%')+'"></i>'}
-  o.innerHTML='<div class="rb">'+rb+'</div><div class="tt"><small>'+(L==="it"?"EPISODIO ":"EPISODE ")+n+'</small><b>'+d.t+'</b><span>'+(d.hl||"")+'</span></div><div class="bar"><i></i></div>';
-  fh.appendChild(o);setTimeout(done,2350)}
+ var _play=play,nb=false,AC=null;
+ function tadum(){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();var a=AC,t=a.currentTime+.02,m=a.createGain();m.gain.value=.55;m.connect(a.destination);
+  function hit(at,f,g){var o=a.createOscillator(),v=a.createGain();o.type="sine";o.frequency.setValueAtTime(f*2.2,at);o.frequency.exponentialRampToValueAtTime(f,at+.08);v.gain.setValueAtTime(0,at);v.gain.linearRampToValueAtTime(g,at+.008);v.gain.exponentialRampToValueAtTime(.001,at+.55);o.connect(v);v.connect(m);o.start(at);o.stop(at+.6);
+   var n=a.createBufferSource(),b=a.createBuffer(1,a.sampleRate*.12,a.sampleRate),d=b.getChannelData(0);for(var k=0;k<d.length;k++)d[k]=(Math.random()*2-1)*Math.pow(1-k/d.length,3);n.buffer=b;var lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=900;var nv=a.createGain();nv.gain.value=g*.5;n.connect(lp);lp.connect(nv);nv.connect(m);n.start(at)}
+  hit(t,52,1);hit(t+.32,46,1.1);
+  var lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.setValueAtTime(200,t+.36);lp.frequency.exponentialRampToValueAtTime(1400,t+1.3);var sw=a.createGain();sw.gain.setValueAtTime(0,t+.36);sw.gain.linearRampToValueAtTime(.16,t+.9);sw.gain.exponentialRampToValueAtTime(.001,t+2.3);lp.connect(sw);sw.connect(m);
+  [46.25,92.5,138.6,185,277.2].forEach(function(f,k){[-6,6].forEach(function(dt){var o=a.createOscillator();o.type="sawtooth";o.frequency.value=f;o.detune.value=dt+k;o.connect(lp);o.start(t+.36);o.stop(t+2.4)})})}catch(e){}}
+ function intro(i,done){var ff=document.querySelector(".fh .ff");if(!ff||RMO){done();return}
+  var p=P[i],d=p[L],n=P.indexOf(p)+1,src=p.himg||p.cimg,it=L==="it";
+  var o=document.createElement("div");o.className="nfv";
+  o.innerHTML=(src?'<img src="'+src+'" alt="">':'')+'<div class="tt"><small>'+(it?"EPISODIO ":"EPISODE ")+n+'</small><b>'+d.t+'</b><span>'+(d.hl||"")+'</span></div>';
+  ff.classList.add("nfon");ff.appendChild(o);
+  var tl=ff.querySelector(".ftt"),old=tl?tl.innerHTML:null;if(tl)tl.innerHTML='<b>'+d.t+'</b><span>S1:E'+n+'</span>';
+  var bar=ff.querySelector(".fpt i");if(bar){bar.style.cssText="animation:none;transition:none;transform:scaleX(0)";bar.offsetWidth;bar.style.cssText="animation:none;transition:transform 1.7s linear;transform:scaleX(1)"}
+  tadum();
+  setTimeout(function(){var k=document.createElement("div");k.className="nfk";document.body.appendChild(k);k.offsetWidth;k.classList.add("on");
+   setTimeout(function(){done();setTimeout(function(){k.classList.add("out");k.classList.remove("on");
+    o.remove();ff.classList.remove("nfon");if(tl&&old!==null)tl.innerHTML=old;if(bar)bar.removeAttribute("style");
+    setTimeout(function(){k.remove()},750)},80)},380)},1700)}
  play=function(i){if(cur!==null||busy||nb)return;nb=true;if(window.mpStop)mpStop();
   var st=document.querySelector(".stage"),r=st.getBoundingClientRect(),wait=(r.top<-10||r.bottom>innerHeight+10)?560:0;
   if(wait)scrollTo({top:0,behavior:"smooth"});

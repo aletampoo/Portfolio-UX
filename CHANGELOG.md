@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.6.0
+- Simpler case study opening: the episode plays inside the hero player (cover image, "EPISODE n", title, red progress bar, player title updated), then fades to black and opens full screen with a fade-in. Synthesized "ta-dum" sound (Web Audio, not the original Netflix audio). Replaces the ribbon intro from v8.5.0.
+
 ## v8.5.1
 - Bigger gap between the hero and Projects on desktop (about 70px, was about 7px).
 
