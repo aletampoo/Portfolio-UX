@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.3.3 — NatWest: sharper images, copy aligned with Rooster Money
+
+- Rooster Money cover and boards re-rendered at 3200×1800 with light sharpening.
+- Case study copy rewritten so it explains Rooster Money and where gifting fits; captions say which boards show the gifting context and which show the rest of the app.
+
 ## v8.3.0 — NatWest: Rooster Money cover and The work by feature
 
 - New cover: two Rooster Money phones (chores and pots) on the site background.
