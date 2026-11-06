@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.0.6 — New list screen
+
+- "List with tabs and selection" in The work now uses the new list screen.
+
 ## v8.0.5 — New parking assist screen
 
 - "Parking assist" in The work now uses the new screen; brand logos on the cars blurred.
