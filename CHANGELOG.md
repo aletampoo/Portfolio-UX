@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.0.2 — New cover for the design system case study
+
+- Cover of the first case study replaced with a cockpit photo (steering wheel logo blurred), full width 16:9.
+
 ## v8.0.1 — Netflix-style project cards
 
 - Project cards back to the Netflix style: 16:9 thumbnail with the holographic name; on hover the card grows and shows the tagline, play and info buttons, match, year and type.
