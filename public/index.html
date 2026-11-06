@@ -1390,6 +1390,14 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 .fh .ff{width:min(calc(1300px - 2*clamp(16px,3.4vw,64px)),calc(100cqw - 2*clamp(16px,3.4vw,64px)));padding:clamp(28px,5.5cqh,64px) clamp(22px,4.5cqw,64px)}
 .fh .fn{font-size:clamp(40px,9cqw,124px)}
 @container (max-width:640px){.fh .ff{width:calc(100cqw - 36px)}}
+
+/* card dei progetti di nuovo in stile Netflix */
+.tiles{grid-template-columns:repeat(3,1fr)!important;gap:clamp(14px,1.6vw,26px)!important}
+@media (max-width:1024px){.tiles{grid-template-columns:repeat(2,1fr)!important}}
+@media (max-width:760px){.tiles{grid-template-columns:1fr!important}}
+#tiles .ti h4{display:none!important}
+#tiles .tile .tl{transition:top .35s ease,opacity .35s}
+@media (hover:hover){#tiles .tile:hover .tl,#tiles .tile:focus-within .tl{top:34%}}
 </style>
 </head>
 <body class="lock">
@@ -1665,7 +1673,7 @@ function stat(){
   function hwl(a){return a.map(function(q){return '<article'+(q.ph?' class="phc"':'')+'><h4>'+q.h+'</h4><p>'+q.p+'</p></article>'}).join("")}
   $("#hwg").innerHTML=hwl(U[L].hw);$("#labg").innerHTML=hwl(U[L].lab);
   $("#ex").innerHTML=exl(U[L].ex);$("#ed").innerHTML=exl(U[L].ed);fkInit();
-  $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<article class="tile cst2" tabindex="0" role="link" style="--c:'+p.c+';--hc:'+p.c+'" data-p="'+i+'" aria-label="'+t("csOpen")+': '+d.t+'"><b class="hx" aria-hidden="true"></b><div class="cx-top"><span class="cx-fo">'+(d.fo||p.ty[L=="it"?0:1])+'</span></div><div class="cx-mid"><h3 class="cx-t">'+d.t+'</h3><p class="cx-hl">'+(d.hl||d.tag)+'</p></div><div class="cx-km"><b>'+(d.km?d.km[0]:'')+'</b><span>'+(d.km?d.km[1]:'')+'</span></div><div class="cx-bot"><span class="cx-meta">'+p.y+' · '+(d.role||'')+'</span><span class="cx-go">'+t("csOpen")+' <i>→</i></span></div></article>'}).join("");
+  $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" style="--c:'+p.c+';--hc:'+p.c+'" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><div class="th'+(p.thc?" "+p.thc:"")+'" style="--c:'+p.c+'">'+cov(p,d)+'<b class="hx" aria-hidden="true"></b><span class="tp">'+(d.fo||p.ty[L=="it"?0:1])+'</span><span class="tl">'+d.t+'</span></div><div class="ti"><h4>'+d.t+'</h4><p>'+d.tag+'</p><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><i>'+p.m+'% match</i><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></small></div></div>'}).join("");
   $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===L)});$("#lt").classList.toggle("en",L==="en");
   try{localStorage.setItem("at-lang",L)}catch(e){}
   hrv($("main"));

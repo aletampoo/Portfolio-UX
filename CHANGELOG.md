@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.0.1 — Netflix-style project cards
+
+- Project cards back to the Netflix style: 16:9 thumbnail with the holographic name; on hover the card grows and shows the tagline, play and info buttons, match, year and type.
+- 3 columns on desktop, 2 on tablet, 1 on mobile.
+
 ## v8.0.0 — New hero and About features
 
 - New hero: a Figma cursor builds the name, tokens and buttons, then settles into a clean frame as wide as the content; buttons: Go to projects, LinkedIn, Download CV.
