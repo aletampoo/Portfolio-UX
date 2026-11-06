@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.4.0 — Hero as a Netflix-style player
+
+- Hero keeps the Figma build animation and easter eggs, and adds a Netflix-style player bar: red progress synced to the animation, replay, back/forward 10s (forward goes to projects), title "S1:E1", time, subtitles and full screen.
+
 ## v8.3.3 — NatWest: sharper images, copy aligned with Rooster Money
 
 - Rooster Money cover and boards re-rendered at 3200×1800 with light sharpening.

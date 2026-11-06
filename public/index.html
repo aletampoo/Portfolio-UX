@@ -1405,6 +1405,26 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 .fxg .fxi:last-child:nth-child(even){grid-column:1/-1}
 
 .fxg .fxi:has(img[src^="rm-"]){grid-column:1/-1}
+
+/* ===== Hero come player video stile Netflix ===== */
+.fh .ff{padding-bottom:calc(clamp(28px,5.5cqh,64px) + 58px)!important}
+.fpl{position:absolute;left:0;right:0;bottom:0;z-index:4;padding:0 clamp(16px,2.4cqw,28px) 14px;background:linear-gradient(transparent,#000c 70%);opacity:0;animation:fIn .5s ease calc(var(--D) + 2.4s) both;font:500 13px/1 Inter,system-ui,sans-serif;color:#e8e8e8}
+.fpt{position:relative;height:4px;margin:0 0 12px;border-radius:4px;background:#ffffff33;cursor:pointer;transition:height .15s}
+.fpl:hover .fpt{height:6px}
+.fpt i{position:absolute;inset:0 auto 0 0;width:100%;border-radius:4px;background:#e50914;transform-origin:left;animation:fpProg 3.4s linear calc(var(--D) - .2s) both}
+.fpt b{position:absolute;top:50%;left:100%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#e50914;box-shadow:0 0 0 3px #e5091440;animation:fpKnob 3.4s linear calc(var(--D) - .2s) both;transform:scale(0);transition:transform .15s}
+.fpl:hover .fpt b{transform:scale(1)}
+@keyframes fpProg{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes fpKnob{from{left:0}to{left:100%}}
+.fpr{display:flex;align-items:center;gap:clamp(10px,1.6cqw,22px)}
+.fpr button{appearance:none;border:0;background:none;padding:0;color:#fff;cursor:pointer;display:grid;place-items:center;width:28px;height:28px;opacity:.9;transition:transform .15s,opacity .15s}
+.fpr button:hover{transform:scale(1.15);opacity:1}
+.fpr svg{width:24px;height:24px;fill:currentColor}
+.fpr .ftt{flex:1;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
+.fpr .ftt b{font-weight:700}.fpr .ftt span{color:#bbb;margin-left:6px}
+.fpr .ftm{font:500 12.5px/1 ui-monospace,Menlo,monospace;color:#ddd;font-variant-numeric:tabular-nums}
+.fh.done .fpl{opacity:1}
+@container (max-width:640px){.fpr .ftt,.fpr .fpx{display:none}.fpr{justify-content:space-between}}
 </style>
 </head>
 <body class="lock">
@@ -2044,13 +2064,13 @@ addEventListener("resize",avPlace);
    tst.classList.toggle("on",on)},330);
   setTimeout(function(){sw.remove();busy=false},720)}
  document.addEventListener("pointermove",function(e){var fh=document.querySelector(".fh");if(!fh)return;var ff=fh.querySelector(".ff");
-  var over=ff&&ff.contains(e.target)&&!e.target.closest(".fbtn");
+  var over=ff&&ff.contains(e.target)&&!e.target.closest(".fbtn,.fpl");
   if(!egg||!fh.contains(egg)){egg=document.createElement("div");egg.className="egg";egg.setAttribute("aria-hidden","true");fh.appendChild(egg)}
   if(over){var r=fh.getBoundingClientRect();egg.style.left=(e.clientX-r.left)+"px";egg.style.top=(e.clientY-r.top)+"px";
    var on=document.body.classList.contains("olm");
    egg.innerHTML='<i>✦</i>'+(on?(it()?'Clicca per tornare al design':'Click to bring the design back'):(window.MPON?(it()?'Clicca per fermare il team':'Click to stop the team'):(it()?'Clicca per invitare il team':'Click to invite the team')));}
   egg.classList.toggle("on",!!over);ff&&ff.classList.toggle("eh",!!over)},{passive:true});
- document.addEventListener("click",function(e){var ff=e.target.closest(".fh .ff");if(!ff||e.target.closest(".fbtn"))return;if(document.body.classList.contains("olm"))toggle();else if(window.MPON&&window.mpStop)mpStop();else if(window.mpStart)mpStart()});
+ document.addEventListener("click",function(e){var ff=e.target.closest(".fh .ff");if(!ff||e.target.closest(".fbtn,.fpl"))return;if(document.body.classList.contains("olm"))toggle();else if(window.MPON&&window.mpStop)mpStop();else if(window.mpStart)mpStart()});
  document.addEventListener("keydown",function(e){if((e.metaKey||e.ctrlKey)&&(e.key==="y"||e.key==="Y")){e.preventDefault();toggle()}else if(e.key==="Escape"&&document.body.classList.contains("olm"))toggle()});
 })();
 
@@ -2222,6 +2242,33 @@ addEventListener("resize",avPlace);
  o.innerHTML=U[L].jr.map(function(q){return '<li'+(q.now?' class="now"':'')+' title="'+q.s+'"><b>'+q.c+'</b><i></i><small>'+(q.now?q.y:q.y.split(" ")[0])+'</small></li>'}).join("");
  var tl=h.firstChild;if(tl&&tl.nodeType===3){var sp=document.createElement("span");sp.setAttribute("data-i","abT");sp.textContent=tl.textContent;h.replaceChild(sp,tl)}}
  var _s4=stat;stat=function(){_s4.apply(this,arguments);d()}})();
+
+
+/* Hero come player: barra di avanzamento e controlli stile Netflix */
+(function(){
+ var I={play:'<path d="M8 5v14l11-7z"/>',pause:'<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>',re:'<path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/>',b10:'<path d="M11 6V3L6 7l5 4V8a5 5 0 1 1-5 5H4a7 7 0 1 0 7-7z"/><text x="11.5" y="15.5" font-size="6" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700">10</text>',f10:'<path d="M13 6V3l5 4-5 4V8a5 5 0 1 0 5 5h2a7 7 0 1 1-7-7z"/><text x="12.5" y="15.5" font-size="6" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700">10</text>',vol:'<path d="M4 9v6h4l5 4V5L8 9zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/>',cc:'<path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v10h14V7zm2 3h4v1.5H8.5v1H11V14H7zm6 0h4v1.5h-2.5v1H17V14h-4z"/>',fs:'<path d="M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 4v-4h2v6h-6v-2z"/>'};
+ function sv(k){return '<svg viewBox="0 0 24 24" aria-hidden="true">'+I[k]+'</svg>'}
+ function add(){var ff=document.querySelector(".fh .ff");if(!ff||ff.querySelector(".fpl"))return;var it=L==="it",done=ff.closest(".fh").classList.contains("done");
+  var d=document.createElement("div");d.className="fpl";
+  d.innerHTML='<div class="fpt" title="'+(it?'Rivedi':'Replay')+'"><i></i><b></b></div><div class="fpr">'+
+   '<button type="button" class="fpp" aria-label="'+(it?'Riproduci di nuovo':'Play again')+'">'+sv(done?'re':'pause')+'</button>'+
+   '<button type="button" class="fpb" aria-label="'+(it?'Indietro di 10 secondi':'Back 10 seconds')+'">'+sv('b10')+'</button>'+
+   '<button type="button" class="fpf" aria-label="'+(it?'Avanti di 10 secondi: vai ai progetti':'Forward 10 seconds: go to projects')+'">'+sv('f10')+'</button>'+
+   '<button type="button" class="fpx" aria-label="Volume">'+sv('vol')+'</button>'+
+   '<span class="ftt"><b>Alessio Tampone</b><span>'+(it?'S1:E1 · Il portfolio':'S1:E1 · The portfolio')+'</span></span>'+
+   '<span class="ftm">'+(done?'0:03 / 0:03':'0:00 / 0:03')+'</span>'+
+   '<button type="button" class="fpx" aria-label="'+(it?'Sottotitoli':'Subtitles')+'">'+sv('cc')+'</button>'+
+   '<button type="button" class="fps" aria-label="'+(it?'Schermo intero':'Full screen')+'">'+sv('fs')+'</button></div>';
+  ff.appendChild(d);
+  if(!done){var tm=d.querySelector(".ftm"),pp=d.querySelector(".fpp"),t0=performance.now()+1500,dur=3400;
+   (function tick(){var x=Math.max(0,Math.min(1,(performance.now()-t0)/dur));tm.textContent="0:0"+Math.round(x*3)+" / 0:03";if(x<1)requestAnimationFrame(tick);else pp.innerHTML=sv('re')})();}
+ }
+ function replay(){window.FH_PLAYED=false;if(typeof FH_PLAYED!=="undefined")FH_PLAYED=false;bb()}
+ document.addEventListener("click",function(e){var b=e.target.closest(".fpl button,.fpl .fpt");if(!b)return;e.stopPropagation();
+  if(b.matches(".fpp,.fpb,.fpt"))replay();else if(b.matches(".fpf"))$("#row").scrollIntoView({behavior:"smooth"});else if(b.matches(".fps")){var h=document.querySelector(".stage");if(document.fullscreenElement)document.exitFullscreen();else if(h&&h.requestFullscreen)h.requestFullscreen().catch(function(){})}
+ },true);
+ var _bbPl=bb;bb=function(){_bbPl.apply(this,arguments);requestAnimationFrame(add)};
+})();
 
 stat();
 </script>
