@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.5.1
+- Bigger gap between the hero and Projects on desktop (about 70px, was about 7px).
+
 ## v8.5.0
 - Case study opening: Netflix-style intro inside the hero (red ribbons, "EPISODE n" + title + headline, red progress bar), then the hero expands into the case study. Scrolls to the hero first if needed; stops the cursors easter egg; skipped with reduced motion.
 
