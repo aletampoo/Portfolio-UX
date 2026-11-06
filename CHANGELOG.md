@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.2.0 — Rooster Money screens in the NatWest case study
+
+- The work (NatWest) now shows the official NatWest Rooster Money app screens, restyled on the site background: goals, family and chores; card, balance and spending limits.
+
 ## v8.1.1 — Theme names blurred
 
 - Drive mode / theme names blurred in the variables visual.
