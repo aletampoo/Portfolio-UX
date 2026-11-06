@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.0.8 — Climate screen
+
+- The tokens image in The work replaced with the climate controls screen (steering wheel logo blurred).
+
 ## v8.0.7 — Gallery cleanup
 
 - Removed "Components in their four states" from The work in the design system case study.
