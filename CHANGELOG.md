@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.0.3 — New navigation screen in The work
+
+- First image of The work (design system case study) replaced with a navigation screen; brand logos on the map blurred.
+
 ## v8.0.2 — New cover for the design system case study
 
 - Cover of the first case study replaced with a cockpit photo (steering wheel logo blurred), full width 16:9.
