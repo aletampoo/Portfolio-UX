@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -1427,20 +1427,23 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 @container (max-width:640px){.fpr .ftt,.fpr .fpx{display:none}.fpr{justify-content:space-between}}
 
 /* ===== Apertura dei case study in stile Netflix, dalla hero ===== */
-.nfv{position:absolute;inset:0;z-index:3;overflow:hidden;background:#000;opacity:0;animation:nfIn .35s ease forwards;pointer-events:none}
-.nfv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);animation:nfImg 1.4s cubic-bezier(.2,.6,.2,1) .15s forwards}
+.nfv{position:absolute;inset:0;z-index:3;overflow:hidden;background:#000;opacity:0;animation:nfIn .2s ease forwards;pointer-events:none}
+.nfv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);animation:nfImg .8s cubic-bezier(.2,.6,.2,1) .05s forwards}
 .nfv:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000d 0%,#0008 45%,#0000 75%),linear-gradient(0deg,#000e 0%,#0000 45%)}
-.nfv .tt{position:absolute;left:clamp(22px,4cqw,56px);bottom:clamp(70px,11cqh,96px);z-index:1;max-width:60%;opacity:0;animation:nfT .5s ease .45s forwards}
+.nfv .tt{position:absolute;left:clamp(22px,4cqw,56px);bottom:clamp(70px,11cqh,96px);z-index:1;max-width:60%;opacity:0;animation:nfT .35s ease .2s forwards}
 .nfv .tt small{display:block;margin-bottom:8px;font:700 12px/1 Inter,system-ui,sans-serif;letter-spacing:.28em;color:#e50914}
 .nfv .tt b{display:block;font-size:clamp(30px,5cqw,64px);font-weight:800;letter-spacing:-.03em;line-height:1;color:#fff}
 .nfv .tt span{display:block;margin-top:10px;font-size:clamp(13px,1.5cqw,18px);color:#d6d6d6}
 .ff.nfon .fpl{opacity:1!important}
 .ff.nfon .fpt i{transition:none}
-.nfk{position:fixed;inset:0;z-index:120;background:#000;opacity:0;pointer-events:none;transition:opacity .35s ease}
-.nfk.on{opacity:1}.nfk.out{transition:opacity .7s ease}
+.nfk{position:fixed;inset:0;z-index:120;background:#000;opacity:0;pointer-events:none;transition:opacity .22s ease}
+.nfk.on{opacity:1}.nfk.out{transition:opacity .45s ease}
 @keyframes nfIn{to{opacity:1}}
 @keyframes nfImg{to{opacity:1;transform:none}}
 @keyframes nfT{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+/* mobile: piu spazio tra header e hero */
+@media(max-width:760px){.stage{height:580px!important}}
+@container (max-width:640px){.fh .ff{top:104px;transform:translateX(-50%)}}
 </style>
 </head>
 <body class="lock">
@@ -1576,7 +1579,7 @@ sec:[
 {n:"04",h:"The solution",p:"A system of 31 screens and 5 flows: empty states, open project, bug detail, remote import, with readable errors and confirmations for critical actions.",shH:"The redesign",shF:1,shots:[["bug-states.webp","Empty state, open project, bug detail and remote import"]]},
 {n:"05",h:"The result",p:"A consistent interface and a library that grows with the product, ready for development.",st:[["49","issues found in the audit"],["31","screens designed"],["5","flows covered"]]},
 {n:"06",h:"What I’d do next",p:"Four things I would change:",li:["<b>Measure before and after</b>Task times and errors, to put numbers on the redesign.","<b>Test with engineers earlier</b>Already on the 8 core screens, not just at the end of an iteration.","<b>Library from day one</b>Starting from components would have cut rework between iterations.","<b>Ship in stages</b>Release the audit’s quick fixes while the redesign moved forward."]}]}}];;
-var L="it",cur=null,f=0,busy=0,$=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)},scr=$("#scr"),inn=$("#inner");
+var L="en",cur=null,f=0,busy=0,$=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)},scr=$("#scr"),inn=$("#inner");
 function t(k){return U[L][k]}
 function art(i){var p=P[i];
   if(p.art==="ds")return '<div class="dsart" style="--c:'+p.c+'">'+(p.cimg?'<img class="cimg" src="'+p.cimg+'" alt="" draggable="false">':'')+'<div class="lgb"><img src="'+p.lg+'" alt="" draggable="false"></div></div><div class="sh1"></div><div class="sh2"></div>';
@@ -1716,9 +1719,8 @@ function stat(){
   function hwl(a){return a.map(function(q){return '<article'+(q.ph?' class="phc"':'')+'><h4>'+q.h+'</h4><p>'+q.p+'</p></article>'}).join("")}
   $("#hwg").innerHTML=hwl(U[L].hw);$("#labg").innerHTML=hwl(U[L].lab);
   $("#ex").innerHTML=exl(U[L].ex);$("#ed").innerHTML=exl(U[L].ed);fkInit();
-  $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" style="--c:'+p.c+';--hc:'+p.c+'" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><div class="th'+(p.thc?" "+p.thc:"")+'" style="--c:'+p.c+'">'+cov(p,d)+'<b class="hx" aria-hidden="true"></b><span class="tp">'+(d.fo||p.ty[L=="it"?0:1])+'</span><span class="tl">'+d.t+'</span></div><div class="ti"><h4>'+d.t+'</h4><p>'+d.tag+'</p><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><i>'+p.m+'% match</i><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></small></div></div>'}).join("");
+  $("#tiles").innerHTML=P.map(function(p,i){var d=p[L];return '<div class="tile" style="--c:'+p.c+';--hc:'+p.c+'" data-p="'+i+'" data-s="'+(d.t+" "+d.tag+" "+d.tools).toLowerCase()+'"><div class="th'+(p.thc?" "+p.thc:"")+'" style="--c:'+p.c+'">'+cov(p,d)+'<b class="hx" aria-hidden="true"></b><span class="tp">'+(d.fo||p.ty[L=="it"?0:1])+'</span><span class="tl">'+d.t+'</span></div><div class="ti"><h4>'+d.t+'</h4><p>'+d.tag+'</p><div class="tc"><button class="cb p" data-play="'+i+'" aria-label="'+t("play")+' '+d.t+'"><svg><use href="#p"/></svg></button><button class="cb" data-info="'+i+'" aria-label="'+t("more")+' '+d.t+'"><svg><use href="#i"/></svg></button></div><small><span>'+p.y+'</span><span>'+p.ty[L=="it"?0:1]+'</span></small></div></div>'}).join("");
   $$("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===L)});$("#lt").classList.toggle("en",L==="en");
-  try{localStorage.setItem("at-lang",L)}catch(e){}
   hrv($("main"));
   if(cur!==null){var s=inn.scrollTop;draw();inn.scrollTop=s}else bb();
   if($("#md").open)info(f,1);if(window.gUpdate)gUpdate();
@@ -1758,7 +1760,7 @@ function close(){
   setTimeout(function(){scr.style.cssText="transition:none";scr.offsetWidth;scr.removeAttribute("style");busy=0;var b=document.querySelector('[data-p="'+i+'"] .cb');if(b)b.focus({preventScroll:true})},780);
 }
 document.addEventListener("click",function(e){
-  var g=e.target.closest("[data-lang]");if(g){L=g.dataset.lang;stat();return}
+  var g=e.target.closest("[data-lang]");if(g){L=g.dataset.lang;try{localStorage.setItem("at-lang-u",L)}catch(e){}stat();return}
   var pl=e.target.closest("[data-play]");if(pl){play(+pl.dataset.play);return}
   var inf=e.target.closest("[data-info]");if(inf){info(+inf.dataset.info);return}
   if(e.target.closest("#mx")||e.target===$("#md")){$("#md").close();return}
@@ -1790,7 +1792,7 @@ var nm=$("#nm");
 function endIntro(){var el=$("#intro");if(!el)return;el.classList.add("out");document.body.classList.remove("lock");setTimeout(function(){el.remove()},460)}
 $("#intro").onclick=endIntro;
 setTimeout(endIntro,matchMedia("(prefers-reduced-motion:reduce)").matches?200:1050);
-try{var sl=localStorage.getItem("at-lang");if(sl&&U[sl])L=sl;else if((navigator.language||"").slice(0,2)==="en")L="en"}catch(e){}
+try{var sl=localStorage.getItem("at-lang-u");if(sl&&U[sl])L=sl}catch(e){}
 (function(){
   var cv=$("#gc"),c=cv.getContext("2d"),gf=$("#gf"),ov=$("#gov"),sc=0;
   var POR=0,W=960,H=360,GR=300,SZ=38,PX=96,FW=1,SPB=340,SPM=240,JV=-800,GRV=2000;
@@ -2302,16 +2304,25 @@ addEventListener("resize",avPlace);
   o.innerHTML=(src?'<img src="'+src+'" alt="">':'')+'<div class="tt"><small>'+(it?"EPISODIO ":"EPISODE ")+n+'</small><b>'+d.t+'</b><span>'+(d.hl||"")+'</span></div>';
   ff.classList.add("nfon");ff.appendChild(o);
   var tl=ff.querySelector(".ftt"),old=tl?tl.innerHTML:null;if(tl)tl.innerHTML='<b>'+d.t+'</b><span>S1:E'+n+'</span>';
-  var bar=ff.querySelector(".fpt i");if(bar){bar.style.cssText="animation:none;transition:none;transform:scaleX(0)";bar.offsetWidth;bar.style.cssText="animation:none;transition:transform 1.7s linear;transform:scaleX(1)"}
+  var bar=ff.querySelector(".fpt i");if(bar){bar.style.cssText="animation:none;transition:none;transform:scaleX(0)";bar.offsetWidth;bar.style.cssText="animation:none;transition:transform 1s linear;transform:scaleX(1)"}
   tadum();
   setTimeout(function(){var k=document.createElement("div");k.className="nfk";document.body.appendChild(k);k.offsetWidth;k.classList.add("on");
    setTimeout(function(){done();setTimeout(function(){k.classList.add("out");k.classList.remove("on");
     o.remove();ff.classList.remove("nfon");if(tl&&old!==null)tl.innerHTML=old;if(bar)bar.removeAttribute("style");
-    setTimeout(function(){k.remove()},750)},80)},380)},1700)}
+    setTimeout(function(){k.remove()},500)},60)},240)},1000)}
  play=function(i){if(cur!==null||busy||nb)return;nb=true;if(window.mpStop)mpStop();
   var st=document.querySelector(".stage"),r=st.getBoundingClientRect(),wait=(r.top<-10||r.bottom>innerHeight+10)?560:0;
   if(wait)scrollTo({top:0,behavior:"smooth"});
   setTimeout(function(){intro(i,function(){nb=false;_play(i)})},wait)};
+})();
+
+/* mobile: l'altezza della hero segue il riquadro, cosi non tocca header e Projects */
+(function(){
+ function fit(){var st=document.querySelector(".stage"),ff=document.querySelector(".fh .ff");if(!st)return;
+  if(innerWidth>760||!ff||cur!==null){st.style.removeProperty("height");return}
+  st.style.setProperty("height",(104+ff.offsetHeight+Math.round(innerHeight*.07)+42)+"px","important")}
+ var _bbF=bb;bb=function(){_bbF.apply(this,arguments);requestAnimationFrame(fit)};
+ addEventListener("resize",fit);if(document.fonts)document.fonts.ready.then(fit);
 })();
 
 stat();
