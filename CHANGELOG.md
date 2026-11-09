@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.12.0
+- Intro: under the logo, name and role, a loading gag with Alessio's avatar eating from a bowl (chewing bob, crumbs) while plates stack up on both sides, with a "Loading · n plates" counter ("Caricamento · n piatti" if Italian was chosen). Original animation, no game characters. Intro now lasts 2.1s instead of 1.05s; still skippable by click; hidden with reduced motion.
+
 ## v8.11.1
 - Sound on mobile: the audio context is unlocked inside the tap (silent buffer + resume), so the ta-dum also plays on iOS/Android after the scroll-to-hero delay. On iOS the audio session is set to "playback" where supported, so it isn't muted by the silent switch.
 
