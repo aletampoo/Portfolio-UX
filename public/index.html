@@ -2298,7 +2298,12 @@ addEventListener("resize",avPlace);
 /* Apertura dei case study: l'episodio parte nel player della hero, poi si apre a schermo intero con un fade, come su Netflix */
 (function(){
  var _play=play,nb=false,AC=null;
- function tadum(){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();var a=AC,t=a.currentTime+.02,m=a.createGain();m.gain.value=.55;m.connect(a.destination);
+ /* mobile: l'audio va sbloccato dentro un tocco dell'utente, poi il ta-dum puo suonare anche dopo lo scroll */
+ function unlock(){try{if(navigator.audioSession)navigator.audioSession.type="playback"}catch(e){}
+  try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();if(AC.state!=="running")AC.resume();
+   var b=AC.createBuffer(1,1,22050),s=AC.createBufferSource();s.buffer=b;s.connect(AC.destination);s.start(0)}catch(e){}}
+ ["pointerdown","touchend","keydown"].forEach(function(ev){addEventListener(ev,function u(){unlock();if(AC&&AC.state==="running")["pointerdown","touchend","keydown"].forEach(function(x){removeEventListener(x,u,true)})},true)});
+ function tadum(){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();if(AC.state!=="running")AC.resume();var a=AC,t=a.currentTime+.02,m=a.createGain();m.gain.value=.55;m.connect(a.destination);
   function hit(at,f,g){var o=a.createOscillator(),v=a.createGain();o.type="sine";o.frequency.setValueAtTime(f*2.2,at);o.frequency.exponentialRampToValueAtTime(f,at+.08);v.gain.setValueAtTime(0,at);v.gain.linearRampToValueAtTime(g,at+.008);v.gain.exponentialRampToValueAtTime(.001,at+.55);o.connect(v);v.connect(m);o.start(at);o.stop(at+.6);
    var n=a.createBufferSource(),b=a.createBuffer(1,a.sampleRate*.12,a.sampleRate),d=b.getChannelData(0);for(var k=0;k<d.length;k++)d[k]=(Math.random()*2-1)*Math.pow(1-k/d.length,3);n.buffer=b;var lp=a.createBiquadFilter();lp.type="lowpass";lp.frequency.value=900;var nv=a.createGain();nv.gain.value=g*.5;n.connect(lp);lp.connect(nv);nv.connect(m);n.start(at)}
   hit(t,52,1);hit(t+.32,46,1.1);
@@ -2316,7 +2321,7 @@ addEventListener("resize",avPlace);
    setTimeout(function(){done();setTimeout(function(){k.classList.add("out");k.classList.remove("on");
     o.remove();ff.classList.remove("nfon");if(tl&&old!==null)tl.innerHTML=old;if(bar)bar.removeAttribute("style");
     setTimeout(function(){k.remove()},500)},60)},240)},1000)}
- play=function(i){if(cur!==null||busy||nb)return;nb=true;if(window.mpStop)mpStop();
+ play=function(i){if(cur!==null||busy||nb)return;nb=true;unlock();if(window.mpStop)mpStop();
   var st=document.querySelector(".stage"),r=st.getBoundingClientRect(),wait=(r.top<-10||r.bottom>innerHeight+10)?560:0;
   if(wait)scrollTo({top:0,behavior:"smooth"});
   setTimeout(function(){intro(i,function(){nb=false;_play(i)})},wait)};

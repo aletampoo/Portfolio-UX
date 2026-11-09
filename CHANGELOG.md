@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.11.1
+- Sound on mobile: the audio context is unlocked inside the tap (silent buffer + resume), so the ta-dum also plays on iOS/Android after the scroll-to-hero delay. On iOS the audio session is set to "playback" where supported, so it isn't muted by the silent switch.
+
 ## v8.11.0
 - Project cards: the case study title (e.g. "One system, many cars") now sits under the client name. Also included in the card search text.
 
