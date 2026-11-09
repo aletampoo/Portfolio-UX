@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.8.0
+- Hero: removed the video player controls (progress bar, play/pause, ±10s, volume, title, time, subtitles, fullscreen). Frame padding back to normal; desktop gap to Projects re-tuned to about 70px. The case study opening (cover in the frame, then fade) is unchanged.
+
 ## v8.7.1
 - Italdesign "One system, many cars" case study: role is now Senior Product Designer (IT/EN).
 
