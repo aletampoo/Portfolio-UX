@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.7.1
+- Italdesign "One system, many cars" case study: role is now Senior Product Designer (IT/EN).
+
 ## v8.7.0
 - English is the default language on every device (no more auto-detect from the browser or old saved setting); Italian only if the visitor picks it with the toggle.
 - Mobile: the hero frame starts below the header (no overlap) and the hero height follows the frame, so the gap to Projects is about 70px on every phone.
