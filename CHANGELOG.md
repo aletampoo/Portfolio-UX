@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.9.0
+- Info modal (i button on project cards) now shows the case study cover image (himg), with a dark gradient so title and Play stay readable.
+
 ## v8.8.1
 - Project info modal: removed the grey box behind the Play button (a badge style named .bt was also being applied to the button row).
 
