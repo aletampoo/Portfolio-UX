@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.10.0
+- Hidden from search engines: robots meta tags (noindex, nofollow, noarchive, nosnippet, noimageindex) in the page, and an X-Robots-Tag header on every file (index, images, CV PDF) via _headers. No robots.txt Disallow on purpose, so crawlers can read the noindex rule. The site stays reachable by link.
+
 ## v8.9.0
 - Info modal (i button on project cards) now shows the case study cover image (himg), with a dark gradient so title and Play stay readable.
 
