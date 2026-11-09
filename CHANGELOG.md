@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.12.2
+- Removed the intro eating/plates animation (v8.12.0 and v8.12.1). The intro is back to the v8.11.1 version: logo, name and role, 1.05s.
+
 ## v8.12.1
 - Intro: the eater is now an original abstract character (inline SVG blob with blue-violet gradient, antenna, blinking eyes, chomping mouth) instead of Alessio's avatar.
 
