@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.0.5
+- Spotlight fix, part 2: the lit dots layer no longer uses a full-screen mask either. It's a 520px round element that follows the cursor, with its dot pattern offset so it stays aligned to the background grid. No full-screen gradients or masks follow the cursor anymore, so there's nothing left for the browser to split into tiles.
+
 ## v9.0.4
 - Fix background spotlight glitch: the soft glow was a full-screen radial gradient that the browser cut off with a hard vertical/horizontal edge around the middle of the screen. It is now a fixed-size round glow (1040px) moved with transform, so no edges and cheaper to repaint.
 

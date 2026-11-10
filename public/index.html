@@ -1465,6 +1465,11 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 /* fix: il bagliore dello spot e' un cerchio di dimensione fissa spostato con transform (il gradiente a tutto schermo veniva tagliato a meta) */
 .hbg i:nth-child(2),.csbg i:nth-child(2){inset:auto;left:0;top:0;right:auto;bottom:auto;width:1040px;height:1040px;border-radius:50%;transform:translate(calc(var(--mx,-2000px) - 520px),calc(var(--my,-2000px) - 520px));will-change:transform;background:radial-gradient(closest-side,color-mix(in srgb,var(--gc,#3e9fd1) 9%,transparent),transparent)}
 .csbg i:nth-child(2){background:radial-gradient(closest-side,color-mix(in srgb,var(--cc,#3e9fd1) 9%,transparent),transparent)}
+/* fix 2: anche i puntini illuminati sono un cerchio piccolo che segue il cursore, niente maschere a tutto schermo */
+.hbg i:nth-child(1),.csbg i:nth-child(1){inset:auto;left:0;top:0;right:auto;bottom:auto;width:520px;height:520px;border-radius:50%;
+ transform:translate(calc(var(--mx,-2000px) - 260px),calc(var(--my,-2000px) - 260px));will-change:transform;
+ background-position:calc(260px - var(--mx,-2000px)) calc(260px - var(--my,-2000px));
+ -webkit-mask-image:radial-gradient(closest-side,#000 0,#0008 45%,#0000 100%);mask-image:radial-gradient(closest-side,#000 0,#0008 45%,#0000 100%)}
 </style>
 </head>
 <body class="lock">
