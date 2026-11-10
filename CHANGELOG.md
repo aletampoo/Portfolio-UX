@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.13.1
+- Hero headline polished, first person: "I design digital products on design systems that scale, with AI built into my workflow. Automotive, fintech and enterprise." (IT to match).
+
 ## v8.13.0
 - Hero headline rewritten to focus on product design, design systems and AI in the design workflow (EN: "Product design built on strong design systems, with AI in the workflow. For automotive, fintech and enterprise products."; IT version to match).
 
