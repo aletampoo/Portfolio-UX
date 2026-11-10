@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v8.14.0
+- About me: added a second paragraph on using AI every day (research, ideas, prototypes and code faster; the decisions stay mine). IT/EN.
+
 ## v8.13.1
 - Hero headline polished, first person: "I design digital products on design systems that scale, with AI built into my workflow. Automotive, fintech and enterprise." (IT to match).
 
