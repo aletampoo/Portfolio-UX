@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.0.4
+- Fix background spotlight glitch: the soft glow was a full-screen radial gradient that the browser cut off with a hard vertical/horizontal edge around the middle of the screen. It is now a fixed-size round glow (1040px) moved with transform, so no edges and cheaper to repaint.
+
 ## v9.0.3
 - About me shortened: two short paragraphs (role, experience and focus; daily AI use). IT/EN.
 

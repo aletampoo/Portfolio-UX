@@ -1462,6 +1462,9 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 .hbg i:nth-child(2),.csbg i:nth-child(2){display:block;inset:0;width:auto;height:auto;left:0;top:0;right:auto;border-radius:0;filter:none;opacity:1;animation:none;will-change:auto;
  background:radial-gradient(520px circle at var(--mx,-999px) var(--my,-999px),color-mix(in srgb,var(--gc,#3e9fd1) 9%,transparent),transparent 70%)}
 .csbg i:nth-child(2){background:radial-gradient(520px circle at var(--mx,-999px) var(--my,-999px),color-mix(in srgb,var(--cc,#3e9fd1) 9%,transparent),transparent 70%)}
+/* fix: il bagliore dello spot e' un cerchio di dimensione fissa spostato con transform (il gradiente a tutto schermo veniva tagliato a meta) */
+.hbg i:nth-child(2),.csbg i:nth-child(2){inset:auto;left:0;top:0;right:auto;bottom:auto;width:1040px;height:1040px;border-radius:50%;transform:translate(calc(var(--mx,-2000px) - 520px),calc(var(--my,-2000px) - 520px));will-change:transform;background:radial-gradient(closest-side,color-mix(in srgb,var(--gc,#3e9fd1) 9%,transparent),transparent)}
+.csbg i:nth-child(2){background:radial-gradient(closest-side,color-mix(in srgb,var(--cc,#3e9fd1) 9%,transparent),transparent)}
 </style>
 </head>
 <body class="lock">
