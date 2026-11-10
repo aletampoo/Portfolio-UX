@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.0.1
+- Hero headline simplified to one line: "Product designer focused on design systems and AI-powered workflows." (IT: "Product designer specializzato in design system e flussi di lavoro con l’AI.").
+
 ## v9.0.0
 - New background for home and case studies: no more blurred colour blobs and line grid. Now a near-black canvas with a fine dot grid (like a design tool canvas) and light grain. With a mouse, a spotlight follows the cursor and lights up the dots around it, tinted with the project colour (changes on card hover). On touch devices only the static dot grid.
 
