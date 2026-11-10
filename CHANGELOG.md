@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.0.2
+- Hero headline from Alessio's sentence, polished: "Product designer shaping design systems and UX/UI for fintech, automotive and SaaS." (IT: "Product designer che costruisce design system e UX/UI per fintech, automotive e SaaS.").
+
 ## v9.0.1
 - Hero headline simplified to one line: "Product designer focused on design systems and AI-powered workflows." (IT: "Product designer specializzato in design system e flussi di lavoro con l’AI.").
 
