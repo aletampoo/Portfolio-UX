@@ -1450,6 +1450,18 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 .bc .bt{background:none;padding:0;border-radius:0}
 #mh{position:relative}#mh .mcg{position:absolute;inset:0;background:linear-gradient(90deg,#000e 0%,#000a 38%,#0000 72%),linear-gradient(0deg,#000d 0%,#0000 55%)}#mh .mcv~.bc{position:absolute;z-index:2}#mh .mcv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
 .tiles .tl .tsb{display:block;margin-top:.5em;font-size:clamp(.9rem,3.8cqw,1.15rem);font-weight:500;letter-spacing:-.005em;line-height:1.25;color:#e8eef4;text-shadow:0 1px 10px #000d;animation:none}
+/* ===== Sfondo v9: griglia di punti come un canvas, con uno spot che segue il cursore (niente blob sfocati) ===== */
+.hbg,.csbg{background:#0a0b0d}
+.hbg i,.csbg i{display:none}
+.hbg::before,.csbg::before{background:radial-gradient(circle at 1px 1px,#ffffff17 1px,transparent 1.5px) 0 0/22px 22px;-webkit-mask-image:linear-gradient(#000,#000c 45%,#0006);mask-image:linear-gradient(#000,#000c 45%,#0006)}
+.hbg::after,.csbg::after{opacity:.05}
+.hbg i:nth-child(1),.csbg i:nth-child(1){display:block;inset:0;width:auto;height:auto;left:0;top:0;border-radius:0;filter:none;opacity:1;animation:none;will-change:auto;
+ background:radial-gradient(circle at 1px 1px,color-mix(in srgb,var(--gc,#3e9fd1) 55%,#fff) 1.15px,transparent 1.6px) 0 0/22px 22px;
+ -webkit-mask-image:radial-gradient(260px circle at var(--mx,-999px) var(--my,-999px),#000 0,#0008 45%,#0000 100%);mask-image:radial-gradient(260px circle at var(--mx,-999px) var(--my,-999px),#000 0,#0008 45%,#0000 100%)}
+.csbg i:nth-child(1){background:radial-gradient(circle at 1px 1px,color-mix(in srgb,var(--cc,#3e9fd1) 55%,#fff) 1.15px,transparent 1.6px) 0 0/22px 22px}
+.hbg i:nth-child(2),.csbg i:nth-child(2){display:block;inset:0;width:auto;height:auto;left:0;top:0;right:auto;border-radius:0;filter:none;opacity:1;animation:none;will-change:auto;
+ background:radial-gradient(520px circle at var(--mx,-999px) var(--my,-999px),color-mix(in srgb,var(--gc,#3e9fd1) 9%,transparent),transparent 70%)}
+.csbg i:nth-child(2){background:radial-gradient(520px circle at var(--mx,-999px) var(--my,-999px),color-mix(in srgb,var(--cc,#3e9fd1) 9%,transparent),transparent 70%)}
 </style>
 </head>
 <body class="lock">
@@ -2334,6 +2346,12 @@ addEventListener("resize",avPlace);
   st.style.setProperty("height",(104+ff.offsetHeight+Math.round(innerHeight*.07)+42)+"px","important")}
  var _bbF=bb;bb=function(){_bbF.apply(this,arguments);requestAnimationFrame(fit)};
  addEventListener("resize",fit);if(document.fonts)document.fonts.ready.then(fit);
+})();
+
+/* sfondo: lo spot di punti segue il cursore (solo con mouse) */
+(function(){if(!matchMedia("(hover:hover) and (pointer:fine)").matches)return;var x=-999,y=-999,q=0,r=document.documentElement;
+ addEventListener("pointermove",function(e){x=e.clientX;y=e.clientY;if(!q){q=1;requestAnimationFrame(function(){q=0;r.style.setProperty("--mx",x+"px");r.style.setProperty("--my",y+"px")})}},{passive:true});
+ document.addEventListener("pointerleave",function(){r.style.setProperty("--mx","-999px");r.style.setProperty("--my","-999px")});
 })();
 
 stat();
