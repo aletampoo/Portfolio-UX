@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.5.0
+- AI case study: new "Prototype in code" step in the process (design ideas iterated with Claude directly in code for the real look and feel, tested in the browser, brought into the real software only once everything worked with the developers). New trade-off on prototyping in code instead of static mockups. Tools: Figma, Claude. Trade-offs subtitle no longer says "Two". IT/EN.
+
 ## v9.4.6
 - Card hover: the border around thumbnail + info panel is now drawn once (one rounded 1px stroke with a soft glow in the project colour), so the left and right strokes line up exactly. Thin gradient divider between thumbnail and panel.
 
