@@ -1500,6 +1500,13 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 #tiles .tile:hover .hx,#tiles .tile:focus-within .hx{display:none!important}
 #tiles .ti{box-shadow:inset 1px 0 0 color-mix(in srgb,var(--c) 70%,transparent),inset -1px 0 0 color-mix(in srgb,var(--c) 70%,transparent),inset 0 -1px 0 color-mix(in srgb,var(--c) 70%,transparent)!important;background:linear-gradient(color-mix(in srgb,var(--c) 10%,#11151c),#11151c 60%)!important;top:calc(100cqw * .5625)!important}
 }
+/* un solo bordo per miniatura + pannello: disegnato una volta, cosi i tratti sono allineati */
+@media (hover:hover) and (min-width:761px){
+#tiles .tile:hover .th,#tiles .tile:focus-within .th{box-shadow:none!important}
+#tiles .ti{box-shadow:none!important;overflow:visible!important}
+#tiles .ti::before{content:"";position:absolute;left:0;right:0;bottom:0;top:calc(-100cqw * .5625);border:1px solid color-mix(in srgb,var(--c) 80%,transparent);border-radius:12px;pointer-events:none;box-shadow:0 0 28px color-mix(in srgb,var(--c) 28%,transparent);z-index:2}
+#tiles .ti::after{content:"";position:absolute;left:16px;right:16px;top:0;height:1px;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--c) 70%,transparent),transparent);pointer-events:none}
+}
 </style>
 </head>
 <body class="lock">

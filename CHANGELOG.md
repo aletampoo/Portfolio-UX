@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.4.6
+- Card hover: the border around thumbnail + info panel is now drawn once (one rounded 1px stroke with a soft glow in the project colour), so the left and right strokes line up exactly. Thin gradient divider between thumbnail and panel.
+
 ## v9.4.5
 - Card hover cleaned up: thumbnail and info panel now read as one card (one continuous coloured border, one shadow, no corner brackets or glow at the join).
 
