@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.9.1
+- Intro lasts 2.2s: pixels appear over ~0.9s, the LOADING bar fills over ~1.9s, then the intro dissolves.
+
 ## v9.9.0
 - New intro, no longer repeating the hero: an 8-bit "AT" monogram built from holographic pixels (iridescent gradient with hue shift) that pop in one by one, a pixel LOADING bar, and the pixels dissolve when the intro ends. Same ~1s, click to skip; static with reduced motion.
 
