@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.2.1
+- Case study highlights: the Figma-frame boxes are replaced by a simple underline in the project colour (2px gradient line, semibold text).
+
 ## v9.2.0
 - All case studies: key phrases highlighted with the Figma-frame style used in Experience (challenge, role, process, outcome, looking back), IT/EN.
 - All case studies: key numbers shown as stat cards in "The outcome".
