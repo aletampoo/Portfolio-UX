@@ -2436,6 +2436,14 @@ addEventListener("resize",avPlace);
  document.addEventListener("pointerleave",function(){r.style.setProperty("--mx","-999px");r.style.setProperty("--my","-999px")});
 })();
 
+/* URL pulito: i link interni scorrono alla sezione senza aggiungere #top, #row... all'indirizzo */
+(function(){
+ function clean(){if(location.hash&&history.replaceState)history.replaceState(null,"",location.pathname+location.search)}
+ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey)return;var id=a.getAttribute("href").slice(1),t=id?document.getElementById(id):null;if(!t&&id!=="")return;e.preventDefault();(t||document.body).scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"start"});clean()});
+ addEventListener("hashchange",clean);
+ if(location.hash){var t=document.getElementById(location.hash.slice(1));if(t)setTimeout(function(){t.scrollIntoView()},1200);clean()}
+})();
+
 stat();
 </script>
 </body>

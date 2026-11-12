@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.8.4
+- Clean URL: in-page links (nav, logo, "Go to projects") smooth-scroll to their section without adding #top, #row, #about… to the address. A link opened with a hash still lands on the section, then the hash is removed.
+
 ## v9.8.3
 - Case study opening: "EPISODE n" label in the hero light blue (#9cd4f1, soft glow) instead of Netflix red.
 
