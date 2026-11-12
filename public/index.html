@@ -1493,6 +1493,13 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 #tiles .ti small span:first-child{color:#46d369;font-weight:700}
 #tiles .ti p{order:3;margin:0!important;font-size:.88rem;line-height:1.4;color:#c9d1db}
 }
+/* hover pulito: miniatura e pannello sembrano un'unica card */
+@media (hover:hover) and (min-width:761px){
+#tiles .tile:hover,#tiles .tile:focus-within{filter:drop-shadow(0 22px 34px #000b)}
+#tiles .tile:hover .th,#tiles .tile:focus-within .th{border-radius:12px 12px 0 0!important;filter:none!important;box-shadow:inset 1px 1px 0 color-mix(in srgb,var(--c) 70%,transparent),inset -1px 0 0 color-mix(in srgb,var(--c) 70%,transparent)!important}
+#tiles .tile:hover .hx,#tiles .tile:focus-within .hx{display:none!important}
+#tiles .ti{box-shadow:inset 1px 0 0 color-mix(in srgb,var(--c) 70%,transparent),inset -1px 0 0 color-mix(in srgb,var(--c) 70%,transparent),inset 0 -1px 0 color-mix(in srgb,var(--c) 70%,transparent)!important;background:linear-gradient(color-mix(in srgb,var(--c) 10%,#11151c),#11151c 60%)!important;top:calc(100cqw * .5625)!important}
+}
 </style>
 </head>
 <body class="lock">

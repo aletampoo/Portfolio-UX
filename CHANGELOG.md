@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.4.5
+- Card hover cleaned up: thumbnail and info panel now read as one card (one continuous coloured border, one shadow, no corner brackets or glow at the join).
+
 ## v9.4.4
 - Relations case study, "The process" simplified into four steps (Understand, Design, Test, Deliver), with AI inside the Design step and the rule "AI suggests, people decide". IT/EN.
 
