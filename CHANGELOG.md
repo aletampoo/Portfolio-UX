@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.13.1
+- Homepage particles calmer at rest (about half intensity); hovering the hero brings them up to full strength. Case studies unchanged.
+
 ## v9.13.0
 - Hovering the hero boosts the particles: more spawn from the frame and all particles get brighter, easing back on leave.
 
