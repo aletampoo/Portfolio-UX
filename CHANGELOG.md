@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.12.0
+- Site background is now a full-page particle field (depth, scroll parallax, gentle cursor push) replacing the dot grid and spotlight.
+
 ## v9.11.0
 - Subtle particles that drift out of the hero frame and fade behind the content; hero background made transparent so they show through.
 

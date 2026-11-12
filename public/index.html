@@ -1589,6 +1589,8 @@ input,textarea,[contenteditable]{cursor:text!important}
 /* hero trasparente: le particelle e la griglia di puntini si vedono dietro la hero */
 .fh{background:transparent!important}
 .fh .ff{background:color-mix(in srgb,#05070b 55%,transparent)!important;backdrop-filter:blur(1px)}
+/* sfondo: campo di particelle al posto della griglia di puntini e dello spotlight */
+.hbg::before,.csbg::before,.hbg i,.csbg i{display:none!important}
 </style>
 </head>
 <body class="lock">
@@ -2523,7 +2525,23 @@ addEventListener("resize",avPlace);
   else if(e<.86){px=r.right-4;py=r.top+Math.random()*r.height;vx=sp;vy=-(Math.random()*.15)}
   else{px=r.left+Math.random()*r.width;py=r.bottom-4;vx=(Math.random()-.5)*.15;vy=sp*.6}
   var a={x:px,y:py,vx:vx,vy:vy,s:Math.random()<.85?.6+Math.random()*.9:1.4+Math.random()*.8,l:0,L:5+Math.random()*7,h:Math.random()<.7?"156,212,241":Math.random()<.5?"201,168,255":"255,255,255",tw:Math.random()*6.28};ps.push(a)}
- function step(t){if(!run){last=t;requestAnimationFrame(step);return}var dt=Math.min((t-last)/1000||0,.05);last=t;x.clearRect(0,0,W,H);
+ var am=[],AM=mob?45:120,sy=scrollY,mx=-999,my=-999;
+ addEventListener("pointermove",function(e){if(e.pointerType==="mouse"){mx=e.clientX;my=e.clientY}},{passive:true});
+ function aspawn(init){var z=.25+Math.random()*.75;am.push({x:Math.random()*W,y:Math.random()*H,z:z,vx:(Math.random()-.5)*.06,vy:-(.03+Math.random()*.1)*z,s:(.4+Math.random()*.9)*z+(Math.random()<.06?1:0),l:init?Math.random()*14:0,L:9+Math.random()*12,h:Math.random()<.68?"156,212,241":Math.random()<.55?"201,168,255":"255,255,255",tw:Math.random()*6.28,ox:0,oy:0})}
+ for(var q=0;q<AM;q++)aspawn(true);
+ function ambient(t,dt){var ds=scrollY-sy;sy=scrollY;
+  while(am.length<AM)aspawn(false);
+  for(var i=am.length-1;i>=0;i--){var p=am[i];p.l+=dt;if(p.l>p.L){am.splice(i,1);continue}
+   p.x+=p.vx*60*dt;p.y+=p.vy*60*dt-ds*p.z*.25;
+   if(p.y<-20)p.y+=H+40;else if(p.y>H+20)p.y-=H+40;if(p.x<-20)p.x+=W+40;else if(p.x>W+20)p.x-=W+40;
+   var dx=p.x+p.ox-mx,dy=p.y+p.oy-my,d2=dx*dx+dy*dy,tx=0,ty=0;
+   if(d2<22500){var d=Math.sqrt(d2)||1,f=(1-d/150)*18*p.z;tx=dx/d*f;ty=dy/d*f}
+   p.ox+=(tx-p.ox)*.08;p.oy+=(ty-p.oy)*.08;
+   var k=p.l/p.L,al=(k<.2?k/.2:k>.8?(1-k)/.2:1)*(.22+.5*p.z)*(.6+.4*Math.sin(t/900+p.tw));
+   if(d2<22500)al*=1+(1-Math.sqrt(d2)/150)*.9;
+   var X=p.x+p.ox,Y=p.y+p.oy;x.beginPath();x.arc(X,Y,p.s,0,6.283);x.fillStyle="rgba("+p.h+","+Math.max(0,al).toFixed(3)+")";x.fill();
+   if(p.s>1.2){x.beginPath();x.arc(X,Y,p.s*3.2,0,6.283);x.fillStyle="rgba("+p.h+","+Math.max(0,al*.07).toFixed(3)+")";x.fill()}}}
+ function step(t){if(!run){last=t;requestAnimationFrame(step);return}var dt=Math.min((t-last)/1000||0,.05);last=t;x.clearRect(0,0,W,H);ambient(t,dt);
   var st=document.querySelector(".fh .ff")||document.querySelector(".stage"),r=st&&st.getBoundingClientRect();if(r&&r.width<10)r=null;
   if(r&&r.bottom>0&&r.top<H&&(typeof cur==="undefined"||cur===null)&&ps.length<MAX&&Math.random()<.6)spawn(r);
   for(var i=ps.length-1;i>=0;i--){var p=ps[i];p.l+=dt;if(p.l>p.L){ps.splice(i,1);continue}
