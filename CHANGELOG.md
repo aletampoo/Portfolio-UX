@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.1.0
+- New 4th case study: Italdesign "Relations you can see" (IT: "Relazioni che si vedono"). Advanced relations between tickets in the internal project-management tool: drag & connect map, relation picker, rules list. Feature design, testing and delivery.
+- Four new screens with improved UI, built from the original Figma screens: rel-cover, rel-connect, rel-picker, rel-list (3200×1800 webp).
+- Projects grid is 2×2 on desktop now that there are four cards.
+
 ## v9.0.5
 - Spotlight fix, part 2: the lit dots layer no longer uses a full-screen mask either. It's a 520px round element that follows the cursor, with its dot pattern offset so it stays aligned to the background grid. No full-screen gradients or masks follow the cursor anymore, so there's nothing left for the browser to split into tiles.
 
