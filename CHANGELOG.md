@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.5.2
+- AI case study title: "AI connects, you decide" (IT: "L’AI collega, tu decidi"), on the card and in the case study.
+
 ## v9.5.1
 - AI case study, "The process": shorter and clearer English (about a third shorter), same five steps. IT updated to match.
 
