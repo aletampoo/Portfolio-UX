@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.10.0
+- First project card highlighted as AI work: holographic "✦ AI-powered" badge (shimmering iridescent gradient, same palette as the pixel intro) and a slowly rotating holographic border. Border hides on hover so the Netflix-style hover stays clean; static with reduced motion.
+
 ## v9.9.2
 - Updated CV (EN, November 2026) behind every Download CV button; link has a version query so browsers don't serve the old cached file.
 
