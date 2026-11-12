@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.10.3
+- "My journey" timeline redesigned: each stop is a pill (city · year) linked by a dashed line; "Turin · Today" highlighted with the hero gradient, glow and a pulsing dot; pills lift on hover. On mobile the pills wrap without the line.
+
 ## v9.10.2
 - Info window (i button on cards) takes the case study's accent colour: border and glow, close and Play buttons, client label, Role/Duration/Tools labels, tinted bottom panel. Orange for the AI case study, blue for the design system, violet for NatWest.
 

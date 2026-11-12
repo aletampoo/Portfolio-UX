@@ -1566,6 +1566,26 @@ input,textarea,[contenteditable]{cursor:text!important}
 #md #mx{border-color:var(--mc,#5ab8e8)!important;color:#fff!important;box-shadow:0 0 16px color-mix(in srgb,var(--mc,#5ab8e8) 45%,transparent)!important;background:color-mix(in srgb,var(--mc,#5ab8e8) 18%,#0b0f15)!important}
 #md #mb dt{color:color-mix(in srgb,var(--mc,#5ab8e8) 75%,#fff)!important}
 #md #mh .cl{color:color-mix(in srgb,var(--mc,#5ab8e8) 70%,#fff)!important}
+/* ===== Timeline "My journey" v2: tappe come pillole collegate ===== */
+#about .jtl{height:auto!important;align-items:center;gap:10px}
+#about .jtl::before{top:50%!important;height:1px!important;background:repeating-linear-gradient(90deg,color-mix(in srgb,var(--hc) 45%,transparent) 0 6px,transparent 6px 12px)!important;opacity:.8}
+#about .jtl li{width:auto!important;margin:0!important;flex-direction:row!important;align-items:baseline;gap:8px;padding:8px 13px 8px 11px;border-radius:999px;background:#0e1217;border:1px solid #ffffff1c;box-shadow:0 4px 14px #0006;transition:border-color .25s,transform .25s,background .25s}
+#about .jtl li:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--hc) 60%,transparent)}
+#about .jtl li:hover i{transform:none}
+#about .jtl b,#about .jtl small{position:static!important;transform:none!important;line-height:1}
+#about .jtl i{align-self:center;width:7px!important;height:7px!important;background:color-mix(in srgb,var(--hc) 55%,#0e1217)!important;box-shadow:none!important;animation:none!important}
+#about .jtl b{font-size:13px;font-weight:650}
+#about .jtl small{font-size:11px;color:#8d98a6!important}
+#about .jtl li.now{background:linear-gradient(100deg,color-mix(in srgb,var(--hc) 26%,#0e1217),#0e1217);border-color:color-mix(in srgb,var(--hc) 75%,transparent);box-shadow:0 0 22px color-mix(in srgb,var(--hc) 30%,transparent),0 4px 14px #0006}
+#about .jtl li.now i{background:#9cd4f1!important;box-shadow:0 0 0 3px #9cd4f133,0 0 10px #9cd4f1!important;animation:hpl 2.4s ease-in-out infinite!important}
+#about .jtl li.now b{color:transparent;background:linear-gradient(100deg,#fff,#9cd4f1 60%,#fff);-webkit-background-clip:text;background-clip:text}
+#about .jtl li.now small{color:#cfe9f8!important}
+@media(max-width:760px){
+#about .jtl{flex-wrap:wrap;justify-content:flex-start!important;gap:8px;margin-top:10px!important}
+#about .jtl::before{display:none}
+#about .jtl li:nth-child(n){padding:7px 11px 7px 9px}
+#about .jtl li:nth-child(even) b,#about .jtl li:nth-child(even) small{top:auto;bottom:auto}
+}
 </style>
 </head>
 <body class="lock">
