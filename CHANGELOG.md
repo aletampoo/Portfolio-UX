@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.5.1
+- AI case study, "The process": shorter and clearer English (about a third shorter), same five steps. IT updated to match.
+
 ## v9.5.0
 - AI case study: new "Prototype in code" step in the process (design ideas iterated with Claude directly in code for the real look and feel, tested in the browser, brought into the real software only once everything worked with the developers). New trade-off on prototyping in code instead of static mockups. Tools: Figma, Claude. Trade-offs subtitle no longer says "Two". IT/EN.
 
