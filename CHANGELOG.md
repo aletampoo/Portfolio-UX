@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.1.1
+- Relations case study: year 2026; "My role" rewritten; usability tests with 8 users (task success rate and error rate) described in the process; removed the line about improving the UI for the portfolio. Post-launch metrics still to add (waiting for real numbers).
+
 ## v9.1.0
 - New 4th case study: Italdesign "Relations you can see" (IT: "Relazioni che si vedono"). Advanced relations between tickets in the internal project-management tool: drag & connect map, relation picker, rules list. Feature design, testing and delivery.
 - Four new screens with improved UI, built from the original Figma screens: rel-cover, rel-connect, rel-picker, rel-list (3200×1800 webp).
