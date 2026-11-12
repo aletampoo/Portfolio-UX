@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.8.3
+- Case study opening: "EPISODE n" label in the hero light blue (#9cd4f1, soft glow) instead of Netflix red.
+
 ## v9.8.2
 - "Recruiter" cursor label redesigned like a Figma multiplayer tag: snug to the arrow, square top-left corner pointing at it, 6px radius elsewhere, thin light top highlight, semibold 11.5px text.
 
