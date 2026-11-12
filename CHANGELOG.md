@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.2.2
+- Case study galleries ("The work"): images stacked vertically at full width, in every case study.
+
 ## v9.2.1
 - Case study highlights: the Figma-frame boxes are replaced by a simple underline in the project colour (2px gradient line, semibold text).
 
