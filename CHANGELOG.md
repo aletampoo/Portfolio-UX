@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.9.0
+- New intro, no longer repeating the hero: an 8-bit "AT" monogram built from holographic pixels (iridescent gradient with hue shift) that pop in one by one, a pixel LOADING bar, and the pixels dissolve when the intro ends. Same ~1s, click to skip; static with reduced motion.
+
 ## v9.8.4
 - Clean URL: in-page links (nav, logo, "Go to projects") smooth-scroll to their section without adding #top, #row, #about… to the address. A link opened with a hash still lands on the section, then the hash is removed.
 
