@@ -1480,6 +1480,19 @@ body.olm .fh::after,body.olm .pglow,body.olm .hbg{display:none!important}
 .fxg{grid-template-columns:1fr!important}.fxg .fxi{grid-column:1/-1!important}
 /* logo nel nav: stesso stile del nome nella hero */
 #nav a .lf,#nav a .ls{color:transparent!important;-webkit-text-fill-color:transparent!important;background:linear-gradient(100deg,#fff 0%,#9cd4f1 45%,#fff 70%,#83caee)!important;-webkit-background-clip:text!important;background-clip:text!important;text-shadow:none!important;filter:drop-shadow(0 0 10px #5ab8e88c)}
+/* card hover come Netflix: la card si ingrandisce e il pannello info compare SOTTO la miniatura, senza coprirla */
+@media (hover:hover) and (min-width:761px){
+#tiles .tile{transition:transform .28s cubic-bezier(.2,.7,.2,1),z-index 0s .28s}
+#tiles .tile:hover,#tiles .tile:focus-within{transform:scale(1.06)!important;z-index:20!important;transition:transform .28s cubic-bezier(.2,.7,.2,1),z-index 0s}
+#tiles .tile:hover .tl,#tiles .tile:focus-within .tl{opacity:1!important;top:50%!important}
+#tiles .tile:hover .th,#tiles .tile:focus-within .th{border-radius:12px 12px 0 0}
+#tiles .ti{position:absolute!important;top:calc(100cqw * .5625 - 1px)!important;bottom:auto!important;left:0!important;right:0!important;display:flex;flex-direction:column;gap:10px;padding:14px 16px 16px!important;border-radius:0 0 12px 12px!important;background:#141820!important;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 45%,transparent),0 24px 48px #000c!important;opacity:0!important;transform:translateY(-6px)!important;pointer-events:none!important;transition:opacity .2s,transform .25s!important;backdrop-filter:none!important}
+#tiles .tile:hover .ti,#tiles .tile:focus-within .ti{opacity:1!important;transform:none!important;pointer-events:auto!important}
+#tiles .ti .tc{order:1;margin:0!important}
+#tiles .ti small{order:2;font-size:.82rem}
+#tiles .ti small span:first-child{color:#46d369;font-weight:700}
+#tiles .ti p{order:3;margin:0!important;font-size:.88rem;line-height:1.4;color:#c9d1db}
+}
 </style>
 </head>
 <body class="lock">

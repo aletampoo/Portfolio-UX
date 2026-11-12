@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.4.3
+- Project card hover (desktop), Netflix style: the card scales up and the info panel opens below the thumbnail (play and info buttons, year in green and type, tagline), so it never covers the name and subtitle. Mobile unchanged.
+
 ## v9.4.2
 - Relations screens simplified: no page subtitle, no minimap, no footnote under Item types; AI assistant without tabs and confidence bars (just "94% match"), one "Accept both suggestions" button.
 
