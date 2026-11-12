@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.3.2
+- Nav logo ("ALESSIO TAMPONE" on desktop, "AT" on mobile) now uses the hero name style: white to light-blue gradient with a soft blue glow, instead of red.
+
 ## v9.3.1
 - Relations case study, "My role" rewritten with senior ownership: framing the problem, interaction model and rules, every state, 8-user usability tests, design QA through to release. IT/EN.
 
