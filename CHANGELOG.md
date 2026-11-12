@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.10.4
+- "Recruiter" cursor tag now holographic: iridescent gradient (blue, lilac, pink, yellow, mint, same palette as the pixel intro) with a glossy top highlight.
+
 ## v9.10.3
 - "My journey" timeline redesigned: each stop is a pill (city · year) linked by a dashed line; "Turin · Today" highlighted with the hero gradient, glow and a pulsing dot; pills lift on hover. On mobile the pills wrap without the line.
 
