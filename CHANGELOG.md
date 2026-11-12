@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.8.1
+- "Recruiter" cursor label: solid light blue (#9cd4f1) instead of gradient; the arrow keeps the gradient.
+
 ## v9.8.0
 - Cursor is now a Figma-style multiplayer cursor with a "Recruiter" label, in the hero name gradient (white to light blue), on the whole site including links and cards. Mouse only; text fields keep the text cursor.
 
