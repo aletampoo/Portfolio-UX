@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.8.0
+- Cursor is now a Figma-style multiplayer cursor with a "Recruiter" label, in the hero name gradient (white to light blue), on the whole site including links and cards. Mouse only; text fields keep the text cursor.
+
 ## v9.7.0
 - Intro restyled to match the site: near-black dot-grid canvas (no blue glow or line grid), "Alessio Tampone" in the hero gradient (no glitch effect), a Figma frame with handles drawn around name and role, and the blue "Alessio" cursor gliding in. Same ~1s duration, click to skip.
 
