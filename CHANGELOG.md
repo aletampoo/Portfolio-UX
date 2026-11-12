@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.3.0
+- Projects order: Relations (Italdesign) first, then Design system (Italdesign), then NatWest. The Bugzer case study is hidden (data kept in the file, easy to bring back). Grid back to 3 columns.
+
 ## v9.2.2
 - Case study galleries ("The work"): images stacked vertically at full width, in every case study.
 
