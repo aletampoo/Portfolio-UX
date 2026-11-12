@@ -2,6 +2,11 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.2.0
+- All case studies: key phrases highlighted with the Figma-frame style used in Experience (challenge, role, process, outcome, looking back), IT/EN.
+- All case studies: key numbers shown as stat cards in "The outcome".
+- Relations case study: post-launch and test metrics added (100% task success in the final round, up from 6/8; −64% wrong relations in 2 months; 5× faster, 1m 40s → 20s). These are ESTIMATES to replace with real data.
+
 ## v9.1.1
 - Relations case study: year 2026; "My role" rewritten; usability tests with 8 users (task success rate and error rate) described in the process; removed the line about improving the UI for the portfolio. Post-launch metrics still to add (waiting for real numbers).
 
