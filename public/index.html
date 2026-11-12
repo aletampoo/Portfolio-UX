@@ -1559,6 +1559,13 @@ input,textarea,[contenteditable]{cursor:text!important}
 @keyframes aiRot{to{--ha:360deg}}
 @keyframes aiSh{to{background-position:-220% 0}}
 @media(prefers-reduced-motion:reduce){#tiles .tile:first-child::after{animation:none}}
+/* finestra info: accent del case study */
+#md{border:1px solid color-mix(in srgb,var(--mc,#5ab8e8) 55%,transparent)!important;box-shadow:0 30px 80px #000c,0 0 70px color-mix(in srgb,var(--mc,#5ab8e8) 22%,transparent)!important}
+#md #mb{background:linear-gradient(color-mix(in srgb,var(--mc,#5ab8e8) 8%,#11151c),#11151c 70%)!important}
+#md .rp{background:color-mix(in srgb,var(--mc,#5ab8e8) 24%,#0b0f15)!important;border-color:var(--mc,#5ab8e8)!important;color:#fff!important;box-shadow:0 0 0 1px color-mix(in srgb,var(--mc,#5ab8e8) 60%,transparent),0 0 22px color-mix(in srgb,var(--mc,#5ab8e8) 45%,transparent)!important}
+#md #mx{border-color:var(--mc,#5ab8e8)!important;color:#fff!important;box-shadow:0 0 16px color-mix(in srgb,var(--mc,#5ab8e8) 45%,transparent)!important;background:color-mix(in srgb,var(--mc,#5ab8e8) 18%,#0b0f15)!important}
+#md #mb dt{color:color-mix(in srgb,var(--mc,#5ab8e8) 75%,#fff)!important}
+#md #mh .cl{color:color-mix(in srgb,var(--mc,#5ab8e8) 70%,#fff)!important}
 </style>
 </head>
 <body class="lock">
@@ -1854,7 +1861,7 @@ function stat(){
   if($("#md").open)info(f,1);if(window.gUpdate)gUpdate();
 }
 function info(i,keep){
-  var p=P[i],d=p[L],md=$("#md");
+  var p=P[i],d=p[L],md=$("#md");md.style.setProperty("--mc",p.c);md.style.setProperty("--hc",p.c);
   $("#mh").innerHTML=art(i)+(p.himg?'<img class="mcv" src="'+p.himg+'" alt=""><div class="mcg"></div>':'')+'<div class="bc" style="--c:'+p.c+'">'+(d.cl?'<span class="cl">'+d.cl+'</span>':'')+'<h2 class="ttl">'+d.t+'</h2><div class="bt"><button class="rp" data-play="'+i+'"><svg><use href="#p"/></svg>'+t("play")+'</button></div></div>';
   $("#mb").innerHTML='<div>'+meta(i).replace('class="mt"','class="mt" style="font-size:1rem"')+'<p>'+(d.sm||d.ds)+'</p></div><dl><dt>'+t("role")+'</dt><dd>'+d.role+'</dd><dt>'+t("dur")+'</dt><dd>'+d.dur+'</dd><dt>'+t("tools")+'</dt><dd>'+d.tools+'</dd></dl>';
   if(!keep)md.showModal();
