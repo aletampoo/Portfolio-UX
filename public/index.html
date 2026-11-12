@@ -1516,11 +1516,27 @@ html,body{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org
 a,button,[role=button],label,summary,select,.tile,.tile *,[data-play],[data-info],[onclick]{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2228%22%20height%3D%2228%22%20viewBox%3D%220%200%2028%2028%22%3E%3Cdefs%3E%3Cfilter%20id%3D%22g%22%20x%3D%22-50%25%22%20y%3D%22-50%25%22%20width%3D%22200%25%22%20height%3D%22200%25%22%3E%3CfeDropShadow%20dx%3D%220%22%20dy%3D%221.5%22%20stdDeviation%3D%221.6%22%20flood-color%3D%22%23000%22%20flood-opacity%3D%22.55%22/%3E%3C/filter%3E%3C/defs%3E%3Cpath%20filter%3D%22url%28%23g%29%22%20d%3D%22M5%203.5%2022%2012.2%2014.6%2014.4%2011.6%2021.6Z%22%20fill%3D%22%235ab8e8%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.6%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2221%22%20cy%3D%2221%22%20r%3D%223.2%22%20fill%3D%22%235ab8e8%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.4%22/%3E%3C/svg%3E") 5 3,pointer!important}
 input,textarea,[contenteditable]{cursor:text!important}
 }
+/* ===== Intro nello stile nuovo: canvas a puntini, nome a gradiente, frame di Figma e cursore ===== */
+#intro{background:#0a0b0d!important}
+#intro::before{background:radial-gradient(circle at 1px 1px,#ffffff1f 1px,transparent 1.5px) 0 0/22px 22px!important;-webkit-mask:radial-gradient(60% 60% at 50% 45%,#000,transparent)!important;mask:radial-gradient(60% 60% at 50% 45%,#000,transparent)!important}
+#intro::after{display:none!important}
+#intro .ir{display:none!important}
+#intro .ib{gap:12px!important;padding:26px 40px 24px;transform:translateY(-3vh)!important}
+#intro .nm{text-transform:none!important;letter-spacing:-.035em!important;font-size:clamp(2rem,5vw,3.6rem)!important;color:transparent!important;-webkit-text-fill-color:transparent;background:linear-gradient(100deg,#fff 0%,#9cd4f1 45%,#fff 70%,#83caee);-webkit-background-clip:text;background-clip:text;text-shadow:none!important;filter:drop-shadow(0 0 14px #5ab8e866);animation:irv .45s .15s cubic-bezier(.2,.8,.2,1) forwards!important}
+#intro .rl{color:#8fa0b3!important;letter-spacing:.28em!important;animation:ifd2 .3s .45s forwards!important}
+#intro .ifr{position:absolute;inset:0;border:1px solid #5ab8e8;opacity:0;transform:scale(1.04);animation:ifrIn .35s .5s cubic-bezier(.2,.8,.2,1) forwards;pointer-events:none;
+ background:linear-gradient(#5ab8e8,#5ab8e8) 0 0/7px 7px no-repeat,linear-gradient(#5ab8e8,#5ab8e8) 100% 0/7px 7px no-repeat,linear-gradient(#5ab8e8,#5ab8e8) 0 100%/7px 7px no-repeat,linear-gradient(#5ab8e8,#5ab8e8) 100% 100%/7px 7px no-repeat}
+#intro .ifr em{position:absolute;left:-1px;bottom:100%;margin-bottom:6px;font:600 11px/1 ui-monospace,Menlo,Consolas,monospace;font-style:normal;letter-spacing:.04em;color:#5ab8e8}
+#intro .icur{position:absolute;right:-6px;bottom:-30px;display:flex;align-items:flex-start;gap:2px;opacity:0;transform:translate(70px,50px);animation:icIn .5s .55s cubic-bezier(.2,.8,.2,1) forwards;filter:drop-shadow(0 2px 4px #0008)}
+#intro .icur span{margin-top:16px;font:600 11px/1 Inter,system-ui,sans-serif;color:#fff;background:#5ab8e8;padding:3px 6px;border-radius:4px}
+@keyframes ifrIn{to{opacity:1;transform:none}}
+@keyframes icIn{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){#intro .ifr,#intro .icur{animation:none;opacity:1;transform:none}}
 </style>
 </head>
 <body class="lock">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="p" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></symbol><symbol id="i" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></symbol></svg>
-<div id="intro" role="presentation"><div class="ib"><div class="ir" aria-hidden="true"><svg viewBox="0 0 100 100"><circle class="a2" cx="50" cy="50" r="48"/><circle class="a1" cx="50" cy="50" r="42" pathLength="100"/></svg><b>AT</b></div><h1 class="nm" id="nm">Alessio Tampone</h1><div class="rl">Senior Product Designer</div></div></div>
+<div id="intro" role="presentation"><div class="ib"><div class="ir" aria-hidden="true"><svg viewBox="0 0 100 100"><circle class="a2" cx="50" cy="50" r="48"/><circle class="a1" cx="50" cy="50" r="42" pathLength="100"/></svg><b>AT</b></div><h1 class="nm" id="nm">Alessio Tampone</h1><div class="rl">Senior Product Designer</div><i class="ifr" aria-hidden="true"><em>Frame</em></i><i class="icur" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 28 28"><path d="M5 3.5 22 12.2 14.6 14.4 11.6 21.6Z" fill="#5ab8e8" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg><span>Alessio</span></i></div></div>
 <nav id="nav">
   <a class="logo" href="#top" aria-label="Alessio Tampone"><span class="lf">Alessio Tampone</span><span class="ls" aria-hidden="true">AT</span></a>
   <div class="nv"><a href="#top" data-t="top" class="on" data-i="n0"></a><a href="#row" data-t="row" data-i="n1"></a><a href="#about" data-t="about" data-i="n2"></a><a href="#exp" data-t="exp" data-i="n3"></a><a href="#edu" data-t="edu" data-i="n6"></a></div>
