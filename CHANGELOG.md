@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.14.0
+- Restored the previous background (dot grid + cursor spotlight) on the site and in case studies; particles now only come out of the hero frame, stronger on hero hover.
+
 ## v9.13.1
 - Homepage particles calmer at rest (about half intensity); hovering the hero brings them up to full strength. Case studies unchanged.
 
