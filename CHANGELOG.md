@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.12.2
+- Particle background slightly more intense: more particles, higher opacity and halo, site-wide and in the hero emitter.
+
 ## v9.12.1
 - Particle-field background also inside case studies (canvas moves into the case study layer; parallax follows the case study scroll).
 
