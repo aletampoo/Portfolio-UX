@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.13.0
+- Hovering the hero boosts the particles: more spawn from the frame and all particles get brighter, easing back on leave.
+
 ## v9.12.2
 - Particle background slightly more intense: more particles, higher opacity and halo, site-wide and in the hero emitter.
 
