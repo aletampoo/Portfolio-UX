@@ -2,6 +2,10 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.4.0
+- Relations case study retold around AI in the product: "AI that links the tickets" (IT: "L'AI che collega i ticket"). AI at three moments of the flow: from text to items, relation type suggested while linking, assistant with suggestions (reason + confidence) and consistency checks. Principle: AI suggests, people decide. New trade-offs, role, process, outcome, looking back. IT/EN.
+- New screens: rel-cover (AI assistant on the map), rel-gen (create items from text), rel-props (relation properties, the old cover). Picker shows "AI suggested"; library has an "Items from text" AI entry.
+
 ## v9.3.2
 - Nav logo ("ALESSIO TAMPONE" on desktop, "AT" on mobile) now uses the hero name style: white to light-blue gradient with a soft blue glow, instead of red.
 
