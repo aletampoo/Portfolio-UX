@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.9.2
+- Updated CV (EN, November 2026) behind every Download CV button; link has a version query so browsers don't serve the old cached file.
+
 ## v9.9.1
 - Intro lasts 2.2s: pixels appear over ~0.9s, the LOADING bar fills over ~1.9s, then the intro dissolves.
 
