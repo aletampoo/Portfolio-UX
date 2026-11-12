@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.11.0
+- Subtle particles that drift out of the hero frame and fade behind the content; hero background made transparent so they show through.
+
 ## v9.10.5
 - "Recruiter" cursor tag back to the previous shape, now see-through like the "Go to projects" button: translucent blue tint, light-blue 1.3px border, light text. Holographic version removed.
 
