@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.10.5
+- "Recruiter" cursor tag back to the previous shape, now see-through like the "Go to projects" button: translucent blue tint, light-blue 1.3px border, light text. Holographic version removed.
+
 ## v9.10.4
 - "Recruiter" cursor tag now holographic: iridescent gradient (blue, lilac, pink, yellow, mint, same palette as the pixel intro) with a glossy top highlight.
 
