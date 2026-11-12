@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.4.4
+- Relations case study, "The process" simplified into four steps (Understand, Design, Test, Deliver), with AI inside the Design step and the rule "AI suggests, people decide". IT/EN.
+
 ## v9.4.3
 - Project card hover (desktop), Netflix style: the card scales up and the info panel opens below the thumbnail (play and info buttons, year in green and type, tagline), so it never covers the name and subtitle. Mobile unchanged.
 
