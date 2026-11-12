@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.14.2
+- Fewer hero particles: start at about 30% density and fade up over ~9 s; steady state slightly lower.
+
 ## v9.14.1
 - Hero particles start already at their steady density (pre-warmed, constant spawn rate) instead of an initial burst.
 
