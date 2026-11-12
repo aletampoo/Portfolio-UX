@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.4.2
+- Relations screens simplified: no page subtitle, no minimap, no footnote under Item types; AI assistant without tabs and confidence bars (just "94% match"), one "Accept both suggestions" button.
+
 ## v9.4.1
 - Relations screens: cleaner "Item types" panel in every screen (one grouped list instead of separate boxes, count badge instead of the repeated "on map" label, no drag handles, compact AI entry, quieter footnote).
 
