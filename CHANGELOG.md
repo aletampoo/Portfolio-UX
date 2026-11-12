@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.4.1
+- Relations screens: cleaner "Item types" panel in every screen (one grouped list instead of separate boxes, count badge instead of the repeated "on map" label, no drag handles, compact AI entry, quieter footnote).
+
 ## v9.4.0
 - Relations case study retold around AI in the product: "AI that links the tickets" (IT: "L'AI che collega i ticket"). AI at three moments of the flow: from text to items, relation type suggested while linking, assistant with suggestions (reason + confidence) and consistency checks. Principle: AI suggests, people decide. New trade-offs, role, process, outcome, looking back. IT/EN.
 - New screens: rel-cover (AI assistant on the map), rel-gen (create items from text), rel-props (relation properties, the old cover). Picker shows "AI suggested"; library has an "Items from text" AI entry.
