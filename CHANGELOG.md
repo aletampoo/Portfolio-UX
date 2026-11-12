@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.5.3
+- Background cursor spotlight made more subtle: lit dots at about 40% and the soft glow at 50% of their previous strength.
+
 ## v9.5.2
 - AI case study title: "AI connects, you decide" (IT: "L’AI collega, tu decidi"), on the card and in the case study.
 
