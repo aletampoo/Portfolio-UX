@@ -2,6 +2,9 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.10.1
+- First card: removed the "AI-powered" chip, only the rotating holographic stroke remains.
+
 ## v9.10.0
 - First project card highlighted as AI work: holographic "✦ AI-powered" badge (shimmering iridescent gradient, same palette as the pixel intro) and a slowly rotating holographic border. Border hides on hover so the Netflix-style hover stays clean; static with reduced motion.
 
