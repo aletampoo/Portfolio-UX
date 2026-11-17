@@ -1958,7 +1958,7 @@ function endIntro(){var el=$("#intro");if(!el)return;el.classList.add("out");doc
  var us=l.querySelectorAll("u"),k=0,iv=setInterval(function(){if(k<us.length)us[k++].className="on";else clearInterval(iv)},190);
 })();
 $("#intro").onclick=endIntro;
-setTimeout(endIntro,matchMedia("(prefers-reduced-motion:reduce)").matches?200:2200);
+endIntro();
 try{var sl=localStorage.getItem("at-lang-u");if(sl&&U[sl])L=sl}catch(e){}
 (function(){
   var cv=$("#gc"),c=cv.getContext("2d"),gf=$("#gf"),ov=$("#gov"),sc=0;
@@ -2473,8 +2473,8 @@ addEventListener("resize",avPlace);
  function intro(i,done){var ff=document.querySelector(".fh .ff");if(!ff||RMO){done();return}
   var p=P[i],d=p[L],n=P.indexOf(p)+1,src=p.himg||p.cimg,it=L==="it";
   var o=document.createElement("div");o.className="nfv";
-  o.innerHTML=(src?'<img src="'+src+'" alt="">':'')+'<div class="tt"><small>'+(it?"EPISODIO ":"EPISODE ")+n+'</small><b>'+d.t+'</b><span>'+(d.hl||"")+'</span></div>';
-  ff.classList.add("nfon");ff.appendChild(o);
+  o.style.setProperty("--c",p.c);o.innerHTML='<div class="tt"><small>'+(it?"EPISODIO ":"EPISODE ")+n+'</small><b>'+d.t+'</b><span>'+(d.hl||"")+'</span></div>';
+  var srcT=document.querySelectorAll(".tiles .tile .th")[i];if(srcT){var w=document.createElement("div");w.className="tiles nfts";var w2=document.createElement("div");w2.className="tile nft";var cl=srcT.cloneNode(true);cl.removeAttribute("id");w2.appendChild(cl);w.appendChild(w2);o.insertBefore(w,o.firstChild);o.classList.add("hasT")}ff.classList.add("nfon");ff.appendChild(o);
   var tl=ff.querySelector(".ftt"),old=tl?tl.innerHTML:null;if(tl)tl.innerHTML='<b>'+d.t+'</b><span>S1:E'+n+'</span>';
   var bar=ff.querySelector(".fpt i");if(bar){bar.style.cssText="animation:none;transition:none;transform:scaleX(0)";bar.offsetWidth;bar.style.cssText="animation:none;transition:transform 1s linear;transform:scaleX(1)"}
   tadum();
@@ -2559,6 +2559,201 @@ addEventListener("resize",avPlace);
 })();
 
 stat();
+</script>
+<style>
+/* ===== prova: hero come TV 3D ===== */
+#c3.fh{-webkit-mask-image:linear-gradient(#000 88%,#0000)!important;mask-image:linear-gradient(#000 88%,#0000)!important}
+#c3 .ff.ff{border:0!important;border-radius:20px;background:radial-gradient(90% 80% at 30% 20%,#0f1b2b,#05070b 70%)!important;
+ box-shadow:inset 0 0 0 1px #ffffff12,inset 0 0 60px #000a,0 0 0 clamp(10px,1.2vw,16px) #141619,0 0 0 calc(clamp(10px,1.2vw,16px) + 1.5px) #3a3f47,0 12px 0 calc(clamp(10px,1.2vw,16px) + 1.5px) #0b0c0f,0 30px 60px #000b!important;clip-path:none!important;
+ transform:translate(-50%,-50%) perspective(1800px) rotateX(5deg)!important;transform-style:preserve-3d}
+#c3 .ff .ffl,#c3 .ff .fhd{display:none!important}
+.tvg{position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:5;overflow:hidden}
+.tvg::before{content:"";position:absolute;inset:-40% -10%;background:linear-gradient(115deg,transparent 38%,#ffffff0d 46%,#ffffff04 54%,transparent 60%)}
+.tvg::after{content:"";position:absolute;inset:0;border-radius:inherit;background:repeating-linear-gradient(0deg,#ffffff05 0 1px,transparent 1px 3px)}
+.tvc{position:absolute;left:50%;top:calc(-1 * clamp(6px,.8vw,10px));width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#0a0b0d;box-shadow:inset 0 0 0 1px #2a2f36,0 0 0 1px #000;z-index:6}
+.tvl{position:absolute;right:clamp(14px,2vw,26px);bottom:calc(-1 * clamp(7px,.85vw,11px));width:5px;height:5px;border-radius:50%;background:#3fd17a;box-shadow:0 0 8px #3fd17a;z-index:6}
+.tvb{position:absolute;left:50%;bottom:calc(-1 * clamp(9px,1vw,14px));transform:translateX(-50%);font:700 9px/1 Inter,system-ui,sans-serif;letter-spacing:.32em;color:#5d6570;z-index:6}
+.tvs{display:none!important;position:absolute;z-index:1;left:50%;transform:translateX(-50%);pointer-events:none;display:flex;flex-direction:column;align-items:center}
+.tvs .nk{width:clamp(70px,9vw,120px);height:clamp(34px,6vh,60px);background:linear-gradient(90deg,#16181c,#2c3036 45%,#16181c);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.tvs .bs{width:clamp(220px,28vw,380px);height:14px;border-radius:50%/100%;background:radial-gradient(60% 120% at 50% 0,#3a3f47,#15171a 70%);box-shadow:0 18px 30px #000c}
+@media (max-width:760px){#c3 .ff.ff{border-radius:16px}.tvs{display:none}}
+@container (max-width:640px){#c3 .ff.ff{transform:translateX(-50%) perspective(1400px) rotateX(4deg)!important}}
+</style>
+<script>
+(function(){
+function go(){var fh=document.getElementById("c3");if(!fh)return;var ff=fh.querySelector(".ff");if(!ff)return;
+ if(!ff.querySelector(".tvg"))ff.insertAdjacentHTML("beforeend",'<span class="tvg" aria-hidden="true"></span><span class="tvc" aria-hidden="true"></span><span class="tvl" aria-hidden="true"></span><span class="tvb" aria-hidden="true">AT</span>');
+ var s=fh.querySelector(".tvs");if(!s){s=document.createElement("div");s.className="tvs";s.setAttribute("aria-hidden","true");s.innerHTML='<span class="nk"></span><span class="bs"></span>';fh.appendChild(s)}
+ var fr=fh.getBoundingClientRect(),r=ff.getBoundingClientRect();s.style.top=(r.bottom-fr.top+6)+"px"}
+setInterval(go,400);addEventListener("resize",go);go();
+})();
+</script>
+<style>#intro{display:none!important}</style>
+<style>
+/* ===== back LED (ambilight) al posto delle particelle ===== */
+body>canvas,#c3 canvas.pcv,#c3>canvas{display:none!important}
+.tva{position:absolute;z-index:1;pointer-events:none;border-radius:40px;transition:opacity .9s ease}
+.tva i{position:absolute;inset:-3% -2%;border-radius:inherit;filter:blur(clamp(50px,6vw,90px)) saturate(1.4);opacity:1;
+ background:conic-gradient(from var(--a,0deg) at 50% 50%,#3e9fd1,#a06bff,#f08c3a,#3e9fd1,#46d3c0,#a06bff,#3e9fd1);animation:tvr 18s linear infinite}
+.tva i+i{inset:2%;filter:blur(clamp(16px,1.8vw,26px)) saturate(1.5);opacity:.9;animation-duration:24s;animation-direction:reverse}
+.tva b{position:absolute;inset:-14% -8%;border-radius:50%;background:radial-gradient(closest-side,#4aa8e022,transparent);filter:blur(30px)}
+@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes tvr{to{--a:360deg}}
+@media (prefers-reduced-motion:reduce){.tva i{animation:none}}
+</style>
+<script>
+(function(){
+function go(){var fh=document.getElementById("c3");if(!fh)return;var ff=fh.querySelector(".ff");if(!ff)return;
+ var a=fh.querySelector(".tva");if(!a){a=document.createElement("div");a.className="tva";a.setAttribute("aria-hidden","true");a.innerHTML="<b></b><i></i><i></i>";fh.insertBefore(a,fh.firstChild)}
+ var fr=fh.getBoundingClientRect(),r=ff.getBoundingClientRect(),p=8;
+ a.style.cssText="left:"+(r.left-fr.left+p)+"px;top:"+(r.top-fr.top+p)+"px;width:"+(r.width-2*p)+"px;height:"+(r.height-2*p)+"px"}
+var lastFull=false,hold=0;
+function loop(){requestAnimationFrame(loop);var a=document.querySelector("#c3 .tva");if(!a){go();a=document.querySelector("#c3 .tva");if(!a)return;a.style.transition="none";a.style.opacity="0";a.offsetWidth;a.style.transition=""}var sc=document.querySelector(".screen"),full=!!(sc&&sc.classList.contains("full"))||(typeof cur!=="undefined"&&cur!==null);
+ if(full!==lastFull){lastFull=full;if(!full)hold=performance.now()+1100}
+ var busyNow=full||performance.now()<hold;a.style.opacity=busyNow?"0":"1";go()}
+requestAnimationFrame(loop);addEventListener("resize",go);go();
+})();
+</script>
+<style>
+/* intro Netflix: logo al posto della cover */
+.nfv{background:radial-gradient(70% 80% at 50% 42%,color-mix(in srgb,var(--c) 34%,#05070b),#030406 75%)!important}
+.nfv .nlg{position:absolute;inset:0;z-index:2;display:grid;place-items:center;padding-bottom:12%}
+.nfv .nlg .pl{display:grid;place-items:center;padding:clamp(14px,2.4cqw,30px) clamp(22px,4cqw,52px);border-radius:clamp(10px,1.4cqw,18px);background:#fff;box-shadow:0 0 0 1px #0002,0 20px 60px #000a,0 0 80px color-mix(in srgb,var(--c) 45%,transparent);opacity:0;transform:scale(.8);animation:nlgIn .55s cubic-bezier(.2,1.3,.4,1) .05s forwards}
+.nfv .nlg img{position:static!important;display:block;width:auto!important;height:clamp(40px,9cqh,96px)!important;max-width:40cqw;object-fit:contain;opacity:1!important;transform:none!important;animation:none!important}
+.nfv .nlg em{font-style:normal;font-size:clamp(28px,6cqw,72px);font-weight:900;letter-spacing:-.04em;line-height:1;color:#111}
+@keyframes nlgIn{to{opacity:1;transform:none}}
+.nfv:after{display:none!important}
+.nfv.nol .tt b{display:none}.nfv.nol .tt{bottom:clamp(80px,24cqh,200px)!important}
+.nfv .nlg{padding-bottom:18%!important}
+.nfv .tt{left:0!important;right:0!important;bottom:clamp(40px,14cqh,120px)!important;max-width:none!important;text-align:center;z-index:3!important}
+</style>
+<style>
+/* intro Netflix: contenuto come nelle card */
+.nfv .nfts{position:absolute;inset:0;display:block!important;margin:0!important;padding:0!important}
+.nfv .nft{position:absolute;inset:0;transform:none!important;cursor:default;container-type:inline-size;opacity:0;animation:nftIn .5s ease .05s forwards}
+.nfv .nft .th{position:absolute;inset:0;aspect-ratio:auto;height:100%;border-radius:0;box-shadow:none!important;filter:none!important}
+.nfv .nft .tp{display:none}
+.nfv .nft .hx{animation:hxs 1.2s ease-in-out .2s}
+.nfv .nft .tl{font-size:clamp(34px,6cqw,84px)!important}
+.nfv .nft .tsb{font-size:clamp(14px,1.6cqw,22px)!important}
+.nfv.hasT .tt,.nfv.hasT>img{display:none!important}
+@keyframes nftIn{to{opacity:1}}
+</style>
+<style>
+/* ===== Projects dentro un telecomando 3D orizzontale ===== */
+.rmt{position:relative;display:flex;align-items:stretch;gap:clamp(14px,1.6vw,24px);margin-top:6px;padding:clamp(18px,2vw,28px) clamp(16px,1.8vw,26px);border-radius:clamp(48px,6vw,90px);
+ background:linear-gradient(180deg,#2a2e35 0%,#1a1d22 40%,#121417 100%);
+ box-shadow:inset 0 1px 0 #ffffff26,inset 0 -2px 0 #0008,inset 0 0 0 1px #ffffff10,0 10px 0 #0e1013,0 11px 0 #ffffff0d,0 40px 70px #000c;
+ transform:none}
+.rmt::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(100deg,transparent 30%,#ffffff0c 45%,transparent 55%),repeating-linear-gradient(90deg,#ffffff03 0 1px,transparent 1px 3px)}
+.rmt #tiles,.rmt .tiles{flex:1;min-width:0;margin:0}
+.rmt .rc{flex:none;width:clamp(64px,6vw,92px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.rmt .pw{width:clamp(38px,3.4vw,50px);aspect-ratio:1;border-radius:50%;border:0;background:radial-gradient(circle at 35% 30%,#ff6b5a,#c62a1c 70%);box-shadow:0 4px 0 #6d140c,0 8px 14px #0009,inset 0 1px 0 #ffffff55;display:grid;place-items:center;color:#fff;pointer-events:none}
+.rmt .pw svg{width:44%;height:44%}
+.rmt .ir{width:16px;height:8px;border-radius:4px;background:#0a0b0d;box-shadow:inset 0 0 0 1px #000,0 0 6px #ff3b3b33}
+.rmt .rc b{display:block;font:800 10px/1 Inter,system-ui,sans-serif;letter-spacing:.3em;color:#5d6570}
+.rmt .bt3{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.rmt .bt3 i{width:clamp(16px,1.5vw,22px);aspect-ratio:1;border-radius:50%;background:linear-gradient(#3a3f47,#24272c);box-shadow:0 3px 0 #0d0e10,inset 0 1px 0 #ffffff22}
+.rmt .bt3 i:nth-child(1){background:linear-gradient(#ff6b5a,#c62a1c);box-shadow:0 3px 0 #6d140c}
+.rmt .bt3 i:nth-child(2){background:linear-gradient(#5fd36e,#21923a);box-shadow:0 3px 0 #0f4a1c}
+.rmt .bt3 i:nth-child(3){background:linear-gradient(#ffd25a,#c99613);box-shadow:0 3px 0 #6d5008}
+.rmt .bt3 i:nth-child(4){background:linear-gradient(#5aa8ff,#1d5fc6);box-shadow:0 3px 0 #0c2d6d}
+.rmt .vl{width:clamp(22px,2vw,30px);height:clamp(50px,5vw,70px);border-radius:999px;background:linear-gradient(#2f343b,#1c1f23);box-shadow:0 3px 0 #0b0c0f,inset 0 1px 0 #ffffff20;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:6px 0;font:800 13px/1 Inter,system-ui,sans-serif;color:#8a929c}
+/* le card diventano tasti/schermi incassati */
+.rmt .tile .th{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--c) 50%,transparent),0 0 0 4px #0c0d10,0 0 0 5px #ffffff12,0 8px 18px #000a}
+.rmt .tile:active .th{transform:translateY(3px)}
+@media (max-width:760px){
+ .rmt{flex-direction:column;border-radius:60px;padding:22px 16px;transform:none}
+ .rmt .rc{width:auto;flex-direction:row}
+ .rmt .bt3{grid-template-columns:repeat(4,1fr)}
+ .rmt .vl{flex-direction:row;width:70px;height:26px;padding:0 8px}
+}
+</style>
+<script>
+(function(){
+function go(){var t=document.getElementById("tiles")||document.querySelector(".row .tiles");if(!t||t.parentElement.classList.contains("rmt"))return;
+ var w=document.createElement("div");w.className="rmt";
+ var L='<div class="rc" aria-hidden="true"><span class="ir"></span><span class="pw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 3v8"/><path d="M6.3 6.8a8 8 0 1 0 11.4 0"/></svg></span><b>AT</b></div>';
+ var R='<div class="rc" aria-hidden="true"><span class="bt3"><i></i><i></i><i></i><i></i></span><span class="vl"><span>+</span><span>−</span></span></div>';
+ t.parentNode.insertBefore(w,t);w.insertAdjacentHTML("beforeend",L);w.appendChild(t);w.insertAdjacentHTML("beforeend",R)}
+setInterval(go,500);go();
+})();
+</script>
+<style>
+/* ===== toggle lingua: interruttore fisico in stile telecomando ===== */
+#lt.lt{gap:0;padding:4px;border-radius:12px;background:linear-gradient(#0c0d10,#15171b);box-shadow:inset 0 2px 4px #000c,inset 0 0 0 1px #000,0 1px 0 #ffffff14!important;backdrop-filter:none;text-shadow:none}
+#lt.lt::after{display:none}
+#lt .kn{top:4px;left:4px;width:44px;height:30px;border-radius:9px;background:linear-gradient(#3a3f47,#24272c)!important;box-shadow:0 3px 0 #0b0c0f,0 5px 10px #0009,inset 0 1px 0 #ffffff2a!important;transition:transform .28s cubic-bezier(.3,1.3,.5,1)}
+#lt.en .kn{transform:translateX(44px)}
+#lt button{width:44px;height:30px;border-radius:9px;opacity:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font:800 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#59606a;transition:color .2s,transform .15s}
+#lt button[aria-pressed=true]{color:#eef3f7}
+#lt button i{width:4px;height:4px;border-radius:50%;background:#2a2e34;transition:background .2s,box-shadow .2s}
+#lt button[aria-pressed=true] i{background:#3fd17a;box-shadow:0 0 6px #3fd17a}
+#lt button:hover:not([aria-pressed=true]){color:#9aa3ad}
+#lt button:active{transform:translateY(1px)}
+#lt button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+</style>
+<script>
+(function(){var t=document.getElementById("lt");if(!t)return;[].forEach.call(t.querySelectorAll("button[data-lang]"),function(b){b.innerHTML='<i aria-hidden="true"></i><span>'+b.dataset.lang.toUpperCase()+'</span>'})})();
+</script>
+<style>
+/* ===== sfondo unico: niente luce sul cursore, un solo pattern per hero e pagina ===== */
+.hbg i,.csbg i{display:none!important}
+.hbg,.csbg{background:#0a0b0d!important}
+.hbg::before,.csbg::before{content:""!important;position:absolute;inset:0;opacity:1!important;animation:none!important;-webkit-mask-image:none!important;mask-image:none!important;
+ background:radial-gradient(circle at 1px 1px,#ffffff1a 1px,transparent 1.5px) 0 0/24px 24px!important}
+.hbg::after,.csbg::after{display:none!important}
+.fh::before,.fh::after{display:none!important}
+.fh,.c3,#c3{background:transparent!important}
+body{background:#0a0b0d!important}
+.pglow{display:none!important}
+</style>
+<style>#row h2{font-size:clamp(24px,2vw,28px)!important}</style>
+<style>
+/* ===== tasto power del telecomando: UX Dash dentro la TV ===== */
+.rmt .pw{position:relative;pointer-events:auto!important;cursor:pointer;transition:transform .12s,box-shadow .12s,filter .2s}
+.rmt .pw:hover,.rmt .pw:focus-visible{filter:brightness(1.15);transform:translateY(-2px) scale(1.08);box-shadow:0 6px 0 #6d140c,0 12px 20px #000a,0 0 0 6px #ff5a4a22,0 0 24px #ff5a4a66,inset 0 1px 0 #ffffff66}
+.rmt .pw::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid #ff6b5a;opacity:0;pointer-events:none}
+.rmt .pw:hover::before{animation:pwR 1.4s ease-out infinite}
+@keyframes pwR{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.5);opacity:0}}
+.rmt .pw[aria-pressed=true]::before{border-color:#3fd17a}
+.rmt .pw[aria-pressed=true]:hover{box-shadow:0 6px 0 #0e5226,0 12px 20px #000a,0 0 0 6px #3fd17a22,0 0 24px #3fd17a88,inset 0 1px 0 #ffffff66}
+.rmt .pwt{position:absolute;left:50%;bottom:calc(100% + 12px);transform:translate(-50%,4px);white-space:nowrap;padding:6px 10px;border-radius:8px;background:#0b0c0f;box-shadow:inset 0 0 0 1px #ffffff1f,0 8px 20px #000a;font:600 12px/1 Inter,system-ui,sans-serif;color:#eef3f7;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
+.rmt .pwt::after{content:"";position:absolute;left:50%;top:100%;margin-left:-5px;border:5px solid transparent;border-top-color:#0b0c0f}
+.rmt .pw:hover+.pwt,.rmt .pw:focus-visible+.pwt{opacity:1;transform:translate(-50%,0)}
+.rmt .rc{position:relative}
+.rmt .pw:active{transform:translateY(3px);box-shadow:0 1px 0 #6d140c,0 4px 8px #0009,inset 0 1px 0 #ffffff55}
+.rmt .pw:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.rmt .pw[aria-pressed=true]{background:radial-gradient(circle at 35% 30%,#7dff9a,#1fa64a 70%);box-shadow:0 4px 0 #0e5226,0 8px 14px #0009,0 0 18px #3fd17a88,inset 0 1px 0 #ffffff66}
+.tvgame{position:absolute;inset:0;z-index:8;display:grid;place-items:center;background:#030405;border-radius:inherit;overflow:hidden;animation:tvOn .35s cubic-bezier(.2,.8,.2,1)}
+.tvgame .gf{max-width:100%;border-radius:10px;margin:0}
+@keyframes tvOn{0%{clip-path:inset(49.5% 0 49.5% 0);filter:brightness(3)}60%{clip-path:inset(0 0 0 0);filter:brightness(1.4)}100%{filter:none}}
+.tvgame .gf:focus,.tvgame .gf:focus-visible{outline:none!important;box-shadow:0 0 0 1px #ffffff1f!important}
+#c3:has(.ff.gon) .fpl,#c3:has(.ff.gon) .fcur{display:none!important}
+.ff.gon>*:not(.tvgame):not(.tvg):not(.tvc):not(.tvl):not(.tvb){visibility:hidden}
+</style>
+<script>
+(function(){
+var on=false,home=null,ro=null;
+function it(){return typeof L!=="undefined"&&L==="it"}
+function fit(){var o=document.querySelector(".tvgame"),gf=document.getElementById("gf"),cv=document.getElementById("gc");if(!o||!gf||!cv)return;
+ var a=(cv.style.aspectRatio||"960/360").split("/"),r=(+a[0]||960)/(+a[1]||360),W=o.clientWidth-24,H=o.clientHeight-24,w=Math.min(W,H*r);gf.style.width=Math.max(200,w)+"px"}
+function open(btn){var ff=document.querySelector("#c3 .ff"),gf=document.getElementById("gf");if(!ff||!gf)return;
+ home={p:gf.parentNode,n:gf.nextSibling};var o=document.createElement("div");o.className="tvgame";ff.appendChild(o);o.appendChild(gf);ff.classList.add("gon");
+ on=true;btn.setAttribute("aria-pressed","true");fit();setTimeout(fit,60);if(window.ResizeObserver){ro=new ResizeObserver(fit);ro.observe(o)}
+ var st=document.querySelector(".stage");if(st){var r=st.getBoundingClientRect();if(r.top<-10||r.bottom>innerHeight+40)scrollTo({top:0,behavior:"smooth"})}
+ setTimeout(function(){try{gf.focus({preventScroll:true})}catch(e){}},400)}
+function close(btn){var gf=document.getElementById("gf"),o=document.querySelector(".tvgame"),ff=document.querySelector("#c3 .ff");
+ if(ro){ro.disconnect();ro=null}if(gf&&home){gf.style.width="";home.p.insertBefore(gf,home.n&&home.n.parentNode===home.p?home.n:null)}
+ if(o)o.remove();if(ff)ff.classList.remove("gon");on=false;btn.setAttribute("aria-pressed","false")}
+function wire(){var b=document.querySelector(".rmt .pw");if(!b||b.dataset.w)return;b.dataset.w=1;
+ var n=document.createElement("button");n.type="button";n.className="pw";n.innerHTML=b.innerHTML;n.setAttribute("aria-pressed","false");b.parentNode.removeAttribute("aria-hidden");
+ n.setAttribute("aria-label",it()?"Accendi UX Dash sulla TV":"Play UX Dash on the TV");b.replaceWith(n);n.dataset.w=1;
+ var tip=document.createElement("span");tip.className="pwt";tip.setAttribute("aria-hidden","true");n.after(tip);
+ function lab(){tip.textContent=on?(it()?"Spegni il gioco":"Turn off the game"):(it()?"▶ Gioca a UX Dash":"▶ Play UX Dash")}lab();
+ n.addEventListener("click",function(){on?close(n):open(n);lab()});n.addEventListener("mouseenter",lab)}
+setInterval(wire,500);wire();
+})();
 </script>
 </body>
 </html>

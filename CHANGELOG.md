@@ -2,6 +2,13 @@
 
 Versioning semantico: MAJOR.MINOR.PATCH (es. v1.1.0 = nuova funzione, v1.0.1 = correzione).
 
+## v9.15.0
+- Hero turned into a 3D TV with back LEDs (ambilight) instead of particles; intro removed.
+- Netflix intro inside the TV now shows the case study card content.
+- Projects cards housed in a horizontal 3D remote; its power button plays UX Dash inside the TV (press again to turn off).
+- Single clean dot-grid background across hero, page and case studies; cursor spotlight removed.
+- Language toggle redesigned as a remote-style switch (IT / EN); smaller Projects heading.
+
 ## v9.14.2
 - Fewer hero particles: start at about 30% density and fade up over ~9 s; steady state slightly lower.
 
